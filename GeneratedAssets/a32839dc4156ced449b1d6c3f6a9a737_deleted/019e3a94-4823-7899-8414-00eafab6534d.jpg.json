@@ -1,0 +1,28 @@
+{
+    "asset": "a32839dc4156ced449b1d6c3f6a9a737",
+    "fileName": "019e3a94-4823-7899-8414-00eafab6534d.jpg",
+    "prompt": "Full body Girl Sakura character, stylized cartoon avatar, 3D render style, vibrant colors, game icon, standing pose, plain white background, high resolution, head to toe in frame",
+    "negativePrompt": "",
+    "model": "flux-2-pro",
+    "modelName": "Flux 2 (Pro)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

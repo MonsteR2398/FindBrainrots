@@ -1,0 +1,38 @@
+{
+    "asset": "779f458c166a9e24c9e3d4e38233608e",
+    "fileName": "019e3ab1-b479-7ec0-ac95-9657bd58b9e2.png",
+    "prompt": "High-quality 2D cartoon UI icon of the Boy_Alladin character, full body. Character is in a calm, neutral standing pose (calm stance). Clean vector lines, vibrant flat colors, cel-shaded. Full body visible. No background, transparent.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "3881b33a2cb6a7446a415a7cda011b3d",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

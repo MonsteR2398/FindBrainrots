@@ -1,0 +1,38 @@
+{
+    "asset": "7dbad7fa4e0b3dd4585916d64fa30fd5",
+    "fileName": "019e3a90-0e66-746a-a5fe-ac1493e7016c.png",
+    "prompt": "Girl Pastel character portrait, head and shoulders, soft pastel colors outfit, colorful 2D cartoon style, vibrant colors, bold outlines, casual game art, matching the style of the reference image, transparent background.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "8434425e42946db4993076e00d1af58f",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

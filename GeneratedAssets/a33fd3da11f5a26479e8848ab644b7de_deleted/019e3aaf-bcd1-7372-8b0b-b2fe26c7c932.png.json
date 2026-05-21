@@ -1,0 +1,38 @@
+{
+    "asset": "a33fd3da11f5a26479e8848ab644b7de",
+    "fileName": "019e3aaf-bcd1-7372-8b0b-b2fe26c7c932.png",
+    "prompt": "High-quality 2D cartoon style UI icon of the character, full body, clean line art, vibrant flat colors, cell-shaded, minimalist design. Matching the provided reference character exactly. Transparent background. No shadow.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "e62e8176bee29e649a2e2b5be42ab01a",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

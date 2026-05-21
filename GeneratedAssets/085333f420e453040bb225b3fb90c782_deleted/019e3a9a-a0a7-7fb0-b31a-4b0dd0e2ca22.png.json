@@ -1,0 +1,38 @@
+{
+    "asset": "085333f420e453040bb225b3fb90c782",
+    "fileName": "019e3a9a-a0a7-7fb0-b31a-4b0dd0e2ca22.png",
+    "prompt": "High-quality 2D flat vector game UI icon of the Boy_Rick character, full body. 100% matching the character proportions and design of the reference. Character faces the camera. Face is at the vertical center of the frame. Minimalist 2D art style, clean outlines, solid colors. White background. Full height visible.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "4a9de8f13eb2f324985a0e20f8057a68",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

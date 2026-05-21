@@ -1,0 +1,38 @@
+{
+    "asset": "39810e801b44a024eb7030da7db9ae1e",
+    "fileName": "019e3a96-9ad1-70c9-8bae-d68d64eba97c.png",
+    "prompt": "High-quality 2D vector style UI icon of the Boy_Samurai character, full body, matching the provided reference perfectly. Clean flat colors, simple shading, white background. Full character visible from head to toe. Stylized cartoon look.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "9bd9bbb613592634a91650e2ca4cfb53",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

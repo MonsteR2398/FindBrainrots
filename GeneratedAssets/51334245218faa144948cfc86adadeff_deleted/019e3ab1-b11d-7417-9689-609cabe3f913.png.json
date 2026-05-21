@@ -1,0 +1,38 @@
+{
+    "asset": "51334245218faa144948cfc86adadeff",
+    "fileName": "019e3ab1-b11d-7417-9689-609cabe3f913.png",
+    "prompt": "High-quality 2D cartoon UI icon of the Boy_3 character, full body. Character is in a calm, neutral standing pose (calm stance). Clean vector lines, vibrant flat colors, cel-shaded. Full body visible. No background, transparent.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "d597c7f41eacf164a836b831aaa66303",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

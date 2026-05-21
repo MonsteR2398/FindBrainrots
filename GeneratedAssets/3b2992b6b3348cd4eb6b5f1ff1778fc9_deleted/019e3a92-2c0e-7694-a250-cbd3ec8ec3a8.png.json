@@ -1,0 +1,38 @@
+{
+    "asset": "3b2992b6b3348cd4eb6b5f1ff1778fc9",
+    "fileName": "019e3a92-2c0e-7694-a250-cbd3ec8ec3a8.png",
+    "prompt": "Girl Cat full body character standing, cat-themed outfit with ears and tail, colorful 2D cartoon style, vibrant colors, bold outlines, casual game art, matching the style of the reference image, transparent background.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "8434425e42946db4993076e00d1af58f",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

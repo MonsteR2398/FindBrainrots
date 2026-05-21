@@ -1,0 +1,38 @@
+{
+    "asset": "ae0529ace2b95fe419de66dc3a65b4bd",
+    "fileName": "019e3abb-7dc9-7ac4-966e-67883f2c72b9.jpg",
+    "prompt": "Transform this 3D character render into a clean, 2D cartoon icon. Add a simple, expressive cartoon face (eyes and mouth) that matches the character's theme. Keep all existing outfit details, colors, and the full-body pose exactly the same. Do not add any new props or accessories. The output should be a vibrant 2D sprite with a transparent background.",
+    "negativePrompt": "",
+    "model": "flux-2-pro",
+    "modelName": "Flux 2 (Pro)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "ae0529ace2b95fe419de66dc3a65b4bd",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

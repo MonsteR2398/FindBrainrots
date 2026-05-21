@@ -1,0 +1,38 @@
+{
+    "asset": "4813b33f15d311c468549b4311138588",
+    "fileName": "019e3ab2-2d03-73e8-9194-a77f99d712bb.png",
+    "prompt": "High-quality 2D cartoon UI icon of the Boy_Noks character, full body. Character is in a calm, neutral standing pose (calm stance). Clean vector lines, vibrant flat colors, cel-shaded. Full body visible. No background, transparent.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "9cd762917287c294e91147bca060dd9b",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

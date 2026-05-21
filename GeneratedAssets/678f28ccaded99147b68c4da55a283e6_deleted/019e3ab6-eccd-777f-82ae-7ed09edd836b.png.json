@@ -1,0 +1,38 @@
+{
+    "asset": "678f28ccaded99147b68c4da55a283e6",
+    "fileName": "019e3ab6-eccd-777f-82ae-7ed09edd836b.png",
+    "prompt": "High-quality 2D cartoon game UI icon of the Boy_4 character. Full body standing in a calm neutral pose. Style: vibrant flat cartoon, clean thick outlines, cell-shaded. 100% matching the reference design. White background. Character fills the height of the image. Face vertically centered.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "1c15e26e1c3b55f4fa64ae9997eee0c5",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

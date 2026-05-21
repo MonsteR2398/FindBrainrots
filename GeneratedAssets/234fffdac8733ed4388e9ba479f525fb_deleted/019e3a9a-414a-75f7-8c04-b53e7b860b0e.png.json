@@ -1,0 +1,38 @@
+{
+    "asset": "234fffdac8733ed4388e9ba479f525fb",
+    "fileName": "019e3a9a-414a-75f7-8c04-b53e7b860b0e.png",
+    "prompt": "High-quality 2D flat vector game UI icon of the Boy_4 character, full body. 100% matching the character proportions and design of the reference. Character faces the camera. Face is at the vertical center of the frame. Minimalist 2D art style, clean outlines, solid colors. White background. Full height visible.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "18e4d64a3c9748640bf5da207c4943b4",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

@@ -1,0 +1,38 @@
+{
+    "asset": "d19b8d38e62d57a428221d9da8d5fa61",
+    "fileName": "019e3a96-9599-78cb-bac1-0a4572cac204.png",
+    "prompt": "High-quality 2D vector style UI icon of the Girl_3 character, full body, matching the provided reference perfectly. Clean flat colors, simple shading, white background. Full character visible from head to toe. Stylized cartoon look.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "3567abc655edca742b03a5f77f7773a6",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

@@ -1,0 +1,38 @@
+{
+    "asset": "06d543e6ed113444f80775af7ceef3a6",
+    "fileName": "019e3a9a-a7d2-7311-aa37-88ea4dd175d3.png",
+    "prompt": "High-quality 2D flat vector game UI icon of the Boy_Ren character, full body. 100% matching the character proportions and design of the reference. Character faces the camera. Face is at the vertical center of the frame. Minimalist 2D art style, clean outlines, solid colors. White background. Full height visible.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "72de8686dd965f9418e50e2735db5412",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

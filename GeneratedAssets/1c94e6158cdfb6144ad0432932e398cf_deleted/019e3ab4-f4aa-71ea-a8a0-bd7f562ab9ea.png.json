@@ -1,0 +1,38 @@
+{
+    "asset": "1c94e6158cdfb6144ad0432932e398cf",
+    "fileName": "019e3ab4-f4aa-71ea-a8a0-bd7f562ab9ea.png",
+    "prompt": "High-quality 2D cartoon UI icon, full body character. Match the reference character design 100%. Calm standing pose, front-facing. Detailed face with clear features. Style: vibrant flat cartoon, clean thick outlines, cel-shaded. Plain white background. Full character height fits in frame, face centered vertically.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "72de8686dd965f9418e50e2735db5412",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

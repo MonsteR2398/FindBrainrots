@@ -1,0 +1,38 @@
+{
+    "asset": "8bde1077416563d459c49f92958ee5a8",
+    "fileName": "019e3ab7-5ad4-70d6-8bfc-10411b0fb67c.png",
+    "prompt": "High-quality 2D cartoon game UI icon of the Boy_Blue_Scar character. Full body standing in a calm neutral pose. Style: vibrant flat cartoon, clean thick outlines, cell-shaded. 100% matching the reference design. White background. Character fills the height of the image. Face vertically centered.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "6ee470178e7050440948b7a74a2c331b",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

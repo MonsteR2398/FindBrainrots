@@ -1,0 +1,38 @@
+{
+    "asset": "a32839dc4156ced449b1d6c3f6a9a737",
+    "fileName": "019e3aba-3687-7f3c-aba1-d96adbcd3162.png",
+    "prompt": "Add a simple, cute cartoon face (eyes and mouth) to this character. Keep the overall body shape and all outfit details exactly as they are, but render it in a clean, vibrant 2D cartoon style. Full body view, transparent background.",
+    "negativePrompt": "",
+    "model": "gpt-image-1-5",
+    "modelName": "GPT Image 1.5",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "a32839dc4156ced449b1d6c3f6a9a737",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

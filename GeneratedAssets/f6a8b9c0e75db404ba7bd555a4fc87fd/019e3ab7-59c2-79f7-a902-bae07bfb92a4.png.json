@@ -1,0 +1,38 @@
+{
+    "asset": "f6a8b9c0e75db404ba7bd555a4fc87fd",
+    "fileName": "019e3ab7-59c2-79f7-a902-bae07bfb92a4.png",
+    "prompt": "High-quality 2D cartoon headshot icon (avatar) of the Boy_Blue_Scar character. Front-facing centered face. Style: vibrant flat cartoon, clean thick outlines, cell-shaded. 100% matching the reference design. White background. Face fills the frame.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "4adc35be67847d447a9bf569c2d2cb63",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

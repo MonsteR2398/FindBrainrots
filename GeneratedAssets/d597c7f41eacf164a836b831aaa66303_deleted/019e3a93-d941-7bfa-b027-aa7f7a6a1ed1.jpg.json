@@ -1,0 +1,28 @@
+{
+    "asset": "d597c7f41eacf164a836b831aaa66303",
+    "fileName": "019e3a93-d941-7bfa-b027-aa7f7a6a1ed1.jpg",
+    "prompt": "Full body Boy character (Boy_3), stylized cartoon avatar, 3D render style, vibrant colors, game icon, standing pose, plain white background, high resolution, head to toe in frame",
+    "negativePrompt": "",
+    "model": "flux-2-pro",
+    "modelName": "Flux 2 (Pro)",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

@@ -1,0 +1,38 @@
+{
+    "asset": "a779d675b1b8bf048b2fe46d87271a47",
+    "fileName": "019e3a95-8b53-76ca-93c1-6e0511e17228.png",
+    "prompt": "High-quality 2D vector style UI icon of the Boy_4 character, full body, matching the provided reference perfectly. Clean flat colors, simple shading, white background. Full character visible from head to toe. Stylized cartoon look.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "18e4d64a3c9748640bf5da207c4943b4",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

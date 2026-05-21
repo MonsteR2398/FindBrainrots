@@ -1,0 +1,38 @@
+{
+    "asset": "ab84d4c22e7e92e489804ed45c67e1b5",
+    "fileName": "019e3ab6-f545-703c-858f-a5189e579610.png",
+    "prompt": "High-quality 2D cartoon headshot icon (avatar) of the Boy_4 character. Front-facing centered face. Style: vibrant flat cartoon, clean thick outlines, cell-shaded. 100% matching the reference design. White background. Face fills the frame.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "f1ebd9caca57d76438f0672a27f044d0",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

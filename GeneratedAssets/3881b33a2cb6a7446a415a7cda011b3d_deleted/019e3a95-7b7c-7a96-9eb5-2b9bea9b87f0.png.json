@@ -1,0 +1,38 @@
+{
+    "asset": "3881b33a2cb6a7446a415a7cda011b3d",
+    "fileName": "019e3a95-7b7c-7a96-9eb5-2b9bea9b87f0.png",
+    "prompt": "High-quality 2D vector style UI icon of the Boy_Alladin character, full body, matching the provided reference perfectly. Clean flat colors, simple shading, white background. Full character visible from head to toe. Stylized cartoon look.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "cc062b7aea5c8bd469deeaee2a29a9b4",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

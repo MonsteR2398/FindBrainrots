@@ -1,0 +1,38 @@
+{
+    "asset": "dc60a8f67bae16e44860a6ac2e0c4be6",
+    "fileName": "019e3a97-ff62-7133-a3f0-b4db326b5a32.png",
+    "prompt": "High-quality 2D flat vector UI icon of the character, full body. Character faces the camera. The face is exactly in the vertical center of the image. Clean lines, solid colors, stylized cartoon 2D look. White background. Matching the reference design 100%. Full height character visible.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "cc062b7aea5c8bd469deeaee2a29a9b4",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

@@ -1,0 +1,38 @@
+{
+    "asset": "91bae29efc21d0345b6af1bc0464be51",
+    "fileName": "019e3a96-97a9-7a1c-a16c-0e1ec476f84d.png",
+    "prompt": "High-quality 2D vector style UI icon of the Boy_Shiro character, full body, matching the provided reference perfectly. Clean flat colors, simple shading, white background. Full character visible from head to toe. Stylized cartoon look.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "c4cab041892db0d4ea830867d03e43f3",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

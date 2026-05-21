@@ -1,0 +1,280 @@
+fileFormatVersion: 2
+guid: e1ef42003da9ea9498b245bdbcf4591b
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Alladin
+    second: {fileID: 2100000, guid: b47d68002bb384c4cb1c19bf12f24508, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body.002
+    second: {fileID: 2100000, guid: 11c9bc140f16915409a6a7f772963379, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body.003
+    second: {fileID: 2100000, guid: f14610a8fe355d349845ff9038bc970a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boy_Blue_Scar
+    second: {fileID: 2100000, guid: a6082f68067ed944e8d728d139636ed7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boy_Blue_Scar_Hair
+    second: {fileID: 2100000, guid: c08180ede2132044090023385401c97b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boy_Noks
+    second: {fileID: 2100000, guid: a13a23c1a7ce7a540a984c913bdf13cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boy_Noks_Hair
+    second: {fileID: 2100000, guid: 1b79e735888d5c44d8abe528a2ce103a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boy_Rick
+    second: {fileID: 2100000, guid: 9a7c483ff60e8c940b35094104f41e66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boy_Shiro
+    second: {fileID: 2100000, guid: 2ad5c6822fbaadb449a881cd850ff578, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boy_Shiro_hair
+    second: {fileID: 2100000, guid: 84a0ec129a577fc479a35b180a251002, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boy_rick_hair
+    second: {fileID: 2100000, guid: 45b9fee3a4525724c8263a56d32b67c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boy_shorts_hair
+    second: {fileID: 2100000, guid: f5760066e42d60140872ff5ffbd8af8f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Face_002
+    second: {fileID: 2100000, guid: 3a9df52070c479a48bfd6d5ccc665e9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Face_002.001
+    second: {fileID: 2100000, guid: b3c5733e4d8990441ab342e5f74fb21a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Face_002.002
+    second: {fileID: 2100000, guid: 6e4ef6c49af219a438d165a111f57b0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Face_002.004
+    second: {fileID: 2100000, guid: 7fd5e6d90023e684084260943b68b818, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Face_girl
+    second: {fileID: 2100000, guid: a5d75a6aacf2fc748ab374ea80b3ca87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Girl_Cyber_Friend
+    second: {fileID: 2100000, guid: a63838f06e6ace84183bcf630eed4e20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Girl_Gothic_Angel
+    second: {fileID: 2100000, guid: 66af9bccdb5468e429fd1b9735d66c1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Girl_Moon_Dreamer
+    second: {fileID: 2100000, guid: 39026306507d5884f9d80c33214a339c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Girl_Sakura
+    second: {fileID: 2100000, guid: 82abb98cd125948409b1d4e952a3162d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Girl_pastel
+    second: {fileID: 2100000, guid: 844e4b2c659c1e74da62366d457fef5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_Cyber_Friend
+    second: {fileID: 2100000, guid: 8ce6165f1c5624749bd70575965e500f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_Moon_Dreamer
+    second: {fileID: 2100000, guid: 122f1b0b50a69fc4d94539adf722de93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_Sakura
+    second: {fileID: 2100000, guid: d8c11a46701c15d4298500bd47911bc1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_blue.001
+    second: {fileID: 2100000, guid: 8b32673872549c045aa86b809c9280b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_girl_1
+    second: {fileID: 2100000, guid: fd811ddbcbb2b5c4885ddd125d9ca281, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_gothic_angel
+    second: {fileID: 2100000, guid: 2334f53efb0cb0040a7e2d2f3d14de72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Samurai
+    second: {fileID: 2100000, guid: 9327ad29c7c3fc34091941228abe0f96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Squid_Gamer_girl
+    second: {fileID: 2100000, guid: 451cfe96257b7164bae62006bd336ef8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Squid_Warrior_man
+    second: {fileID: 2100000, guid: 8b04bd6473af6744f8b78cae3fb30970, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Squid_gamer_man
+    second: {fileID: 2100000, guid: 5ab3bcec8f24c0948baa0bad3be61c0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UV_Atlas
+    second: {fileID: 2100000, guid: c9aaa5108b91be44d8f7b593bceebcef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: penguin
+    second: {fileID: 2100000, guid: 0ede4e72e819d224d8b1334371b0b5b9, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

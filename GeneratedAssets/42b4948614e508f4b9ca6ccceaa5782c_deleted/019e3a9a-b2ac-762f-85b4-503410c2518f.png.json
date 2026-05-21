@@ -1,0 +1,38 @@
+{
+    "asset": "42b4948614e508f4b9ca6ccceaa5782c",
+    "fileName": "019e3a9a-b2ac-762f-85b4-503410c2518f.png",
+    "prompt": "High-quality 2D flat vector game UI icon of the Boy_Robot character, full body. 100% matching the character proportions and design of the reference. Character faces the camera. Face is at the vertical center of the frame. Minimalist 2D art style, clean outlines, solid colors. White background. Full height visible.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "1c09a5a028691624baca24ebbc67d03d",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}
