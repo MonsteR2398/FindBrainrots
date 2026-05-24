@@ -4,6 +4,8 @@ using TMPro;
 using ModularSkinShop.Data;
 using ModularSkinShop.Core;
 using Treasures.CurrencySystem;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 
 namespace ModularSkinShop.UI
 {
@@ -12,12 +14,11 @@ namespace ModularSkinShop.UI
         [Header("References")]
         public Image IconImage;
         public TextMeshProUGUI NameText;
-        public TextMeshProUGUI PriceText;
+        public TextMeshProUGUI InteractionText;
         public Button SeletButton;
-        public Button BuyButton;
+        public Button InteractionButton;
 
         [Header("Visual")]
-        public Image buyImage;
         public Sprite buySprite;
         public Sprite noEnoughCurrencySprite;
         public Sprite unlockedSprite;
@@ -26,6 +27,8 @@ namespace ModularSkinShop.UI
         private SkinSO _skin;
         private SkinShopManager _manager;
 
+        private List<Button> _buyButtons = new List<Button>();
+
         public void Setup(SkinSO skin, SkinShopManager manager)
         {
             _skin = skin;
@@ -33,58 +36,77 @@ namespace ModularSkinShop.UI
 
             IconImage.sprite = skin.Icon;
             NameText.text = skin.DisplayName;
+            _buyButtons.Clear();
+            InteractionButton.gameObject.SetActive(false);
 
+            if (_skin.CurrencyPrice != null)
+            {
+                for (int i = 0; i < _skin.CurrencyPrice.Length; i++)
+                {
+                    int capturedIndex = i;
+                    Button buyButton = Instantiate(InteractionButton, InteractionButton.transform.parent);
+                    buyButton.gameObject.SetActive(true);
+                    buyButton.onClick.RemoveAllListeners();
+                    buyButton.onClick.AddListener(() => OnBuyClickedWithPrice(capturedIndex));
+                    _buyButtons.Add(buyButton);
+                }
+            }
             UpdateUI();
-
             SeletButton.onClick.RemoveAllListeners();
             SeletButton.onClick.AddListener(OnSelectClicked);
-
-            BuyButton.onClick.RemoveAllListeners();
-            BuyButton.onClick.AddListener(OnBuyClicked);
         }
 
         public void UpdateUI()
         {
+
             if (_manager.IsSkinActive(_skin))
             {
-                PriceText.text = "Active";
-                BuyButton.interactable = false;
-                if(buyImage != null)
+                foreach (var item in _buyButtons)
+                    item.gameObject.SetActive(false);
+
+                InteractionText.text = "Active";
+                InteractionButton.gameObject.SetActive(true);
+                InteractionButton.interactable = false;
+                if(InteractionButton.TryGetComponent(out Image image))
                     if(unlockedSprite != null)
-                        buyImage.sprite = unlockedSprite;
+                        image.sprite = unlockedSprite;
             }
             else if (_manager.IsSkinUnlocked(_skin))
             {
-                PriceText.text = "Select";
-                BuyButton.interactable = true;
-                if(buyImage != null)
+                foreach (var item in _buyButtons)
+                    item.gameObject.SetActive(false);
+                
+
+                InteractionText.text = "Select";
+                InteractionButton.gameObject.SetActive(true);
+                InteractionButton.interactable = true;
+                if(InteractionButton.TryGetComponent(out Image image))
                     if(selectedSprite != null)
-                        buyImage.sprite = selectedSprite;
+                        image.sprite = selectedSprite;
             }
             else
             {
-                if(buyImage != null)
+                for (int i = 0; i < _buyButtons.Count; i++)
                 {
-                    if(CurrencyService.Instance.GetBalance(CurrencyType.Gold) >= _skin.Price)
-                    {
-                        if(buySprite != null)
-                            buyImage.sprite = buySprite;
-                    }
-                    else
-                    {
-                       if(noEnoughCurrencySprite != null)
-                            buyImage.sprite = noEnoughCurrencySprite; 
-                    }
-                        
-                }
-
-                PriceText.text = $"Buy: {_skin.Price}";
-                BuyButton.interactable = true;
+                        if(CurrencyService.Instance.GetBalance(_skin.CurrencyPrice[i].Type) >= _skin.CurrencyPrice[i].Value)
+                        {
+                            if(buySprite != null)
+                                _buyButtons[i].GetComponent<Image>().sprite = buySprite;
+                        }
+                        else
+                        {
+                           if(noEnoughCurrencySprite != null)
+                                _buyButtons[i].GetComponent<Image>().sprite = noEnoughCurrencySprite; 
+                        }
+                    _buyButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = $"{_skin.CurrencyPrice[i].Value}";
+                    _buyButtons[i].transform.Find("Icon").GetComponent<Image>().sprite = CurrencyService.Instance.Database.GetDefinition(_skin.CurrencyPrice[i].Type).Icon;
+                } 
+                InteractionButton.gameObject.SetActive(false);
             }
         }
 
         private void OnSelectClicked() => _manager.TryDress(_skin);
-        private void OnBuyClicked() => _manager.TryDressOrBuy(_skin);
+        private void OnBuyClickedWithPrice(int priceIndex) => _manager.TryDressOrBuy(_skin, _skin.CurrencyPrice[priceIndex]);
             
     }
 }

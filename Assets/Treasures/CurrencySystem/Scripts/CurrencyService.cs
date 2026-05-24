@@ -22,7 +22,10 @@ namespace Treasures.CurrencySystem
     {
         public static CurrencyService Instance { get; private set; }
 
-        public event Action<CurrencyType, long> OnBalanceChanged; // type, newAmount
+        [SerializeField] private CurrencyDatabaseSO database;
+        public CurrencyDatabaseSO Database => database;
+
+        public event Action<CurrencyType, long, bool> OnBalanceChanged; // type, newAmount, isSilent
         public event Action<CurrencyType, long> OnCurrencyReceived; // type, addedAmount (for VFX)
 
         private Dictionary<CurrencyType, long> _balances = new Dictionary<CurrencyType, long>();
@@ -37,7 +40,6 @@ namespace Treasures.CurrencySystem
             }
             Instance = this;
 
-            // сделать общую систему менеджеров разделенную на local и global (чтобы работал DontDestroyOnLoad и небыло ошибок)
             DontDestroyOnLoad(gameObject);
 
             _savePath = Path.Combine(Application.persistentDataPath, "wallet.json");
@@ -60,13 +62,11 @@ namespace Treasures.CurrencySystem
             
             Save();
 
-            if (!silent)
+            OnBalanceChanged?.Invoke(type, _balances[type], silent);
+
+            if (!silent && amount > 0)
             {
-                OnBalanceChanged?.Invoke(type, _balances[type]);
-                if (amount > 0)
-                {
-                    OnCurrencyReceived?.Invoke(type, amount);
-                }
+                OnCurrencyReceived?.Invoke(type, amount);
             }
         }
 
@@ -76,7 +76,7 @@ namespace Treasures.CurrencySystem
 
             _balances[type] -= amount;
             Save();
-            OnBalanceChanged?.Invoke(type, _balances[type]);
+            OnBalanceChanged?.Invoke(type, _balances[type], true);
             return true;
         }
 

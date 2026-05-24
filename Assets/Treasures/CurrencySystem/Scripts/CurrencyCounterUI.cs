@@ -14,7 +14,7 @@ namespace Treasures.CurrencySystem
 
     public class CurrencyCounterUI : MonoBehaviour
     {
-        [SerializeField] private CurrencyDefinition definition;
+        [SerializeField] private CurrencyType type;
         [SerializeField] private TextMeshProUGUI countText;
         [SerializeField] private Image iconImage;
         [SerializeField] private float countSpeed = 500f;
@@ -22,26 +22,48 @@ namespace Treasures.CurrencySystem
         [SerializeField] private float maxFillDuration = 1.5f;
         [SerializeField] private CurrencyFormatMode formatMode = CurrencyFormatMode.Separated;
 
-        public CurrencyType CurrencyType => definition != null ? definition.Type : CurrencyType.Gold;
+        public CurrencyType CurrencyType => type;
 
         private long _displayedValue;
         private long _targetVisualValue;
 
+        private void OnBalanceChangedHandler(CurrencyType changedType, long newAmount, bool isSilent)
+        {
+            if (changedType == type)
+            {
+                // If isSilent is true, we update instantly (no animation expected).
+                // If the balance decreased (spending), we also update instantly.
+                // Otherwise (normal addition), we wait for AddVisualAmount from the VFX.
+                if (isSilent || newAmount < _targetVisualValue)
+                {
+                    SetInstant(newAmount);
+                }
+            }
+        }
+
         private void Start()
         {
-            if (definition != null)
+            CurrencyService.Instance.OnBalanceChanged += OnBalanceChangedHandler;
+
+            var database = CurrencyService.Instance.Database;
+            if (database != null)
             {
-                if (iconImage != null) iconImage.sprite = definition.Icon;
-                
-                _displayedValue = CurrencyService.Instance.GetBalance(definition.Type);
-                _targetVisualValue = _displayedValue;
-                UpdateText(_displayedValue);
+                var definition = database.GetDefinition(type);
+                if (definition != null)
+                {
+                    if (iconImage != null) iconImage.sprite = definition.Icon;
+                }
             }
+
+            _displayedValue = CurrencyService.Instance.GetBalance(type);
+            _targetVisualValue = _displayedValue;
+            UpdateText(_displayedValue);
         }
 
         public void AddVisualAmount(long amount)
         {
-            _targetVisualValue += amount;
+            long realBalance = CurrencyService.Instance.GetBalance(type);
+            _targetVisualValue = System.Math.Min(_targetVisualValue + amount, realBalance);
 
             if (!useSmoothFilling)
             {

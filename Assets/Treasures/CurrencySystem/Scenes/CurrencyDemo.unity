@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b7f655579837347933320cf23c0986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.CurrencySystem.CurrencyCounterUI
-  definition: {fileID: 11400000, guid: 2cf60d9003827384ea9f8cfdd20f0ce1, type: 2}
+  type: 0
   countText: {fileID: 2049937291}
   iconImage: {fileID: 618721113}
   countSpeed: 500
@@ -847,10 +847,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.CurrencySystem.CurrencyFlyVFX
   pool: {fileID: 1349093762}
   targets:
-  - definition: {fileID: 11400000, guid: 2cf60d9003827384ea9f8cfdd20f0ce1, type: 2}
-    targetTransform: {fileID: 58198238}
-  - definition: {fileID: 11400000, guid: 4c325b6056239b244b47702eada52e82, type: 2}
+  - type: 1
     targetTransform: {fileID: 1344321062}
+  - type: 0
+    targetTransform: {fileID: 58198238}
   maxItemsPerReward: 10
 --- !u!4 &816680668
 Transform:
@@ -919,7 +919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b7f655579837347933320cf23c0986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.CurrencySystem.CurrencyCounterUI
-  definition: {fileID: 11400000, guid: 4c325b6056239b244b47702eada52e82, type: 2}
+  type: 1
   countText: {fileID: 1822840551}
   iconImage: {fileID: 1876499676}
   countSpeed: 500
@@ -1641,8 +1641,6 @@ MonoBehaviour:
   counters:
   - {fileID: 58198239}
   - {fileID: 1344321063}
-  goldDef: {fileID: 11400000, guid: 2cf60d9003827384ea9f8cfdd20f0ce1, type: 2}
-  diamondDef: {fileID: 11400000, guid: 4c325b6056239b244b47702eada52e82, type: 2}
   giveGoldButton: {fileID: 1896466919}
   giveDiamondButton: {fileID: 1476864669}
 --- !u!114 &1934646927
@@ -1657,6 +1655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f84d560b84d94854ea926a3a6848c2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.CurrencySystem.CurrencyService
+  database: {fileID: 11400000, guid: c94ecf18f72c8bf4b87e825b7cd8180c, type: 2}
 --- !u!4 &1934646928
 Transform:
   m_ObjectHideFlags: 0

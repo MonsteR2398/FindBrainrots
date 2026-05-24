@@ -7,7 +7,7 @@ namespace Treasures.CurrencySystem
     [Serializable]
     public class CurrencyTargetMapping
     {
-        public CurrencyDefinition definition;
+        public CurrencyType type;
         public RectTransform targetTransform;
     }
 
@@ -25,8 +25,7 @@ namespace Treasures.CurrencySystem
         {
             foreach (var mapping in targets)
             {
-                if (mapping.definition != null)
-                    _targetLookup[mapping.definition.Type] = mapping.targetTransform;
+                _targetLookup[mapping.type] = mapping.targetTransform;
             }
         }
 
@@ -40,7 +39,14 @@ namespace Treasures.CurrencySystem
             }
 
             RectTransform target = _targetLookup[currencyType];
-            CurrencyDefinition def = targets.Find(x => x.definition.Type == currencyType).definition;
+            
+            Sprite icon = null;
+            var database = CurrencyService.Instance.Database;
+            if (database != null)
+            {
+                var def = database.GetDefinition(currencyType);
+                if (def != null) icon = def.Icon;
+            }
 
             int itemsToSpawn = Mathf.Min(maxItemsPerReward, (int)Mathf.Max(1, totalAmount));
             long amountPerItem = totalAmount / itemsToSpawn;
@@ -51,7 +57,7 @@ namespace Treasures.CurrencySystem
                 long value = amountPerItem + (i == 0 ? remainder : 0);
                 GameObject obj = pool.Get();
                 CurrencyVFXItem item = obj.GetComponent<CurrencyVFXItem>();
-                item.Play(def.Icon, spawnPosition, target, value, (v) => {
+                item.Play(icon, spawnPosition, target, value, (v) => {
                     OnItemReachedTarget?.Invoke(currencyType, v);
                     pool.Release(obj);
                 });

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8829b820e35be7c4f83bef8084e5e8da, type: 3}
+  m_Name: CurrencyDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::Treasures.CurrencySystem.CurrencyDatabaseSO
+  definitions:
+  - {fileID: 11400000, guid: 4c325b6056239b244b47702eada52e82, type: 2}
+  - {fileID: 11400000, guid: 2cf60d9003827384ea9f8cfdd20f0ce1, type: 2}

@@ -1,3 +1,4 @@
+using Treasures.CurrencySystem;
 using UnityEngine;
 
 namespace ModularSkinShop.Data
@@ -9,6 +10,6 @@ namespace ModularSkinShop.Data
         public string DisplayName;
         public GameObject Prefab;
         public Sprite Icon;
-        public int Price;
+        public CurrencyValue[] CurrencyPrice;
     }
 }

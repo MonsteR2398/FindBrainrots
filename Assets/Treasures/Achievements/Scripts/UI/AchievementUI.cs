@@ -13,9 +13,6 @@ namespace ModularTreasures.Achievements
         [SerializeField] private Transform categoryContainer;
         [SerializeField] private Transform achievementContainer;
 
-        [Header("Data")]
-        [SerializeField] private List<AchievementCategorySO> categories;
-
         private AchievementCategorySO _currentCategory;
 
         private void OnEnable()
@@ -23,20 +20,19 @@ namespace ModularTreasures.Achievements
             if (AchievementManager.Instance != null)
             {
                 AchievementManager.Instance.OnProgressUpdated += HandleProgressUpdated;
-                
-                if (_currentCategory == null && categories.Count > 0)
-                    _currentCategory = categories[0];
-    
-                if (_currentCategory != null)
-                    DisplayCategory(_currentCategory);
+                RefreshUI();
             }
-
         }
 
         private void OnDisable()
         {
             if (AchievementManager.Instance != null)
                 AchievementManager.Instance.OnProgressUpdated -= HandleProgressUpdated;
+        }
+
+        public void OpenUI(bool active)
+        {
+            gameObject.SetActive(active);
         }
 
         private void HandleProgressUpdated(string id, float progress)
@@ -47,14 +43,12 @@ namespace ModularTreasures.Achievements
             }
         }
 
-        private void Start()
-        {
-            InitializeUI();
-        }
-
-        private void InitializeUI()
+        private void RefreshUI()
         {
             foreach (Transform child in categoryContainer) Destroy(child.gameObject);
+
+            var categories = AchievementManager.Instance != null ? AchievementManager.Instance.Categories : null;
+            if (categories == null || categories.Count == 0) return;
 
             foreach (var category in categories)
             {
@@ -67,15 +61,12 @@ namespace ModularTreasures.Achievements
                 };
             }
 
-            if (_currentCategory == null && categories.Count > 0)
+            if (_currentCategory == null)
             {
                 _currentCategory = categories[0];
             }
 
-            if (_currentCategory != null)
-            {
-                DisplayCategory(_currentCategory);
-            }
+            DisplayCategory(_currentCategory);
         }
 
         private void DisplayCategory(AchievementCategorySO category)
@@ -89,5 +80,5 @@ namespace ModularTreasures.Achievements
                 item.Setup(achievement, progress);
             }
         }
-    }
+}
 }

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eeb013ae996f9c47b89ed84533822a5, type: 3}
+  m_Name: Diamonds
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Achievements.AchievementCategorySO
+  categoryName: Diamonds
+  icon: {fileID: 0}
+  achievements:
+  - {fileID: 11400000, guid: 1b3db63c05ea3534195716176f74dbe1, type: 2}
+  - {fileID: 11400000, guid: 3a5d3f81bb97c83498d23ba9c8fe8e07, type: 2}
+  - {fileID: 11400000, guid: 4f9d31265e74923448c097ad1d19b390, type: 2}
+  - {fileID: 11400000, guid: 6726b2d9bd59c8e40acf3ebf936e83ad, type: 2}
+  - {fileID: 11400000, guid: a99945e3523cd6b438d7625ba98b0e11, type: 2}
+  - {fileID: 11400000, guid: a4fdd8a931add2f41bf7a37a2c03807b, type: 2}
+  - {fileID: 11400000, guid: 1ffb5507881de8341afc00b3f16df09d, type: 2}
+  - {fileID: 11400000, guid: c451d4c8d1342184f86221a7f54cce4c, type: 2}
+  - {fileID: 11400000, guid: 696b6434b3e655342b4dd330f829a1c2, type: 2}
+  - {fileID: 11400000, guid: 8d99a8eb8d9d237419d7b33ce45c41a8, type: 2}

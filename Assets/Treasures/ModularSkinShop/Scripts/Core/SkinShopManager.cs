@@ -3,6 +3,7 @@ using UnityEngine;
 using ModularSkinShop.Data;
 using ModularSkinShop.Interfaces;
 using ModularSkinShop.Example;
+using Treasures.CurrencySystem;
 
 namespace ModularSkinShop.Core
 {
@@ -11,7 +12,6 @@ namespace ModularSkinShop.Core
         [Header("Data")]
         public SkinLibrarySO Library;
 
-        private IShopEconomy _economy;
         private IShopPersistence _persistence;
 
         public event Action<SkinSO> OnSkinDressed;
@@ -29,12 +29,12 @@ namespace ModularSkinShop.Core
         public bool IsSkinUnlocked(SkinSO skin) => _persistence.IsUnlocked(skin.ID);
         public bool IsSkinActive(SkinSO skin) => _persistence.GetActiveId() == skin.ID;
 
-        public void TryDressOrBuy(SkinSO skin)
+        public void TryDressOrBuy(SkinSO skin, CurrencyValue currencyValue)
         {
             if (IsSkinUnlocked(skin))
                 DressSkin(skin);
             else
-                TryBuySkin(skin);
+                TryBuySkin(skin, currencyValue);
 
             TrySelect(skin);
         }
@@ -63,11 +63,10 @@ namespace ModularSkinShop.Core
             OnSkinDressed?.Invoke(skin);
         }
 
-        private void TryBuySkin(SkinSO skin)
+        private void TryBuySkin(SkinSO skin, CurrencyValue currency)
         {
-            if (_economy.CanAfford(skin.Price))
+            if (CurrencyService.Instance.TrySpend(currency.Type, currency.Value))
             {
-                _economy.Spend(skin.Price);
                 _persistence.Unlock(skin.ID);
                 
                 OnSkinPurchased?.Invoke(skin);
