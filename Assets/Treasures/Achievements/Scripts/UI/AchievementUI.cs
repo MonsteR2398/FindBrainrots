@@ -15,24 +15,24 @@ namespace ModularTreasures.Achievements
 
         private AchievementCategorySO _currentCategory;
 
-        private void OnEnable()
-        {
-            if (AchievementManager.Instance != null)
-            {
-                AchievementManager.Instance.OnProgressUpdated += HandleProgressUpdated;
-                RefreshUI();
-            }
-        }
-
-        private void OnDisable()
-        {
-            if (AchievementManager.Instance != null)
-                AchievementManager.Instance.OnProgressUpdated -= HandleProgressUpdated;
-        }
 
         public void OpenUI(bool active)
         {
-            gameObject.SetActive(active);
+            gameObject.transform.GetChild(0).gameObject.SetActive(active);
+            if(AchievementManager.Instance != null)
+            {
+                if(active)
+                {
+                    AchievementManager.Instance.OnProgressUpdated += HandleProgressUpdated;
+                    RefreshUI();
+                }
+                else
+                {
+                    if (AchievementManager.Instance != null)
+                    AchievementManager.Instance.OnProgressUpdated -= HandleProgressUpdated;
+                }
+            }
+
         }
 
         private void HandleProgressUpdated(string id, float progress)
