@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3328345269760018345}
   - component: {fileID: 1487323244594812698}
   - component: {fileID: 5708859246181725557}
-  - component: {fileID: 6749146893414151927}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -27,12 +26,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4990990471301781586}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8983776330906371953}
+  m_Father: {fileID: 7056743742517007213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1487323244594812698
 MeshFilter:
@@ -91,27 +90,38 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6749146893414151927
-BoxCollider:
+--- !u!1 &5115932530351787984
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4990990471301781586}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7056743742517007213}
+  m_Layer: 0
+  m_Name: ModelContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7056743742517007213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5115932530351787984}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3328345269760018345}
+  m_Father: {fileID: 8983776330906371953}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7748597124644288836
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,6 +131,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8983776330906371953}
+  - component: {fileID: 8329436164471858518}
+  - component: {fileID: 4926574955098697068}
+  - component: {fileID: 6486563418555170485}
   m_Layer: 0
   m_Name: Brainrot_Example_Prefab
   m_TagString: Untagged
@@ -141,6 +154,74 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3328345269760018345}
+  - {fileID: 7056743742517007213}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8329436164471858518
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7748597124644288836}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4926574955098697068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7748597124644288836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ddcabfaac92a9c43865585e378dd62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Treasures.Pickups.ModularPickup
+  uniqueId: 84feae80-b34f-48c4-bc4a-6aa8416eb47c
+  effects: []
+  vfxPrefab: {fileID: 0}
+  OnPickedUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6486563418555170485}
+        m_TargetAssemblyTypeName: Treasures.Pickups.BrainrotMapInstance, Assembly-CSharp
+        m_MethodName: ProcessPickup
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6486563418555170485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7748597124644288836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2ce1f193bfc4b4885bbf8b5a865f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Treasures.Pickups.BrainrotMapInstance
+  itemData: {fileID: 0}
+  rarityFilter: {fileID: 0}
+  achievementId: brainrots_found
+  modelContainer: {fileID: 7056743742517007213}
+  placeholderMaterial: {fileID: 2100000, guid: a8a844e0918660e4dbeec99a4db613ea, type: 2}
