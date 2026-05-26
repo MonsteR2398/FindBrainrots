@@ -834,12 +834,24 @@ PrefabInstance:
       value: Brainrot_Example_Prefab
       objectReference: {fileID: 0}
     - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.3934987
       objectReference: {fileID: 0}
     - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4711,7 +4723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1096696568
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6893,7 +6905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088614510841834754, guid: abce4048a3878744dbc5befeed162558, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7802508793243826121, guid: abce4048a3878744dbc5befeed162558, type: 3}
@@ -7845,12 +7857,24 @@ PrefabInstance:
       value: Brainrot_Example_Prefab (2)
       objectReference: {fileID: 0}
     - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.6065013
       objectReference: {fileID: 0}
     - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9069,12 +9093,24 @@ PrefabInstance:
       value: Brainrot_Example_Prefab (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.39349866
       objectReference: {fileID: 0}
     - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
       propertyPath: m_LocalPosition.z

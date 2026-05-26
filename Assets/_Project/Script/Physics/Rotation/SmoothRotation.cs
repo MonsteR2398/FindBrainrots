@@ -4,22 +4,42 @@ using UnityEngine;
 
 public class SmoothRotation : MonoBehaviour
 {
-    public Vector3 rotationAxis = new Vector3(0, 1, 0); // Ось вращения (например, Y)
-    public float rotationSpeed = 50f; // Скорость вращения
+    public Vector3 rotationAxis = new Vector3(0, 1, 0);
+    public float rotationSpeed = 50f;
+
+    [Header("Vertical PingPong")]
+    public bool enableVerticalFloat = false;
+    public float verticalAmplitude = 1f;
+    public float verticalSpeed = 1f;
+
+    private float startY;
+
+    void Start()
+    {
+        startY = transform.localPosition.y;
+    }
 
     void Update()
     {
-        // Вращаем объект вокруг заданной оси
         RotateContinuously();
+        FloatVertically();
     }
 
     void RotateContinuously()
     {
-        // Вычисляем вращение на основе времени и скорости
         float step = (rotationSpeed * 10) * Time.deltaTime;
         Quaternion rotation = Quaternion.Euler(rotationAxis * step);
 
-        // Применяем вращение к объекту
         transform.rotation *= rotation;
+    }
+
+    void FloatVertically()
+    {
+        if (!enableVerticalFloat) return;
+
+        float offset = Mathf.Sin(Time.time * verticalSpeed) * verticalAmplitude;
+        Vector3 pos = transform.localPosition;
+        pos.y = startY + offset;
+        transform.localPosition = pos;
     }
 }
