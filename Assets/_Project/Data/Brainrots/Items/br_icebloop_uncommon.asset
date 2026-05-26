@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_icebloop_uncommon
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_icebloop_uncommon
-  itemName: IceBloop (Uncommon)
-  icon: {fileID: 0}
+  itemName: IceBloop
+  icon: {fileID: 21300000, guid: 038ecb36041898a41823bef1c165fe9b, type: 3}
   rarity: {fileID: 11400000, guid: 6feb8e048eadef243b7343d1fdf700f0, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: af87b859c674ab9479c06665a5490837, type: 3}
   overrideTexture: {fileID: 2800000, guid: 0254ab85ac1449a44b8c22b1c4975fb2, type: 3}

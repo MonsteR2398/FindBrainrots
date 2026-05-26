@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_plant_pam_pam_legendary
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_plant_pam_pam_legendary
-  itemName: Plant Pam Pam (Legendary)
-  icon: {fileID: 0}
+  itemName: Plant Pam Pam
+  icon: {fileID: 21300000, guid: e91d030f60503b842a560b6f0e7777a3, type: 3}
   rarity: {fileID: 11400000, guid: c8109f7f852dd4c4b8c9440306b82681, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: dd4b642f67fc26343bbda7290af66430, type: 3}
   overrideTexture: {fileID: 2800000, guid: adda5fa37b1b9334086cd801338ff90f, type: 3}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_mush_mike_common
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_mush_mike_common
-  itemName: Mush Mike (Common)
-  icon: {fileID: 0}
+  itemName: Mush Mike
+  icon: {fileID: 21300000, guid: a0ed6504cc2de464e967cb1c7b61899f, type: 3}
   rarity: {fileID: 11400000, guid: 276ea778d7a31f84eadca6f56b5704cb, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 44ee738cc7786e549adecf39b05b136d, type: 3}
   overrideTexture: {fileID: 2800000, guid: 08117cb0bd820f84d88b687fb0921719, type: 3}

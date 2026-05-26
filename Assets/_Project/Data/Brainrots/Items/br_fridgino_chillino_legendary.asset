@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_fridgino_chillino_legendary
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_fridgino_chillino_legendary
-  itemName: Fridgino Chillino (Legendary)
-  icon: {fileID: 0}
+  itemName: Fridgino Chillino
+  icon: {fileID: 21300000, guid: 485f1509382a6234a80a8511374331c6, type: 3}
   rarity: {fileID: 11400000, guid: c8109f7f852dd4c4b8c9440306b82681, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 92a926fb91354da4795beb3e2340307c, type: 3}
   overrideTexture: {fileID: 2800000, guid: 0f8752a161920854d8b96271e41d8379, type: 3}

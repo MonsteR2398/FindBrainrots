@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_carroto_zoomini_rare
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_carroto_zoomini_rare
-  itemName: Carroto Zoomini (Rare)
-  icon: {fileID: 0}
+  itemName: Carroto Zoomini
+  icon: {fileID: 21300000, guid: 5e296cc45e653264fb2394f10977ae89, type: 3}
   rarity: {fileID: 11400000, guid: 0a2e2abb043cb74469b0f5b1bd6e8568, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: ccdd2f9a153ca6044a62883326962764, type: 3}
   overrideTexture: {fileID: 2800000, guid: 5e8c62007523ffe4087ca34526b5a968, type: 3}

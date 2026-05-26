@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_taptap_pad_mythic
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_taptap_pad_mythic
-  itemName: TapTap Pad (Mythic)
-  icon: {fileID: 0}
+  itemName: TapTap Pad
+  icon: {fileID: 21300000, guid: 73abf42d1f9a97340b8888e315201d1b, type: 3}
   rarity: {fileID: 11400000, guid: 30bc1b48cd6ec3046bc187e463ca8a52, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: ecf1f2a2a35ae4d4a9b520b9e7979b0f, type: 3}
   overrideTexture: {fileID: 2800000, guid: 3b63ec062c458794991e9435a25b3968, type: 3}

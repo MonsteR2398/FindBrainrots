@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_mr_common
   itemName: Mr
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: fd730a493000c2548b5588add0b87c80, type: 3}
   rarity: {fileID: 11400000, guid: 276ea778d7a31f84eadca6f56b5704cb, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 123ec33db4a2eb645b9388a4007b9177, type: 3}
   overrideTexture: {fileID: 0}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_candlebop_rare
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_candlebop_rare
-  itemName: CandleBop (Rare)
-  icon: {fileID: 0}
+  itemName: CandleBop
+  icon: {fileID: 21300000, guid: b5b14fd4bb7a76146886fff09c8e80d3, type: 3}
   rarity: {fileID: 11400000, guid: 0a2e2abb043cb74469b0f5b1bd6e8568, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 3f561798ad58ce84590ffaaa5cec6c99, type: 3}
   overrideTexture: {fileID: 2800000, guid: 7a9b9ba5a60b76d41b46c558ceaee248, type: 3}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_vroomo_rocket_rare
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_vroomo_rocket_rare
-  itemName: Vroomo Rocket (Rare)
-  icon: {fileID: 0}
+  itemName: Vroomo Rocket
+  icon: {fileID: 21300000, guid: 813415c2e736a744884d71f20d73f2c1, type: 3}
   rarity: {fileID: 11400000, guid: 0a2e2abb043cb74469b0f5b1bd6e8568, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: efa8f7f32bf16dc4dbea5e5fe6a8dabc, type: 3}
   overrideTexture: {fileID: 2800000, guid: 6bee06f11f24a4a48a1c05e3380e1665, type: 3}

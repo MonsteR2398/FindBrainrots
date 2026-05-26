@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_frogo_cubino_epic
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_frogo_cubino_epic
-  itemName: Frogo Cubino (Epic)
-  icon: {fileID: 0}
+  itemName: Frogo Cubino
+  icon: {fileID: 21300000, guid: afda3b030e6855f419ca9f45f7b14b66, type: 3}
   rarity: {fileID: 11400000, guid: 4e2f0b5c54bda8047a931b8ae72faad0, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 793944016087164498ee2bec1b972e83, type: 3}
   overrideTexture: {fileID: 2800000, guid: f055f0e71c43d4d4cbb848a91097914b, type: 3}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_barrel_paler_uncommon
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_barrel_paler_uncommon
-  itemName: Barrel Paler (Uncommon)
-  icon: {fileID: 0}
+  itemName: Barrel Paler
+  icon: {fileID: 21300000, guid: df12e6e92df8adf419fb8a5f788d7cbb, type: 3}
   rarity: {fileID: 11400000, guid: 6feb8e048eadef243b7343d1fdf700f0, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 750dcb082e1b5b341aef82584731a2b3, type: 3}
   overrideTexture: {fileID: 2800000, guid: 5d9fc4054ff6f994e8b140699052f245, type: 3}

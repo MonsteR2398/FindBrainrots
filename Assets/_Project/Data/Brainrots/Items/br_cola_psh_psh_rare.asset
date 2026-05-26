@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_cola_psh_psh_rare
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_cola_psh_psh_rare
-  itemName: Cola Psh Psh (Rare)
-  icon: {fileID: 0}
+  itemName: Cola Psh Psh
+  icon: {fileID: 21300000, guid: ae7cb5da1f26e9640883a828dffb4d52, type: 3}
   rarity: {fileID: 11400000, guid: 0a2e2abb043cb74469b0f5b1bd6e8568, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 53d7acca4613f0b4897e25d81baf4a04, type: 3}
   overrideTexture: {fileID: 2800000, guid: a2ed332e8b84fb046a6e447e1a6f031a, type: 3}

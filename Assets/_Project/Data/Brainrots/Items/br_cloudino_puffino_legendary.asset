@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_cloudino_puffino_legendary
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_cloudino_puffino_legendary
-  itemName: Cloudino Puffino (Legendary)
-  icon: {fileID: 0}
+  itemName: Cloudino Puffino
+  icon: {fileID: 21300000, guid: ccc8df0027ace3e489e50491f0c9a7fe, type: 3}
   rarity: {fileID: 11400000, guid: c8109f7f852dd4c4b8c9440306b82681, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 6003410af0db0894bb7ecfc900d7332e, type: 3}
   overrideTexture: {fileID: 2800000, guid: 49e9c195b0c23604c9292ed7051bfba0, type: 3}

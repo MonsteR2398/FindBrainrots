@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_rameno_slurpino_epic
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_rameno_slurpino_epic
-  itemName: Rameno Slurpino (Epic)
-  icon: {fileID: 0}
+  itemName: Rameno Slurpino
+  icon: {fileID: 21300000, guid: e8e8fb9dc5b93f24aafc943eadd58a87, type: 3}
   rarity: {fileID: 11400000, guid: 4e2f0b5c54bda8047a931b8ae72faad0, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 07cd576d19451204493d8182fc72ede5, type: 3}
   overrideTexture: {fileID: 2800000, guid: 3ba5cd91f91148f4d86f2b4d0f68ffca, type: 3}

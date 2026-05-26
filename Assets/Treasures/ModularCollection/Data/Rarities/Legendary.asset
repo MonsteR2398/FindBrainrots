@@ -15,3 +15,6 @@ MonoBehaviour:
   rarityID: legendary
   displayName: Legendary
   rarityColor: {r: 1, g: 0.9, b: 0, a: 1}
+  rarityButtonSprite: {fileID: 21300000, guid: 6812b841d04968646b30e54bd050c2d5, type: 3}
+  rarityCardSprite: {fileID: 21300000, guid: 4891a08f03da24642a1eed2258999016, type: 3}
+  glitterImageSprite: {fileID: 21300000, guid: a2ab96429771876419d74d8c2ab6bf82, type: 3}

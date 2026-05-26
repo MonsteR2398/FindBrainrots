@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_potato_meowto_common
   itemName: Potato Meowto
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 206bb7f0d7a62e64582e181850021840, type: 3}
   rarity: {fileID: 11400000, guid: 276ea778d7a31f84eadca6f56b5704cb, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 2d2bbdf4cb2a82340a88fe3faef11806, type: 3}
   overrideTexture: {fileID: 0}

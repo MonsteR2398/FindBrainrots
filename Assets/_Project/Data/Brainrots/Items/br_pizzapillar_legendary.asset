@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_pizzapillar_legendary
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_pizzapillar_legendary
-  itemName: Pizzapillar (Legendary)
-  icon: {fileID: 0}
+  itemName: Pizzapillar
+  icon: {fileID: 21300000, guid: 806724cfc64cd8e40b8ec23a39455e57, type: 3}
   rarity: {fileID: 11400000, guid: c8109f7f852dd4c4b8c9440306b82681, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: b71433f8bb942624fa266a6359a82f96, type: 3}
   overrideTexture: {fileID: 2800000, guid: 03de8cd697d574049a13feb5c9af5199, type: 3}

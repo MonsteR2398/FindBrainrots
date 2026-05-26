@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_trashino_stinkino_epic
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_trashino_stinkino_epic
-  itemName: Trashino Stinkino (Epic)
-  icon: {fileID: 0}
+  itemName: Trashino Stinkino
+  icon: {fileID: 21300000, guid: 95454c59542aabb4aaba87d861b0a149, type: 3}
   rarity: {fileID: 11400000, guid: 4e2f0b5c54bda8047a931b8ae72faad0, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 2c1316d104c575e4b9e8c45f904a6bf0, type: 3}
   overrideTexture: {fileID: 2800000, guid: 832df4208e087124f958ec8ac93ba17c, type: 3}

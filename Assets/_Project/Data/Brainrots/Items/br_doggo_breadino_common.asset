@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_doggo_breadino_common
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_doggo_breadino_common
-  itemName: Doggo Breadino (Common)
-  icon: {fileID: 0}
+  itemName: Doggo Breadino
+  icon: {fileID: 21300000, guid: 9aecffbc56810c94e847689ce640301b, type: 3}
   rarity: {fileID: 11400000, guid: 276ea778d7a31f84eadca6f56b5704cb, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 27d47b7c9f55b4945ad95bf8f9d744e4, type: 3}
   overrideTexture: {fileID: 2800000, guid: 8521111d5ea88074eb9dacb1d21bc1f4, type: 3}

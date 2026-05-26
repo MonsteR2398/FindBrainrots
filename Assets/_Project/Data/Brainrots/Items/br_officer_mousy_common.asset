@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_officer_mousy_common
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_officer_mousy_common
-  itemName: Officer Mousy (Common)
-  icon: {fileID: 0}
+  itemName: Officer Mousy
+  icon: {fileID: 21300000, guid: dcce10a55bf6630418fc7a38317e9d2f, type: 3}
   rarity: {fileID: 11400000, guid: 276ea778d7a31f84eadca6f56b5704cb, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 8cb71657c4f75f645add9cd0aff098de, type: 3}
   overrideTexture: {fileID: 2800000, guid: a461665ec4ad6554d8b3b982b4ef29ef, type: 3}

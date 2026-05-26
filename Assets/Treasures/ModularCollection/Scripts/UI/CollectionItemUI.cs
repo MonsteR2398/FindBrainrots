@@ -31,15 +31,18 @@ namespace ModularCollection.UI
                 iconImage.sprite = item.Icon;
                 nameText.text = item.ItemName;
                 rarityText.text = item.Rarity.DisplayName;
-                backgroundImage.color = item.Rarity.RarityColor;
+                backgroundImage.sprite = item.Rarity.CardSprite;
                 newBadge.SetActive(!isRead);
+                iconImage.gameObject.SetActive(true);
             }
             else
             {
-                iconImage.sprite = lockedIcon;
+                if(lockedIcon != null)
+                    iconImage.sprite = lockedIcon;
+                else
+                    iconImage.gameObject.SetActive(false);
                 nameText.text = lockedName;
                 rarityText.text = "";
-                backgroundImage.color = Color.gray;
                 newBadge.SetActive(false);
             }
 

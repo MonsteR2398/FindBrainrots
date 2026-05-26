@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_dingding_droid_mythic
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_dingding_droid_mythic
-  itemName: DingDing Droid (Mythic)
-  icon: {fileID: 0}
+  itemName: DingDing Droid
+  icon: {fileID: 21300000, guid: 32667fcc76765cd40a720547a2e17ba9, type: 3}
   rarity: {fileID: 11400000, guid: 30bc1b48cd6ec3046bc187e463ca8a52, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: e8482e38adca91642aa1a27255f712c1, type: 3}
   overrideTexture: {fileID: 2800000, guid: a0a017212d399b149b34c8b1b926bf1a, type: 3}

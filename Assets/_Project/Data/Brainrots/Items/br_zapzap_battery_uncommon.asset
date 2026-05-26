@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_zapzap_battery_uncommon
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_zapzap_battery_uncommon
-  itemName: ZapZap Battery (Uncommon)
-  icon: {fileID: 0}
+  itemName: ZapZap Battery
+  icon: {fileID: 21300000, guid: 65fedca83d1887147abad9030a7c3a8f, type: 3}
   rarity: {fileID: 11400000, guid: 6feb8e048eadef243b7343d1fdf700f0, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: ff80fe20e313ab54d83ed0e4f70b4831, type: 3}
   overrideTexture: {fileID: 2800000, guid: eb65d17a2eee635478a15178da2e56dd, type: 3}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_barrel_paler_mythic
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_barrel_paler_mythic
-  itemName: Barrel Paler (Mythic)
-  icon: {fileID: 0}
+  itemName: Barrel Paler
+  icon: {fileID: 21300000, guid: df12e6e92df8adf419fb8a5f788d7cbb, type: 3}
   rarity: {fileID: 11400000, guid: 30bc1b48cd6ec3046bc187e463ca8a52, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 750dcb082e1b5b341aef82584731a2b3, type: 3}
   overrideTexture: {fileID: 2800000, guid: 771df5fa9cfad6c4aac80fefcba356b1, type: 3}

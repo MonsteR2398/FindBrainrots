@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_apple_pepple_legendary
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_apple_pepple_legendary
-  itemName: Apple Pepple (Legendary)
-  icon: {fileID: 0}
+  itemName: Apple Pepple
+  icon: {fileID: 21300000, guid: 9efc2e8574f71bf4e917270ff14f6ed1, type: 3}
   rarity: {fileID: 11400000, guid: c8109f7f852dd4c4b8c9440306b82681, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 76898c9313c261745b49cec7eb009de2, type: 3}
   overrideTexture: {fileID: 2800000, guid: e246da5c99dff924c8335749c8a67180, type: 3}

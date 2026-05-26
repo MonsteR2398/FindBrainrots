@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_sushi_shinobi_uncommon
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_sushi_shinobi_uncommon
-  itemName: Sushi Shinobi (Uncommon)
-  icon: {fileID: 0}
+  itemName: Sushi Shinobi
+  icon: {fileID: 21300000, guid: 28cf2635681828d4d8755917cc9305f1, type: 3}
   rarity: {fileID: 11400000, guid: 6feb8e048eadef243b7343d1fdf700f0, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: c06eed25d9d424b44a894d9c766c6f3b, type: 3}
   overrideTexture: {fileID: 2800000, guid: 6a4b1b921d6603948859d42bf0aa821e, type: 3}

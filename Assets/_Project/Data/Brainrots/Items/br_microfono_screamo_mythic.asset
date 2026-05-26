@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_microfono_screamo_mythic
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_microfono_screamo_mythic
-  itemName: Microfono Screamo (Mythic)
-  icon: {fileID: 0}
+  itemName: Microfono Screamo
+  icon: {fileID: 21300000, guid: 06c121ef683e6924da54f40512fc36db, type: 3}
   rarity: {fileID: 11400000, guid: 30bc1b48cd6ec3046bc187e463ca8a52, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: def30f12f5b429444b554bf6aeab9233, type: 3}
   overrideTexture: {fileID: 2800000, guid: 1581679322559a54aab44b7259f85df0, type: 3}

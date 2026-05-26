@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_80_mythic
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_80_mythic
-  itemName: 80 (Mythic)
-  icon: {fileID: 0}
+  itemName: 80
+  icon: {fileID: 21300000, guid: b0a31d95806ed9645bfa108bed93a265, type: 3}
   rarity: {fileID: 11400000, guid: 30bc1b48cd6ec3046bc187e463ca8a52, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 1133374641bdffb4f8f110f87a56f631, type: 3}
   overrideTexture: {fileID: 2800000, guid: ba24eec18f67b6749b0ae4c1a16b593e, type: 3}

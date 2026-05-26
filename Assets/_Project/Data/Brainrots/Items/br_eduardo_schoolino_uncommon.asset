@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_eduardo_schoolino_uncommon
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_eduardo_schoolino_uncommon
-  itemName: Eduardo Schoolino (Uncommon)
-  icon: {fileID: 0}
+  itemName: Eduardo Schoolino
+  icon: {fileID: 21300000, guid: d79fc876a4027ed45aeee56c98b2ab10, type: 3}
   rarity: {fileID: 11400000, guid: 6feb8e048eadef243b7343d1fdf700f0, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 180e641e5d5b42b4bae7639ac37f414a, type: 3}
   overrideTexture: {fileID: 2800000, guid: d3c64a1913d09e54a94a4513feaeb287, type: 3}

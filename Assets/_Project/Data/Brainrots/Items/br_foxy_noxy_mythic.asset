@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_foxy_noxy_mythic
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_foxy_noxy_mythic
-  itemName: Foxy Noxy (Mythic)
-  icon: {fileID: 0}
+  itemName: Foxy Noxy
+  icon: {fileID: 21300000, guid: 2e501b14150d2a14e8f43522f3cb7ca0, type: 3}
   rarity: {fileID: 11400000, guid: 30bc1b48cd6ec3046bc187e463ca8a52, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 1661b5ac623e90f41ad1131518e9e62f, type: 3}
   overrideTexture: {fileID: 2800000, guid: fcfd56d76e611524bb730e25055665ed, type: 3}

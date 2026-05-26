@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_milko_babino_common
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_milko_babino_common
-  itemName: Milko Babino (Common)
-  icon: {fileID: 0}
+  itemName: Milko Babino
+  icon: {fileID: 21300000, guid: 5e30392780c83254cb527ce44a354a00, type: 3}
   rarity: {fileID: 11400000, guid: 276ea778d7a31f84eadca6f56b5704cb, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 848e4066d21eedc47a588244b6e996dd, type: 3}
   overrideTexture: {fileID: 2800000, guid: 109f3a551b2221542ba8c0be78f7eb85, type: 3}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_apple_pepple_mythic
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_apple_pepple_mythic
-  itemName: Apple Pepple (Mythic)
-  icon: {fileID: 0}
+  itemName: Apple Pepple
+  icon: {fileID: 21300000, guid: 9efc2e8574f71bf4e917270ff14f6ed1, type: 3}
   rarity: {fileID: 11400000, guid: 30bc1b48cd6ec3046bc187e463ca8a52, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 76898c9313c261745b49cec7eb009de2, type: 3}
   overrideTexture: {fileID: 2800000, guid: 478742156a67efa46be70caf52b455ad, type: 3}

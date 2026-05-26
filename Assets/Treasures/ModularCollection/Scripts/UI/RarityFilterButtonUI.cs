@@ -22,7 +22,7 @@ namespace ModularCollection.UI
             this.onClickCallback = onClick;
             
             labelText.text = rarity.DisplayName;
-            buttonImage.color = rarity.RarityColor;
+            buttonImage.sprite = rarity.ButtonSprite;
             newIndicator.SetActive(hasNew);
 
             button.onClick.RemoveAllListeners();

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_nailo_stepino_rare
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_nailo_stepino_rare
-  itemName: Nailo Stepino (Rare)
-  icon: {fileID: 0}
+  itemName: Nailo Stepino
+  icon: {fileID: 21300000, guid: 554dd1546c210aa4ba3b388c5fc36397, type: 3}
   rarity: {fileID: 11400000, guid: 0a2e2abb043cb74469b0f5b1bd6e8568, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 9b69f800277a3b443bf1ad497a7b2661, type: 3}
   overrideTexture: {fileID: 2800000, guid: 7d538e2bbd35d8e4889cfc3ee6ab29df, type: 3}

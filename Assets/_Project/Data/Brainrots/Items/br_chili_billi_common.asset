@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_chili_billi_common
   itemName: Chili Billi
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 98246ff35cf8ed244a8812df4bf04fa5, type: 3}
   rarity: {fileID: 11400000, guid: 276ea778d7a31f84eadca6f56b5704cb, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 2ed88f82443af984daa1afaeb915cb2d, type: 3}
   overrideTexture: {fileID: 0}

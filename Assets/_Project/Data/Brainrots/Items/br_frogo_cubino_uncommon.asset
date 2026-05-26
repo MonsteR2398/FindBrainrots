@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_frogo_cubino_uncommon
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_frogo_cubino_uncommon
-  itemName: Frogo Cubino (Uncommon)
-  icon: {fileID: 0}
+  itemName: Frogo Cubino
+  icon: {fileID: 21300000, guid: afda3b030e6855f419ca9f45f7b14b66, type: 3}
   rarity: {fileID: 11400000, guid: 6feb8e048eadef243b7343d1fdf700f0, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 793944016087164498ee2bec1b972e83, type: 3}
   overrideTexture: {fileID: 2800000, guid: c0914347c298d254eb9a56a87fc54926, type: 3}

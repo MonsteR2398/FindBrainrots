@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_chargo_bargo_uncommon
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_chargo_bargo_uncommon
-  itemName: Chargo Bargo (Uncommon)
-  icon: {fileID: 0}
+  itemName: Chargo Bargo
+  icon: {fileID: 21300000, guid: 9718065e319ff4740b2b4d5eed325e66, type: 3}
   rarity: {fileID: 11400000, guid: 6feb8e048eadef243b7343d1fdf700f0, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: a3c67aaa3de83d443ba7c04586b4a344, type: 3}
   overrideTexture: {fileID: 2800000, guid: ad9754afa5f98234c99b72e62c67531f, type: 3}

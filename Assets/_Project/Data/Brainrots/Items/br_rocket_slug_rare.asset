@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_rocket_slug_rare
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_rocket_slug_rare
-  itemName: Rocket Slug (Rare)
-  icon: {fileID: 0}
+  itemName: Rocket Slug
+  icon: {fileID: 21300000, guid: 3c94259c6622d1c4dae8579b423e16ee, type: 3}
   rarity: {fileID: 11400000, guid: 0a2e2abb043cb74469b0f5b1bd6e8568, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 554fc17cefbe8f443a296d580cf8d8b0, type: 3}
   overrideTexture: {fileID: 2800000, guid: 373d1e3782db6024eb6955b57eea1b6f, type: 3}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_snakey_wakey_epic
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_snakey_wakey_epic
-  itemName: Snakey Wakey (Epic)
-  icon: {fileID: 0}
+  itemName: Snakey Wakey
+  icon: {fileID: 21300000, guid: 19bb09fcbf5d7d4409e54f933348d948, type: 3}
   rarity: {fileID: 11400000, guid: 4e2f0b5c54bda8047a931b8ae72faad0, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 34743dea21d9ff44bbe72f180044d6b4, type: 3}
   overrideTexture: {fileID: 2800000, guid: 1d00bc331e8c8d048b6d497c49bea356, type: 3}

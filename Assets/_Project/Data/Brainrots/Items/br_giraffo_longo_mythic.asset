@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_giraffo_longo_mythic
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_giraffo_longo_mythic
-  itemName: Giraffo Longo (Mythic)
-  icon: {fileID: 0}
+  itemName: Giraffo Longo
+  icon: {fileID: 21300000, guid: 89950113848a563438f1a3666c01a07a, type: 3}
   rarity: {fileID: 11400000, guid: 30bc1b48cd6ec3046bc187e463ca8a52, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 2869556de3ae3834991575f7cfecf108, type: 3}
   overrideTexture: {fileID: 2800000, guid: 125b48f3324d6e2419304b3e4c6c6a44, type: 3}

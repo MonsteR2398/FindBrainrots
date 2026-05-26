@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_choco_bobo_legendary
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_choco_bobo_legendary
-  itemName: Choco Bobo (Legendary)
-  icon: {fileID: 0}
+  itemName: Choco Bobo
+  icon: {fileID: 21300000, guid: 16e686925240ba7428f59933541f0c4f, type: 3}
   rarity: {fileID: 11400000, guid: c8109f7f852dd4c4b8c9440306b82681, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: d0c7ae7969bec7d4b840017afbee581e, type: 3}
   overrideTexture: {fileID: 2800000, guid: a91cd0d7be5bc384dab2aba6272afbe3, type: 3}

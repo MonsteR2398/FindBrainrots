@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_burgerino_chompino_uncommon
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_burgerino_chompino_uncommon
-  itemName: Burgerino Chompino (Uncommon)
-  icon: {fileID: 0}
+  itemName: Burgerino Chompino
+  icon: {fileID: 21300000, guid: dc671e13986981145842d795bb5ac3cf, type: 3}
   rarity: {fileID: 11400000, guid: 6feb8e048eadef243b7343d1fdf700f0, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 0c5cb8313247cf043becc5541aaa3b4b, type: 3}
   overrideTexture: {fileID: 2800000, guid: 153a7a91a8de9114cacb2114d4bf0538, type: 3}

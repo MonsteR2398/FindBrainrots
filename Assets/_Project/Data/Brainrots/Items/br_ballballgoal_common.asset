@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_ballballgoal_common
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_ballballgoal_common
-  itemName: BallBallGoal (Common)
-  icon: {fileID: 0}
+  itemName: BallBallGoal
+  icon: {fileID: 21300000, guid: 7ca9fb4d5211abb408d5a79c3608a671, type: 3}
   rarity: {fileID: 11400000, guid: 276ea778d7a31f84eadca6f56b5704cb, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 18b2afde128bc944ebeef0a0dca62423, type: 3}
   overrideTexture: {fileID: 2800000, guid: 1a947e6411eda5a4ab1048af2e6a01ad, type: 3}

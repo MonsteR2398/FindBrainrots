@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_icecreamo_swirlino_common
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_icecreamo_swirlino_common
-  itemName: IceCreamo Swirlino (Common)
-  icon: {fileID: 0}
+  itemName: IceCreamo Swirlino
+  icon: {fileID: 21300000, guid: 58fc2706674cf4d439be63f3cf388f44, type: 3}
   rarity: {fileID: 11400000, guid: 276ea778d7a31f84eadca6f56b5704cb, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: 4fa1d9b695854414cb7ceb994f9c072a, type: 3}
   overrideTexture: {fileID: 2800000, guid: b70d89d9e1315474c8e5a5f3df862648, type: 3}

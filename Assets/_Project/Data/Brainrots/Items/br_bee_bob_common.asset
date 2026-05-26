@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: br_bee_bob_common
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.CollectibleItemSO
   itemID: br_bee_bob_common
-  itemName: Bee Bob (Common)
-  icon: {fileID: 0}
+  itemName: Bee Bob
+  icon: {fileID: 21300000, guid: 13059e6a801eab24e8b48933cee6f8b6, type: 3}
   rarity: {fileID: 11400000, guid: 276ea778d7a31f84eadca6f56b5704cb, type: 2}
   worldPrefab: {fileID: 919132149155446097, guid: ed7b699ab88968f4e9bd996dbb92ab2b, type: 3}
   overrideTexture: {fileID: 2800000, guid: 9df18f9150612854090639596cae06fc, type: 3}
