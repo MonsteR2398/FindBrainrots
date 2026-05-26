@@ -17,4 +17,4 @@ MonoBehaviour:
   rarityColor: {r: 0.57667446, g: 0.08962262, b: 1, a: 1}
   rarityButtonSprite: {fileID: 21300000, guid: 885b6d1eafa35474c99245e29240a21b, type: 3}
   rarityCardSprite: {fileID: 21300000, guid: 8305fb012ac0ca44ca321fef6326bf60, type: 3}
-  glitterImageSprite: {fileID: 0}
+  glitterImageSprite: {fileID: 21300000, guid: 27b604bc7d64529428f78f33d6530278, type: 3}
