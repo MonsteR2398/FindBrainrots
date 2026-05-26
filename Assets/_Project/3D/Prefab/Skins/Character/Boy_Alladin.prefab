@@ -150,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
       propertyPath: m_Name
-      value: Character_skins 2
+      value: Boy_Alladin
       objectReference: {fileID: 0}
     - target: {fileID: 1204159587550442900, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
       propertyPath: m_IsActive
@@ -255,6 +255,12 @@ PrefabInstance:
     - {fileID: 6617777273086351174, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4027742853146859807}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8683432649255448294}
     - targetCorrespondingSourceObject: {fileID: 3335911513863623390, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1879208206635163982}
@@ -264,6 +270,45 @@ SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -4302398278409537717, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
   m_PrefabInstance: {fileID: 5587856848407172389}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4705531411619522676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
+  m_PrefabInstance: {fileID: 5587856848407172389}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4027742853146859807
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4705531411619522676}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 58a9402bd283f3c43a6b85e3fc5875ed, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8683432649255448294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4705531411619522676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03c02b3f8d063241bcf236dc59f2da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimator
 --- !u!1 &7189864770704574459 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3335911513863623390, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}

@@ -20,6 +20,7 @@ public class BrainrotUIController : MonoBehaviour
 
     private Animator animator;
     private bool isSpeededUp = false;
+    private bool pendingHide = false;
     private float lastClickTime = 0f;
     private const float doubleClickThreshold = 0.3f;
 
@@ -65,18 +66,49 @@ public class BrainrotUIController : MonoBehaviour
             {
                 animator.speed = 5f;
                 isSpeededUp = true;
+                pendingHide = false;
+                StopAllCoroutines();
             }
+            return;
         }
+
         if (isFinished)
         {
             HideAnimation();
             animator.speed = 1f;
             isSpeededUp = false;
         }
+        else if (!pendingHide)
+        {
+            pendingHide = true;
+            StartCoroutine(WaitForAnimationEnd());
+        }
+    }
+
+    private System.Collections.IEnumerator WaitForAnimationEnd()
+    {
+        while (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+        {
+            yield return null;
+        }
+
+        if (isSpeededUp)
+        {
+            animator.speed = 1f;
+            isSpeededUp = false;
+            pendingHide = false;
+        }
+        else
+        {
+            HideAnimation();
+            animator.speed = 1f;
+            isSpeededUp = false;
+            pendingHide = false;
+        }
     }
 
     public void PlayUnlockAnimation(CollectibleItemSO item)
-{
+    {
         if (animationPanel == null) return;
 
         animationPanel.SetActive(true);
@@ -84,6 +116,8 @@ public class BrainrotUIController : MonoBehaviour
         {
             animator.speed = 1f;
             isSpeededUp = false;
+            pendingHide = false;
+            StopAllCoroutines();
             animator.Play(0, 0, 0f);
         }
 
@@ -116,7 +150,7 @@ public class BrainrotUIController : MonoBehaviour
     }
 
     public void HideAnimation()
-{
+    {
         if (animationPanel != null) animationPanel.SetActive(false);
     }
 }

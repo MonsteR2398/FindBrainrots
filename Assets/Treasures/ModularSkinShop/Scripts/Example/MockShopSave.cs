@@ -6,7 +6,7 @@ namespace ModularSkinShop.Example
 {
     public class MockShopSave : MonoBehaviour, IShopPersistence
     {
-        public string DefaultSkinId = "skin_base";
+        public string DefaultSkinId = "";
 
         private HashSet<string> _unlockedSkins = new HashSet<string>();
         private string _activeSkinId;

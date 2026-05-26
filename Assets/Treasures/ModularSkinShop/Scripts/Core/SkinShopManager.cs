@@ -24,6 +24,44 @@ namespace ModularSkinShop.Core
 
         private void Awake() {
             _persistence = mockShopSave.GetComponent<IShopPersistence>();
+            InitializeDefaultSkin();
+        }
+
+        private void InitializeDefaultSkin()
+        {
+            if (Library == null || Library.Skins.Count == 0) return;
+
+            bool anyUnlocked = false;
+            foreach (var skin in Library.Skins)
+            {
+                if (_persistence.IsUnlocked(skin.ID))
+                {
+                    anyUnlocked = true;
+                    break;
+                }
+            }
+
+            if (!anyUnlocked)
+            {
+                var firstSkin = Library.Skins[0];
+                _persistence.Unlock(firstSkin.ID);
+                _persistence.SetActive(firstSkin.ID);
+            }
+            else
+            {
+                string activeId = _persistence.GetActiveId();
+                if (string.IsNullOrEmpty(activeId) || Library.Skins.Find(s => s.ID == activeId) == null)
+                {
+                    foreach (var skin in Library.Skins)
+                    {
+                        if (_persistence.IsUnlocked(skin.ID))
+                        {
+                            _persistence.SetActive(skin.ID);
+                            break;
+                        }
+                    }
+                }
+            }
         }
 
         public bool IsSkinUnlocked(SkinSO skin) => _persistence.IsUnlocked(skin.ID);
@@ -76,25 +114,10 @@ namespace ModularSkinShop.Core
             }
         }
 
-        public bool IsUnlocked(string id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Unlock(string id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string GetActiveId()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SetActive(string id)
-        {
-            throw new NotImplementedException();
-        }
+        public bool IsUnlocked(string id) => _persistence.IsUnlocked(id);
+        public void Unlock(string id) => _persistence.Unlock(id);
+        public string GetActiveId() => _persistence.GetActiveId();
+        public void SetActive(string id) => _persistence.SetActive(id);
 
     }
 }
