@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2026d73f13412e45a225ff3089f56ad, type: 3}
+  m_Name: Quest_1_Gold
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestSO
+  id: collect_10_gold
+  title: Collect 10 Gold
+  icon: {fileID: 0}
+  targetValue: 10
+  condition: {fileID: 11400000, guid: 6e432070545799a4fa8bc36eff8a7e81, type: 2}
+  isRepeatable: 1
+  rewards:
+  - {fileID: 11400000, guid: 9369184af45400a44a7165332a237ccc, type: 2}
