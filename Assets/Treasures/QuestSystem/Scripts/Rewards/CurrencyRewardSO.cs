@@ -9,12 +9,10 @@ namespace ModularTreasures.Quests
         [SerializeField] private CurrencyType type;
         [SerializeField] private long amount;
 
-        public override void GiveReward()
+        public override void GiveReward(Transform targetPos)
         {
             if (CurrencyService.Instance != null)
-            {
-                CurrencyService.Instance.AddBalance(type, amount);
-            }
+                CurrencyService.Instance.AddBalance(type, amount, targetPos);
         }
     }
 }

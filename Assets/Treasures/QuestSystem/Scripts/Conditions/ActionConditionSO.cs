@@ -5,7 +5,7 @@ namespace ModularTreasures.Quests
     [CreateAssetMenu(fileName = "New Action Condition", menuName = "Quests/Conditions/Action Condition")]
     public class ActionConditionSO : QuestConditionSO
     {
-        [SerializeField] private string actionKey;
+        [SerializeField] protected string actionKey;
 
         protected override void OnEnableCondition()
         {
@@ -17,18 +17,18 @@ namespace ModularTreasures.Quests
             QuestActionSystem.OnActionTriggered -= HandleAction;
         }
 
-        private void HandleAction(string key)
+        protected virtual void HandleAction(string key, float value)
         {
             if (key == actionKey)
-                AddProgress(1f);
+                AddProgress(value);
         }
     }
 
     // Небольшой помощник, позволяющий вызывать общие евенты, не зная о системе квестов
     public static class QuestActionSystem
     {
-        public static System.Action<string> OnActionTriggered;
+        public static System.Action<string, float> OnActionTriggered;
             
-        public static void TriggerAction(string key) => OnActionTriggered?.Invoke(key);
+        public static void TriggerAction(string key, float value) => OnActionTriggered?.Invoke(key, value);
     }
 }

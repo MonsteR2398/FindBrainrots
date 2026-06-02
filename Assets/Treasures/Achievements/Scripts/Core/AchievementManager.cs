@@ -74,6 +74,9 @@ namespace ModularTreasures.Achievements
             _progress[achievementId] = currentProgress;
             OnProgressUpdated?.Invoke(achievementId, currentProgress);
 
+            // Trigger QuestActionSystem for modular quest tracking
+            ModularTreasures.Quests.QuestActionSystem.TriggerAction(achievementId + "Add", amount);
+
             // Save shared progress for this ID
             _persistence.SaveProgress(achievementId, currentProgress, false);
 

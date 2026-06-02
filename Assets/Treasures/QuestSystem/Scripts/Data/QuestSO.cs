@@ -15,6 +15,7 @@ namespace ModularTreasures.Quests
         [SerializeField] private float targetValue;
         [SerializeField] private QuestConditionSO condition;
         [SerializeField] private bool isRepeatable;
+        [SerializeField] private bool startFromCurrentValue;
 
         [Header("Rewards")]
         [SerializeField] private List<QuestRewardSO> rewards;
@@ -25,6 +26,7 @@ namespace ModularTreasures.Quests
         public float TargetValue => targetValue;
         public QuestConditionSO Condition => condition;
         public bool IsRepeatable => isRepeatable;
+        public bool StartFromCurrentValue => startFromCurrentValue;
         public List<QuestRewardSO> Rewards => rewards;
 
         private void OnValidate()

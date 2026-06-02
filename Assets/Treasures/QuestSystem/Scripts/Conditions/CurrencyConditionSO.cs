@@ -1,29 +1,25 @@
 using UnityEngine;
-using Treasures.CurrencySystem;
+using ModularTreasures.Quests;
 
-namespace ModularTreasures.Quests
+namespace Treasures.CurrencySystem
 {
     [CreateAssetMenu(fileName = "New Currency Condition", menuName = "Quests/Conditions/Currency Condition")]
-    public class CurrencyConditionSO : QuestConditionSO
+    public class CurrencyConditionSO : ActionConditionSO
     {
-        [SerializeField] private CurrencyType type;
+        [SerializeField] private CurrencyType currencyType;
 
-        protected override void OnEnableCondition()
+        private void OnValidate()
         {
-            if (CurrencyService.Instance != null)
-                CurrencyService.Instance.OnCurrencyReceived += HandleCurrencyReceived;
+            actionKey = $"{currencyType}Add";
         }
 
-        protected override void OnDisableCondition()
+        public override float GetCurrentValue()
         {
             if (CurrencyService.Instance != null)
-                CurrencyService.Instance.OnCurrencyReceived -= HandleCurrencyReceived;
-        }
-
-        private void HandleCurrencyReceived(CurrencyType receivedType, long amount)
-        {
-            if (receivedType == type)
-                AddProgress((float)amount);
+            {
+                return CurrencyService.Instance.GetBalance(currencyType);
+            }
+            return 0f;
         }
     }
 }

@@ -304,6 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03c02b3f8d063241bcf236dc59f2da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimator
+  speedDampTime: 0.15
 --- !u!1 &6868409893362133825 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7864005838431846812, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}

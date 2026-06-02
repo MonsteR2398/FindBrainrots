@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GoldCurrency
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.CurrencySystem.CurrencyDefinition
   type: 0
-  icon: {fileID: 21300000, guid: 0edda61b8e08e54498c92d19cc3155ca, type: 3}
+  icon: {fileID: 21300000, guid: b567fe8d0a1354b1191c222e4db929f0, type: 3}

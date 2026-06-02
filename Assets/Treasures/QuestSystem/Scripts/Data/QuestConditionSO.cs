@@ -18,6 +18,8 @@ namespace ModularTreasures.Quests
             Manager = null;
         }
 
+        public virtual float GetCurrentValue() => 0f;
+
         protected abstract void OnEnableCondition();
         protected abstract void OnDisableCondition();
         

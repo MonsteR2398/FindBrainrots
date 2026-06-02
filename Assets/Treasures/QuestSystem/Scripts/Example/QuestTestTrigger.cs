@@ -18,7 +18,7 @@ namespace ModularTreasures.Quests
         public void TriggerAction()
         {
             Debug.Log($"[QuestTest] Triggering action: {actionKey}");
-            QuestActionSystem.TriggerAction(actionKey);
+            QuestActionSystem.TriggerAction(actionKey, 1f);
         }
         public void AddAnyProgress()
         {

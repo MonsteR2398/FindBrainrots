@@ -8,172 +8,172 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Alladin
-    second: {fileID: 2100000, guid: b47d68002bb384c4cb1c19bf12f24508, type: 2}
+    second: {fileID: 2100000, guid: 41edb7e4c5e3a6d44af92c9329639ca5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Body.002
-    second: {fileID: 2100000, guid: 11c9bc140f16915409a6a7f772963379, type: 2}
+    second: {fileID: 2100000, guid: ab04370cd1e862c43b73927334ee3b6c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Body.003
-    second: {fileID: 2100000, guid: f14610a8fe355d349845ff9038bc970a, type: 2}
+    second: {fileID: 2100000, guid: 19c88fc78eedd4e4ab0b05d6d92eecdb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_Blue_Scar
-    second: {fileID: 2100000, guid: a6082f68067ed944e8d728d139636ed7, type: 2}
+    second: {fileID: 2100000, guid: 80395ed5e5dce2444bec454ed6612f71, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_Blue_Scar_Hair
-    second: {fileID: 2100000, guid: c08180ede2132044090023385401c97b, type: 2}
+    second: {fileID: 2100000, guid: 0dd2adaf97bb9c94e84f9963a4642a25, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_Noks
-    second: {fileID: 2100000, guid: a13a23c1a7ce7a540a984c913bdf13cd, type: 2}
+    second: {fileID: 2100000, guid: a812b94414e95124a9674cc27ec6f1fe, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_Noks_Hair
-    second: {fileID: 2100000, guid: 1b79e735888d5c44d8abe528a2ce103a, type: 2}
+    second: {fileID: 2100000, guid: c3aff1f618b00bc4db0ae7beaa528292, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_Rick
-    second: {fileID: 2100000, guid: 9a7c483ff60e8c940b35094104f41e66, type: 2}
+    second: {fileID: 2100000, guid: fe86741eb739c3243aa08e544438cd5e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_Shiro
-    second: {fileID: 2100000, guid: 2ad5c6822fbaadb449a881cd850ff578, type: 2}
+    second: {fileID: 2100000, guid: faa757d03fe23214a9f8f8ae03f382ad, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_Shiro_hair
-    second: {fileID: 2100000, guid: 84a0ec129a577fc479a35b180a251002, type: 2}
+    second: {fileID: 2100000, guid: efd6b9ce256b3c14ea56ebbf81fb786d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_rick_hair
-    second: {fileID: 2100000, guid: 45b9fee3a4525724c8263a56d32b67c4, type: 2}
+    second: {fileID: 2100000, guid: da2e9e4af2531264898c01a8ccb3646e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_shorts_hair
-    second: {fileID: 2100000, guid: f5760066e42d60140872ff5ffbd8af8f, type: 2}
+    second: {fileID: 2100000, guid: 5e9d3237c1e5ebb4c9dd62dfe8c5e945, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Face_002
-    second: {fileID: 2100000, guid: 3a9df52070c479a48bfd6d5ccc665e9b, type: 2}
+    second: {fileID: 2100000, guid: 654b9dcd7fe7baa4b825ca94178b8768, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Face_002.001
-    second: {fileID: 2100000, guid: b3c5733e4d8990441ab342e5f74fb21a, type: 2}
+    second: {fileID: 2100000, guid: f42889f9eb1db7545afad87fb773c354, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Face_002.002
-    second: {fileID: 2100000, guid: 6e4ef6c49af219a438d165a111f57b0d, type: 2}
+    second: {fileID: 2100000, guid: a608192164e7e1d4f9aa2d804afd950c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Face_002.004
-    second: {fileID: 2100000, guid: 7fd5e6d90023e684084260943b68b818, type: 2}
+    second: {fileID: 2100000, guid: 0940d35d082b5e34492aaae9704bfa78, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Face_girl
-    second: {fileID: 2100000, guid: a5d75a6aacf2fc748ab374ea80b3ca87, type: 2}
+    second: {fileID: 2100000, guid: 8a2d9d5567ce23c46b82d528bd963107, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Girl_Cyber_Friend
-    second: {fileID: 2100000, guid: a63838f06e6ace84183bcf630eed4e20, type: 2}
+    second: {fileID: 2100000, guid: cde9f412de8a9174099e114fdd46f560, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Girl_Gothic_Angel
-    second: {fileID: 2100000, guid: 66af9bccdb5468e429fd1b9735d66c1e, type: 2}
+    second: {fileID: 2100000, guid: 970d3e80c3bb3ad489d6ffbad2db506e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Girl_Moon_Dreamer
-    second: {fileID: 2100000, guid: 39026306507d5884f9d80c33214a339c, type: 2}
+    second: {fileID: 2100000, guid: 9524e5015f0edf1429f1769d26e09bcf, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Girl_Sakura
-    second: {fileID: 2100000, guid: 82abb98cd125948409b1d4e952a3162d, type: 2}
+    second: {fileID: 2100000, guid: 9b7b588686724f84ea3eb01e998c1f20, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Girl_pastel
-    second: {fileID: 2100000, guid: 844e4b2c659c1e74da62366d457fef5a, type: 2}
+    second: {fileID: 2100000, guid: 827fa898706fa104a956ab50529e216b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hair_Cyber_Friend
-    second: {fileID: 2100000, guid: 8ce6165f1c5624749bd70575965e500f, type: 2}
+    second: {fileID: 2100000, guid: 9f5bfd7212f04894ca9c1f0ffdaac773, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hair_Moon_Dreamer
-    second: {fileID: 2100000, guid: 122f1b0b50a69fc4d94539adf722de93, type: 2}
+    second: {fileID: 2100000, guid: f5b7eef0864417f409f00a88c579813f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hair_Sakura
-    second: {fileID: 2100000, guid: d8c11a46701c15d4298500bd47911bc1, type: 2}
+    second: {fileID: 2100000, guid: 638b83c56d3d1284f9adfc6fe97a4629, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hair_blue.001
-    second: {fileID: 2100000, guid: 8b32673872549c045aa86b809c9280b9, type: 2}
+    second: {fileID: 2100000, guid: ef9f00918019e3549af1d68a66ce4f07, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hair_girl_1
-    second: {fileID: 2100000, guid: fd811ddbcbb2b5c4885ddd125d9ca281, type: 2}
+    second: {fileID: 2100000, guid: 701882c75c34c2b449f24a2fd663b33a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hair_gothic_angel
-    second: {fileID: 2100000, guid: 2334f53efb0cb0040a7e2d2f3d14de72, type: 2}
+    second: {fileID: 2100000, guid: 100d2f721ca2cb04ba895ab9601e0512, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Samurai
-    second: {fileID: 2100000, guid: 9327ad29c7c3fc34091941228abe0f96, type: 2}
+    second: {fileID: 2100000, guid: 4c412b03f01ed374ca8d31a24a55556d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Squid_Gamer_girl
-    second: {fileID: 2100000, guid: 451cfe96257b7164bae62006bd336ef8, type: 2}
+    second: {fileID: 2100000, guid: 1f15d65f03887cc44a5f7cb6baf0014a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Squid_Warrior_man
-    second: {fileID: 2100000, guid: 8b04bd6473af6744f8b78cae3fb30970, type: 2}
+    second: {fileID: 2100000, guid: 1075a4885b8ca594ba6781c3a758e8a1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Squid_gamer_man
-    second: {fileID: 2100000, guid: 5ab3bcec8f24c0948baa0bad3be61c0f, type: 2}
+    second: {fileID: 2100000, guid: 4886b10f386e199459802b6a48bbdc9a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: UV_Atlas
-    second: {fileID: 2100000, guid: c9aaa5108b91be44d8f7b593bceebcef, type: 2}
+    second: {fileID: 2100000, guid: 50c5c45c6c4c63940a5fe89a02b908dc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: penguin
-    second: {fileID: 2100000, guid: 0ede4e72e819d224d8b1334371b0b5b9, type: 2}
+    second: {fileID: 2100000, guid: 53d429ef4b8b2fc4998bd37e1a32a412, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -201,9 +201,9 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Running
-      takeName: Running
-      internalID: -9121621101649706817
+      name: Idle
+      takeName: Idle
+      internalID: -3100369314251171874
       firstFrame: 0
       lastFrame: 24
       wrapMode: 0
@@ -317,35 +317,6 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Fall
-      takeName: Fall
-      internalID: 5917537482288442099
-      firstFrame: 0
-      lastFrame: 23
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
       name: JumpinWalking
       takeName: JumpinWalking
       internalID: 3555095487115482178
@@ -375,9 +346,96 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Idle
-      takeName: Idle
-      internalID: -3100369314251171874
+      name: Fall
+      takeName: Fall
+      internalID: 5917537482288442099
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Squatting
+      takeName: Squatting
+      internalID: -3745759798430572437
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: JumpRope
+      takeName: JumpRope
+      internalID: 2412980612680690295
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Running
+      takeName: Running
+      internalID: -9121621101649706817
       firstFrame: 0
       lastFrame: 24
       wrapMode: 0
@@ -387,6 +445,122 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Somersault
+      takeName: Somersault
+      internalID: -9146538161596909413
+      firstFrame: 0
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Flip.001
+      takeName: Flip.001
+      internalID: 21220528213340344
+      firstFrame: 0
+      lastFrame: 27
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Swim_Idle
+      takeName: Swim_Idle
+      internalID: -7833822941507725128
+      firstFrame: 0
+      lastFrame: 22
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Swim.001
+      takeName: Swim.001
+      internalID: -1705380719386326235
+      firstFrame: 0
+      lastFrame: 22
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

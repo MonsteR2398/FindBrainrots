@@ -56,14 +56,6 @@ namespace ModularTreasures.Quests
             StartQuest(CurrentQuest);
         }
 
-        private void Update()
-        {
-            if (_activeCondition is LocationConditionSO locCond)
-            {
-                locCond.Update();
-            }
-        }
-
         private void StartQuest(QuestSO quest)
         {
             if (quest == null)
@@ -112,16 +104,14 @@ namespace ModularTreasures.Quests
             OnQuestCompleted?.Invoke(CurrentQuest);
         }
 
-        public void ClaimReward()
+        public void ClaimReward(Transform targetPos)
         {
             if (_status != QuestStatus.Completed || CurrentQuest == null) return;
-
             QuestSO finishedQuest = CurrentQuest;
 
-            // Give rewards
             foreach (var reward in finishedQuest.Rewards)
             {
-                if (reward != null) reward.GiveReward();
+                if (reward != null) reward.GiveReward(targetPos);
             }
 
             if (autoLoadNextOnClaim)
@@ -132,19 +122,22 @@ namespace ModularTreasures.Quests
 
         private void LoadNextQuest(QuestSO finishedQuest)
         {
-            // Remove current from front
             if (_questIdQueue.Count > 0)
             {
                 _questIdQueue.RemoveAt(0);
             }
 
-            // If repeatable, add to end
             if (finishedQuest.IsRepeatable)
             {
                 _questIdQueue.Add(finishedQuest.Id);
             }
 
             _currentProgress = 0f;
+            if (CurrentQuest != null && CurrentQuest.StartFromCurrentValue && CurrentQuest.Condition != null)
+            {
+                _currentProgress = CurrentQuest.Condition.GetCurrentValue();
+            }
+
             _status = QuestStatus.InProgress;
             
             SaveProgress();
@@ -184,6 +177,7 @@ namespace ModularTreasures.Quests
 
         private void LoadProgress()
         {
+            bool hasSavedProgress = PlayerPrefs.HasKey(SAVE_KEY_PROGRESS);
             _currentProgress = PlayerPrefs.GetFloat(SAVE_KEY_PROGRESS, 0f);
             _status = (QuestStatus)PlayerPrefs.GetInt(SAVE_KEY_STATUS, (int)QuestStatus.InProgress);
 
@@ -196,6 +190,11 @@ namespace ModularTreasures.Quests
             {
                 // First time initialization
                 _questIdQueue = questDatabase.Quests.Select(q => q.Id).ToList();
+
+                if (!hasSavedProgress && CurrentQuest != null && CurrentQuest.StartFromCurrentValue && CurrentQuest.Condition != null)
+                {
+                    _currentProgress = CurrentQuest.Condition.GetCurrentValue();
+                }
             }
         }
 

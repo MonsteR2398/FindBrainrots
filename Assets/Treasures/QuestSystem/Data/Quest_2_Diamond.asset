@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestSO
   id: collect_5_diamonds
   title: Collect 5 Diamonds
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: d5cde9a64966840628d5810c40246db0, type: 3}
   targetValue: 5
-  condition: {fileID: 11400000, guid: 3c19fbb1310575e41a93a381a4a126d8, type: 2}
+  condition: {fileID: 11400000, guid: ff50871f817cb5c4c90004d02598cf6d, type: 2}
+  isRepeatable: 0
   rewards: []

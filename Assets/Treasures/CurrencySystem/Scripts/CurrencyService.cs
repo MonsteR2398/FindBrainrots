@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using ModularTreasures.Quests;
 using UnityEngine;
 
 namespace Treasures.CurrencySystem
@@ -23,6 +24,7 @@ namespace Treasures.CurrencySystem
         public static CurrencyService Instance { get; private set; }
 
         [SerializeField] private CurrencyDatabaseSO database;
+        [SerializeField] private CurrencyFlyVFX vfxManager;
         public CurrencyDatabaseSO Database => database;
 
         public event Action<CurrencyType, long, bool> OnBalanceChanged; // type, newAmount, isSilent
@@ -51,7 +53,7 @@ namespace Treasures.CurrencySystem
             return _balances.ContainsKey(type) ? _balances[type] : 0;
         }
 
-        public void AddBalance(CurrencyType type, long amount, bool silent = false)
+        public void AddBalance(CurrencyType type, long amount, Transform targetPos = null,  bool silent = false)
         {
             if (amount == 0) return;
 
@@ -59,10 +61,16 @@ namespace Treasures.CurrencySystem
                 _balances[type] = 0;
 
             _balances[type] += amount;
-            
+            QuestActionSystem.TriggerAction($"{type}Add", (float)amount);
             Save();
 
-            OnBalanceChanged?.Invoke(type, _balances[type], silent);
+            bool isEffectivelySilent = silent || targetPos == null;
+            OnBalanceChanged?.Invoke(type, _balances[type], isEffectivelySilent);
+
+            if (targetPos != null)
+            {
+                vfxManager.SpawnVFX(type, amount, targetPos.position);
+            }
 
             if (!silent && amount > 0)
             {

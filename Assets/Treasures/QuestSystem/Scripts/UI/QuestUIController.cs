@@ -12,19 +12,23 @@ namespace ModularTreasures.Quests
         [SerializeField] private Slider progressSlider;
         [SerializeField] private Image backgroundImage;
         [SerializeField] private Button claimButton;
+        [SerializeField] private Image IconImage;
+
+        [Header("Settings")]
+        [SerializeField] private NumberFormatMode formatMode = NumberFormatMode.Abbreviated;
 
         [Header("Colors")]
         [SerializeField] private Color activeColor = new Color(0.15f, 0.15f, 0.15f, 0.9f);
-        [SerializeField] private Color completedColor = new Color(0.1f, 0.5f, 0.1f, 1f);
+[SerializeField] private Color completedColor = new Color(0.1f, 0.5f, 0.1f, 1f);
 
+        private RectTransform panelParent;
         private Vector3 _originalScale;
 
         private void Awake()
         {
-            _originalScale = transform.localScale;
             if (claimButton != null)
             {
-                claimButton.onClick.AddListener(OnClaimClicked);
+                claimButton.onClick.AddListener(() => OnClaimClicked(claimButton.transform));
             }
         }
 
@@ -42,6 +46,9 @@ namespace ModularTreasures.Quests
                 else
                     HandleQuestStarted(QuestManager.Instance.CurrentQuest);
             }
+
+            panelParent = backgroundImage.rectTransform;
+            _originalScale = panelParent.localScale;
         }
 
         private void OnDisable()
@@ -59,11 +66,11 @@ namespace ModularTreasures.Quests
             if (QuestManager.Instance != null && QuestManager.Instance.Status == QuestStatus.Completed)
             {
                 float scale = 1f + Mathf.Sin(Time.time * 2f) * 0.05f;
-                transform.localScale = _originalScale * scale;
+               panelParent.localScale = _originalScale * scale;
             }
             else
             {
-                transform.localScale = _originalScale;
+                panelParent.localScale = _originalScale;
             }
         }
 
@@ -78,6 +85,7 @@ namespace ModularTreasures.Quests
             gameObject.SetActive(true);
             titleText.text = quest.Title;
             backgroundImage.color = activeColor;
+            IconImage.sprite = quest.Icon;
             if (claimButton != null) claimButton.interactable = false;
         }
 
@@ -93,12 +101,15 @@ namespace ModularTreasures.Quests
 
             progressSlider.maxValue = quest.TargetValue;
             progressSlider.value = currentProgress;
-            progressText.text = $"{(int)currentProgress} / {(int)quest.TargetValue}";
+
+            string currentStr = NumberFormatter.Format(currentProgress, formatMode);
+            string targetStr = NumberFormatter.Format(quest.TargetValue, formatMode);
+            progressText.text = $"{currentStr} / {targetStr}";
         }
 
-        private void OnClaimClicked()
+        private void OnClaimClicked(Transform targetPos)
         {
-            QuestManager.Instance.ClaimReward();
+            QuestManager.Instance.ClaimReward(targetPos);
         }
     }
 }

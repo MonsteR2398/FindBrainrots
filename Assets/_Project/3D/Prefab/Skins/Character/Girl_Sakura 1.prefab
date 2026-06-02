@@ -321,3 +321,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03c02b3f8d063241bcf236dc59f2da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimator
+  speedDampTime: 0.15

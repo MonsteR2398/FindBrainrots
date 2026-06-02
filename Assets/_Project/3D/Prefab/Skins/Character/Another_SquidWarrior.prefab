@@ -325,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03c02b3f8d063241bcf236dc59f2da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimator
+  speedDampTime: 0.15
 --- !u!137 &6859438363823295124 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 1350394806355156913, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}

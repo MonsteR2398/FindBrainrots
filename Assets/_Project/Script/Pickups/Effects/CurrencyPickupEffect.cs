@@ -2,6 +2,7 @@ using UnityEngine;
 using Treasures.CurrencySystem;
 using ModularTreasures.Achievements;
 using System.Collections.Generic;
+using ModularTreasures.Quests;
 
 namespace Treasures.Pickups
 {
@@ -25,13 +26,15 @@ namespace Treasures.Pickups
         {
             if (CurrencyService.Instance != null)
             {
-                CurrencyService.Instance.AddBalance(currencyType, amount, true);
+                CurrencyService.Instance.AddBalance(currencyType, amount, null);
 
                 if (AchievementManager.Instance != null)
                 {
                     foreach (var achieve in _achievements)
                         AchievementManager.Instance.AddProgress(achieve.key, achieve.value);
                 }
+
+                QuestActionSystem.TriggerAction($"{currencyType}Pickup", 1);
             }
             else
             {

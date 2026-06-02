@@ -43,14 +43,12 @@ namespace Treasures.Pickups
         {
             if (itemData == null || itemData.WorldPrefab == null || modelContainer == null) return;
 
-            // Clear existing models
             foreach (Transform child in modelContainer)
             {
                 if (Application.isPlaying) Destroy(child.gameObject);
                 else DestroyImmediate(child.gameObject);
             }
 
-            // Instantiate new model
             GameObject visual = Instantiate(itemData.WorldPrefab, modelContainer);
             visual.transform.localPosition = Vector3.zero;
             visual.transform.localRotation = Quaternion.identity;
@@ -60,14 +58,12 @@ namespace Treasures.Pickups
             {
                 if (placeholderMaterial != null)
                 {
-                    // Apply black placeholder material to all slots
                     Material[] mats = new Material[r.sharedMaterials.Length];
                     for (int i = 0; i < mats.Length; i++) mats[i] = placeholderMaterial;
                     r.sharedMaterials = mats;
                 }
                 else if (itemData.OverrideTexture != null)
                 {
-                    // Apply rarity texture using sharedMaterials to avoid leaks in Editor
                     Material[] sharedMats = r.sharedMaterials;
                     foreach (var mat in sharedMats)
                     {

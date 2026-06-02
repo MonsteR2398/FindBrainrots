@@ -16,6 +16,9 @@ namespace ModularCollection.Core
         private List<string> allItemIds = new List<string>();
         private ICollectionPersistence persistence;
 
+        public int UnlockedCount => unlockedItemIds.Count;
+        public IReadOnlyCollection<string> UnlockedItemIds => unlockedItemIds;
+
         private void Awake()
         {
             if (Instance == null)
@@ -55,6 +58,9 @@ namespace ModularCollection.Core
             unlockedItemIds.Add(itemId);
             persistence.SaveUnlockedItems(unlockedItemIds);
             OnItemUnlocked?.Invoke(itemId);
+            
+            // Trigger QuestActionSystem for modular quest tracking
+            ModularTreasures.Quests.QuestActionSystem.TriggerAction("CollectionItemUnlocked", 1f);
         }
 
 

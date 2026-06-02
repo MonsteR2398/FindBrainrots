@@ -2,16 +2,10 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using ModularTreasures;
 
 namespace Treasures.CurrencySystem
 {
-    public enum CurrencyFormatMode
-    {
-        Raw,         // 1000000
-        Separated,   // 1.000.000
-        Abbreviated  // 1K, 1M, 1B
-    }
-
     public class CurrencyCounterUI : MonoBehaviour
     {
         [SerializeField] private CurrencyType type;
@@ -20,7 +14,7 @@ namespace Treasures.CurrencySystem
         [SerializeField] private float countSpeed = 500f;
         [SerializeField] private bool useSmoothFilling = true;
         [SerializeField] private float maxFillDuration = 1.5f;
-        [SerializeField] private CurrencyFormatMode formatMode = CurrencyFormatMode.Separated;
+        [SerializeField] private NumberFormatMode formatMode = NumberFormatMode.Separated;
 
         public CurrencyType CurrencyType => type;
 
@@ -109,38 +103,7 @@ namespace Treasures.CurrencySystem
 
         private void UpdateText(long value)
         {
-            countText.text = FormatNumber(value);
+            countText.text = NumberFormatter.Format(value, formatMode);
         }
-
-        private string FormatNumber(long value)
-        {
-            switch (formatMode)
-            {
-                case CurrencyFormatMode.Raw:
-                    return value.ToString();
-                case CurrencyFormatMode.Separated:
-                    var nfi = new System.Globalization.NumberFormatInfo { NumberGroupSeparator = ".", NumberDecimalDigits = 0 };
-                    return value.ToString("N", nfi);
-                case CurrencyFormatMode.Abbreviated:
-                    return Abbreviate(value);
-                default:
-                    return value.ToString();
-            }
-        }
-
-        private string Abbreviate(long value)
-        {
-            if (value < 1000) return value.ToString();
-            
-            var nfi = new System.Globalization.NumberFormatInfo { NumberDecimalSeparator = "." };
-            
-            if (value < 1000000) 
-                return (value / 1000f).ToString("F1", nfi).TrimEnd('0').TrimEnd('.') + "K";
-            
-            if (value < 1000000000) 
-                return (value / 1000000f).ToString("F1", nfi).TrimEnd('0').TrimEnd('.') + "M";
-            
-            return (value / 1000000000f).ToString("F1", nfi).TrimEnd('0').TrimEnd('.') + "B";
-        }
-}
+    }
 }

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: DiamondCurrency
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.CurrencySystem.CurrencyDefinition
   type: 1
-  icon: {fileID: 21300000, guid: 9d828b669d63a451c8ae0a8541df8dc1, type: 3}
+  icon: {fileID: 21300000, guid: d5cde9a64966840628d5810c40246db0, type: 3}
