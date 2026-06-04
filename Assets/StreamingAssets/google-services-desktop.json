@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "924897537041",
+    "project_id": "obby-find-brainrots",
+    "storage_bucket": "obby-find-brainrots.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924897537041:android:81ceac28d744a4d159d5b0",
+        "android_client_info": {
+          "package_name": "obby.find.apollo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR2L0Nw8PnCtzCqC3LXAQ3K8IfnGGs9L4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

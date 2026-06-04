@@ -19,4 +19,5 @@ MonoBehaviour:
   condition: {fileID: 11400000, guid: e4bca757c7086394d8674d698ac42eb3, type: 2}
   isRepeatable: 0
   startFromCurrentValue: 1
-  rewards: []
+  rewards:
+  - {fileID: 11400000, guid: 1ca83f2771698a6468cf7807194560f2, type: 2}
