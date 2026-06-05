@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private int jumpsRemaining;
     private bool jumpRequested;
     private float externalSpeedMultiplier = 1f;
+    private float externalJumpMultiplier = 1f;
 
     // ----------------------------------------
     public Vector3 CurrentVelocity => velocity;
@@ -69,6 +70,11 @@ public class PlayerController : MonoBehaviour
         {
             externalSpeedMultiplier = multiplier;
         }
+    }
+
+    public void SetJumpMultiplier(float multiplier)
+    {
+        externalJumpMultiplier = multiplier;
     }
 
     public void ApplySpeedBoost(float multiplier)
@@ -140,7 +146,7 @@ else
         velocity.z = currentHorizontalVel.z;
         if (jumpRequested)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            velocity.y = Mathf.Sqrt(jumpHeight * externalJumpMultiplier * -2f * gravity);
             jumpsRemaining--;
             jumpRequested = false;
         }

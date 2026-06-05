@@ -5,29 +5,34 @@ namespace ModularTreasures.Quests
     [CreateAssetMenu(fileName = "Camera Sequence Reward", menuName = "Quests/Rewards/Camera Sequence")]
     public class CameraSequenceRewardSO : QuestRewardSO
     {
-        [SerializeField] private string targetName = "CameraTarget";
+        [SerializeField] private string targetId = "CameraTarget";
         [SerializeField] private float focusDuration = 3f;
         [SerializeField] private string arrivalActionKey = "CameraArrived";
+        [SerializeField] private bool waitForManualRelease = false;
 
         public override void GiveReward(Transform playerPos)
         {
-            GameObject targetObj = GameObject.Find(targetName);
-            if (targetObj == null)
+            if (CameraSequenceManager.Instance == null)
             {
-                Debug.LogWarning($"[CameraSequenceReward] Target '{targetName}' not found in scene!");
+                Debug.LogWarning("[CameraSequenceReward] CameraSequenceManager not found in scene!");
                 return;
             }
 
-            if (CameraSequenceManager.Instance != null)
+            Transform target = CameraSequenceManager.Instance.GetTarget(targetId);
+
+            if (target == null)
             {
-                CameraSequenceManager.Instance.PlaySequence(targetObj.transform, focusDuration, () => 
-                {
-                    if (!string.IsNullOrEmpty(arrivalActionKey))
-                    {
-                        QuestActionSystem.TriggerAction(arrivalActionKey, 1f);
-                    }
-                });
+                Debug.LogWarning($"[CameraSequenceReward] Target '{targetId}' is not registered!");
+                return;
             }
+
+            CameraSequenceManager.Instance.PlaySequence(target, null, focusDuration, () =>
+            {
+                if (!string.IsNullOrEmpty(arrivalActionKey))
+                {
+                    QuestActionSystem.TriggerAction(arrivalActionKey, 1f);
+                }
+            }, waitForManualRelease);
         }
     }
 }

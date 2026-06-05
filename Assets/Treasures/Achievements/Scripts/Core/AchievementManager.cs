@@ -74,10 +74,8 @@ namespace ModularTreasures.Achievements
             _progress[achievementId] = currentProgress;
             OnProgressUpdated?.Invoke(achievementId, currentProgress);
 
-            // Trigger QuestActionSystem for modular quest tracking
             ModularTreasures.Quests.QuestActionSystem.TriggerAction(achievementId + "Add", amount);
 
-            // Save shared progress for this ID
             _persistence.SaveProgress(achievementId, currentProgress, false);
 
             foreach (var tier in _definitions[achievementId])
@@ -97,7 +95,6 @@ namespace ModularTreasures.Achievements
             if (_unlockedUniqueIds.Contains(uniqueKey)) return;
 
             _unlockedUniqueIds.Add(uniqueKey);
-            // Save unlock state using unique key
             _persistence.SaveProgress(uniqueKey, definition.TargetValue, true);
             
             OnAchievementUnlocked?.Invoke(definition);
@@ -133,7 +130,6 @@ namespace ModularTreasures.Achievements
 
         public bool IsUnlocked(string achievementId)
         {
-            // For backward compatibility or general checks, return true if ALL tiers for this ID are unlocked
             if (!_definitions.TryGetValue(achievementId, out var tiers)) return false;
             foreach (var tier in tiers)
             {
@@ -144,7 +140,6 @@ namespace ModularTreasures.Achievements
 
         private string GetUniqueKey(AchievementSO definition)
         {
-            // Use asset name or a combination of ID and Target to ensure uniqueness among tiers
             return $"{definition.Id}_{definition.TargetValue}";
         }
 }

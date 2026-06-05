@@ -15,9 +15,9 @@ MonoBehaviour:
   id: Quest_3_Brainrots
   title: Find 10 Brainrots
   icon: {fileID: 21300000, guid: 7ca9fb4d5211abb408d5a79c3608a671, type: 3}
-  targetValue: 10
+  targetValue: 1
   condition: {fileID: 11400000, guid: e4bca757c7086394d8674d698ac42eb3, type: 2}
   isRepeatable: 0
   startFromCurrentValue: 1
   rewards:
-  - {fileID: 11400000, guid: 1ca83f2771698a6468cf7807194560f2, type: 2}
+  - {fileID: 11400000, guid: 31eb9240a8eb5164495318dab27b318c, type: 2}

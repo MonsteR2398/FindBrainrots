@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8e61b4b18a08154a95c46ea32504640, type: 3}
-  m_Name: Reward_BrainrotCameraSequence
+  m_Name: Reward_Wall10View
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraSequenceRewardSO
-  targetName: CameraTarget
-  focusDuration: 4
-  arrivalActionKey: BrainrotQuest_FocusArrival
+  targetId: Wall10View
+  focusDuration: 5
+  arrivalActionKey: Quest_Wall10View
+  waitForManualRelease: 1
