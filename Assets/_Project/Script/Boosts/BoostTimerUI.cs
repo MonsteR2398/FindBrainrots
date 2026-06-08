@@ -26,7 +26,6 @@ namespace Treasures.Boosts
 
         private void OnEnable()
         {
-            // Start hidden until a boost activates.
             if (window != null) window.SetActive(false);
         }
 

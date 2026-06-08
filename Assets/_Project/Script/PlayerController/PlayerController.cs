@@ -64,6 +64,26 @@ public class PlayerController : MonoBehaviour
         jumpsRemaining = maxJumps;
     }
 
+    /// <summary>
+    /// Safely moves the player to a new position/rotation. The CharacterController must
+    /// be disabled while repositioning, otherwise its internal collision state fights
+    /// the transform change. Also resets accumulated velocity.
+    /// </summary>
+    public void Teleport(Vector3 position, Quaternion rotation)
+    {
+        if (controller == null) controller = GetComponent<CharacterController>();
+
+        bool wasEnabled = controller != null && controller.enabled;
+        if (controller != null) controller.enabled = false;
+
+        transform.SetPositionAndRotation(position, rotation);
+
+        if (controller != null) controller.enabled = wasEnabled;
+
+        velocity = Vector3.zero;
+        jumpsRemaining = maxJumps;
+    }
+
     public void SetSpeedMultiplier(float multiplier)
     {
         if (Mathf.Abs(externalSpeedMultiplier - multiplier) > 0.01f)

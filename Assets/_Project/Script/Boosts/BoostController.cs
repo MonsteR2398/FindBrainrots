@@ -93,6 +93,14 @@ namespace Treasures.Boosts
         public bool AnyActive() => IsActive(BoostType.Speed) || IsActive(BoostType.Jump);
 
         public int GetCost(BoostType type) => ConfigFor(type).diamondCost;
+        public Sprite GetIcon()
+        {
+            var database = CurrencyService.Instance.Database;
+            if (database != null)
+                return database.GetDefinition(CurrencyType.Diamond).Icon;
+            else
+                return null;
+        }
 
         /// <summary>
         /// Requests a boost. Spends crystals if affordable, otherwise shows a Reward ad.
@@ -111,24 +119,24 @@ namespace Treasures.Boosts
                 return;
             }
 
-            // 2. Not enough crystals -> fall back to a Reward ad.
-            Debug.Log($"[Boost] Not enough crystals for {type}. Offering reward ad...");
-            var ads = AppServices.Ads;
-            if (ads != null && ads.IsRewardedAdReady())
-            {
-                ads.ShowRewardedAd(
-                    onRewarded: () =>
-                    {
-                        Debug.Log($"[Boost] Reward granted -> activating {type}.");
-                        Activate(type);
-                    },
-                    onClosed: null);
-            }
-            else
-            {
-                Debug.LogWarning($"[Boost] {type} unavailable: not enough crystals and no reward ad ready.");
-                ads?.LoadRewardedAd();
-            }
+            // // 2. Not enough crystals -> fall back to a Reward ad.
+            // Debug.Log($"[Boost] Not enough crystals for {type}. Offering reward ad...");
+            // var ads = AppServices.Ads;
+            // if (ads != null && ads.IsRewardedAdReady())
+            // {
+            //     ads.ShowRewardedAd(
+            //         onRewarded: () =>
+            //         {
+            //             Debug.Log($"[Boost] Reward granted -> activating {type}.");
+            //             Activate(type);
+            //         },
+            //         onClosed: null);
+            // }
+            // else
+            // {
+            //     Debug.LogWarning($"[Boost] {type} unavailable: not enough crystals and no reward ad ready.");
+            //     ads?.LoadRewardedAd();
+            // }
         }
 
         #endregion

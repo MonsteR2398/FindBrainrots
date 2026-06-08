@@ -46,7 +46,8 @@ public class CameraLookController : MonoBehaviour
 
         if (delta.sqrMagnitude > 0)
         {
-            float currentSensitivity = IsTouchInput() ? touchSensitivity : mouseSensitivity;
+            float baseSensitivity = IsTouchInput() ? touchSensitivity : mouseSensitivity;
+            float currentSensitivity = baseSensitivity * Treasures.Settings.GameSettings.SensitivityMultiplier;
             
             if (Cursor.lockState == CursorLockMode.Locked || IsTouchInput())
             {

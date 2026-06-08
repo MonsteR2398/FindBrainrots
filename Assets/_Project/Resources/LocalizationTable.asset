@@ -1,0 +1,176 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea188eb928c071243809edd4459bd4fe, type: 3}
+  m_Name: LocalizationTable
+  m_EditorClassIdentifier: Assembly-CSharp::Treasures.Localization.LocalizationTable
+  languageCodes:
+  - en
+  - ru
+  - es
+  - pt
+  - fr
+  - de
+  - it
+  languageNames:
+  - English
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
+  - "Espa\xF1ol"
+  - "Portugu\xEAs"
+  - "Fran\xE7ais"
+  - Deutsch
+  - Italiano
+  entries:
+  - key: settings.title
+    values:
+    - Settings
+    - "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+    - Ajustes
+    - "Configura\xE7\xF5es"
+    - "Param\xE8tres"
+    - Einstellungen
+    - Impostazioni
+  - key: settings.music
+    values:
+    - Music
+    - "\u041C\u0443\u0437\u044B\u043A\u0430"
+    - "M\xFAsica"
+    - "M\xFAsica"
+    - Musique
+    - Musik
+    - Musica
+  - key: settings.sfx
+    values:
+    - Sound
+    - "\u0417\u0432\u0443\u043A\u0438"
+    - Sonido
+    - Som
+    - Son
+    - Ton
+    - Suono
+  - key: settings.sensitivity
+    values:
+    - Sensitivity
+    - "\u0427\u0443\u0432\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C"
+    - Sensibilidad
+    - Sensibilidade
+    - "Sensibilit\xE9"
+    - Empfindlichkeit
+    - "Sensibilit\xE0"
+  - key: settings.language
+    values:
+    - Language
+    - "\u042F\u0437\u044B\u043A"
+    - Idioma
+    - Idioma
+    - Langue
+    - Sprache
+    - Lingua
+  - key: menu.skins
+    values:
+    - Skins
+    - "\u0421\u043A\u0438\u043D\u044B"
+    - Skins
+    - Skins
+    - Skins
+    - Skins
+    - Skin
+  - key: menu.collection
+    values:
+    - Collection
+    - "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u044F"
+    - "Colecci\xF3n"
+    - "Cole\xE7\xE3o"
+    - Collection
+    - Sammlung
+    - Collezione
+  - key: menu.achievements
+    values:
+    - Achievements
+    - "\u0410\u0447\u0438\u0432\u043A\u0438"
+    - Logros
+    - Conquistas
+    - "Succ\xE8s"
+    - Erfolge
+    - Obiettivi
+  - key: brainrot.get
+    values:
+    - Get
+    - "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C"
+    - Obtener
+    - Obter
+    - Obtenir
+    - Holen
+    - Ottieni
+  - key: quest.findBrainrots
+    values:
+    - Find the Brainrots to open the portal
+    - "\u041D\u0430\u0439\u0434\u0438 \u0411\u0440\u0435\u0439\u043D\u0440\u043E\u0442\u043E\u0432,
+      \u0447\u0442\u043E\u0431\u044B \u043E\u0442\u043A\u0440\u044B\u0442\u044C \u043F\u043E\u0440\u0442\u0430\u043B"
+    - Encuentra los Brainrots para abrir el portal
+    - Encontre os Brainrots para abrir o portal
+    - Trouve les Brainrots pour ouvrir le portail
+    - "Finde die Brainrots, um das Portal zu \xF6ffnen"
+    - Trova i Brainrot per aprire il portale
+  - key: boosts.title
+    values:
+    - BOOSTS
+    - "\u0411\u0423\u0421\u0422\u042B"
+    - MEJORAS
+    - TURBOS
+    - BOOSTS
+    - BOOSTS
+    - BONUS
+  - key: boost.speed
+    values:
+    - Speed
+    - "\u0421\u043A\u043E\u0440\u043E\u0441\u0442\u044C"
+    - Velocidad
+    - Velocidade
+    - Vitesse
+    - Tempo
+    - "Velocit\xE0"
+  - key: boost.jump
+    values:
+    - Jump
+    - "\u041F\u0440\u044B\u0436\u043E\u043A"
+    - Salto
+    - Salto
+    - Saut
+    - Sprung
+    - Salto
+  - key: boost.speed_caps
+    values:
+    - SPEED
+    - "\u0421\u041A\u041E\u0420\u041E\u0421\u0422\u042C"
+    - VELOCIDAD
+    - VELOCIDADE
+    - VITESSE
+    - TEMPO
+    - "VELOCIT\xC0"
+  - key: boost.jump_caps
+    values:
+    - JUMP
+    - "\u041F\u0420\u042B\u0416\u041E\u041A"
+    - SALTO
+    - SALTO
+    - SAUT
+    - SPRUNG
+    - SALTO
+  - key: collection.title
+    values:
+    - COLLECTION
+    - "\u041A\u041E\u041B\u041B\u0415\u041A\u0426\u0418\u042F"
+    - "COLECCI\xD3N"
+    - "COLE\xC7\xC3O"
+    - COLLECTION
+    - SAMMLUNG
+    - COLLEZIONE

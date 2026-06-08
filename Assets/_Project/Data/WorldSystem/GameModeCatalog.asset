@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c614c16854dfe8e49924d769d3c25f2c, type: 3}
+  m_Name: GameModeCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::Treasures.WorldSystem.GameModeCatalog
+  Modes:
+  - {fileID: 11400000, guid: f4b7acdfd7a2f954aa61836169a4e4f3, type: 2}
+  - {fileID: 11400000, guid: 1ed41944374116947852073bf2debbe4, type: 2}
+  - {fileID: 11400000, guid: 856cd7eea88fb3e428b921b00cc75c49, type: 2}

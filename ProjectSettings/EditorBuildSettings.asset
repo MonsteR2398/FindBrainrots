@@ -8,5 +8,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/MainScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/_Project/Scenes/Worlds/World_Grasslands.unity
+    guid: c0827daab6fd88141b5cc590e100bbc7
+  - enabled: 1
+    path: Assets/_Project/Scenes/Worlds/World_Arena.unity
+    guid: d21afd41117334b49ba0e2f2eee91b4f
+  - enabled: 1
+    path: Assets/_Project/Scenes/Worlds/World_Skylands.unity
+    guid: 344835696652bbb4ba5935ac7ffb8f3e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

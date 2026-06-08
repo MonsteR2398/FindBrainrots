@@ -23,7 +23,9 @@ namespace Treasures.Services
             _instance = go.AddComponent<AppBootstrap>();
             
             go.AddComponent<AdsCoordinator>();
-            
+
+            go.AddComponent<AudioManager>();
+
             DontDestroyOnLoad(go);
         }
 

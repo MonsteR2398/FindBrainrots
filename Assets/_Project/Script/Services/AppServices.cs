@@ -12,6 +12,9 @@ namespace Treasures.Services
         /// <summary>Analytics/backend service (Firebase). Never throws even when the SDK is absent.</summary>
         public static IAnalyticsService Analytics { get; internal set; }
 
+        /// <summary>Audio service (music + SFX playback and persisted volume controls).</summary>
+        public static IAudioService Audio { get; internal set; }
+
         /// <summary>True when ads SDK + consent flow are fully initialized.</summary>
         public static bool AdsReady => Ads != null && Ads.IsInitialized;
 
