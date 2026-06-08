@@ -119,24 +119,24 @@ namespace Treasures.Boosts
                 return;
             }
 
-            // // 2. Not enough crystals -> fall back to a Reward ad.
-            // Debug.Log($"[Boost] Not enough crystals for {type}. Offering reward ad...");
-            // var ads = AppServices.Ads;
-            // if (ads != null && ads.IsRewardedAdReady())
-            // {
-            //     ads.ShowRewardedAd(
-            //         onRewarded: () =>
-            //         {
-            //             Debug.Log($"[Boost] Reward granted -> activating {type}.");
-            //             Activate(type);
-            //         },
-            //         onClosed: null);
-            // }
-            // else
-            // {
-            //     Debug.LogWarning($"[Boost] {type} unavailable: not enough crystals and no reward ad ready.");
-            //     ads?.LoadRewardedAd();
-            // }
+            // 2. Not enough crystals -> fall back to a Reward ad.
+             Debug.Log($"[Boost] Not enough crystals for {type}. Offering reward ad...");
+             var ads = AppServices.Ads;
+             if (ads != null && ads.IsRewardedAdReady())
+             {
+                 ads.ShowRewardedAd(
+                     onRewarded: () =>
+                     {
+                        Debug.Log($"[Boost] Reward granted -> activating {type}.");
+                        Activate(type);
+                     },
+                     onClosed: null);
+             }
+            else
+             {
+                Debug.LogWarning($"[Boost] {type} unavailable: not enough crystals and no reward ad ready.");
+                 ads?.LoadRewardedAd();
+             }
         }
 
         #endregion
