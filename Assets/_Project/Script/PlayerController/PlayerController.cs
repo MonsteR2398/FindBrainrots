@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
     public float gravity = -30f;
     public int maxJumps = 2;
 
+    [Tooltip("When true, movement input is interpreted relative to the main camera (human player). " +
+             "When false, input is interpreted in world space (used by bots that have no camera).")]
+    public bool useCameraRelativeMovement = true;
+
     [Header("Momentum")]
     public float acceleration = 60f; 
     public float friction = 50f;     
@@ -36,23 +40,45 @@ public class PlayerController : MonoBehaviour
     public bool IsGrounded => controller != null && controller.isGrounded;
     public bool IsFalling => velocity.y < 0f && !IsGrounded;
     public bool IsJumping => velocity.y > 0f && !IsGrounded;
+    public int JumpsRemaining => jumpsRemaining;
     // ----------------------------------------
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
-        mainCamera = Camera.main.transform;
+        if (useCameraRelativeMovement && Camera.main != null)
+            mainCamera = Camera.main.transform;
         jumpsRemaining = maxJumps;
     }
 
     public void OnMove(InputValue value)
     {
-        moveInput = value.Get<Vector2>();
+        SetMoveInput(value.Get<Vector2>());
     }
 
     public void OnJump(InputValue value)
     {
-        if (value.isPressed && (controller.isGrounded || jumpsRemaining > 0))
+        if (value.isPressed)
+            RequestJump();
+    }
+
+    /// <summary>
+    /// Sets the desired movement input (-1..1 on each axis). Used by human input (OnMove)
+    /// and by bots driving this controller programmatically.
+    /// </summary>
+    public void SetMoveInput(Vector2 input)
+    {
+        moveInput = input;
+    }
+
+    /// <summary>
+    /// Requests a jump for the next movement update, if grounded or air-jumps remain.
+    /// Shared entry point for human input (OnJump) and bots.
+    /// </summary>
+    public void RequestJump()
+    {
+        if (controller == null) controller = GetComponent<CharacterController>();
+        if (controller.isGrounded || jumpsRemaining > 0)
         {
             jumpRequested = true;
         }
@@ -127,8 +153,18 @@ public class PlayerController : MonoBehaviour
             jumpsRemaining = maxJumps;
         }
 
-        Vector3 forward = mainCamera.forward;
-        Vector3 right = mainCamera.right;
+        Vector3 forward, right;
+        if (useCameraRelativeMovement && mainCamera != null)
+        {
+            forward = mainCamera.forward;
+            right = mainCamera.right;
+        }
+        else
+        {
+            // World-space axes for bots (no camera dependency).
+            forward = Vector3.forward;
+            right = Vector3.right;
+        }
         forward.y = 0; right.y = 0;
         forward.Normalize(); right.Normalize();
 

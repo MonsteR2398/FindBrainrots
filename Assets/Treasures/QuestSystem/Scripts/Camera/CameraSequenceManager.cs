@@ -68,7 +68,7 @@ namespace ModularTreasures.Quests
 
             if (viewPoint == null)
             {
-                viewPoint = target.Find("CameraView");
+                viewPoint = target.GetChild(0);
             }
 
             if (viewPoint != null)
@@ -79,10 +79,10 @@ namespace ModularTreasures.Quests
             }
             else
             {
-                focusCamera.LookAt = target;
                 focusCamera.transform.position = target.position + target.forward * -5f + Vector3.up * 3f;
-                focusCamera.transform.LookAt(target);
             }
+                focusCamera.transform.LookAt(target);
+                focusCamera.LookAt = target;
 
             focusCamera.Priority = 100;
 

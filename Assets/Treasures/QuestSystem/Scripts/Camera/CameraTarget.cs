@@ -19,5 +19,11 @@ namespace ModularTreasures.Quests
             if (CameraSequenceManager.Instance != null)
                 CameraSequenceManager.Instance.UnregisterTarget(id, transform);
         }
+
+        private void OnDestroy()
+        {
+            if (CameraSequenceManager.Instance != null)
+                CameraSequenceManager.Instance.UnregisterTarget(id, transform);
+        }
     }
 }
