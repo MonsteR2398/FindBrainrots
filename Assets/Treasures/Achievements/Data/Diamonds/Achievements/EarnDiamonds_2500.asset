@@ -15,5 +15,5 @@ MonoBehaviour:
   id: diamonds_earn
   title: Earn 2500 diamonds
   description: Earn 2500 diamonds in one session.
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: e0940f4e599044730b69eb2f0af6617d, type: 3}
   targetValue: 2500

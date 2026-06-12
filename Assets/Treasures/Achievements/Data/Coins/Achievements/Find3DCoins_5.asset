@@ -15,5 +15,5 @@ MonoBehaviour:
   id: coins_find
   title: Find 5 coins
   description: Find 5 coins in one session.
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 407417b1be4764427a2a8ea9ff3f67e7, type: 3}
   targetValue: 5
