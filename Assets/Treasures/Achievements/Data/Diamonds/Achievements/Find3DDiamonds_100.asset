@@ -15,5 +15,5 @@ MonoBehaviour:
   id: diamonds_find
   title: Find 100 diamonds
   description: Find 100 diamonds in one session.
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: e0940f4e599044730b69eb2f0af6617d, type: 3}
   targetValue: 100

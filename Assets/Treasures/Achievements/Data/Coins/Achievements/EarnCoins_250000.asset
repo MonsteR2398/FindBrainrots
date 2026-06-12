@@ -15,5 +15,5 @@ MonoBehaviour:
   id: coins_earn
   title: Earn 250000 coins
   description: Earn 250000 coins in one session.
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 407417b1be4764427a2a8ea9ff3f67e7, type: 3}
   targetValue: 250000

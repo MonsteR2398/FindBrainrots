@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Coins
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Achievements.AchievementCategorySO
   categoryName: Coins
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 407417b1be4764427a2a8ea9ff3f67e7, type: 3}
   achievements:
   - {fileID: 11400000, guid: bea74615ebbca9d4a94e915593980bb5, type: 2}
   - {fileID: 11400000, guid: 9354b729cd49c0a4cb850f69f663967f, type: 2}
