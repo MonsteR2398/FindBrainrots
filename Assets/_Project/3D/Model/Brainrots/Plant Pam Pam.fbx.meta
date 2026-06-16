@@ -3,7 +3,12 @@ guid: dd4b642f67fc26343bbda7290af66430
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plant Pam Pam
+    second: {fileID: 2100000, guid: f25d426372580314eaa5ee158fe8b8f7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: e66d617c98df03c4a93977f6d4f00e24
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Peary Bunny
+    second: {fileID: 2100000, guid: 846ad1b9c0c754c4785fd70c0d2e4438, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

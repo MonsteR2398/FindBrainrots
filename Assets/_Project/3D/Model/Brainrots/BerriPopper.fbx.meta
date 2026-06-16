@@ -3,7 +3,12 @@ guid: f7c1a791fd4e844478f691febf0c8d84
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BerriPopper
+    second: {fileID: 2100000, guid: e1d1784bd83fc714db0625bfd8c573d0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: a1cf6ba77fc91b54ba5fb8395355e388
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lighty Bighty
+    second: {fileID: 2100000, guid: 779533a8b300fc94c992c9061f3f2a11, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

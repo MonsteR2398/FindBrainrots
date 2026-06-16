@@ -3,7 +3,12 @@ guid: f409ec1de8ccc7c4ab16c15ffd0d6cdf
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Compy Bumpy
+    second: {fileID: 2100000, guid: fbde8ed6d1a1ca445a3ce404f3dc8184, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

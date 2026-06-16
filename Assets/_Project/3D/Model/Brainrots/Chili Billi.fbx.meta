@@ -3,7 +3,12 @@ guid: 2ed88f82443af984daa1afaeb915cb2d
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chili Billi
+    second: {fileID: 2100000, guid: ed2a033ed748f0f4fb18d2b2d7428002, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

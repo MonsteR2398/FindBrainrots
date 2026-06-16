@@ -3,7 +3,12 @@ guid: def30f12f5b429444b554bf6aeab9233
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Microfono Screamo
+    second: {fileID: 2100000, guid: 183450a46827ac34eaea879ae23b2e07, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

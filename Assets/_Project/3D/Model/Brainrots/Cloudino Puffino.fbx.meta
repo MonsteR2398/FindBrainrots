@@ -3,7 +3,12 @@ guid: 6003410af0db0894bb7ecfc900d7332e
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cloudino Puffino
+    second: {fileID: 2100000, guid: 9a954ee4c12291b49b9820a55d8759ee, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

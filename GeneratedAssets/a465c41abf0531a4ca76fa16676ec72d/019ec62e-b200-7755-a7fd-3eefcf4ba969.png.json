@@ -1,0 +1,41 @@
+{
+    "asset": "a465c41abf0531a4ca76fa16676ec72d",
+    "fileName": "019ec62e-b200-7755-a7fd-3eefcf4ba969.png",
+    "prompt": "A game UI icon of a thick magical collection book. The book has a dark wine-colored leather cover with gold metallic corner reinforcements. In the center of the cover, there is a prominent gold emblem featuring a silhouette of a small creature with a question mark, representing a monster collection. High-quality 2D sprite, casual cartoon style, vibrant colors, professional shading, glowing accents.",
+    "negativePrompt": "",
+    "model": "game-ui-essentials-2",
+    "modelName": "Game UI Essentials 2.0",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "84b32224d9df54965a78e2998b9a4e5f",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 512,
+        "height": 512
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

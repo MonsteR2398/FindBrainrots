@@ -3,7 +3,12 @@ guid: 1ea903a7180763f419b4962713c2b8c5
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Zibbo
+    second: {fileID: 2100000, guid: 7945fab8d103db04abd23cbc6829b1d1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: 0c5cb8313247cf043becc5541aaa3b4b
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Burgerino Chompino
+    second: {fileID: 2100000, guid: 0a3f09ce333ccbb44b0967f0dff5d8dc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

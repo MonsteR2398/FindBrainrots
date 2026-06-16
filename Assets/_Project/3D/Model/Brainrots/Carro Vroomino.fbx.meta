@@ -3,7 +3,12 @@ guid: f892ad6e2bb4702498d378f263eaa765
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carro Vroomino
+    second: {fileID: 2100000, guid: 249ba11e59010244a938aa3c46b0f1ef, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

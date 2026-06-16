@@ -3,7 +3,12 @@ guid: 18f698d995cc8b3488a81659752d52a5
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ducko Rollino
+    second: {fileID: 2100000, guid: c293444c41a6e534b819c27dbb6cf55b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

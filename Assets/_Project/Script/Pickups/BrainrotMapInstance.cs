@@ -58,15 +58,18 @@ namespace Treasures.Pickups
             {
                 if (placeholderMaterial != null)
                 {
+                    Debug.Log(1);
                     Material[] mats = new Material[r.sharedMaterials.Length];
                     for (int i = 0; i < mats.Length; i++) mats[i] = placeholderMaterial;
                     r.sharedMaterials = mats;
                 }
                 else if (itemData.OverrideTexture != null)
                 {
+                    Debug.Log(2);
                     Material[] sharedMats = r.sharedMaterials;
                     foreach (var mat in sharedMats)
                     {
+                        Debug.Log(mat, mat);
                         if (mat.HasProperty("_BaseMap"))
                             mat.SetTexture("_BaseMap", itemData.OverrideTexture);
                         else if (mat.HasProperty("_MainTex"))

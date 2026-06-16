@@ -15,6 +15,7 @@ namespace Treasures.Boosts
         [SerializeField] private BoostType boostType = BoostType.Speed;
         [SerializeField] private TextMeshProUGUI costLabel;
         [SerializeField] private Image currencyImage;
+        [SerializeField] private RectTransform boostCost;
 
         private Button _button;
 
@@ -29,13 +30,7 @@ namespace Treasures.Boosts
             if (costLabel != null && BoostController.Instance != null)
             {
                 costLabel.text = BoostController.Instance.GetCost(boostType).ToString();
-                
-                if (transform.Find("SpeedBoost_Cost") is RectTransform rt) 
-                    LayoutRebuilder.ForceRebuildLayoutImmediate(rt);
-                else if (transform.Find("JumpBoost_Cost") is RectTransform rt2)
-                    LayoutRebuilder.ForceRebuildLayoutImmediate(rt2);
-                else if (costLabel.transform.parent is RectTransform parentRt)
-                    LayoutRebuilder.ForceRebuildLayoutImmediate(parentRt);
+                    LayoutRebuilder.ForceRebuildLayoutImmediate(boostCost);
             }
 
             if(currencyImage != null && BoostController.Instance != null)

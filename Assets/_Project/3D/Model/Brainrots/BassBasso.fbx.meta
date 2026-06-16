@@ -3,7 +3,12 @@ guid: 7b86141c3cd6c1c4f803603ae8357814
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BassBasso
+    second: {fileID: 2100000, guid: 2a5ffed0c6cebc944a8eb9254fbc0a93, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

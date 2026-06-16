@@ -22,20 +22,24 @@ namespace Treasures.WorldSystem
 
         private void OnTriggerEnter(Collider other)
         {
-            if (openOnce && _used) return;
-
-            PlayerController pc = other.GetComponentInParent<PlayerController>();
-            if (pc == null) return;
-
-            if (PortalWindowUI.Instance != null)
+            if (other.gameObject.tag == "Player")
             {
-                PortalWindowUI.Instance.Open();
-                _used = true;
+                if (openOnce && _used) return;
+
+                PlayerController pc = other.GetComponentInParent<PlayerController>();
+                if (pc == null) return;
+
+                if (PortalWindowUI.Instance != null)
+                {
+                    PortalWindowUI.Instance.Open();
+                    _used = true;
+                }
+                else
+                {
+                    Debug.LogWarning("[PortalTrigger] No PortalWindowUI in the scene.");
+                }
             }
-            else
-            {
-                Debug.LogWarning("[PortalTrigger] No PortalWindowUI in the scene.");
-            }
+
         }
     }
 }

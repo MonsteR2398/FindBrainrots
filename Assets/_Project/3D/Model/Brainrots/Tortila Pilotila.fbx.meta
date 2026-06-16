@@ -3,7 +3,12 @@ guid: 1a486fa8ecab3b643929cce6b7c4ba03
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tortila Pilotila
+    second: {fileID: 2100000, guid: 25cb996e66270a849b6286fec8eed739, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

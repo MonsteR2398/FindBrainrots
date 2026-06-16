@@ -16,6 +16,8 @@ namespace Treasures.Bots
         [Tooltip("Vertical offset above a graph node when spawning, so the bot settles onto the platform.")]
         [SerializeField] private float spawnHeightOffset = 0.5f;
 
+        [SerializeField] private ParkourGraph currentGraph;
+
         private readonly List<GameObject> _bots = new List<GameObject>();
 
         private void OnEnable()
@@ -24,15 +26,12 @@ namespace Treasures.Bots
             if (mgr != null)
             {
                 mgr.WorldChanged += HandleWorldChanged;
-                // A world may already be loaded if we enabled late.
                 if (mgr.CurrentMode != null) HandleWorldChanged(mgr.CurrentMode);
             }
         }
 
         private void Start()
         {
-            // GameModeManager assigns its Instance in Awake and loads the first world in Start.
-            // If we missed subscribing in OnEnable (manager not ready yet), subscribe now.
             var mgr = GameModeManager.Instance;
             if (mgr != null)
             {
@@ -61,14 +60,13 @@ namespace Treasures.Bots
                 return;
             }
 
-            ParkourGraph graph = FindFirstObjectByType<ParkourGraph>();
-            if (graph == null)
+            if (currentGraph == null)
             {
                 Debug.LogWarning("[BotSpawner] No ParkourGraph in the loaded world - no bots spawned.");
                 return;
             }
 
-            IReadOnlyList<ParkourNode> nodes = graph.Nodes;
+            IReadOnlyList<ParkourNode> nodes = currentGraph.Nodes;
             if (nodes == null || nodes.Count == 0)
             {
                 Debug.LogWarning("[BotSpawner] ParkourGraph has no nodes - no bots spawned.");
@@ -77,7 +75,7 @@ namespace Treasures.Bots
 
             for (int i = 0; i < botCount; i++)
             {
-                ParkourNode node = graph.RandomNode();
+                ParkourNode node = currentGraph.RandomNode();
                 if (node == null) continue;
 
                 Vector3 pos = node.Position + Vector3.up * spawnHeightOffset;
@@ -85,7 +83,7 @@ namespace Treasures.Bots
                 bot.name = $"Bot_{i}";
 
                 var brain = bot.GetComponent<BotBrain>();
-                if (brain != null) brain.Initialize(graph);
+                if (brain != null) brain.Initialize(currentGraph);
 
                 _bots.Add(bot);
             }

@@ -3,7 +3,12 @@ guid: 53d7acca4613f0b4897e25d81baf4a04
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cola Psh Psh
+    second: {fileID: 2100000, guid: ef17a6eec433e244889c228693b6d075, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

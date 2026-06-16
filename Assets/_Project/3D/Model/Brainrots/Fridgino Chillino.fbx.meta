@@ -3,7 +3,12 @@ guid: 92a926fb91354da4795beb3e2340307c
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fridgino Chillino
+    second: {fileID: 2100000, guid: 22634356944d15f4b9ecbb62ed3a74de, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

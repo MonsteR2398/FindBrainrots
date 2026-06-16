@@ -13,6 +13,7 @@ namespace ModularTreasures.Quests
         [SerializeField] private Image backgroundImage;
         [SerializeField] private Button claimButton;
         [SerializeField] private Image IconImage;
+        [SerializeField] private Image FingerImage;
 
         [Header("Settings")]
         [SerializeField] private NumberFormatMode formatMode = NumberFormatMode.Abbreviated;
@@ -67,10 +68,12 @@ namespace ModularTreasures.Quests
             {
                 float scale = 1f + Mathf.Sin(Time.time * 2f) * 0.05f;
                panelParent.localScale = _originalScale * scale;
+               FingerImage.enabled = true;
             }
             else
             {
                 panelParent.localScale = _originalScale;
+               FingerImage.enabled = false;
             }
         }
 

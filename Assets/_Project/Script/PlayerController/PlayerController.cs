@@ -110,22 +110,29 @@ public class PlayerController : MonoBehaviour
         jumpsRemaining = maxJumps;
     }
 
-    public void SetSpeedMultiplier(float multiplier)
+    public void AddSpeedMultiplier(float multiplier)
     {
-        if (Mathf.Abs(externalSpeedMultiplier - multiplier) > 0.01f)
-        {
-            externalSpeedMultiplier = multiplier;
-        }
+            externalSpeedMultiplier += multiplier;
     }
 
-    public void SetJumpMultiplier(float multiplier)
+    public void RemoveSpeedMultiplayer(float multiplier)
     {
-        externalJumpMultiplier = multiplier;
+        externalSpeedMultiplier -= multiplier;
+    }
+
+    public void RemoveJumpMultiplayer(float multiplier)
+    {
+        externalJumpMultiplier -= multiplier;
+    }
+
+    public void AddJumpMultiplier(float multiplier)
+    {
+        externalJumpMultiplier += multiplier;
     }
 
     public void ApplySpeedBoost(float multiplier)
     {
-        SetSpeedMultiplier(multiplier);
+        AddSpeedMultiplier(multiplier);
         
         float targetMax = moveSpeed * multiplier;
         Vector3 hVel = new Vector3(velocity.x, 0, velocity.z);
@@ -161,7 +168,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // World-space axes for bots (no camera dependency).
+            // World-space axes for bots (no camera dependency)
             forward = Vector3.forward;
             right = Vector3.right;
         }

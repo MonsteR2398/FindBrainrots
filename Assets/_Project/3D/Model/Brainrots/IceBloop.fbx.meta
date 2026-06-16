@@ -3,7 +3,12 @@ guid: af87b859c674ab9479c06665a5490837
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: icebloop
+    second: {fileID: 2100000, guid: 978b9afbffb7c554ebdcf31dbe7d9ff1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: 07cd576d19451204493d8182fc72ede5
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rameno Slurpino
+    second: {fileID: 2100000, guid: 121153b895091644b9fbecd46ff8cd2f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

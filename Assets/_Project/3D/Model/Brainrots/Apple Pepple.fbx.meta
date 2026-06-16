@@ -3,7 +3,12 @@ guid: 76898c9313c261745b49cec7eb009de2
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Apple Pepple
+    second: {fileID: 2100000, guid: 31a7190c54f9d8f4e9c1a91a70c05d68, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

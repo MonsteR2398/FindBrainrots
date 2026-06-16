@@ -128,6 +128,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brainrot_Example_Prefab_Rarity_1
       objectReference: {fileID: 0}
+    - target: {fileID: 8329436164471858518, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329436164471858518, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329436164471858518, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
+      propertyPath: m_Size.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329436164471858518, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
+      propertyPath: m_Center.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8983776330906371953, guid: ea53c49e5797f2a4aa56792746a01a9e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

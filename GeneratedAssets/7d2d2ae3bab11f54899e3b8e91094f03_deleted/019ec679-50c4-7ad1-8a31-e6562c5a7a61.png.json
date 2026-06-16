@@ -1,0 +1,41 @@
+{
+    "asset": "7d2d2ae3bab11f54899e3b8e91094f03",
+    "fileName": "019ec679-50c4-7ad1-8a31-e6562c5a7a61.png",
+    "prompt": "A game UI icon for a skins shop. The icon features a blocky Roblox-style character torso and head, representing a customizable avatar. The character is wearing a vibrant, stylish outfit with a playful design. Visual style: casual cartoon, bold colors, rounded corners, clean shading, matching the aesthetic of the provided reference image. High-quality 2D sprite, professional and vibrant.",
+    "negativePrompt": "",
+    "model": "game-ui-essentials-2",
+    "modelName": "Game UI Essentials 2.0",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "93c216ac791944ce3890a9175a006fbf",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 512,
+        "height": 512
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

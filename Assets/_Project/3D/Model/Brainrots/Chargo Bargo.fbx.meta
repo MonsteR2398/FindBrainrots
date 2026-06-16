@@ -3,7 +3,12 @@ guid: a3c67aaa3de83d443ba7c04586b4a344
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chargo Bargo
+    second: {fileID: 2100000, guid: c803124cb4427b04bb4e814101f4d138, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

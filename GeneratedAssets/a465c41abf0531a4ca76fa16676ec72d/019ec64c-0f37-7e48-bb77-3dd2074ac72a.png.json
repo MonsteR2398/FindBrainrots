@@ -1,0 +1,41 @@
+{
+    "asset": "a465c41abf0531a4ca76fa16676ec72d",
+    "fileName": "019ec64c-0f37-7e48-bb77-3dd2074ac72a.png",
+    "prompt": "Position the white question mark precisely in the center of the black monster silhouette. Around the black monster silhouette, add a thick, light-grey beveled/embossed stroke border, matching the emblem outline style from the reference image. The wine-red leather cover and gold corners must remain unchanged.",
+    "negativePrompt": "",
+    "model": "game-ui-essentials-2",
+    "modelName": "Game UI Essentials 2.0",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "c16591869b2474a649dac6761e3e4b7e",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 512,
+        "height": 512
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

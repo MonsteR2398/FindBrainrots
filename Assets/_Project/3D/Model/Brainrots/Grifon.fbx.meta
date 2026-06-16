@@ -3,7 +3,12 @@ guid: b0b8add179d4db1458c8856786d391dc
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grifon
+    second: {fileID: 2100000, guid: 9ce0ac22985ffca498217c8bbe1c5712, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

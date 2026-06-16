@@ -1,0 +1,41 @@
+{
+    "asset": "d947567e2e25d4c4fb514de96afc58bd",
+    "fileName": "019ec65f-0e5a-70aa-8854-e660f7b1006e.png",
+    "prompt": "Keep the book exactly as it is (the wine-colored leather cover, gold metallic corner decorations, the book structure, pages, and spine). Make the grey creature silhouette in the center of the book cover look like a polished, shiny silver metal emblem (more metallic, chrome reflections). In the exact center of this metallic monster emblem, draw a clean, clear, perfectly defined white/silver question mark. Keep the overall casual cartoon art style.",
+    "negativePrompt": "",
+    "model": "game-ui-essentials-2",
+    "modelName": "Game UI Essentials 2.0",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "d947567e2e25d4c4fb514de96afc58bd",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 512,
+        "height": 512
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

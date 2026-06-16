@@ -3,7 +3,12 @@ guid: 4fa1d9b695854414cb7ceb994f9c072a
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: IceCreamo Swirlino
+    second: {fileID: 2100000, guid: f566b9646b4533045a27b1a20961068c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

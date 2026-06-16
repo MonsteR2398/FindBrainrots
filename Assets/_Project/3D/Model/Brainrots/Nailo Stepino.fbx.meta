@@ -3,7 +3,12 @@ guid: 9b69f800277a3b443bf1ad497a7b2661
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nailo Stepino
+    second: {fileID: 2100000, guid: 45a18f8fc8274944ab2cbf69a12499e4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

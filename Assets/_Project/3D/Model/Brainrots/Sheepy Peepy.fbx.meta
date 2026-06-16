@@ -3,7 +3,12 @@ guid: 56d136e855810fb45bf9c0a292985a95
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sheepy Peepy
+    second: {fileID: 2100000, guid: a96ac66d9a55d8d4eab349bdca79d6c4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

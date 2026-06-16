@@ -3,7 +3,12 @@ guid: bd4afe350f509f44684912d6cfad659c
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Buzzo TVino
+    second: {fileID: 2100000, guid: 099fd08b6ff4b10458693ca942d9d077, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

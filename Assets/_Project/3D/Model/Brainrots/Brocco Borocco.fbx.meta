@@ -3,7 +3,12 @@ guid: ec6ca5f041b887640af0eb8c4db5b4ec
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brocco Borocco
+    second: {fileID: 2100000, guid: 7b377d8e2dbf52b4894fcf3c90a3230b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: 02dab1cce931ea64a949b7876bcc014f
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cakie Pakie
+    second: {fileID: 2100000, guid: 0d1a08b47ff72b447b7123bfdfea375f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

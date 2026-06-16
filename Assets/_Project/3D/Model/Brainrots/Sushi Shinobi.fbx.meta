@@ -3,7 +3,12 @@ guid: c06eed25d9d424b44a894d9c766c6f3b
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sushi Shinobi
+    second: {fileID: 2100000, guid: 404e7d8507143534d9334ad9fa8fd49b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

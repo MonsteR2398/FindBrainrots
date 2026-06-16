@@ -3,7 +3,12 @@ guid: 2869556de3ae3834991575f7cfecf108
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Giraffo Longo
+    second: {fileID: 2100000, guid: 4b29be478887a6c4ea6028289779c512, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

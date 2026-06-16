@@ -3,7 +3,12 @@ guid: 65c0c43a0cb5d4c4990e100931172cd5
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bobba Slurpino
+    second: {fileID: 2100000, guid: f0df973c298ca1d408727033400bde23, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

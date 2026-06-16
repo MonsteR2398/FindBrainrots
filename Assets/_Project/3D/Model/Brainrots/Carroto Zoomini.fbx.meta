@@ -3,7 +3,12 @@ guid: ccdd2f9a153ca6044a62883326962764
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carroto Zoomini
+    second: {fileID: 2100000, guid: 6cb24d925810bf548a26a065d38b210c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

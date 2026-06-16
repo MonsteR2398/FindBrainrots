@@ -1,0 +1,41 @@
+{
+  "asset": "a465c41abf0531a4ca76fa16676ec72d",
+  "fileName": "019ec634-dbe6-7b76-a650-3f0275cf2d7b.png",
+  "prompt": "Move the white question mark to the exact center of the black monster silhouette. Add a thick, light-grey beveled border around the black monster silhouette, matching the style of the emblem's border in the reference image (ItemIcon_Book_1_Wine). Ensure the wine-colored book, gold corners, and overall cartoon style remain consistent.",
+  "negativePrompt": "",
+  "model": "game-ui-essentials-2",
+  "modelName": "Game UI Essentials 2.0",
+  "customSeed": -1,
+  "w3CTraceId": "",
+  "feedback": 1,
+  "refinementMode": "Generation",
+  "pixelateTargetSize": 0,
+  "pixelateKeepImageSize": false,
+  "pixelatePixelBlockSize": 0,
+  "pixelatePixelGridSize": 0,
+  "pixelateMode": 0,
+  "pixelateOutlineThickness": 0,
+  "doodles": {
+    "m_Items": [
+      {
+        "doodleReferenceType": 7,
+        "doodle": [],
+        "label": "Image",
+        "strength": 0.25,
+        "invertStrength": false,
+        "assetReferenceGuid": "c16591869b2474a649dac6761e3e4b7e",
+        "unlabeledIndex": -1
+      }
+    ]
+  },
+  "upscaleFactor": 0,
+  "dimensions": {
+    "width": 512,
+    "height": 512
+  },
+  "spriteSheet": false,
+  "duration": 0.0,
+  "dynamicParams": {
+    "serializedData": []
+  }
+}

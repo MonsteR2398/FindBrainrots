@@ -3,7 +3,12 @@ guid: ff80fe20e313ab54d83ed0e4f70b4831
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ZapZap Battery
+    second: {fileID: 2100000, guid: 016c38ab7b3237045a24abf03032854f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -33,6 +33,9 @@ namespace Treasures.Boosts
 
             [Tooltip("Crystal (Diamond) cost to activate.")]
             public int diamondCost = 25;
+
+
+            [NonSerialized]public bool isActived = false;
         }
 
         public static BoostController Instance { get; private set; }
@@ -41,13 +44,13 @@ namespace Treasures.Boosts
         [SerializeField] private BoostConfig speedBoost = new BoostConfig { duration = 15f, multiplier = 1.6f, diamondCost = 25 };
         [SerializeField] private BoostConfig jumpBoost = new BoostConfig { duration = 15f, multiplier = 1.5f, diamondCost = 25 };
 
+        [SerializeField] private PlayerController _player;
+
         /// <summary>Fired whenever a boost starts or ends (use for showing/hiding the timer window).</summary>
         public event Action OnBoostsChanged;
 
         private readonly Dictionary<BoostType, float> _remaining = new Dictionary<BoostType, float>();
         private readonly Dictionary<BoostType, float> _peak = new Dictionary<BoostType, float>();
-
-        private PlayerController _player;
 
         private void Awake()
         {
@@ -64,16 +67,6 @@ namespace Treasures.Boosts
             if (Instance == this) Instance = null;
         }
 
-        private PlayerController Player
-        {
-            get
-            {
-                if (_player == null)
-                    _player = FindFirstObjectByType<PlayerController>();
-                return _player;
-            }
-        }
-
         private BoostConfig ConfigFor(BoostType type) => type == BoostType.Speed ? speedBoost : jumpBoost;
 
         #region Public API
@@ -82,7 +75,6 @@ namespace Treasures.Boosts
 
         public float GetRemaining(BoostType type) => _remaining.TryGetValue(type, out var t) ? Mathf.Max(0f, t) : 0f;
 
-        /// <summary>0..1 fraction of the current (possibly stacked) duration remaining, for fill bars.</summary>
         public float GetFraction(BoostType type)
         {
             if (!IsActive(type)) return 0f;
@@ -102,24 +94,20 @@ namespace Treasures.Boosts
                 return null;
         }
 
-        /// <summary>
-        /// Requests a boost. Spends crystals if affordable, otherwise shows a Reward ad.
-        /// Returns immediately; activation may be deferred until the ad completes.
-        /// </summary>
         public void RequestBoost(BoostType type)
         {
             var config = ConfigFor(type);
 
             // 1. Try to pay with crystals (Diamond).
-            var currency = CurrencyService.Instance;
-            if (currency != null && currency.TrySpend(CurrencyType.Diamond, config.diamondCost))
-            {
-                Debug.Log($"[Boost] {type} purchased for {config.diamondCost} crystals.");
-                Activate(type);
-                return;
-            }
+            // var currency = CurrencyService.Instance;
+            // if (currency != null && currency.TrySpend(CurrencyType.Diamond, config.diamondCost))
+            // {
+            //     Debug.Log($"[Boost] {type} purchased for {config.diamondCost} crystals.");
+            //     Activate(type);
+            //     return;
+            // }
 
-            // 2. Not enough crystals -> fall back to a Reward ad.
+            // 2. Not enough crystals >> fall back to a Reward ad.
              Debug.Log($"[Boost] Not enough crystals for {type}. Offering reward ad...");
              var ads = AppServices.Ads;
              if (ads != null && ads.IsRewardedAdReady())
@@ -149,8 +137,11 @@ namespace Treasures.Boosts
             float newRemaining = GetRemaining(type) + config.duration; // stack
             _remaining[type] = newRemaining;
             _peak[type] = Mathf.Max(_peak.TryGetValue(type, out var p) ? p : 0f, newRemaining);
-
-            ApplyMultiplier(type, config.multiplier);
+            if(!config.isActived)
+            {
+                ApplyMultiplier(type, config.multiplier);
+                config.isActived = true;
+            }
 
             if (!wasActive)
                 OnBoostsChanged?.Invoke();
@@ -158,28 +149,29 @@ namespace Treasures.Boosts
 
         private void ApplyMultiplier(BoostType type, float multiplier)
         {
-            var player = Player;
+            var player = _player;
             if (player == null)
             {
                 Debug.LogWarning("[Boost] PlayerController not found; cannot apply boost.");
                 return;
             }
-
             if (type == BoostType.Speed)
                 player.ApplySpeedBoost(multiplier);
             else
-                player.SetJumpMultiplier(multiplier);
+                player.AddJumpMultiplier(multiplier);
         }
 
-        private void ResetMultiplier(BoostType type)
+        private void ResetMultiplier(BoostType type, float multiplier)
         {
-            var player = Player;
+            var player = _player;
             if (player == null) return;
 
+            ConfigFor(type).isActived = false;
+
             if (type == BoostType.Speed)
-                player.SetSpeedMultiplier(1f);
+                player.RemoveSpeedMultiplayer(multiplier);
             else
-                player.SetJumpMultiplier(1f);
+                player.RemoveJumpMultiplayer(multiplier);
         }
 
         private void Update()
@@ -197,7 +189,7 @@ namespace Treasures.Boosts
             {
                 _remaining[type] = 0f;
                 _peak[type] = 0f;
-                ResetMultiplier(type);
+                ResetMultiplier(type, ConfigFor(type).multiplier);
                 OnBoostsChanged?.Invoke();
             }
         }

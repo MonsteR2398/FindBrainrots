@@ -1,0 +1,41 @@
+{
+    "asset": "2497e08078398d8458ae58840dd8453b",
+    "fileName": "019ec689-7005-78ce-87e0-4d81dd4fbfbd.png",
+    "prompt": "A 2D casual game UI icon of a cool bright t-shirt, representing skins/clothing shop. Colorful design with clean thick outline, glossy shading, matching the casual cartoon style of the provided reference image. The icon is just a beautiful t-shirt, simple, clean, and easily recognizable.",
+    "negativePrompt": "",
+    "model": "game-ui-essentials-2",
+    "modelName": "Game UI Essentials 2.0",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "93c216ac791944ce3890a9175a006fbf",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 512,
+        "height": 512
+    },
+    "spriteSheet": false,
+    "duration": 0.0,
+    "dynamicParams": {
+        "serializedData": []
+    }
+}

@@ -3,7 +3,12 @@ guid: e8482e38adca91642aa1a27255f712c1
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DingDing Droid
+    second: {fileID: 2100000, guid: ade1fddcee62c8747b1bed9a737843ba, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

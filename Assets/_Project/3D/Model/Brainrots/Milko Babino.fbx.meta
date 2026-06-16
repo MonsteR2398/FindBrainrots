@@ -3,7 +3,12 @@ guid: 848e4066d21eedc47a588244b6e996dd
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Milko Babino
+    second: {fileID: 2100000, guid: 241171ea7cfcf0d409587c44e2c88353, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: 9c2017eff59932b409b3ee5897ec5c3b
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trucko Bonko
+    second: {fileID: 2100000, guid: c9c5b046d2df6b1449cd8fffb2eca781, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

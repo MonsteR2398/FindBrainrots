@@ -3,7 +3,12 @@ guid: ecf1f2a2a35ae4d4a9b520b9e7979b0f
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TapTap Pad
+    second: {fileID: 2100000, guid: 9bd818d338633eb4d8cd8fd5325152a9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

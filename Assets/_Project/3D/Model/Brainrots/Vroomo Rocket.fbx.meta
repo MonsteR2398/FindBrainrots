@@ -3,7 +3,12 @@ guid: efa8f7f32bf16dc4dbea5e5fe6a8dabc
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vroomo Rocket
+    second: {fileID: 2100000, guid: 64950c82d52d5654c9ac58a83dc8ef2a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

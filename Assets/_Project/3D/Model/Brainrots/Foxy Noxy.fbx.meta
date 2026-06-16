@@ -3,7 +3,12 @@ guid: 1661b5ac623e90f41ad1131518e9e62f
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Foxy Noxy
+    second: {fileID: 2100000, guid: c011f9fee3ce8f64e89086561cbd1483, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

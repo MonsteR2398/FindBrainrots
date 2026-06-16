@@ -3,7 +3,12 @@ guid: 3f561798ad58ce84590ffaaa5cec6c99
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CandleBop
+    second: {fileID: 2100000, guid: 1b1914273cb47e149bd2eb4ff1bce2af, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

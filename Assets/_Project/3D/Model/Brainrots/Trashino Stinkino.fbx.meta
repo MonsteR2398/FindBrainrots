@@ -3,7 +3,12 @@ guid: 2c1316d104c575e4b9e8c45f904a6bf0
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trashino Stinkino
+    second: {fileID: 2100000, guid: d2aac482a89e6f04a870bd58ab0c9a1f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

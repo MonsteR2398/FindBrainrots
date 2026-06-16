@@ -3,7 +3,12 @@ guid: 8cb71657c4f75f645add9cd0aff098de
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Officer Mousy
+    second: {fileID: 2100000, guid: 0835daca36eb0a84e9ece5491f3c2c10, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
