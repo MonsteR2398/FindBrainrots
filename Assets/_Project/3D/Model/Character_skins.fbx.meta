@@ -437,7 +437,7 @@ ModelImporter:
       takeName: Running
       internalID: -9121621101649706817
       firstFrame: 0
-      lastFrame: 24
+      lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -495,7 +495,7 @@ ModelImporter:
       takeName: Flip.001
       internalID: 21220528213340344
       firstFrame: 0
-      lastFrame: 27
+      lastFrame: 19
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
