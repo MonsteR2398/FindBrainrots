@@ -1,3 +1,4 @@
+using Treasures.CurrencySystem;
 using UnityEngine;
 
 namespace Treasures.WorldSystem
@@ -28,5 +29,7 @@ namespace Treasures.WorldSystem
 
         [Tooltip("Rules applied while this mode is active. Leave empty for plain free-roam.")]
         public GameRules Rules;
+
+        public CurrencyValue price;
     }
 }

@@ -20,3 +20,6 @@ MonoBehaviour:
   AccentColor: {r: 0.85, g: 0.35, b: 0.3, a: 1}
   SceneName: World_Arena
   Rules: {fileID: 11400000, guid: 63f9692193284db4aa6f44603ecf1d6d, type: 2}
+  price:
+    Type: 0
+    Value: 10000

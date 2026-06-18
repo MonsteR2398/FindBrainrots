@@ -26,7 +26,7 @@ namespace Treasures.WorldSystem
 
         private readonly List<GameObject> _spawned = new List<GameObject>();
         private bool _built;
-        private PlayerController _player;
+        [SerializeField] private PlayerController _player;
 
         private void Awake()
         {
@@ -70,6 +70,45 @@ namespace Treasures.WorldSystem
             }
         }
 
+        private bool IsWorldPurchased(GameModeDefinition mode)
+        {
+            if (mode == null) return true;
+            if (mode.price == null || mode.price.Value <= 0) return true;
+
+            string key = "WorldPurchased_" + mode.Id;
+            return PlayerPrefs.GetInt(key, 0) == 1;
+        }
+
+        private void PurchaseWorld(GameModeDefinition mode, GameObject lockGo)
+        {
+            if (mode == null || mode.price == null) return;
+
+            if (Treasures.CurrencySystem.CurrencyService.Instance != null)
+            {
+                if (Treasures.CurrencySystem.CurrencyService.Instance.TrySpend(mode.price.Type, mode.price.Value))
+                {
+                    string key = "WorldPurchased_" + mode.Id;
+                    PlayerPrefs.SetInt(key, 1);
+                    PlayerPrefs.Save();
+
+                    if (lockGo != null)
+                    {
+                        lockGo.SetActive(false);
+                    }
+
+                    Debug.Log($"[PortalWindowUI] Successfully purchased world: {mode.DisplayName}");
+                }
+                else
+                {
+                    Debug.LogWarning($"[PortalWindowUI] Not enough {mode.price.Type} to purchase {mode.DisplayName}. Required: {mode.price.Value}");
+                }
+            }
+            else
+            {
+                Debug.LogError("[PortalWindowUI] CurrencyService instance is missing!");
+            }
+        }
+
         private void BuildIfNeeded()
         {
             if (_built) return;
@@ -93,7 +132,6 @@ namespace Treasures.WorldSystem
                 UnityEngine.UI.Image bg = go.GetComponent<UnityEngine.UI.Image>();
                 if (bg != null) bg.color = mode.AccentColor;
 
-                // Optional icon: a child Image named "Icon".
                 Transform iconTf = go.transform.Find("Icon");
                 if (iconTf != null)
                 {
@@ -102,6 +140,54 @@ namespace Treasures.WorldSystem
                     {
                         if (mode.Icon != null) { iconImg.sprite = mode.Icon; iconImg.enabled = true; }
                         else iconImg.enabled = false;
+                    }
+                }
+
+                Transform lockTf = go.transform.Find("Lock");
+                if (lockTf != null)
+                {
+                    bool isPurchased = IsWorldPurchased(mode);
+                    lockTf.gameObject.SetActive(!isPurchased);
+
+                    if (!isPurchased)
+                    {
+                        Transform buyBtnTf = lockTf.Find("BuyButton");
+                        if (buyBtnTf != null)
+                        {
+                            UnityEngine.UI.Button buyBtn = buyBtnTf.GetComponent<UnityEngine.UI.Button>();
+                            if (buyBtn != null)
+                            {
+                                buyBtn.onClick.RemoveAllListeners();
+                                GameObject lockGo = lockTf.gameObject;
+                                GameModeDefinition capturedMode = mode;
+                                buyBtn.onClick.AddListener(() => PurchaseWorld(capturedMode, lockGo));
+                            }
+
+                            TMPro.TMP_Text priceLabel = buyBtnTf.GetComponentInChildren<TMPro.TMP_Text>(true);
+                            if (priceLabel != null && mode.price != null)
+                            {
+                                priceLabel.text = mode.price.Value.ToString();
+                            }
+
+                            Transform currencyIconTf = buyBtnTf.Find("Icon");
+                            if (currencyIconTf != null && mode.price != null)
+                            {
+                                UnityEngine.UI.Image currencyImg = currencyIconTf.GetComponent<UnityEngine.UI.Image>();
+                                if (currencyImg != null && Treasures.CurrencySystem.CurrencyService.Instance != null)
+                                {
+                                    var database = Treasures.CurrencySystem.CurrencyService.Instance.Database;
+                                    if (database != null)
+                                    {
+                                        var currencyDef = database.GetDefinition(mode.price.Type);
+                                        if (currencyDef != null && currencyDef.Icon != null)
+                                        {
+                                            currencyImg.sprite = currencyDef.Icon;
+                                            currencyImg.enabled = true;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -117,6 +203,12 @@ namespace Treasures.WorldSystem
 
         private void OnSelect(GameModeDefinition mode)
         {
+            if (!IsWorldPurchased(mode))
+            {
+                Debug.LogWarning($"[PortalWindowUI] World '{mode.DisplayName}' is locked and not purchased.");
+                return;
+            }
+
             Close();
             if (GameModeManager.Instance != null) GameModeManager.Instance.SwitchTo(mode);
             else Debug.LogWarning("[PortalWindowUI] No GameModeManager in the scene.");
