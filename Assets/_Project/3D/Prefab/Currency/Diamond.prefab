@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 2095572920460537145}
   - component: {fileID: 5754923228501485384}
   - component: {fileID: 7949173341867905453}
+  - component: {fileID: 4391432565367438438}
   m_Layer: 0
   m_Name: Diamond
   m_TagString: Untagged
@@ -104,10 +105,34 @@ MonoBehaviour:
   effects:
   - {fileID: 11400000, guid: d8db9ef7e7e84064d942e4f5f17a360e, type: 2}
   vfxPrefab: {fileID: 4009871513710076505, guid: 529b93c02ffee40429c42e5e75754b84, type: 3}
-  soundVolume: 1
   OnPickedUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4391432565367438438}
+        m_TargetAssemblyTypeName: SoundPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4391432565367438438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7454991743799207251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf990323d4be3b44596676df8d8af3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundPlayer
+  _defaultAudioClip: {fileID: 8300000, guid: 642b710bb66d8f4438dd1c2c22ab4bcd, type: 3}
 --- !u!1001 &2008421214459594263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -203,6 +228,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationAxis: {x: 0, y: 1, z: 0}
   rotationSpeed: 15
+  enableVerticalFloat: 0
+  verticalAmplitude: 1
+  verticalSpeed: 1
 --- !u!4 &5425958381064866632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5806186733575195999, guid: 33f869e978473744ebb44fc92f424e09, type: 3}

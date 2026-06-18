@@ -69,8 +69,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaunchPadEffect
   launchForce: 30
-  launchDirection: {x: -1, y: 5, z: 0}
+  launchDirection: {x: -1, y: 5, z: -30}
   useRelativeDirection: 1
+  gizmoColor: {r: 0, g: 1, b: 0, a: 1}
+  gizmoArrowLength: 2
+  gizmoArrowHeadSize: 0.5
 --- !u!1001 &3830601594378575809
 PrefabInstance:
   m_ObjectHideFlags: 0
