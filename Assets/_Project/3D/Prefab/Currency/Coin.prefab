@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4933561956368209837}
   - component: {fileID: 2300498886558562275}
   - component: {fileID: 6371179970838183574}
+  - component: {fileID: -2907588612749208236}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -73,7 +74,32 @@ MonoBehaviour:
   vfxPrefab: {fileID: 4812455897532753986, guid: 9d98b71f8e5d72a41b64e90f5cb4aa9e, type: 3}
   OnPickedUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -2907588612749208236}
+        m_TargetAssemblyTypeName: SoundPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-2907588612749208236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476272939970103834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf990323d4be3b44596676df8d8af3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundPlayer
+  _defaultAudioClip: {fileID: 8300000, guid: 642b710bb66d8f4438dd1c2c22ab4bcd, type: 3}
 --- !u!1 &2878969696930699585
 GameObject:
   m_ObjectHideFlags: 0

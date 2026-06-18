@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -43,6 +44,8 @@ public class PlayerController : MonoBehaviour
     public int JumpsRemaining => jumpsRemaining;
     // ----------------------------------------
 
+    public UnityEvent Jumped;
+
     private void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -59,7 +62,10 @@ public class PlayerController : MonoBehaviour
     public void OnJump(InputValue value)
     {
         if (value.isPressed)
+        {
             RequestJump();
+            Jumped?.Invoke();
+        }
     }
 
     /// <summary>

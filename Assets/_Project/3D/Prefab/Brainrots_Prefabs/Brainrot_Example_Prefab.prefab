@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 8329436164471858518}
   - component: {fileID: 4926574955098697068}
   - component: {fileID: 6486563418555170485}
+  - component: {fileID: 4403130980143142560}
   m_Layer: 0
   m_Name: Brainrot_Example_Prefab
   m_TagString: Untagged
@@ -226,6 +227,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4403130980143142560}
+        m_TargetAssemblyTypeName: SoundPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6486563418555170485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,3 +256,16 @@ MonoBehaviour:
   achievementId: brainrots_found
   modelContainer: {fileID: 7056743742517007213}
   placeholderMaterial: {fileID: 2100000, guid: a8a844e0918660e4dbeec99a4db613ea, type: 2}
+--- !u!114 &4403130980143142560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7748597124644288836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf990323d4be3b44596676df8d8af3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundPlayer
+  _defaultAudioClip: {fileID: 8300000, guid: b6171b2c2e79dfa4c8cc4911c71bacb4, type: 3}
