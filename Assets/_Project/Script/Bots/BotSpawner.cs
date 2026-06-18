@@ -11,7 +11,7 @@ namespace Treasures.Bots
     public class BotSpawner : MonoBehaviour
     {
         [Header("Config")]
-        [SerializeField] private GameObject botPrefab;
+        [SerializeField] private GameObject[] botPrefabs;
         [SerializeField, Min(0)] private int botCount = 3;
         [Tooltip("Vertical offset above a graph node when spawning, so the bot settles onto the platform.")]
         [SerializeField] private float spawnHeightOffset = 0.5f;
@@ -54,7 +54,7 @@ namespace Treasures.Bots
 
         private void SpawnBots()
         {
-            if (botPrefab == null)
+            if (botPrefabs == null)
             {
                 Debug.LogWarning("[BotSpawner] No bot prefab assigned.");
                 return;
@@ -79,7 +79,7 @@ namespace Treasures.Bots
                 if (node == null) continue;
 
                 Vector3 pos = node.Position + Vector3.up * spawnHeightOffset;
-                GameObject bot = Instantiate(botPrefab, pos, Quaternion.identity);
+                GameObject bot = Instantiate(botPrefabs[Random.Range(0, botPrefabs.Length)], pos, Quaternion.identity);
                 bot.name = $"Bot_{i}";
 
                 var brain = bot.GetComponent<BotBrain>();
