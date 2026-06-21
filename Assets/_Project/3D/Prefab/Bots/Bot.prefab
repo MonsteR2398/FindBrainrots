@@ -73,15 +73,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 958bb18a360f8d245af594300de46672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  moveSpeed: 6
+  moveSpeed: 10
   rotationSpeed: 10
-  jumpHeight: 1.5
+  jumpHeight: 2.5
   gravity: -20
   maxJumps: 2
   useCameraRelativeMovement: 0
   acceleration: 60
   friction: 50
   airDrag: 10
+  Jumped:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4809626735889105031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,8 +111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.Bots.BotBrain
   graph: {fileID: 0}
   arriveDistance: 0.6
-  jumpTriggerDistance: 2.2
-  repathInterval: 0.5
   fallRescueMargin: 10
 --- !u!1001 &943145034328370775
 PrefabInstance:
