@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: GameMode_Skylands
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.WorldSystem.GameModeDefinition
   Id: skylands
-  DisplayName: "\u041D\u0435\u0431\u0435\u0441\u043D\u044B\u0435 \u041E\u0441\u0442\u0440\u043E\u0432\u0430"
-  Description: "\u041F\u0430\u0440\u044F\u0449\u0438\u0435 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u044B
-    \u0432 \u043D\u0435\u0431\u0435."
+  DisplayName: world.skylands.name
+  Description: world.skylands.desc
   Icon: {fileID: 0}
   AccentColor: {r: 0.35, g: 0.6, b: 0.95, a: 1}
   SceneName: World_Skylands

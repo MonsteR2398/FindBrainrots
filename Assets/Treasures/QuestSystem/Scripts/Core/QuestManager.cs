@@ -106,12 +106,28 @@ namespace ModularTreasures.Quests
 
         public void ClaimReward(Transform targetPos)
         {
-            if (_status != QuestStatus.Completed || CurrentQuest == null) return;
+            if (_status != QuestStatus.Completed || CurrentQuest == null)
+            {
+                Debug.Log($"[QuestManager] ClaimReward failed. Status: {_status}, CurrentQuest: {(CurrentQuest != null ? CurrentQuest.Id : "null")}");
+                return;
+            }
             QuestSO finishedQuest = CurrentQuest;
+
+            // Save permanent quest completion state with normalized key
+            string questId = finishedQuest.Id;
+            string claimKey = questId.StartsWith("Quest_") ? $"{questId}_Claimed" : $"Quest_{questId}_Claimed";
+
+            Debug.Log($"[QuestManager] ClaimReward: Saving '{claimKey}' = 1 to PlayerPrefs.");
+            PlayerPrefs.SetInt(claimKey, 1);
+            PlayerPrefs.Save();
 
             foreach (var reward in finishedQuest.Rewards)
             {
-                if (reward != null) reward.GiveReward(targetPos);
+                if (reward != null)
+                {
+                    Debug.Log($"[QuestManager] Giving reward: {reward.name}");
+                    reward.GiveReward(targetPos);
+                }
             }
 
             if (autoLoadNextOnClaim)

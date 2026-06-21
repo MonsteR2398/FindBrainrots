@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: GameMode_Grasslands
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.WorldSystem.GameModeDefinition
   Id: grasslands
-  DisplayName: "\u041B\u0443\u0433\u0430"
-  Description: "\u0413\u043B\u0430\u0432\u043D\u044B\u0439 \u043C\u0438\u0440. \u0421\u043E\u0431\u0438\u0440\u0430\u0439
-    \u043C\u043E\u043D\u0435\u0442\u044B \u0438 \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432."
+  DisplayName: world.grasslands.name
+  Description: world.grasslands.desc
   Icon: {fileID: 0}
   AccentColor: {r: 0.35, g: 0.75, b: 0.35, a: 1}
   SceneName: World_Grasslands
   Rules: {fileID: 11400000, guid: 63f9692193284db4aa6f44603ecf1d6d, type: 2}
+  price:
+    Type: 0
+    Value: 0

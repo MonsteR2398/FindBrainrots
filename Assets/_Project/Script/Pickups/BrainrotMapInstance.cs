@@ -58,7 +58,6 @@ namespace Treasures.Pickups
             {
                 if (placeholderMaterial != null)
                 {
-                    Debug.Log(1);
                     Material[] mats = new Material[r.sharedMaterials.Length];
                     for (int i = 0; i < mats.Length; i++) mats[i] = placeholderMaterial;
                     r.sharedMaterials = mats;

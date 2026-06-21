@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Common
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.RaritySettingsSO
   rarityID: common
-  displayName: Common
+  displayName: rarity.common
   rarityColor: {r: 0.59, g: 1, b: 0.13, a: 1}
   rarityButtonSprite: {fileID: 21300000, guid: 7e2e18210821dcc4ca4adf927d99d36a, type: 3}
   rarityCardSprite: {fileID: 21300000, guid: 133c24f4f9bc117429eb5a69c3ef57fd, type: 3}

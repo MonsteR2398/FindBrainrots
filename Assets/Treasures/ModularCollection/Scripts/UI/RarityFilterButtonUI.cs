@@ -21,7 +21,7 @@ namespace ModularCollection.UI
             this.rarity = rarity;
             this.onClickCallback = onClick;
             
-            labelText.text = rarity.DisplayName;
+            labelText.text = Treasures.Localization.Localization.Get(rarity.DisplayName);
             buttonImage.sprite = rarity.ButtonSprite;
             newIndicator.SetActive(hasNew);
 

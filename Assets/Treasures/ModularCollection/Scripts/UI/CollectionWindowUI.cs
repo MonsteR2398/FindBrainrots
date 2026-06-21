@@ -70,7 +70,7 @@ namespace ModularCollection.UI
         public void SelectRarity(RaritySettingsSO rarity)
         {
             selectedRarity = rarity;
-            headerTitle.text = rarity.DisplayName;
+            headerTitle.text = Treasures.Localization.Localization.Get(rarity.DisplayName);
             RefreshGrid();
         }
 

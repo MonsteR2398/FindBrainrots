@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rainbow
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.RaritySettingsSO
   rarityID: rainbow
-  displayName: Rainbow
+  displayName: rarity.rainbow
   rarityColor: {r: 1, g: 1, b: 1, a: 1}
   rarityButtonSprite: {fileID: 21300000, guid: f97f1393d5c8ae4439d9b6aabdd95d41, type: 3}
   rarityCardSprite: {fileID: 21300000, guid: 17c4d06fd8def4049b899ce5ceeb3299, type: 3}

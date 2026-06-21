@@ -174,3 +174,229 @@ MonoBehaviour:
     - COLLECTION
     - SAMMLUNG
     - COLLEZIONE
+  - key: iap.shop.title
+    values:
+    - Shop
+    - "\u041C\u0430\u0433\u0430\u0437\u0438\u043D"
+    - Tienda
+    - Loja
+    - Boutique
+    - Laden
+    - Negozio
+  - key: portal.title
+    values:
+    - Select World
+    - "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u043C\u0438\u0440"
+    - Seleccionar mundo
+    - Selecionar mundo
+    - "S\xE9lectionner le monde"
+    - "Welt ausw\xE4hlen"
+    - Seleziona mondo
+  - key: portal.description
+    values:
+    - Enemy Trial
+    - "\u0418\u0441\u043F\u044B\u0442\u0430\u043D\u0438\u0435 \u0441 \u0432\u0440\u0430\u0433\u0430\u043C\u0438"
+    - Prueba de enemigos
+    - Teste de inimigos
+    - "\xC9preuve des ennemis"
+    - "Gegner-Pr\xFCfung"
+    - Prova dei nemici
+  - key: quest.find_brainrots
+    values:
+    - Find the Brainrots
+    - "\u041D\u0430\u0439\u0434\u0438 \u0411\u0440\u0435\u0439\u043D\u0440\u043E\u0442\u043E\u0432"
+    - Encuentra los Brainrots
+    - Encontre os Brainrots
+    - Trouve les Brainrots
+    - Finde die Brainrots
+    - Trova i Brainrot
+  - key: menu.world
+    values:
+    - World
+    - "\u041C\u0438\u0440"
+    - Mundo
+    - Mundo
+    - Monde
+    - Welt
+    - Mondo
+  - key: boost.speed_btn
+    values:
+    - '+Speed+
+
+      60 sec'
+    - "+\u0421\u043A\u043E\u0440\u043E\u0441\u0442\u044C+\n60 \u0441\u0435\u043A"
+    - '+Velocidad+
+
+      60 s'
+    - '+Velocidade+
+
+      60 s'
+    - '+Vitesse+
+
+      60 s'
+    - '+Tempo+
+
+      60 Sek'
+    - "+Velocit\xE0+\n60 s"
+  - key: boost.jump_btn
+    values:
+    - '+Jump+
+
+      60 sec'
+    - "+\u041F\u0440\u044B\u0436\u043E\u043A+\n60 \u0441\u0435\u043A"
+    - '+Salto+
+
+      60 s'
+    - '+Salto+
+
+      60 s'
+    - '+Saut+
+
+      60 s'
+    - '+Sprung+
+
+      60 Sek'
+    - '+Salto+
+
+      60 s'
+  - key: boost.wallhack_btn
+    values:
+    - '+WallHack+
+
+      60 sec'
+    - "+\u0412\u0425+\n60 \u0441\u0435\u043A"
+    - '+WallHack+
+
+      60 s'
+    - '+WallHack+
+
+      60 s'
+    - '+WallHack+
+
+      60 s'
+    - '+WallHack+
+
+      60 Sek'
+    - '+WallHack+
+
+      60 s'
+  - key: rarity.common
+    values:
+    - Common
+    - "\u041E\u0431\u044B\u0447\u043D\u044B\u0439"
+    - "Com\xFAn"
+    - Comum
+    - Commun
+    - "Gew\xF6hnlich"
+    - Comune
+  - key: rarity.uncommon
+    values:
+    - Uncommon
+    - "\u041D\u0435\u043E\u0431\u044B\u0447\u043D\u044B\u0439"
+    - "Poco com\xFAn"
+    - Incomum
+    - Peu commun
+    - "Ungew\xF6hnlich"
+    - Non comune
+  - key: rarity.rare
+    values:
+    - Rare
+    - "\u0420\u0435\u0434\u043A\u0438\u0439"
+    - Raro
+    - Raro
+    - Rare
+    - Selten
+    - Raro
+  - key: rarity.epic
+    values:
+    - Epic
+    - "\u042D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0439"
+    - "\xC9pico"
+    - "\xC9pico"
+    - "\xC9pique"
+    - Episch
+    - Epico
+  - key: rarity.legendary
+    values:
+    - Legendary
+    - "\u041B\u0435\u0433\u0435\u043D\u0434\u0430\u0440\u043D\u044B\u0439"
+    - Legendario
+    - "Lend\xE1rio"
+    - "L\xE9gendaire"
+    - "Legend\xE4r"
+    - Leggendario
+  - key: rarity.mythic
+    values:
+    - Mythic
+    - "\u041C\u0438\u0444\u0438\u0447\u0435\u0441\u043A\u0438\u0439"
+    - "M\xEDtico"
+    - "M\xEDtico"
+    - Mythique
+    - Mythisch
+    - Mitico
+  - key: rarity.rainbow
+    values:
+    - Rainbow
+    - "\u0420\u0430\u0434\u0443\u0436\u043D\u044B\u0439"
+    - "Arco\xEDris"
+    - "Arco-\xEDris"
+    - Arc-en-ciel
+    - Regenbogen
+    - Arcobaleno
+  - key: world.arena.name
+    values:
+    - Arena
+    - "\u0410\u0440\u0435\u043D\u0430"
+    - Arena
+    - Arena
+    - "Ar\xE8ne"
+    - Arena
+    - Arena
+  - key: world.arena.desc
+    values:
+    - Closed arena with pillars.
+    - "\u0417\u0430\u043A\u0440\u044B\u0442\u0430\u044F \u0430\u0440\u0435\u043D\u0430
+      \u0441 \u043A\u043E\u043B\u043E\u043D\u043D\u0430\u043C\u0438."
+    - Arena cerrada con columnas.
+    - Arena fechada com colunas.
+    - "Ar\xE8ne ferm\xE9e avec des piliers."
+    - "Geschlossene Arena mit S\xE4ulen."
+    - Arena chiusa con colonne.
+  - key: world.grasslands.name
+    values:
+    - Grasslands
+    - "\u041B\u0443\u0433\u0430"
+    - Prados
+    - Campos
+    - Prairies
+    - Wiesen
+    - Praterie
+  - key: world.grasslands.desc
+    values:
+    - Main world. Collect coins and brainrots.
+    - "\u0413\u043B\u0430\u0432\u043D\u044B\u0439 \u043C\u0438\u0440. \u0421\u043E\u0431\u0438\u0440\u0430\u0439
+      \u043C\u043E\u043D\u0435\u0442\u044B \u0438 \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432."
+    - Mundo principal. Recoge monedas y brainrots.
+    - Mundo principal. Colete moedas e brainrots.
+    - "Monde principal. Collectionne des pi\xE8ces et des brainrots."
+    - "Hauptwelt. Sammle M\xFCnzen und Brainrots."
+    - Mondo principale. Raccogli monete e brainrot.
+  - key: world.skylands.name
+    values:
+    - Skylands
+    - "\u041D\u0435\u0431\u0435\u0441\u043D\u044B\u0435 \u041E\u0441\u0442\u0440\u043E\u0432\u0430"
+    - Islas celestiales
+    - Ilhas celestes
+    - "\xCEles c\xE9lestes"
+    - Himmelsinseln
+    - Isole celesti
+  - key: world.skylands.desc
+    values:
+    - Floating platforms in the sky.
+    - "\u041F\u0430\u0440\u044F\u0449\u0438\u0435 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u044B
+      \u0432 \u043D\u0435\u0431\u0435."
+    - Plataformas flotantes en el cielo.
+    - "Plataformas flutuantes no c\xE9u."
+    - Plateformes flottantes dans le ciel.
+    - Schwebende Plattformen am Himmel.
+    - Piattaforme galleggianti nel cielo.

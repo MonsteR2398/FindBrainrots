@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Epic
   m_EditorClassIdentifier: Assembly-CSharp::ModularCollection.Data.RaritySettingsSO
   rarityID: epic
-  displayName: Epic
+  displayName: rarity.epic
   rarityColor: {r: 0.86, g: 0, b: 1, a: 1}
   rarityButtonSprite: {fileID: 21300000, guid: 23ca3cb0647f346429bbd0ee68cc2283, type: 3}
   rarityCardSprite: {fileID: 21300000, guid: 6212f872820fd1447be7e5b4ffb2df21, type: 3}

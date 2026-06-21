@@ -29,8 +29,8 @@ namespace ModularCollection.UI
             if (isUnlocked)
             {
                 iconImage.sprite = item.Icon;
-                nameText.text = item.ItemName;
-                rarityText.text = item.Rarity.DisplayName;
+                nameText.text = Treasures.Localization.Localization.Get(item.ItemName);
+                rarityText.text = Treasures.Localization.Localization.Get(item.Rarity.DisplayName);
                 backgroundImage.sprite = item.Rarity.CardSprite;
                 newBadge.SetActive(!isRead);
                 iconImage.gameObject.SetActive(true);
@@ -41,7 +41,7 @@ namespace ModularCollection.UI
                     iconImage.sprite = lockedIcon;
                 else
                     iconImage.gameObject.SetActive(false);
-                nameText.text = lockedName;
+                nameText.text = Treasures.Localization.Localization.Get(lockedName);
                 rarityText.text = "";
                 newBadge.SetActive(false);
             }

@@ -1477,6 +1477,71 @@ MonoBehaviour:
   - target: {fileID: 327363683}
     isJump: 0
     requiresDoubleJump: 0
+--- !u!1 &363608839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 363608840}
+  - component: {fileID: 363608843}
+  - component: {fileID: 363608842}
+  m_Layer: 2
+  m_Name: Wall10View
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &363608840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363608839}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.07042043, y: 0.9282096, z: -0.26804465, w: -0.248234}
+  m_LocalPosition: {x: 180.49, y: 8.62, z: 54.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1923658694}
+  m_Father: {fileID: 1708957921}
+  m_LocalEulerAnglesHint: {x: 32.179, y: -150.009, z: 0.159}
+--- !u!114 &363608842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363608839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58cd6758ab65f64bbc0cd5e5f85912d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestCameraSequenceTrigger
+  questIdToCheck: Wall10View
+  cameraTargetId: CameraTarget
+  delayBeforeStart: 1
+  focusDuration: 3
+  arrivalActionKey: Quest_Wall10View
+  waitForManualRelease: 1
+--- !u!114 &363608843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363608839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c409e39fd3de42f41a87b8848ce357f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraTarget
+  id: Wall10View
 --- !u!1 &369741559
 GameObject:
   m_ObjectHideFlags: 0
@@ -4545,7 +4610,8 @@ PrefabInstance:
       value: Main_Location
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 890296384734361370, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1636474030599961149, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
       insertIndex: 445
@@ -4602,10 +4668,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6013018887771982389, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 1529143884379734731, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 1695245999020431402, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 890296384734361370, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
+      addedObject: {fileID: 1014287105}
+    - targetCorrespondingSourceObject: {fileID: 1695245999020431402, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1014287106}
+    - targetCorrespondingSourceObject: {fileID: 1529143884379734731, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
@@ -4614,6 +4683,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1636474030599961149, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
   m_PrefabInstance: {fileID: 1014287101}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1014287103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 143064739592224942, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
+  m_PrefabInstance: {fileID: 1014287101}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1014287104 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1695245999020431402, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
+  m_PrefabInstance: {fileID: 1014287101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1014287105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014287104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f731ab2e28920044c80f79f778310829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.BrainrotTaskHUD
+  taskText: {fileID: 1014287103}
+  brainrotCategory: {fileID: 11400000, guid: 2290d2b93e88fe7458667cdecdd0a8b1, type: 2}
+  targetCount: 10
+  panelToDisable: {fileID: 1014287104}
+  disableActionKey: Quest_Wall10View
+--- !u!114 &1014287106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014287104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58cd6758ab65f64bbc0cd5e5f85912d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestCameraSequenceTrigger
+  questIdToCheck: Quest_3_Brainrots
+  cameraTargetId: Wall10View
+  delayBeforeStart: 1
+  focusDuration: 3
+  arrivalActionKey: Quest_Wall10View
+  waitForManualRelease: 1
 --- !u!1 &1024128179
 GameObject:
   m_ObjectHideFlags: 0
@@ -7358,6 +7478,39 @@ MonoBehaviour:
   - target: {fileID: 362067287}
     isJump: 1
     requiresDoubleJump: 1
+--- !u!1 &1708957920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1708957921}
+  m_Layer: 0
+  m_Name: CameraTargets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1708957921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708957920}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 363608840}
+  - {fileID: 1827931440}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1725291360
 GameObject:
   m_ObjectHideFlags: 0
@@ -7694,6 +7847,63 @@ MonoBehaviour:
   - target: {fileID: 1454347592}
     isJump: 1
     requiresDoubleJump: 1
+--- !u!1001 &1791953897
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3610419747869406790, guid: 19b12ab31e0394c49ad428dc23a65eb4, type: 3}
+      propertyPath: m_Name
+      value: Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862062661021724139, guid: 19b12ab31e0394c49ad428dc23a65eb4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 380.83545
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862062661021724139, guid: 19b12ab31e0394c49ad428dc23a65eb4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.231635
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862062661021724139, guid: 19b12ab31e0394c49ad428dc23a65eb4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.6460545
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862062661021724139, guid: 19b12ab31e0394c49ad428dc23a65eb4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862062661021724139, guid: 19b12ab31e0394c49ad428dc23a65eb4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862062661021724139, guid: 19b12ab31e0394c49ad428dc23a65eb4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862062661021724139, guid: 19b12ab31e0394c49ad428dc23a65eb4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862062661021724139, guid: 19b12ab31e0394c49ad428dc23a65eb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862062661021724139, guid: 19b12ab31e0394c49ad428dc23a65eb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862062661021724139, guid: 19b12ab31e0394c49ad428dc23a65eb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 19b12ab31e0394c49ad428dc23a65eb4, type: 3}
 --- !u!1 &1797100626
 GameObject:
   m_ObjectHideFlags: 0
@@ -7902,6 +8112,51 @@ MonoBehaviour:
   - target: {fileID: 1788477285}
     isJump: 0
     requiresDoubleJump: 0
+--- !u!1 &1827931439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1827931440}
+  - component: {fileID: 1827931441}
+  m_Layer: 2
+  m_Name: Wall20View
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1827931440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827931439}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.10510144, y: -0.011703968, z: 0.002218494, w: 0.99439025}
+  m_LocalPosition: {x: -272.24182, y: -2.1280906, z: 16.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1708957921}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1827931441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827931439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c409e39fd3de42f41a87b8848ce357f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraTarget
+  id: Wall20View
 --- !u!1 &1831470033
 GameObject:
   m_ObjectHideFlags: 0
@@ -8337,6 +8592,37 @@ MonoBehaviour:
   - target: {fileID: 2036904097}
     isJump: 0
     requiresDoubleJump: 0
+--- !u!1 &1923658693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1923658694}
+  m_Layer: 2
+  m_Name: CameraTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1923658694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923658693}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.459406, y: 13.789612, z: 8.7341385}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 363608840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1963148135
 GameObject:
   m_ObjectHideFlags: 0
@@ -9049,3 +9335,5 @@ SceneRoots:
   - {fileID: 2114367238}
   - {fileID: 63311479}
   - {fileID: 20340445}
+  - {fileID: 1708957921}
+  - {fileID: 1791953897}

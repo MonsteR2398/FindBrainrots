@@ -22,7 +22,7 @@ namespace ModularTreasures.Quests
 
             if (target == null)
             {
-                Debug.LogWarning($"[CameraSequenceReward] Target '{targetId}' is not registered!");
+                Debug.Log($"[CameraSequenceReward] Target '{targetId}' is not registered in this scene. The sequence will be triggered via QuestCameraSequenceTrigger when entering its scene.");
                 return;
             }
 
