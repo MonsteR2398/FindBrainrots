@@ -32,6 +32,37 @@ namespace Treasures.Bots
             }
         }
 
+        private void Start()
+        {
+            IgnoreBarrierCollisions();
+        }
+
+        private void IgnoreBarrierCollisions()
+        {
+            var charController = GetComponent<CharacterController>();
+            if (charController == null) return;
+
+            var allColliders = Object.FindObjectsByType<Collider>(FindObjectsInactive.Include);
+            foreach (var col in allColliders)
+            {
+                if (col == null) continue;
+
+                bool isBarrier = col.name.Contains("Barrier", System.StringComparison.OrdinalIgnoreCase) ||
+                                 col.name.Contains("барьер", System.StringComparison.OrdinalIgnoreCase);
+
+                if (!isBarrier && col.transform.parent != null)
+                {
+                    isBarrier = col.transform.parent.name.Contains("Barrier", System.StringComparison.OrdinalIgnoreCase) ||
+                                col.transform.parent.name.Contains("барьер", System.StringComparison.OrdinalIgnoreCase);
+                }
+
+                if (isBarrier)
+                {
+                    Physics.IgnoreCollision(charController, col, true);
+                }
+            }
+        }
+
         public bool IsGrounded => Controller != null && Controller.IsGrounded;
         public int JumpsRemaining => Controller != null ? Controller.JumpsRemaining : 0;
 

@@ -49,6 +49,19 @@ namespace ModularTreasures.Quests
             return _targets.TryGetValue(id, out var target) ? target : null;
         }
 
+        private class SequenceRequest
+        {
+            public Transform Target;
+            public Transform ViewPoint;
+            public float Duration;
+            public Action OnArrival;
+            public bool WaitForManualRelease;
+        }
+
+        private readonly Queue<SequenceRequest> _sequenceQueue = new Queue<SequenceRequest>();
+        private readonly List<CinemachineCamera> _activeTempCameras = new List<CinemachineCamera>();
+        private bool _isSequenceActive;
+
         public void ReleaseCamera()
         {
             _manualReleaseReceived = true;
@@ -58,38 +71,112 @@ namespace ModularTreasures.Quests
         {
             if (focusCamera == null || target == null) return;
 
-            StopAllCoroutines();
-            StartCoroutine(SequenceRoutine(target, viewPoint, duration > 0 ? duration : defaultDuration, onArrival, waitForManualRelease));
+            var request = new SequenceRequest
+            {
+                Target = target,
+                ViewPoint = viewPoint,
+                Duration = duration > 0 ? duration : defaultDuration,
+                OnArrival = onArrival,
+                WaitForManualRelease = waitForManualRelease
+            };
+
+            _sequenceQueue.Enqueue(request);
+
+            if (!_isSequenceActive)
+            {
+                StartCoroutine(ProcessQueueRoutine());
+            }
         }
 
-        private IEnumerator SequenceRoutine(Transform target, Transform viewPoint, float duration, Action onArrival, bool waitForManualRelease)
+        private IEnumerator ProcessQueueRoutine()
+        {
+            _isSequenceActive = true;
+            int priority = 100;
+
+            while (_sequenceQueue.Count > 0)
+            {
+                SequenceRequest request = _sequenceQueue.Dequeue();
+                yield return StartCoroutine(SequenceRoutine(
+                    request.Target,
+                    request.ViewPoint,
+                    request.Duration,
+                    request.OnArrival,
+                    request.WaitForManualRelease,
+                    priority
+                ));
+                priority++;
+            }
+
+            // Return to player smoothly
+            foreach (var cam in _activeTempCameras)
+            {
+                if (cam != null) cam.Priority = -1;
+            }
+
+            yield return new WaitForSeconds(returnDelay);
+
+            if (brain != null)
+            {
+                // Даем Cinemachine один кадр на регистрацию возврата и старт блендинга к игроку
+                yield return null;
+                if (brain.IsBlending)
+                {
+                    yield return new WaitWhile(() => brain.IsBlending);
+                }
+            }
+            else
+            {
+                yield return new WaitForSeconds(1.5f);
+            }
+
+            // Clean up temporary cameras
+            foreach (var cam in _activeTempCameras)
+            {
+                if (cam != null) Destroy(cam.gameObject);
+            }
+            _activeTempCameras.Clear();
+
+            _isSequenceActive = false;
+        }
+
+        private IEnumerator SequenceRoutine(Transform target, Transform viewPoint, float duration, Action onArrival, bool waitForManualRelease, int priority)
         {
             _manualReleaseReceived = false;
 
-            if (viewPoint == null)
+            if (viewPoint == null && target.childCount > 0)
             {
                 viewPoint = target.GetChild(0);
             }
 
+            // Instantiate a temporary focus camera
+            CinemachineCamera tempCam = Instantiate(focusCamera, focusCamera.transform.parent);
+            tempCam.gameObject.name = "Temp_FocusCamera_" + target.name;
+            tempCam.gameObject.SetActive(true);
+            _activeTempCameras.Add(tempCam);
+
             if (viewPoint != null)
             {
-                focusCamera.LookAt = null;
-                focusCamera.transform.position = viewPoint.position;
-                focusCamera.transform.rotation = viewPoint.rotation;
+                tempCam.LookAt = null;
+                tempCam.transform.position = viewPoint.position;
+                tempCam.transform.rotation = viewPoint.rotation;
             }
             else
             {
-                focusCamera.transform.position = target.position + target.forward * -5f + Vector3.up * 3f;
+                tempCam.transform.position = target.position + target.forward * -5f + Vector3.up * 3f;
             }
-                focusCamera.transform.LookAt(target);
-                focusCamera.LookAt = target;
+            tempCam.transform.LookAt(target);
+            tempCam.LookAt = target;
 
-            focusCamera.Priority = 100;
+            tempCam.Priority = priority;
 
             if (brain != null)
             {
-                yield return new WaitUntil(() => brain.IsBlending);
-                yield return new WaitWhile(() => brain.IsBlending);
+                // Даем Cinemachine один кадр на регистрацию изменения приоритета и старт блендинга
+                yield return null;
+                if (brain.IsBlending)
+                {
+                    yield return new WaitWhile(() => brain.IsBlending);
+                }
             }
             else
             {
@@ -108,9 +195,6 @@ namespace ModularTreasures.Quests
             {
                 yield return new WaitForSeconds(duration);
             }
-
-            yield return new WaitForSeconds(returnDelay);
-            focusCamera.Priority = -1;
         }
     }
 }

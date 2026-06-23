@@ -24,6 +24,11 @@ namespace Treasures.Boosts
         [SerializeField] private Image jumpFill;
         [SerializeField] private TextMeshProUGUI jumpText;
 
+        [Header("Vision row")]
+        [SerializeField] private GameObject visionRow;
+        [SerializeField] private Image visionFill;
+        [SerializeField] private TextMeshProUGUI visionText;
+
         private void OnEnable()
         {
             if (window != null) window.SetActive(false);
@@ -46,6 +51,7 @@ namespace Treasures.Boosts
 
             UpdateRow(bc, BoostType.Speed, speedRow, speedFill, speedText);
             UpdateRow(bc, BoostType.Jump, jumpRow, jumpFill, jumpText);
+            UpdateRow(bc, BoostType.Vision, visionRow, visionFill, visionText);
         }
 
         private void UpdateRow(BoostController bc, BoostType type, GameObject row, Image fill, TextMeshProUGUI text)

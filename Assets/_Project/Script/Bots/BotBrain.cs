@@ -184,21 +184,28 @@ namespace Treasures.Bots
             }
         }
 
+        public void RecoverToClosestNode()
+        {
+            if (graph == null) return;
+            ParkourNode safe = graph.ClosestNode(transform.position) ?? _currentNode;
+            if (safe != null)
+            {
+                _loco.Recover(safe.Position + Vector3.up * 0.5f);
+                _currentNode = safe;
+                _ctx.CurrentNode = safe;
+                _path.Clear();
+                ResetEdgeJumpState();
+                _stuckTimer = 0f;
+            }
+        }
+
         private void CheckFallRecovery()
         {
             if (_lowestNodeY == float.MaxValue) return;
             if (transform.position.y < _lowestNodeY - fallRescueMargin)
             {
-                ParkourNode safe = graph.ClosestNode(transform.position) ?? _currentNode;
-                if (safe != null)
-                {
-                    _loco.Recover(safe.Position + Vector3.up * 0.5f);
-                    _currentNode = safe;
-                    _ctx.CurrentNode = safe;
-                    _path.Clear();
-                    ResetEdgeJumpState();
-                    Debug.LogWarning($"[BotBrain] '{name}' fell off and was recovered to '{safe.name}'.");
-                }
+                RecoverToClosestNode();
+                Debug.LogWarning($"[BotBrain] '{name}' fell off and was recovered.");
             }
         }
 

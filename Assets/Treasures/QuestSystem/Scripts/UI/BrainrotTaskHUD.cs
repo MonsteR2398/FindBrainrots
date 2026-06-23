@@ -12,6 +12,8 @@ namespace ModularTreasures.Quests
         [SerializeField] private int targetCount = 10;
         [SerializeField] private GameObject panelToDisable;
         [SerializeField] private string disableActionKey = "BrainrotQuest_FocusArrival";
+        [SerializeField] private string taskTitleOverride = "Найди бреинротов";
+        [SerializeField] private RaritySettingsSO rarityFilter;
 
         private void Start()
         {
@@ -20,6 +22,12 @@ namespace ModularTreasures.Quests
             
             QuestActionSystem.OnActionTriggered += HandleQuestAction;
             UpdateDisplay();
+
+            // Load saved disabled state
+            if (PlayerPrefs.GetInt(GetSaveKey(), 0) == 1)
+            {
+                DisableHUD(false); // disable without triggering a save again
+            }
         }
 
         private void OnDisable()
@@ -36,7 +44,7 @@ namespace ModularTreasures.Quests
         {
             if (key == disableActionKey)
             {
-                DisableHUD();
+                DisableHUD(true);
             }
         }
 
@@ -47,22 +55,47 @@ namespace ModularTreasures.Quests
             int current = 0;
             foreach (var item in brainrotCategory.Items)
             {
-                if (CollectionManager.Instance.IsUnlocked(item.ItemID)) current++;
+                if (item != null && CollectionManager.Instance.IsUnlocked(item.ItemID))
+                {
+                    if (rarityFilter == null || item.Rarity == rarityFilter)
+                    {
+                        current++;
+                    }
+                }
             }
             
             if (taskText != null)
-                taskText.text = $"Найди бреинротов\n{current}/{targetCount}";
+            {
+                string title = string.IsNullOrEmpty(taskTitleOverride) ? "Найди бреинротов" : taskTitleOverride;
+                taskText.text = $"{title}\n{current}/{targetCount}";
+            }
         }
 
         public void DisableHUD()
         {
+            DisableHUD(true);
+        }
+
+        public void DisableHUD(bool shouldSave)
+        {
             if (panelToDisable != null) panelToDisable.SetActive(false);
             else gameObject.SetActive(false);
+
+            if (shouldSave)
+            {
+                PlayerPrefs.SetInt(GetSaveKey(), 1);
+                PlayerPrefs.Save();
+            }
 
             if (CameraSequenceManager.Instance != null)
             {
                 CameraSequenceManager.Instance.ReleaseCamera();
             }
+        }
+
+        private string GetSaveKey()
+        {
+            return "BrainrotTaskHUD_Disabled_" + disableActionKey;
         }
     }
 }

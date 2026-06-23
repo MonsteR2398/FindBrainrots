@@ -20,8 +20,20 @@ namespace Treasures.Pickups
 
         public RaritySettingsSO RarityFilter => rarityFilter;
 
+        private Outline _outlineComponent;
+        private bool _hasStarted = false;
+
+        private void OnEnable()
+        {
+            if (_hasStarted)
+            {
+                UpdateOutlineState();
+            }
+        }
+
         private void Start()
         {
+            _hasStarted = true;
             if (itemData == null || CollectionManager.Instance.IsUnlocked(itemData.ItemID))
             {
                 gameObject.SetActive(false);
@@ -29,6 +41,47 @@ namespace Treasures.Pickups
             }
 
             UpdateVisuals();
+            UpdateOutlineState();
+        }
+
+        public void UpdateOutlineState()
+        {
+            var bc = Boosts.BoostController.Instance;
+            if (bc != null && bc.IsActive(Boosts.BoostType.Vision))
+            {
+                SetOutline(true, bc.VisionOutlineColor, bc.VisionOutlineWidth);
+            }
+            else
+            {
+                SetOutline(false, Color.clear, 0f);
+            }
+        }
+
+        public void SetOutline(bool enable, Color color, float width)
+        {
+            if (enable)
+            {
+                if (_outlineComponent == null)
+                {
+                    _outlineComponent = gameObject.GetComponent<Outline>();
+                    if (_outlineComponent == null)
+                    {
+                        _outlineComponent = gameObject.AddComponent<Outline>();
+                    }
+                }
+
+                _outlineComponent.OutlineMode = Outline.Mode.OutlineAll;
+                _outlineComponent.OutlineColor = color;
+                _outlineComponent.OutlineWidth = width;
+                _outlineComponent.enabled = true;
+            }
+            else
+            {
+                if (_outlineComponent != null)
+                {
+                    _outlineComponent.enabled = false;
+                }
+            }
         }
 
         public void SetItem(CollectibleItemSO data)

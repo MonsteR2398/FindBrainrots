@@ -24,13 +24,10 @@ namespace ModularTreasures.Quests
 
         private IEnumerator Start()
         {
-            Debug.Log($"[QuestCameraSequenceTrigger] Initialize on GameObject '{gameObject.name}'. Target Quest: '{questIdToCheck}', Target Camera: '{cameraTargetId}'");
-
             yield return null;
 
             string claimedKey = questIdToCheck.StartsWith("Quest_") ? $"{questIdToCheck}_Claimed" : $"Quest_{questIdToCheck}_Claimed";
             int isClaimed = PlayerPrefs.GetInt(claimedKey, 0);
-            Debug.Log($"[QuestCameraSequenceTrigger] Step 1: Checking PlayerPrefs for '{claimedKey}'. Value is: {isClaimed}");
 
             if (isClaimed != 1)
             {
@@ -39,7 +36,6 @@ namespace ModularTreasures.Quests
             }
 
             int isPlayed = PlayerPrefs.GetInt(PlaySaveKey, 0);
-            Debug.Log($"[QuestCameraSequenceTrigger] Step 2: Checking PlayerPrefs for '{PlaySaveKey}'. Value is: {isPlayed}");
 
             if (isPlayed == 1)
             {
@@ -49,18 +45,15 @@ namespace ModularTreasures.Quests
 
             if (delayBeforeStart > 0f)
             {
-                Debug.Log($"[QuestCameraSequenceTrigger] Step 3: Waiting for delayBeforeStart of {delayBeforeStart} seconds.");
                 yield return new WaitForSeconds(delayBeforeStart);
             }
 
-            Debug.Log($"[QuestCameraSequenceTrigger] Step 4: Checking CameraSequenceManager.Instance.");
             if (CameraSequenceManager.Instance == null)
             {
                 Debug.LogError("[QuestCameraSequenceTrigger] Error: CameraSequenceManager.Instance is null in this scene! Cannot play camera sequence.");
                 yield break;
             }
 
-            Debug.Log($"[QuestCameraSequenceTrigger] Step 5: Getting target '{cameraTargetId}' from CameraSequenceManager.");
             Transform target = CameraSequenceManager.Instance.GetTarget(cameraTargetId);
             if (target == null)
             {
@@ -68,7 +61,6 @@ namespace ModularTreasures.Quests
                 yield break;
             }
 
-            Debug.Log($"[QuestCameraSequenceTrigger] Step 6: Triggering PlaySequence for target '{cameraTargetId}' (Position: {target.position}). Duration: {focusDuration}, Arrival Action Key: '{arrivalActionKey}', Wait For Manual Release: {waitForManualRelease}");
             CameraSequenceManager.Instance.PlaySequence(target, null, focusDuration, () =>
             {
                 Debug.Log($"[QuestCameraSequenceTrigger] Focus arrived! Triggering QuestActionSystem.TriggerAction with key: '{arrivalActionKey}'");
@@ -78,7 +70,6 @@ namespace ModularTreasures.Quests
                 }
             }, waitForManualRelease);
 
-            Debug.Log($"[QuestCameraSequenceTrigger] Step 7: Saving to PlayerPrefs '{PlaySaveKey}' = 1 to mark it as played.");
             PlayerPrefs.SetInt(PlaySaveKey, 1);
             PlayerPrefs.Save();
         }

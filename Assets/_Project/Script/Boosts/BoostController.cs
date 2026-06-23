@@ -9,7 +9,8 @@ namespace Treasures.Boosts
     public enum BoostType
     {
         Speed,
-        Jump
+        Jump,
+        Vision
     }
 
     /// <summary>
@@ -43,6 +44,14 @@ namespace Treasures.Boosts
         [Header("Balance (tune freely)")]
         [SerializeField] private BoostConfig speedBoost = new BoostConfig { duration = 15f, multiplier = 1.6f, diamondCost = 25 };
         [SerializeField] private BoostConfig jumpBoost = new BoostConfig { duration = 15f, multiplier = 1.5f, diamondCost = 25 };
+        [SerializeField] private BoostConfig visionBoost = new BoostConfig { duration = 15f, multiplier = 1f, diamondCost = 25 };
+
+        [Header("Vision Boost Settings")]
+        [SerializeField] private Color visionOutlineColor = Color.yellow;
+        [SerializeField] private float visionOutlineWidth = 4f;
+
+        public Color VisionOutlineColor => visionOutlineColor;
+        public float VisionOutlineWidth => visionOutlineWidth;
 
         [SerializeField] private PlayerController _player;
 
@@ -67,7 +76,12 @@ namespace Treasures.Boosts
             if (Instance == this) Instance = null;
         }
 
-        private BoostConfig ConfigFor(BoostType type) => type == BoostType.Speed ? speedBoost : jumpBoost;
+        private BoostConfig ConfigFor(BoostType type)
+        {
+            if (type == BoostType.Speed) return speedBoost;
+            if (type == BoostType.Jump) return jumpBoost;
+            return visionBoost;
+        }
 
         #region Public API
 
@@ -82,7 +96,7 @@ namespace Treasures.Boosts
             return peak > 0f ? Mathf.Clamp01(GetRemaining(type) / peak) : 0f;
         }
 
-        public bool AnyActive() => IsActive(BoostType.Speed) || IsActive(BoostType.Jump);
+        public bool AnyActive() => IsActive(BoostType.Speed) || IsActive(BoostType.Jump) || IsActive(BoostType.Vision);
 
         public int GetCost(BoostType type) => ConfigFor(type).diamondCost;
         public Sprite GetIcon()
@@ -149,6 +163,12 @@ namespace Treasures.Boosts
 
         private void ApplyMultiplier(BoostType type, float multiplier)
         {
+            if (type == BoostType.Vision)
+            {
+                SetVisionBoostActive(true);
+                return;
+            }
+
             var player = _player;
             if (player == null)
             {
@@ -157,20 +177,26 @@ namespace Treasures.Boosts
             }
             if (type == BoostType.Speed)
                 player.ApplySpeedBoost(multiplier);
-            else
+            else if (type == BoostType.Jump)
                 player.AddJumpMultiplier(multiplier);
         }
 
         private void ResetMultiplier(BoostType type, float multiplier)
         {
+            ConfigFor(type).isActived = false;
+
+            if (type == BoostType.Vision)
+            {
+                SetVisionBoostActive(false);
+                return;
+            }
+
             var player = _player;
             if (player == null) return;
 
-            ConfigFor(type).isActived = false;
-
             if (type == BoostType.Speed)
                 player.RemoveSpeedMultiplayer(multiplier);
-            else
+            else if (type == BoostType.Jump)
                 player.RemoveJumpMultiplayer(multiplier);
         }
 
@@ -178,6 +204,19 @@ namespace Treasures.Boosts
         {
             TickBoost(BoostType.Speed);
             TickBoost(BoostType.Jump);
+            TickBoost(BoostType.Vision);
+        }
+
+        private void SetVisionBoostActive(bool active)
+        {
+            var brainrots = UnityEngine.Object.FindObjectsByType<Pickups.BrainrotMapInstance>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            foreach (var brainrot in brainrots)
+            {
+                if (brainrot != null)
+                {
+                    brainrot.SetOutline(active, visionOutlineColor, visionOutlineWidth);
+                }
+            }
         }
 
         private void TickBoost(BoostType type)

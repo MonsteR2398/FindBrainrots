@@ -152,6 +152,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: bb07306b87ad64d27a3977839e8bb408, type: 3}
+    - target: {fileID: 6389043749831380406, guid: ff8035d4d2f258849811884abde08b9b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389043749831380406, guid: ff8035d4d2f258849811884abde08b9b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389043749831380406, guid: ff8035d4d2f258849811884abde08b9b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6644514606114550438, guid: ff8035d4d2f258849811884abde08b9b, type: 3}
       propertyPath: m_Name
       value: WallHack_Boost
@@ -184,7 +196,8 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 18
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5824592451605624704, guid: ff8035d4d2f258849811884abde08b9b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

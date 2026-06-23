@@ -18,21 +18,34 @@ namespace ModularTreasures.Quests
                 return;
             }
 
-            Transform target = CameraSequenceManager.Instance.GetTarget(targetId);
+            if (string.IsNullOrEmpty(targetId)) return;
 
-            if (target == null)
-            {
-                Debug.Log($"[CameraSequenceReward] Target '{targetId}' is not registered in this scene. The sequence will be triggered via QuestCameraSequenceTrigger when entering its scene.");
-                return;
-            }
+            string[] ids = targetId.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries);
+            string[] arrivalKeys = !string.IsNullOrEmpty(arrivalActionKey) 
+                ? arrivalActionKey.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries) 
+                : new string[0];
 
-            CameraSequenceManager.Instance.PlaySequence(target, null, focusDuration, () =>
+            for (int i = 0; i < ids.Length; i++)
             {
-                if (!string.IsNullOrEmpty(arrivalActionKey))
+                string id = ids[i].Trim();
+                Transform target = CameraSequenceManager.Instance.GetTarget(id);
+
+                if (target == null)
                 {
-                    QuestActionSystem.TriggerAction(arrivalActionKey, 1f);
+                    Debug.Log($"[CameraSequenceReward] Target '{id}' is not registered in this scene.");
+                    continue;
                 }
-            }, waitForManualRelease);
+
+                string currentArrivalKey = (i < arrivalKeys.Length) ? arrivalKeys[i].Trim() : "";
+
+                CameraSequenceManager.Instance.PlaySequence(target, null, focusDuration, () =>
+                {
+                    if (!string.IsNullOrEmpty(currentArrivalKey))
+                    {
+                        QuestActionSystem.TriggerAction(currentArrivalKey, 1f);
+                    }
+                }, waitForManualRelease);
+            }
         }
     }
 }

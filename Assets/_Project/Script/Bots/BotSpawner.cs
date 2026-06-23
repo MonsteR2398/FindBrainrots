@@ -88,7 +88,6 @@ namespace Treasures.Bots
                 _bots.Add(bot);
             }
 
-            Debug.Log($"[BotSpawner] Spawned {_bots.Count} bots.");
         }
 
         private void DespawnAll()

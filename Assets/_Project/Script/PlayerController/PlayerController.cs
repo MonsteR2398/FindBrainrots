@@ -31,6 +31,9 @@ public class PlayerController : MonoBehaviour
     private float externalSpeedMultiplier = 1f;
     private float externalJumpMultiplier = 1f;
 
+    private Vector3 lastSafePosition;
+    private Quaternion lastSafeRotation;
+
     // ----------------------------------------
     public Vector3 CurrentVelocity => velocity;
     public float CurrentSpeed => new Vector3(velocity.x, 0, velocity.z).magnitude;
@@ -52,6 +55,9 @@ public class PlayerController : MonoBehaviour
         if (useCameraRelativeMovement && Camera.main != null)
             mainCamera = Camera.main.transform;
         jumpsRemaining = maxJumps;
+
+        lastSafePosition = transform.position;
+        lastSafeRotation = transform.rotation;
     }
 
     public void OnMove(InputValue value)
@@ -116,6 +122,11 @@ public class PlayerController : MonoBehaviour
         jumpsRemaining = maxJumps;
     }
 
+    public void RespawnAtLastSafePosition()
+    {
+        Teleport(lastSafePosition, lastSafeRotation);
+    }
+
     public void AddSpeedMultiplier(float multiplier)
     {
             externalSpeedMultiplier += multiplier;
@@ -154,6 +165,11 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         HandleMovement();
+        if (IsGrounded)
+        {
+            lastSafePosition = transform.position;
+            lastSafeRotation = transform.rotation;
+        }
     }
 
     private void HandleMovement()

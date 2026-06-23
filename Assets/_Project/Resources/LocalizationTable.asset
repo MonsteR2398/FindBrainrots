@@ -400,3 +400,12 @@ MonoBehaviour:
     - Plateformes flottantes dans le ciel.
     - Schwebende Plattformen am Himmel.
     - Piattaforme galleggianti nel cielo.
+  - key: boost.wallhack
+    values:
+    - WallHack
+    - "\u0412\u0425"
+    - WallHack
+    - WallHack
+    - WallHack
+    - WallHack
+    - WallHack
