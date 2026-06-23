@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e61b4b18a08154a95c46ea32504640, type: 3}
   m_Name: Reward_EpicBrainrotsView
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraSequenceRewardSO
-  targetId: Wall10View_2
+  targetId: Wall3Epic_A, Wall3Epic_B, Wall3Epic_C
   focusDuration: 5
-  arrivalActionKey: Quest_Wall10View_2
+  arrivalActionKey: Quest_Wall3Epic_A, Quest_Wall3Epic_B, Quest_Wall3Epic_C
   waitForManualRelease: 1

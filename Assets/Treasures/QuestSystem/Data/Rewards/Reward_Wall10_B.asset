@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8e61b4b18a08154a95c46ea32504640, type: 3}
-  m_Name: Reward_Wall10View
+  m_Name: Reward_Wall10_B
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraSequenceRewardSO
-  targetId: Wall10_A, Wall10_B
+  targetId: Wall10_B
   focusDuration: 5
-  arrivalActionKey: Quest_Wall10_A, Quest_Wall10_B
+  arrivalActionKey: Quest_Wall10_B
   waitForManualRelease: 1

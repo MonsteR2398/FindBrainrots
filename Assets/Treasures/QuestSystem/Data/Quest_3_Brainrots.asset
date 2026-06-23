@@ -20,4 +20,5 @@ MonoBehaviour:
   isRepeatable: 0
   startFromCurrentValue: 1
   rewards:
-  - {fileID: 11400000, guid: 31eb9240a8eb5164495318dab27b318c, type: 2}
+  - {fileID: 11400000, guid: 9be2518b35b026b4ba96437356a70b7d, type: 2}
+  - {fileID: 11400000, guid: 42598c40da4922249aeaffa74e90d39b, type: 2}
