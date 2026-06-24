@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 10
-  rotationSpeed: 10
+  rotationSpeed: 24
   jumpHeight: 2.5
   gravity: -20
   maxJumps: 2
