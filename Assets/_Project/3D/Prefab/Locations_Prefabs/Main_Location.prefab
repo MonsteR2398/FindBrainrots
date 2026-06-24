@@ -6208,7 +6208,7 @@ MonoBehaviour:
   - {fileID: 8531485491263520109, guid: a8cc4658b5ac211438b015909e77ecb2, type: 3}
   - {fileID: 8531485491263520109, guid: fd60f6755d1587444b9e92fc7b7fd205, type: 3}
   - {fileID: 8531485491263520109, guid: 0881fe939a0427d48989f9113cafcccb, type: 3}
-  botCount: 12
+  botCount: 2
   spawnHeightOffset: 0.5
   currentGraph: {fileID: 3472112152851123872}
 --- !u!1 &235654804711551477
@@ -32437,7 +32437,7 @@ MonoBehaviour:
   - {fileID: 8531485491263520109, guid: a8cc4658b5ac211438b015909e77ecb2, type: 3}
   - {fileID: 8531485491263520109, guid: fd60f6755d1587444b9e92fc7b7fd205, type: 3}
   - {fileID: 8531485491263520109, guid: 0881fe939a0427d48989f9113cafcccb, type: 3}
-  botCount: 12
+  botCount: 8
   spawnHeightOffset: 0.5
   currentGraph: {fileID: 5185349014683889407}
 --- !u!1 &1217466990032630764
@@ -61891,7 +61891,7 @@ MonoBehaviour:
   - {fileID: 8531485491263520109, guid: a8cc4658b5ac211438b015909e77ecb2, type: 3}
   - {fileID: 8531485491263520109, guid: fd60f6755d1587444b9e92fc7b7fd205, type: 3}
   - {fileID: 8531485491263520109, guid: 0881fe939a0427d48989f9113cafcccb, type: 3}
-  botCount: 12
+  botCount: 2
   spawnHeightOffset: 0.5
   currentGraph: {fileID: 5123832563844983611}
 --- !u!1 &2188466312677640980
@@ -67536,7 +67536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &803466999571664482
 Transform:
   m_ObjectHideFlags: 0
@@ -83041,7 +83041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6027165958768124849
 Transform:
   m_ObjectHideFlags: 0
@@ -84110,7 +84110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5570022970644193077
 Transform:
   m_ObjectHideFlags: 0
@@ -86348,7 +86348,7 @@ MonoBehaviour:
   - {fileID: 8531485491263520109, guid: a8cc4658b5ac211438b015909e77ecb2, type: 3}
   - {fileID: 8531485491263520109, guid: fd60f6755d1587444b9e92fc7b7fd205, type: 3}
   - {fileID: 8531485491263520109, guid: 0881fe939a0427d48989f9113cafcccb, type: 3}
-  botCount: 12
+  botCount: 3
   spawnHeightOffset: 0.5
   currentGraph: {fileID: 6821456186290812814}
 --- !u!1 &3041888901150575668
@@ -111239,7 +111239,7 @@ MonoBehaviour:
   - {fileID: 8531485491263520109, guid: a8cc4658b5ac211438b015909e77ecb2, type: 3}
   - {fileID: 8531485491263520109, guid: fd60f6755d1587444b9e92fc7b7fd205, type: 3}
   - {fileID: 8531485491263520109, guid: 0881fe939a0427d48989f9113cafcccb, type: 3}
-  botCount: 66
+  botCount: 8
   spawnHeightOffset: 0.5
   currentGraph: {fileID: 2287569878224772423}
 --- !u!1 &3833056871751097785
@@ -119045,7 +119045,7 @@ MonoBehaviour:
   - {fileID: 8531485491263520109, guid: a8cc4658b5ac211438b015909e77ecb2, type: 3}
   - {fileID: 8531485491263520109, guid: fd60f6755d1587444b9e92fc7b7fd205, type: 3}
   - {fileID: 8531485491263520109, guid: 0881fe939a0427d48989f9113cafcccb, type: 3}
-  botCount: 15
+  botCount: 4
   spawnHeightOffset: 0.5
   currentGraph: {fileID: 4750157773318453069}
 --- !u!1 &4121492878110388939
@@ -129116,7 +129116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8135713754480976399
 Transform:
   m_ObjectHideFlags: 0
@@ -133597,7 +133597,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8440795323915042195
 Transform:
   m_ObjectHideFlags: 0
@@ -159538,7 +159538,6 @@ Transform:
   - {fileID: 6031587934051641523}
   - {fileID: 4345993864991991572}
   - {fileID: 1880041502017150977}
-  - {fileID: 8729861338975756045}
   - {fileID: 4782847440637473867}
   - {fileID: 1828584773877738068}
   - {fileID: 5802695830552953734}
@@ -178456,7 +178455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &107306663009451964
 Transform:
   m_ObjectHideFlags: 0
@@ -180674,7 +180673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4906698153501063706
 Transform:
   m_ObjectHideFlags: 0
@@ -202502,7 +202501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2166716699902202851
 Transform:
   m_ObjectHideFlags: 0
@@ -215743,7 +215742,7 @@ MonoBehaviour:
   - {fileID: 8531485491263520109, guid: a8cc4658b5ac211438b015909e77ecb2, type: 3}
   - {fileID: 8531485491263520109, guid: fd60f6755d1587444b9e92fc7b7fd205, type: 3}
   - {fileID: 8531485491263520109, guid: 0881fe939a0427d48989f9113cafcccb, type: 3}
-  botCount: 12
+  botCount: 2
   spawnHeightOffset: 0.5
   currentGraph: {fileID: 8323492688511386909}
 --- !u!1 &7515943407561995368
@@ -229780,7 +229779,7 @@ MonoBehaviour:
   - {fileID: 8531485491263520109, guid: a8cc4658b5ac211438b015909e77ecb2, type: 3}
   - {fileID: 8531485491263520109, guid: fd60f6755d1587444b9e92fc7b7fd205, type: 3}
   - {fileID: 8531485491263520109, guid: 0881fe939a0427d48989f9113cafcccb, type: 3}
-  botCount: 25
+  botCount: 6
   spawnHeightOffset: 0.5
   currentGraph: {fileID: 4678826828811264833}
 --- !u!1 &8116554006246460044
@@ -234949,7 +234948,7 @@ MonoBehaviour:
   - {fileID: 8531485491263520109, guid: a8cc4658b5ac211438b015909e77ecb2, type: 3}
   - {fileID: 8531485491263520109, guid: fd60f6755d1587444b9e92fc7b7fd205, type: 3}
   - {fileID: 8531485491263520109, guid: 0881fe939a0427d48989f9113cafcccb, type: 3}
-  botCount: 15
+  botCount: 8
   spawnHeightOffset: 0.5
   currentGraph: {fileID: 2945520347772907030}
 --- !u!1 &8328314381541904152
@@ -257655,7 +257654,8 @@ PrefabInstance:
       value: Barrier (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5875190757193763851, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5254211232033733082, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
@@ -259552,15 +259552,55 @@ PrefabInstance:
       value: 74
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5875190757193763851, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8669424597498459488}
   m_SourcePrefab: {fileID: 100100000, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
 --- !u!4 &4782847440637473867 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
   m_PrefabInstance: {fileID: 474792186580909904}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5531085266281585771 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 474792186580909904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8669424597498459488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5531085266281585771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f731ab2e28920044c80f79f778310829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.BrainrotTaskHUD
+  taskText: {fileID: 6537152296488846575}
+  brainrotCategory: {fileID: 11400000, guid: 2290d2b93e88fe7458667cdecdd0a8b1, type: 2}
+  targetCount: 10
+  panelToDisable: {fileID: 5531085266281585771}
+  disableActionKey: Quest_Wall10Rainbow_B
+  taskTitleOverride: "\u041D\u0430\u0439\u0434\u0438 \u0440\u0430\u0434\u0443\u0436\u043D\u044B\u0445
+    \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+  rarityFilter: {fileID: 11400000, guid: 6ef4cd1da91c58745bd53b830e931d55, type: 2}
+--- !u!114 &6537152296488846575 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6642367011790912447, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 474792186580909904}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &476513012250343787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -265914,15 +265954,55 @@ PrefabInstance:
       value: 135
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5875190757193763851, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6859090038651472511}
   m_SourcePrefab: {fileID: 100100000, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+--- !u!114 &5215139875270046498 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6642367011790912447, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 1473112000948324509}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5802695830552953734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
   m_PrefabInstance: {fileID: 1473112000948324509}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6783858974991494054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 1473112000948324509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6859090038651472511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6783858974991494054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f731ab2e28920044c80f79f778310829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.BrainrotTaskHUD
+  taskText: {fileID: 5215139875270046498}
+  brainrotCategory: {fileID: 11400000, guid: 2290d2b93e88fe7458667cdecdd0a8b1, type: 2}
+  targetCount: 10
+  panelToDisable: {fileID: 6783858974991494054}
+  disableActionKey: Quest_Wall10Rainbow_C
+  taskTitleOverride: "\u041D\u0430\u0439\u0434\u0438 \u0440\u0430\u0434\u0443\u0436\u043D\u044B\u0445
+    \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+  rarityFilter: {fileID: 11400000, guid: 6ef4cd1da91c58745bd53b830e931d55, type: 2}
 --- !u!1001 &1474683760559376091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -267892,7 +267972,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5875190757193763851, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
@@ -267937,12 +268018,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.BrainrotTaskHUD
   taskText: {fileID: 5434778551186610199}
   brainrotCategory: {fileID: 11400000, guid: 2290d2b93e88fe7458667cdecdd0a8b1, type: 2}
-  targetCount: 3
+  targetCount: 60
   panelToDisable: {fileID: 6707772524243402899}
-  disableActionKey: Quest_Wall3Epic_A
-  taskTitleOverride: "\u041D\u0430\u0439\u0434\u0438 \u044D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0445
-    \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
-  rarityFilter: {fileID: 11400000, guid: 4e2f0b5c54bda8047a931b8ae72faad0, type: 2}
+  disableActionKey: Quest_Wall60_A
+  taskTitleOverride: "\u041D\u0430\u0439\u0434\u0438 \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+  rarityFilter: {fileID: 0}
 --- !u!1 &6893021538406029938 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5254211232033733082, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
@@ -270891,10 +270971,49 @@ PrefabInstance:
       value: 16.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5875190757193763851, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4101475513577748411}
   m_SourcePrefab: {fileID: 100100000, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+--- !u!114 &4712149741274052262 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6642367011790912447, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 2110647414251015449}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &6277480113014713890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 2110647414251015449}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4101475513577748411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6277480113014713890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f731ab2e28920044c80f79f778310829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.BrainrotTaskHUD
+  taskText: {fileID: 4712149741274052262}
+  brainrotCategory: {fileID: 11400000, guid: 2290d2b93e88fe7458667cdecdd0a8b1, type: 2}
+  targetCount: 210
+  panelToDisable: {fileID: 6277480113014713890}
+  disableActionKey: Quest_Wall210_A
+  taskTitleOverride: "\u041D\u0430\u0439\u0434\u0438 \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+  rarityFilter: {fileID: 0}
 --- !u!4 &6466144532698973698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
@@ -284296,15 +284415,55 @@ PrefabInstance:
       value: 135
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5875190757193763851, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7341239908330563087}
   m_SourcePrefab: {fileID: 100100000, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+--- !u!114 &7764813800593565112 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6642367011790912447, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 4029671193580658183}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8294115437254530332 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
   m_PrefabInstance: {fileID: 4029671193580658183}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9059224698099514684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 4029671193580658183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7341239908330563087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9059224698099514684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f731ab2e28920044c80f79f778310829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.BrainrotTaskHUD
+  taskText: {fileID: 7764813800593565112}
+  brainrotCategory: {fileID: 11400000, guid: 2290d2b93e88fe7458667cdecdd0a8b1, type: 2}
+  targetCount: 10
+  panelToDisable: {fileID: 9059224698099514684}
+  disableActionKey: Quest_Wall10Rainbow_A
+  taskTitleOverride: "\u041D\u0430\u0439\u0434\u0438 \u0440\u0430\u0434\u0443\u0436\u043D\u044B\u0445
+    \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+  rarityFilter: {fileID: 11400000, guid: 6ef4cd1da91c58745bd53b830e931d55, type: 2}
 --- !u!1001 &4030509153352405214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -284452,13 +284611,28 @@ PrefabInstance:
       value: Barrier (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5875190757193763851, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5933758554798034854}
     - targetCorrespondingSourceObject: {fileID: 5254211232033733082, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3182081768802366091}
   m_SourcePrefab: {fileID: 100100000, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+--- !u!114 &7219149786979173935 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6642367011790912447, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 4035788083817020816}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8136679229549315146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8136679229549315146 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5254211232033733082, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
@@ -284477,6 +284651,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.Localization.LocalizedText
   key: quest.find_brainrots
+--- !u!1 &8238613851914870443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 4035788083817020816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5933758554798034854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8238613851914870443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f731ab2e28920044c80f79f778310829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.BrainrotTaskHUD
+  taskText: {fileID: 7219149786979173935}
+  brainrotCategory: {fileID: 11400000, guid: 2290d2b93e88fe7458667cdecdd0a8b1, type: 2}
+  targetCount: 3
+  panelToDisable: {fileID: 8238613851914870443}
+  disableActionKey: Quest_Wall3Epic_A
+  taskTitleOverride: "\u041D\u0430\u0439\u0434\u0438 \u044D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0445
+    \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+  rarityFilter: {fileID: 11400000, guid: 4e2f0b5c54bda8047a931b8ae72faad0, type: 2}
 --- !u!4 &9004707157042984587 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
@@ -287316,85 +287515,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4933561956368209837, guid: 0033491820129ad468f8f632a463258a, type: 3}
   m_PrefabInstance: {fileID: 4439581733292074055}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &4454174590818374678
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1636474030599961149}
-    m_Modifications:
-    - target: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.87626
-      objectReference: {fileID: 0}
-    - target: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.87626
-      objectReference: {fileID: 0}
-    - target: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.87626
-      objectReference: {fileID: 0}
-    - target: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 37.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 121.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9743701
-      objectReference: {fileID: 0}
-    - target: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.22495107
-      objectReference: {fileID: 0}
-    - target: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 26
-      objectReference: {fileID: 0}
-    - target: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-      propertyPath: m_Name
-      value: Barrier (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5775972024074254066, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 135
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 4616466703324067656, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
---- !u!4 &8729861338975756045 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
-  m_PrefabInstance: {fileID: 4454174590818374678}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4467686734841467583
 PrefabInstance:
@@ -300679,13 +300799,28 @@ PrefabInstance:
       value: Barrier (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5875190757193763851, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7843738536802632996}
     - targetCorrespondingSourceObject: {fileID: 5254211232033733082, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7015561244257335924}
   m_SourcePrefab: {fileID: 100100000, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+--- !u!114 &94614872121653637 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6642367011790912447, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 6736908005609456186}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555144178850773984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1555144178850773984 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5254211232033733082, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
@@ -300704,6 +300839,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.Localization.LocalizedText
   key: quest.find_brainrots
+--- !u!1 &1669391149858758913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 6736908005609456186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7843738536802632996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669391149858758913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f731ab2e28920044c80f79f778310829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.BrainrotTaskHUD
+  taskText: {fileID: 94614872121653637}
+  brainrotCategory: {fileID: 11400000, guid: 2290d2b93e88fe7458667cdecdd0a8b1, type: 2}
+  targetCount: 200
+  panelToDisable: {fileID: 1669391149858758913}
+  disableActionKey: Quest_Wall200_A
+  taskTitleOverride: "\u041D\u0430\u0439\u0434\u0438 \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+  rarityFilter: {fileID: 0}
 --- !u!4 &1839883937112541473 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
@@ -300844,10 +301003,50 @@ PrefabInstance:
       value: 74
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5875190757193763851, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8687786257858029734}
   m_SourcePrefab: {fileID: 100100000, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+--- !u!114 &124067934844115696 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6642367011790912447, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 6743765214819754319}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1711995676816228980 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 6743765214819754319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8687786257858029734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711995676816228980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f731ab2e28920044c80f79f778310829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.BrainrotTaskHUD
+  taskText: {fileID: 124067934844115696}
+  brainrotCategory: {fileID: 11400000, guid: 2290d2b93e88fe7458667cdecdd0a8b1, type: 2}
+  targetCount: 10
+  panelToDisable: {fileID: 1711995676816228980}
+  disableActionKey: Quest_Wall10Rainbow_D
+  taskTitleOverride: "\u041D\u0430\u0439\u0434\u0438 \u0440\u0430\u0434\u0443\u0436\u043D\u044B\u0445
+    \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+  rarityFilter: {fileID: 11400000, guid: 6ef4cd1da91c58745bd53b830e931d55, type: 2}
 --- !u!4 &1828584773877738068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
@@ -301760,7 +301959,8 @@ PrefabInstance:
       value: Barrier (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5875190757193763851, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
@@ -301770,6 +301970,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1045531169918921812}
   m_SourcePrefab: {fileID: 100100000, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+--- !u!114 &202530874027446437 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6642367011790912447, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 6836997890475649818}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588451376711176896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1492227630763608097 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
@@ -301787,14 +301998,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f731ab2e28920044c80f79f778310829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.BrainrotTaskHUD
-  taskText: {fileID: 5434778551186610199}
+  taskText: {fileID: 202530874027446437}
   brainrotCategory: {fileID: 11400000, guid: 2290d2b93e88fe7458667cdecdd0a8b1, type: 2}
-  targetCount: 3
+  targetCount: 60
   panelToDisable: {fileID: 1492227630763608097}
-  disableActionKey: Quest_Wall3Epic_B
-  taskTitleOverride: "\u041D\u0430\u0439\u0434\u0438 \u044D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0445
-    \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
-  rarityFilter: {fileID: 11400000, guid: 4e2f0b5c54bda8047a931b8ae72faad0, type: 2}
+  disableActionKey: Quest_Wall60_B
+  taskTitleOverride: "\u041D\u0430\u0439\u0434\u0438 \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+  rarityFilter: {fileID: 0}
 --- !u!1 &1588451376711176896 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5254211232033733082, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
@@ -304055,7 +304265,8 @@ PrefabInstance:
       value: Barrier (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5875190757193763851, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
@@ -304087,14 +304298,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f731ab2e28920044c80f79f778310829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.BrainrotTaskHUD
-  taskText: {fileID: 5434778551186610199}
+  taskText: {fileID: 4535371258572402351}
   brainrotCategory: {fileID: 11400000, guid: 2290d2b93e88fe7458667cdecdd0a8b1, type: 2}
-  targetCount: 3
+  targetCount: 60
   panelToDisable: {fileID: 2921180290069952043}
-  disableActionKey: Quest_Wall3Epic_C
-  taskTitleOverride: "\u041D\u0430\u0439\u0434\u0438 \u044D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0445
-    \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
-  rarityFilter: {fileID: 11400000, guid: 4e2f0b5c54bda8047a931b8ae72faad0, type: 2}
+  disableActionKey: Quest_Wall60_C
+  taskTitleOverride: "\u041D\u0430\u0439\u0434\u0438 \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+  rarityFilter: {fileID: 0}
 --- !u!1 &3041118307224939722 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5254211232033733082, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
@@ -304113,6 +304323,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.Localization.LocalizedText
   key: quest.find_brainrots
+--- !u!114 &4535371258572402351 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6642367011790912447, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 7124287498773632272}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3041118307224939722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7148594218736075249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -314702,13 +314923,28 @@ PrefabInstance:
       value: Barrier (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5875190757193763851, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8742804682654045282}
     - targetCorrespondingSourceObject: {fileID: 5254211232033733082, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2457985104896175427}
   m_SourcePrefab: {fileID: 100100000, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+--- !u!114 &2632535866111825840 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6642367011790912447, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 8693857092181945359}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3480294813759116757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3480294813759116757 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5254211232033733082, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
@@ -314727,6 +314963,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.Localization.LocalizedText
   key: quest.find_brainrots
+--- !u!1 &3671094169328586548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5356064481809359675, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}
+  m_PrefabInstance: {fileID: 8693857092181945359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8742804682654045282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3671094169328586548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f731ab2e28920044c80f79f778310829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.BrainrotTaskHUD
+  taskText: {fileID: 2632535866111825840}
+  brainrotCategory: {fileID: 11400000, guid: 2290d2b93e88fe7458667cdecdd0a8b1, type: 2}
+  targetCount: 15
+  panelToDisable: {fileID: 3671094169328586548}
+  disableActionKey: Quest_Wall15Legendary_A
+  taskTitleOverride: "\u041D\u0430\u0439\u0434\u0438 \u043B\u0435\u0433\u0435\u043D\u0434\u0430\u0440\u043D\u044B\u0445
+    \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+  rarityFilter: {fileID: 11400000, guid: c8109f7f852dd4c4b8c9440306b82681, type: 2}
 --- !u!4 &4345993864991991572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4969399561553185563, guid: 69ea644d474f32b48b9719f733ce6759, type: 3}

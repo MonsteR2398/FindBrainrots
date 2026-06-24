@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Boy_Ren
   m_EditorClassIdentifier: Assembly-CSharp::ModularSkinShop.Data.SkinSO
   ID: skin_boy_ren
-  DisplayName: Boy_Ren
+  DisplayName: ' '
   Prefab: {fileID: 4705531411619522676, guid: 87337a3341fe84e40bdfdf5ebea4b81c, type: 3}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 2155109be3e8f0d4a814421f85eb4bf9, type: 3}
   CurrencyPrice:
   - Type: 0
     Value: 4000
