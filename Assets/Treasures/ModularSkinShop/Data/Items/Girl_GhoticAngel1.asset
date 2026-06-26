@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Girl_GhoticAngel1
   m_EditorClassIdentifier: Assembly-CSharp::ModularSkinShop.Data.SkinSO
   ID: skin_girl_ghoticangel1
-  DisplayName: Girl_GhoticAngel 1
+  DisplayName: ' '
   Prefab: {fileID: 4705531411619522676, guid: afceb617f856c4945aa507dfdbb9ace2, type: 3}
   Icon: {fileID: 0}
   CurrencyPrice:

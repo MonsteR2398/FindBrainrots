@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Girl_Pastel
   m_EditorClassIdentifier: Assembly-CSharp::ModularSkinShop.Data.SkinSO
   ID: skin_girl_pastel
-  DisplayName: Girl_Pastel
+  DisplayName: ' '
   Prefab: {fileID: 4705531411619522676, guid: 2fa5292e5b7556340bdfc10aa4a9be55, type: 3}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 55a4a22f8f7c135448ff2e1508ebce6e, type: 3}
   CurrencyPrice:
   - Type: 0
     Value: 3900

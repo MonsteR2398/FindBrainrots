@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2026d73f13412e45a225ff3089f56ad, type: 3}
+  m_Name: Quest_9_RainbowBrainrots10
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestSO
+  id: Quest_9_Brainrots
+  title: Find 210 Brainrots
+  icon: {fileID: 21300000, guid: 7ca9fb4d5211abb408d5a79c3608a671, type: 3}
+  targetValue: 10
+  condition: {fileID: 11400000, guid: 6845a2be71f60ec42ae54fb124383ae8, type: 2}
+  isRepeatable: 0
+  startFromCurrentValue: 1
+  rewards:
+  - {fileID: 11400000, guid: c5c5fc1fb6dd7b0448dafa20a1b0f39c, type: 2}

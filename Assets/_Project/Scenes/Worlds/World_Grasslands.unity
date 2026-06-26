@@ -119,6 +119,359 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &93076602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 93076603}
+  m_Layer: 0
+  m_Name: CameraTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &93076603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93076602}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.04445348, y: 0.036992967, z: -0.012289267, w: 0.9982507}
+  m_LocalPosition: {x: -0.6942749, y: -4.736255, z: -26.93822}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1953757125}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &157887004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 157887005}
+  - component: {fileID: 157887007}
+  - component: {fileID: 157887006}
+  m_Layer: 0
+  m_Name: 'Wall15LegendaryView_A '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &157887005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157887004}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.2047468, y: -0.59060514, z: 0.16700518, w: 0.76247853}
+  m_LocalPosition: {x: 141.5933, y: 22.021507, z: -222.20517}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 860362491}
+  m_Father: {fileID: 2116127856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &157887006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157887004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58cd6758ab65f64bbc0cd5e5f85912d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestCameraSequenceTrigger
+  questIdToCheck: Wall15LegendaryView
+  cameraTargetId: CameraTarget
+  delayBeforeStart: 1
+  focusDuration: 3
+  arrivalActionKey: Quest_Wall15LegendaryView
+  waitForManualRelease: 1
+--- !u!114 &157887007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157887004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c409e39fd3de42f41a87b8848ce357f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraTarget
+  id: Wall15Legendary_A
+--- !u!1 &204521959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 204521960}
+  m_Layer: 0
+  m_Name: CameraTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &204521960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204521959}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.024280868, y: -0.021659344, z: 0.0060793757, w: 0.99945205}
+  m_LocalPosition: {x: 0.7728796, y: -0.44084048, z: -37.210094}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 970224423}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &375220576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 375220577}
+  m_Layer: 0
+  m_Name: CameraTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &375220577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375220576}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.16320941, y: 0.10261059, z: -0.011973746, w: 0.98116785}
+  m_LocalPosition: {x: -11.167478, y: 15.302007, z: -33.300526}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 386208306}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &386208305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 386208306}
+  - component: {fileID: 386208308}
+  - component: {fileID: 386208307}
+  m_Layer: 0
+  m_Name: Wall10RainbowView_D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &386208306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386208305}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.021664865, y: -0.22122028, z: -0.011496064, w: -0.9749154}
+  m_LocalPosition: {x: -14.161948, y: 10.673855, z: 83.04624}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 375220577}
+  m_Father: {fileID: 2116127856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &386208307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386208305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58cd6758ab65f64bbc0cd5e5f85912d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestCameraSequenceTrigger
+  questIdToCheck: Wall10RainbowView
+  cameraTargetId: CameraTarget
+  delayBeforeStart: 1
+  focusDuration: 3
+  arrivalActionKey: Quest_Wall10RainbowView
+  waitForManualRelease: 1
+--- !u!114 &386208308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386208305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c409e39fd3de42f41a87b8848ce357f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraTarget
+  id: Wall10Rainbow_D
+--- !u!1 &396389775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 396389776}
+  - component: {fileID: 396389778}
+  - component: {fileID: 396389777}
+  m_Layer: 0
+  m_Name: Wall10RainbowView_C
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &396389776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396389775}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.05566791, y: -0.8326921, z: 0.07314158, w: -0.54605436}
+  m_LocalPosition: {x: -17.38, y: 11.147825, z: 152.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 989169984}
+  m_Father: {fileID: 2116127856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &396389777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396389775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58cd6758ab65f64bbc0cd5e5f85912d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestCameraSequenceTrigger
+  questIdToCheck: Wall10RainbowView
+  cameraTargetId: CameraTarget
+  delayBeforeStart: 1
+  focusDuration: 3
+  arrivalActionKey: Quest_Wall10RainbowView
+  waitForManualRelease: 1
+--- !u!114 &396389778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396389775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c409e39fd3de42f41a87b8848ce357f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraTarget
+  id: Wall10Rainbow_C
+--- !u!1 &493199004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493199005}
+  - component: {fileID: 493199007}
+  - component: {fileID: 493199006}
+  m_Layer: 0
+  m_Name: Wall10RainbowView_B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &493199005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493199004}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.027872816, y: -0.9535217, z: 0.119979866, w: 0.2749987}
+  m_LocalPosition: {x: 40.3736, y: 13.873912, z: 185.54904}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1402224016}
+  m_Father: {fileID: 2116127856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &493199006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493199004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58cd6758ab65f64bbc0cd5e5f85912d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestCameraSequenceTrigger
+  questIdToCheck: Wall10RainbowView
+  cameraTargetId: CameraTarget
+  delayBeforeStart: 1
+  focusDuration: 3
+  arrivalActionKey: Quest_Wall10RainbowView
+  waitForManualRelease: 1
+--- !u!114 &493199007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493199004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c409e39fd3de42f41a87b8848ce357f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraTarget
+  id: Wall10Rainbow_B
 --- !u!1 &543906952
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,7 +484,7 @@ GameObject:
   - component: {fileID: 543906955}
   - component: {fileID: 543906954}
   m_Layer: 0
-  m_Name: Wall10View (1)
+  m_Name: Wall10View_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,6 +537,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraTarget
   id: Wall10_B
+--- !u!1 &555818525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 555818526}
+  m_Layer: 0
+  m_Name: CameraTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &555818526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555818525}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.010973276, y: -0.036447737, z: 0.008770716, w: 0.9992368}
+  m_LocalPosition: {x: 2.7731996, y: -0.816393, z: -28.128012}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1923890112}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &603087299
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +642,7 @@ GameObject:
   - component: {fileID: 720087254}
   - component: {fileID: 720087253}
   m_Layer: 0
-  m_Name: Wall3EpicView
+  m_Name: Wall60View_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -292,11 +676,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58cd6758ab65f64bbc0cd5e5f85912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestCameraSequenceTrigger
-  questIdToCheck: Wall3EpicView
+  questIdToCheck: Wall60View
   cameraTargetId: CameraTarget
   delayBeforeStart: 1
   focusDuration: 3
-  arrivalActionKey: Quest_Wall3EpicView
+  arrivalActionKey: Quest_Wall60View
   waitForManualRelease: 1
 --- !u!114 &720087254
 MonoBehaviour:
@@ -310,7 +694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c409e39fd3de42f41a87b8848ce357f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraTarget
-  id: Wall3Epic_A
+  id: Wall60_A
 --- !u!1 &781317909
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +770,133 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1 &860362490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 860362491}
+  m_Layer: 0
+  m_Name: CameraTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &860362491
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860362490}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.17210086, y: -0.07845278, z: 0.02972219, w: 0.98150045}
+  m_LocalPosition: {x: 2.6827745, y: -9.624361, z: -31.099886}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 157887005}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &970224422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 970224423}
+  - component: {fileID: 970224425}
+  - component: {fileID: 970224424}
+  m_Layer: 0
+  m_Name: Wall10RainbowView_A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &970224423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970224422}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.12184853, y: -0.5285224, z: 0.08472428, w: 0.8358462}
+  m_LocalPosition: {x: 41.380867, y: 10.833103, z: 120.8331}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 204521960}
+  m_Father: {fileID: 2116127856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &970224424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970224422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58cd6758ab65f64bbc0cd5e5f85912d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestCameraSequenceTrigger
+  questIdToCheck: Wall10RainbowView
+  cameraTargetId: CameraTarget
+  delayBeforeStart: 1
+  focusDuration: 3
+  arrivalActionKey: Quest_Wall10RainbowView
+  waitForManualRelease: 1
+--- !u!114 &970224425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970224422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c409e39fd3de42f41a87b8848ce357f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraTarget
+  id: Wall10Rainbow_A
+--- !u!1 &989169983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 989169984}
+  m_Layer: 0
+  m_Name: CameraTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &989169984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989169983}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.060803525, y: 0.078514986, z: -0.019519417, w: 0.99486554}
+  m_LocalPosition: {x: -9.15036, y: 6.0997877, z: -42.22663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 396389776}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1014287101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -451,19 +962,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8136679229549315146, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7604645990101660059, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 1555144178850773984, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 934093396424199729, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 6169988547881972931, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 5531080592343826706, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 6893021538406029938, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
@@ -472,61 +974,93 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3480294813759116757, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 2967333578652950532, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 1588451376711176896, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 1110484233758189329, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 8447307558039858636, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7807191085142087709, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 5655529086529160842, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 6277474893365277531, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 1548147541546850453, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 873263359389527364, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 6672996303051370823, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 5042155071930008726, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 9153269231595497437, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7378191706938577420, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 3041118307224939722, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 3699235843565279515, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 5337015471496544228, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 6013018887771982389, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 1529143884379734731, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: e4aefef5accb7a64ea5081ae50e26382, type: 3}
+--- !u!1 &1244460358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1244460359}
+  m_Layer: 0
+  m_Name: CameraTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1244460359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244460358}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.058224138, y: 0.14203733, z: -0.029036025, w: 0.9877207}
+  m_LocalPosition: {x: -5.9709506, y: 2.6624258, z: -23.56393}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1692037087}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1402224015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1402224016}
+  m_Layer: 0
+  m_Name: CameraTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1402224016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402224015}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.09775165, y: -0.06345396, z: 0.022851013, w: 0.992923}
+  m_LocalPosition: {x: 6.8077974, y: 8.110477, z: -31.718023}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 493199005}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1524980119
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,7 +1073,7 @@ GameObject:
   - component: {fileID: 1524980122}
   - component: {fileID: 1524980121}
   m_Layer: 0
-  m_Name: Wall3EpicView_3
+  m_Name: Wall60View_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -573,11 +1107,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58cd6758ab65f64bbc0cd5e5f85912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestCameraSequenceTrigger
-  questIdToCheck: Wall3EpicView
+  questIdToCheck: Wall60View
   cameraTargetId: CameraTarget
   delayBeforeStart: 1
   focusDuration: 3
-  arrivalActionKey: Quest_Wall3EpicView
+  arrivalActionKey: Quest_Wall60View
   waitForManualRelease: 1
 --- !u!114 &1524980122
 MonoBehaviour:
@@ -591,7 +1125,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c409e39fd3de42f41a87b8848ce357f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraTarget
-  id: Wall3Epic_C
+  id: Wall60_C
+--- !u!1 &1692037086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1692037087}
+  - component: {fileID: 1692037089}
+  - component: {fileID: 1692037088}
+  m_Layer: 0
+  m_Name: Wall210View_A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1692037087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692037086}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.045483552, y: -0.71847695, z: 0.056513667, w: 0.69175744}
+  m_LocalPosition: {x: -41.953583, y: 131.58234, z: 2.878006}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1244460359}
+  m_Father: {fileID: 2116127856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1692037088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692037086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58cd6758ab65f64bbc0cd5e5f85912d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestCameraSequenceTrigger
+  questIdToCheck: Wall210View
+  cameraTargetId: CameraTarget
+  delayBeforeStart: 1
+  focusDuration: 3
+  arrivalActionKey: Quest_Wall210View
+  waitForManualRelease: 1
+--- !u!114 &1692037089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692037086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c409e39fd3de42f41a87b8848ce357f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraTarget
+  id: Wall210_A
 --- !u!1 &1706830578
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,7 +1203,7 @@ GameObject:
   - component: {fileID: 1706830581}
   - component: {fileID: 1706830580}
   m_Layer: 0
-  m_Name: Wall3EpicView_2
+  m_Name: Wall60View_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -638,11 +1237,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58cd6758ab65f64bbc0cd5e5f85912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestCameraSequenceTrigger
-  questIdToCheck: Wall3EpicView
+  questIdToCheck: Wall60View
   cameraTargetId: CameraTarget
   delayBeforeStart: 1
   focusDuration: 3
-  arrivalActionKey: Quest_Wall3EpicView
+  arrivalActionKey: Quest_Wall60View
   waitForManualRelease: 1
 --- !u!114 &1706830581
 MonoBehaviour:
@@ -656,7 +1255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c409e39fd3de42f41a87b8848ce357f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraTarget
-  id: Wall3Epic_B
+  id: Wall60_B
 --- !u!1 &1811140365
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,6 +1287,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1935840576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1923890111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1923890112}
+  - component: {fileID: 1923890114}
+  - component: {fileID: 1923890113}
+  m_Layer: 0
+  m_Name: Wall200View_A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1923890112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923890111}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.07699986, y: -0.7409647, z: 0.09614084, w: 0.66015095}
+  m_LocalPosition: {x: -61.18537, y: 66.847824, z: 68.01874}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 555818526}
+  m_Father: {fileID: 2116127856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1923890113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923890111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58cd6758ab65f64bbc0cd5e5f85912d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestCameraSequenceTrigger
+  questIdToCheck: Wall200View
+  cameraTargetId: CameraTarget
+  delayBeforeStart: 1
+  focusDuration: 3
+  arrivalActionKey: Quest_Wall200View
+  waitForManualRelease: 1
+--- !u!114 &1923890114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923890111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c409e39fd3de42f41a87b8848ce357f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraTarget
+  id: Wall200_A
 --- !u!1 &1935840575
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +1364,7 @@ GameObject:
   - component: {fileID: 1935840578}
   - component: {fileID: 1935840577}
   m_Layer: 0
-  m_Name: Wall10View
+  m_Name: Wall10View_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -784,6 +1448,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1706830579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1953757124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1953757125}
+  - component: {fileID: 1953757127}
+  - component: {fileID: 1953757126}
+  m_Layer: 0
+  m_Name: Wall3EpicView_A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1953757125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953757124}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.1721308, y: -0.26907983, z: 0.055741932, w: 0.94597036}
+  m_LocalPosition: {x: 86.26555, y: 25.7438, z: -34.642574}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 93076603}
+  m_Father: {fileID: 2116127856}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1953757126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953757124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58cd6758ab65f64bbc0cd5e5f85912d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestCameraSequenceTrigger
+  questIdToCheck: Wall3EpicView
+  cameraTargetId: CameraTarget
+  delayBeforeStart: 1
+  focusDuration: 3
+  arrivalActionKey: Quest_Wall3EpicView
+  waitForManualRelease: 1
+--- !u!114 &1953757127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953757124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c409e39fd3de42f41a87b8848ce357f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraTarget
+  id: Wall3Epic_A
 --- !u!1 &2116127855
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,9 +1544,17 @@ Transform:
   m_Children:
   - {fileID: 1935840576}
   - {fileID: 543906953}
+  - {fileID: 1953757125}
   - {fileID: 720087252}
   - {fileID: 1706830579}
   - {fileID: 1524980120}
+  - {fileID: 157887005}
+  - {fileID: 1923890112}
+  - {fileID: 1692037087}
+  - {fileID: 970224423}
+  - {fileID: 493199005}
+  - {fileID: 396389776}
+  - {fileID: 386208306}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807

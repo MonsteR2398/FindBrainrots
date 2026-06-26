@@ -409,3 +409,903 @@ MonoBehaviour:
     - WallHack
     - WallHack
     - WallHack
+  - key: bot.name.0
+    values:
+    - Shadow
+    - "\u0422\u0435\u043D\u044C"
+    - Shadow
+    - Shadow
+    - Shadow
+    - Shadow
+    - Shadow
+  - key: bot.name.1
+    values:
+    - Ace
+    - "\u0422\u0443\u0437"
+    - Ace
+    - Ace
+    - Ace
+    - Ace
+    - Ace
+  - key: bot.name.2
+    values:
+    - Rex
+    - "\u0420\u0435\u043A\u0441"
+    - Rex
+    - Rex
+    - Rex
+    - Rex
+    - Rex
+  - key: bot.name.3
+    values:
+    - Viper
+    - "\u0413\u0430\u0434\u044E\u043A\u0430"
+    - Viper
+    - Viper
+    - Viper
+    - Viper
+    - Viper
+  - key: bot.name.4
+    values:
+    - Ghost
+    - "\u041F\u0440\u0438\u0437\u0440\u0430\u043A"
+    - Ghost
+    - Ghost
+    - Ghost
+    - Ghost
+    - Ghost
+  - key: bot.name.5
+    values:
+    - Titan
+    - "\u0422\u0438\u0442\u0430\u043D"
+    - Titan
+    - Titan
+    - Titan
+    - Titan
+    - Titan
+  - key: bot.name.6
+    values:
+    - Nova
+    - "\u041D\u043E\u0432\u0430"
+    - Nova
+    - Nova
+    - Nova
+    - Nova
+    - Nova
+  - key: bot.name.7
+    values:
+    - Blaze
+    - "\u0412\u0441\u043F\u044B\u0448\u043A\u0430"
+    - Blaze
+    - Blaze
+    - Blaze
+    - Blaze
+    - Blaze
+  - key: bot.name.8
+    values:
+    - Frost
+    - "\u041C\u043E\u0440\u043E\u0437"
+    - Frost
+    - Frost
+    - Frost
+    - Frost
+    - Frost
+  - key: bot.name.9
+    values:
+    - Storm
+    - "\u0428\u0442\u043E\u0440\u043C"
+    - Storm
+    - Storm
+    - Storm
+    - Storm
+    - Storm
+  - key: bot.name.10
+    values:
+    - Rogue
+    - "\u0420\u0430\u0437\u0431\u043E\u0439\u043D\u0438\u043A"
+    - Rogue
+    - Rogue
+    - Rogue
+    - Rogue
+    - Rogue
+  - key: bot.name.11
+    values:
+    - Hunter
+    - "\u041E\u0445\u043E\u0442\u043D\u0438\u043A"
+    - Hunter
+    - Hunter
+    - Hunter
+    - Hunter
+    - Hunter
+  - key: bot.name.12
+    values:
+    - Warrior
+    - "\u0412\u043E\u0438\u043D"
+    - Warrior
+    - Warrior
+    - Warrior
+    - Warrior
+    - Warrior
+  - key: bot.name.13
+    values:
+    - Seeker
+    - "\u0418\u0441\u043A\u0430\u0442\u0435\u043B\u044C"
+    - Seeker
+    - Seeker
+    - Seeker
+    - Seeker
+    - Seeker
+  - key: bot.name.14
+    values:
+    - Alpha
+    - "\u0410\u043B\u044C\u0444\u0430"
+    - Alpha
+    - Alpha
+    - Alpha
+    - Alpha
+    - Alpha
+  - key: bot.name.15
+    values:
+    - Omega
+    - "\u041E\u043C\u0435\u0433\u0430"
+    - Omega
+    - Omega
+    - Omega
+    - Omega
+    - Omega
+  - key: bot.name.16
+    values:
+    - Zero
+    - "\u0417\u0435\u0440\u043E"
+    - Zero
+    - Zero
+    - Zero
+    - Zero
+    - Zero
+  - key: bot.name.17
+    values:
+    - Echo
+    - "\u042D\u0445\u043E"
+    - Echo
+    - Echo
+    - Echo
+    - Echo
+    - Echo
+  - key: bot.name.18
+    values:
+    - Delta
+    - "\u0414\u0435\u043B\u044C\u0442\u0430"
+    - Delta
+    - Delta
+    - Delta
+    - Delta
+    - Delta
+  - key: bot.name.19
+    values:
+    - Raven
+    - "\u0412\u043E\u0440\u043E\u043D"
+    - Raven
+    - Raven
+    - Raven
+    - Raven
+    - Raven
+  - key: bot.name.20
+    values:
+    - Falcon
+    - "\u0421\u043E\u043A\u043E\u043B"
+    - Falcon
+    - Falcon
+    - Falcon
+    - Falcon
+    - Falcon
+  - key: bot.name.21
+    values:
+    - Hawk
+    - "\u042F\u0441\u0442\u0440\u0435\u0431"
+    - Hawk
+    - Hawk
+    - Hawk
+    - Hawk
+    - Hawk
+  - key: bot.name.22
+    values:
+    - Eagle
+    - "\u041E\u0440\u0435\u043B"
+    - Eagle
+    - Eagle
+    - Eagle
+    - Eagle
+    - Eagle
+  - key: bot.name.23
+    values:
+    - Wolf
+    - "\u0412\u043E\u043B\u043A"
+    - Wolf
+    - Wolf
+    - Wolf
+    - Wolf
+    - Wolf
+  - key: bot.name.24
+    values:
+    - Bear
+    - "\u041C\u0435\u0434\u0432\u0435\u0434\u044C"
+    - Bear
+    - Bear
+    - Bear
+    - Bear
+    - Bear
+  - key: bot.name.25
+    values:
+    - Lion
+    - "\u041B\u0435\u0432"
+    - Lion
+    - Lion
+    - Lion
+    - Lion
+    - Lion
+  - key: bot.name.26
+    values:
+    - Tiger
+    - "\u0422\u0438\u0433\u0440"
+    - Tiger
+    - Tiger
+    - Tiger
+    - Tiger
+    - Tiger
+  - key: bot.name.27
+    values:
+    - Panther
+    - "\u041F\u0430\u043D\u0442\u0435\u0440\u0430"
+    - Panther
+    - Panther
+    - Panther
+    - Panther
+    - Panther
+  - key: bot.name.28
+    values:
+    - Jaguar
+    - "\u042F\u0433\u0443\u0430\u0440"
+    - Jaguar
+    - Jaguar
+    - Jaguar
+    - Jaguar
+    - Jaguar
+  - key: bot.name.29
+    values:
+    - Lynx
+    - "\u0420\u044B\u0441\u044C"
+    - Lynx
+    - Lynx
+    - Lynx
+    - Lynx
+    - Lynx
+  - key: bot.name.30
+    values:
+    - Cobra
+    - "\u041A\u043E\u0431\u0440\u0430"
+    - Cobra
+    - Cobra
+    - Cobra
+    - Cobra
+    - Cobra
+  - key: bot.name.31
+    values:
+    - Dragon
+    - "\u0414\u0440\u0430\u043A\u043E\u043D"
+    - Dragon
+    - Dragon
+    - Dragon
+    - Dragon
+    - Dragon
+  - key: bot.name.32
+    values:
+    - Phoenix
+    - "\u0424\u0435\u043D\u0438\u043A\u0441"
+    - Phoenix
+    - Phoenix
+    - Phoenix
+    - Phoenix
+    - Phoenix
+  - key: bot.name.33
+    values:
+    - Griffin
+    - "\u0413\u0440\u0438\u0444\u043E\u043D"
+    - Griffin
+    - Griffin
+    - Griffin
+    - Griffin
+    - Griffin
+  - key: bot.name.34
+    values:
+    - Kraken
+    - "\u041A\u0440\u0430\u043A\u0435\u043D"
+    - Kraken
+    - Kraken
+    - Kraken
+    - Kraken
+    - Kraken
+  - key: bot.name.35
+    values:
+    - Titan
+    - "\u0422\u0438\u0442\u0430\u043D"
+    - Titan
+    - Titan
+    - Titan
+    - Titan
+    - Titan
+  - key: bot.name.36
+    values:
+    - Colossus
+    - "\u041A\u043E\u043B\u043E\u0441\u0441"
+    - Colossus
+    - Colossus
+    - Colossus
+    - Colossus
+    - Colossus
+  - key: bot.name.37
+    values:
+    - Goliath
+    - "\u0413\u043E\u043B\u0438\u0430\u0444"
+    - Goliath
+    - Goliath
+    - Goliath
+    - Goliath
+    - Goliath
+  - key: bot.name.38
+    values:
+    - Behemoth
+    - "\u0411\u0435\u0433\u0435\u043C\u043E\u0442"
+    - Behemoth
+    - Behemoth
+    - Behemoth
+    - Behemoth
+    - Behemoth
+  - key: bot.name.39
+    values:
+    - Leviathan
+    - "\u041B\u0435\u0432\u0438\u0430\u0444\u0430\u043D"
+    - Leviathan
+    - Leviathan
+    - Leviathan
+    - Leviathan
+    - Leviathan
+  - key: bot.name.40
+    values:
+    - Steel
+    - "\u0421\u0442\u0430\u043B\u044C"
+    - Steel
+    - Steel
+    - Steel
+    - Steel
+    - Steel
+  - key: bot.name.41
+    values:
+    - Iron
+    - "\u0416\u0435\u043B\u0435\u0437\u043E"
+    - Iron
+    - Iron
+    - Iron
+    - Iron
+    - Iron
+  - key: bot.name.42
+    values:
+    - Gold
+    - "\u0417\u043E\u043B\u043E\u0442\u043E"
+    - Gold
+    - Gold
+    - Gold
+    - Gold
+    - Gold
+  - key: bot.name.43
+    values:
+    - Silver
+    - "\u0421\u0435\u0440\u0435\u0431\u0440\u043E"
+    - Silver
+    - Silver
+    - Silver
+    - Silver
+    - Silver
+  - key: bot.name.44
+    values:
+    - Copper
+    - "\u041C\u0435\u0434\u044C"
+    - Copper
+    - Copper
+    - Copper
+    - Copper
+    - Copper
+  - key: bot.name.45
+    values:
+    - Bronze
+    - "\u0411\u0440\u043E\u043D\u0437\u0430"
+    - Bronze
+    - Bronze
+    - Bronze
+    - Bronze
+    - Bronze
+  - key: bot.name.46
+    values:
+    - Metal
+    - "\u041C\u0435\u0442\u0430\u043B\u043B"
+    - Metal
+    - Metal
+    - Metal
+    - Metal
+    - Metal
+  - key: bot.name.47
+    values:
+    - Bolt
+    - "\u0411\u043E\u043B\u0442"
+    - Bolt
+    - Bolt
+    - Bolt
+    - Bolt
+    - Bolt
+  - key: bot.name.48
+    values:
+    - Gear
+    - "\u0428\u0435\u0441\u0442\u0435\u0440\u043D\u044F"
+    - Gear
+    - Gear
+    - Gear
+    - Gear
+    - Gear
+  - key: bot.name.49
+    values:
+    - Circuit
+    - "\u0426\u0435\u043F\u044C"
+    - Circuit
+    - Circuit
+    - Circuit
+    - Circuit
+    - Circuit
+  - key: bot.name.50
+    values:
+    - Pixel
+    - "\u041F\u0438\u043A\u0441\u0435\u043B\u044C"
+    - Pixel
+    - Pixel
+    - Pixel
+    - Pixel
+    - Pixel
+  - key: bot.name.51
+    values:
+    - Vector
+    - "\u0412\u0435\u043A\u0442\u043E\u0440"
+    - Vector
+    - Vector
+    - Vector
+    - Vector
+    - Vector
+  - key: bot.name.52
+    values:
+    - Matrix
+    - "\u041C\u0430\u0442\u0440\u0438\u0446\u0430"
+    - Matrix
+    - Matrix
+    - Matrix
+    - Matrix
+    - Matrix
+  - key: bot.name.53
+    values:
+    - Cyber
+    - "\u041A\u0438\u0431\u0435\u0440"
+    - Cyber
+    - Cyber
+    - Cyber
+    - Cyber
+    - Cyber
+  - key: bot.name.54
+    values:
+    - Synth
+    - "\u0421\u0438\u043D\u0442"
+    - Synth
+    - Synth
+    - Synth
+    - Synth
+    - Synth
+  - key: bot.name.55
+    values:
+    - Glitch
+    - "\u0413\u043B\u0438\u0442\u0447"
+    - Glitch
+    - Glitch
+    - Glitch
+    - Glitch
+    - Glitch
+  - key: bot.name.56
+    values:
+    - Byte
+    - "\u0411\u0430\u0439\u0442"
+    - Byte
+    - Byte
+    - Byte
+    - Byte
+    - Byte
+  - key: bot.name.57
+    values:
+    - Bit
+    - "\u0411\u0438\u0442"
+    - Bit
+    - Bit
+    - Bit
+    - Bit
+    - Bit
+  - key: bot.name.58
+    values:
+    - Logic
+    - "\u041B\u043E\u0433\u0438\u043A\u0430"
+    - Logic
+    - Logic
+    - Logic
+    - Logic
+    - Logic
+  - key: bot.name.59
+    values:
+    - Code
+    - "\u041A\u043E\u0434"
+    - Code
+    - Code
+    - Code
+    - Code
+    - Code
+  - key: bot.name.60
+    values:
+    - Spark
+    - "\u0418\u0441\u043A\u0440\u0430"
+    - Spark
+    - Spark
+    - Spark
+    - Spark
+    - Spark
+  - key: bot.name.61
+    values:
+    - Flame
+    - "\u041F\u043B\u0430\u043C\u044F"
+    - Flame
+    - Flame
+    - Flame
+    - Flame
+    - Flame
+  - key: bot.name.62
+    values:
+    - Wave
+    - "\u0412\u043E\u043B\u043D\u0430"
+    - Wave
+    - Wave
+    - Wave
+    - Wave
+    - Wave
+  - key: bot.name.63
+    values:
+    - Cloud
+    - "\u041E\u0431\u043B\u0430\u043A\u043E"
+    - Cloud
+    - Cloud
+    - Cloud
+    - Cloud
+    - Cloud
+  - key: bot.name.64
+    values:
+    - Shadow
+    - "\u0422\u0435\u043D\u044C"
+    - Shadow
+    - Shadow
+    - Shadow
+    - Shadow
+    - Shadow
+  - key: bot.name.65
+    values:
+    - Night
+    - "\u041D\u043E\u0447\u044C"
+    - Night
+    - Night
+    - Night
+    - Night
+    - Night
+  - key: bot.name.66
+    values:
+    - Day
+    - "\u0414\u0435\u043D\u044C"
+    - Day
+    - Day
+    - Day
+    - Day
+    - Day
+  - key: bot.name.67
+    values:
+    - Star
+    - "\u0417\u0432\u0435\u0437\u0434\u0430"
+    - Star
+    - Star
+    - Star
+    - Star
+    - Star
+  - key: bot.name.68
+    values:
+    - Moon
+    - "\u041B\u0443\u043D\u0430"
+    - Moon
+    - Moon
+    - Moon
+    - Moon
+    - Moon
+  - key: bot.name.69
+    values:
+    - Sun
+    - "\u0421\u043E\u043B\u043D\u0446\u0435"
+    - Sun
+    - Sun
+    - Sun
+    - Sun
+    - Sun
+  - key: bot.name.70
+    values:
+    - Ranger
+    - "\u0420\u0435\u0439\u043D\u0434\u0436\u0435\u0440"
+    - Ranger
+    - Ranger
+    - Ranger
+    - Ranger
+    - Ranger
+  - key: bot.name.71
+    values:
+    - Slayer
+    - "\u0423\u0431\u0438\u0439\u0446\u0430"
+    - Slayer
+    - Slayer
+    - Slayer
+    - Slayer
+    - Slayer
+  - key: bot.name.72
+    values:
+    - Guardian
+    - "\u0421\u0442\u0440\u0430\u0436"
+    - Guardian
+    - Guardian
+    - Guardian
+    - Guardian
+    - Guardian
+  - key: bot.name.73
+    values:
+    - Paladin
+    - "\u041F\u0430\u043B\u0430\u0434\u0438\u043D"
+    - Paladin
+    - Paladin
+    - Paladin
+    - Paladin
+    - Paladin
+  - key: bot.name.74
+    values:
+    - Knight
+    - "\u0420\u044B\u0446\u0430\u0440\u044C"
+    - Knight
+    - Knight
+    - Knight
+    - Knight
+    - Knight
+  - key: bot.name.75
+    values:
+    - Sniper
+    - "\u0421\u043D\u0430\u0439\u043F\u0435\u0440"
+    - Sniper
+    - Sniper
+    - Sniper
+    - Sniper
+    - Sniper
+  - key: bot.name.76
+    values:
+    - Scout
+    - "\u0421\u043A\u0430\u0443\u0442"
+    - Scout
+    - Scout
+    - Scout
+    - Scout
+    - Scout
+  - key: bot.name.77
+    values:
+    - Spy
+    - "\u0428\u043F\u0438\u043E\u043D"
+    - Spy
+    - Spy
+    - Spy
+    - Spy
+    - Spy
+  - key: bot.name.78
+    values:
+    - Soldier
+    - "\u0421\u043E\u043B\u0434\u0430\u0442"
+    - Soldier
+    - Soldier
+    - Soldier
+    - Soldier
+    - Soldier
+  - key: bot.name.79
+    values:
+    - Hero
+    - "\u0413\u0435\u0440\u043E\u0439"
+    - Hero
+    - Hero
+    - Hero
+    - Hero
+    - Hero
+  - key: bot.name.80
+    values:
+    - Mage
+    - "\u041C\u0430\u0433"
+    - Mage
+    - Mage
+    - Mage
+    - Mage
+    - Mage
+  - key: bot.name.81
+    values:
+    - Wizard
+    - "\u0412\u043E\u043B\u0448\u0435\u0431\u043D\u0438\u043A"
+    - Wizard
+    - Wizard
+    - Wizard
+    - Wizard
+    - Wizard
+  - key: bot.name.82
+    values:
+    - Witch
+    - "\u0412\u0435\u0434\u044C\u043C\u0430"
+    - Witch
+    - Witch
+    - Witch
+    - Witch
+    - Witch
+  - key: bot.name.83
+    values:
+    - Shaman
+    - "\u0428\u0430\u043C\u0430\u043D"
+    - Shaman
+    - Shaman
+    - Shaman
+    - Shaman
+    - Shaman
+  - key: bot.name.84
+    values:
+    - Druid
+    - "\u0414\u0440\u0443\u0438\u0434"
+    - Druid
+    - Druid
+    - Druid
+    - Druid
+    - Druid
+  - key: bot.name.85
+    values:
+    - Cleric
+    - "\u041A\u043B\u0438\u0440\u0438\u043A"
+    - Cleric
+    - Cleric
+    - Cleric
+    - Cleric
+    - Cleric
+  - key: bot.name.86
+    values:
+    - Monk
+    - "\u041C\u043E\u043D\u0430\u0445"
+    - Monk
+    - Monk
+    - Monk
+    - Monk
+    - Monk
+  - key: bot.name.87
+    values:
+    - Bard
+    - "\u0411\u0430\u0440\u0434"
+    - Bard
+    - Bard
+    - Bard
+    - Bard
+    - Bard
+  - key: bot.name.88
+    values:
+    - Thief
+    - "\u0412\u043E\u0440"
+    - Thief
+    - Thief
+    - Thief
+    - Thief
+    - Thief
+  - key: bot.name.89
+    values:
+    - Assassin
+    - "\u0410\u0441\u0441\u0430\u0441\u0438\u043D"
+    - Assassin
+    - Assassin
+    - Assassin
+    - Assassin
+    - Assassin
+  - key: bot.name.90
+    values:
+    - Nomad
+    - "\u041D\u043E\u043C\u0430\u0434"
+    - Nomad
+    - Nomad
+    - Nomad
+    - Nomad
+    - Nomad
+  - key: bot.name.91
+    values:
+    - Wanderer
+    - "\u0421\u0442\u0440\u0430\u043D\u043D\u0438\u043A"
+    - Wanderer
+    - Wanderer
+    - Wanderer
+    - Wanderer
+    - Wanderer
+  - key: bot.name.92
+    values:
+    - Explorer
+    - "\u0418\u0441\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u0435\u043B\u044C"
+    - Explorer
+    - Explorer
+    - Explorer
+    - Explorer
+    - Explorer
+  - key: bot.name.93
+    values:
+    - Pilot
+    - "\u041F\u0438\u043B\u043E\u0442"
+    - Pilot
+    - Pilot
+    - Pilot
+    - Pilot
+    - Pilot
+  - key: bot.name.94
+    values:
+    - Captain
+    - "\u041A\u0430\u043F\u0438\u0442\u0430\u043D"
+    - Captain
+    - Captain
+    - Captain
+    - Captain
+    - Captain
+  - key: bot.name.95
+    values:
+    - Chief
+    - "\u0412\u043E\u0436\u0434\u044C"
+    - Chief
+    - Chief
+    - Chief
+    - Chief
+    - Chief
+  - key: bot.name.96
+    values:
+    - Boss
+    - "\u0411\u043E\u0441\u0441"
+    - Boss
+    - Boss
+    - Boss
+    - Boss
+    - Boss
+  - key: bot.name.97
+    values:
+    - King
+    - "\u041A\u043E\u0440\u043E\u043B\u044C"
+    - King
+    - King
+    - King
+    - King
+    - King
+  - key: bot.name.98
+    values:
+    - Queen
+    - "\u041A\u043E\u0440\u043E\u043B\u0435\u0432\u0430"
+    - Queen
+    - Queen
+    - Queen
+    - Queen
+    - Queen
+  - key: bot.name.99
+    values:
+    - Legend
+    - "\u041B\u0435\u0433\u0435\u043D\u0434\u0430"
+    - Legend
+    - Legend
+    - Legend
+    - Legend
+    - Legend

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Girl_MoonDreamer
   m_EditorClassIdentifier: Assembly-CSharp::ModularSkinShop.Data.SkinSO
   ID: skin_girl_moondreamer
-  DisplayName: Girl_MoonDreamer
+  DisplayName: ' '
   Prefab: {fileID: 4705531411619522676, guid: ad514882d77d3914cbdc57ba800b391b, type: 3}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 090d49165843b4f46b7d34371f0db349, type: 3}
   CurrencyPrice:
   - Type: 0
     Value: 1000

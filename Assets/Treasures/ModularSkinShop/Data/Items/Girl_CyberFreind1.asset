@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Girl_CyberFreind1
   m_EditorClassIdentifier: Assembly-CSharp::ModularSkinShop.Data.SkinSO
   ID: skin_girl_cyberfreind1
-  DisplayName: Girl_CyberFreind 1
+  DisplayName: ' '
   Prefab: {fileID: 4705531411619522676, guid: 4da028b03ef39604a9c2efdf666b0767, type: 3}
   Icon: {fileID: 0}
   CurrencyPrice:
