@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using ModularTreasures;
 
 namespace Treasures.IAP
 {
@@ -11,8 +12,8 @@ namespace Treasures.IAP
 
         [Header("UI Components")]
         [SerializeField] private TMPro.TextMeshProUGUI titleText;
-        [SerializeField] private TMPro.TextMeshProUGUI descriptionText;
         [SerializeField] private TMPro.TextMeshProUGUI priceText;
+        [SerializeField] private TMPro.TextMeshProUGUI rewardText;
         [SerializeField] private UnityEngine.UI.Image iconImage;
         [SerializeField] private UnityEngine.UI.Button buyButton;
 
@@ -48,7 +49,7 @@ namespace Treasures.IAP
             if (offer == null) return;
 
             if (titleText != null) titleText.text = offer.Title;
-            if (descriptionText != null) descriptionText.text = offer.Description;
+            if (rewardText != null) rewardText.text = NumberFormatter.Format(offer.CurrencyRewards[0].Value, NumberFormatMode.Separated);
             if (iconImage != null && offer.Icon != null) iconImage.sprite = offer.Icon;
 
             if (priceText != null)

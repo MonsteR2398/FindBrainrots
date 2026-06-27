@@ -11,11 +11,14 @@ namespace Treasures.UI
         public struct SectionMapping
         {
             public Button sectionButton;
-            public RectTransform targetPanel;
+            [Tooltip("Значение anchoredPosition.y контента, до которого прокручивать.")]
+            public float targetScrollY;
         }
 
         [Header("References")]
         [SerializeField] private ScrollRect scrollRect;
+
+        [Header("Mappings")]
         [SerializeField] private List<SectionMapping> mappings;
 
         [Header("Settings")]
@@ -27,32 +30,30 @@ namespace Treasures.UI
         {
             foreach (var mapping in mappings)
             {
-                if (mapping.sectionButton != null && mapping.targetPanel != null)
+                if (mapping.sectionButton != null)
                 {
-                    mapping.sectionButton.onClick.AddListener(() => ScrollToPanel(mapping.targetPanel));
+                    var capturedScrollY = mapping.targetScrollY;
+                    mapping.sectionButton.onClick.AddListener(() => ScrollTo(capturedScrollY));
                 }
             }
         }
 
-        public void ScrollToPanel(RectTransform target)
+        public void ScrollTo(float targetScrollY)
         {
             if (scrollCoroutine != null) StopCoroutine(scrollCoroutine);
-            scrollCoroutine = StartCoroutine(ScrollToCoroutine(target));
+            scrollCoroutine = StartCoroutine(ScrollToCoroutine(targetScrollY));
         }
 
-        private IEnumerator ScrollToCoroutine(RectTransform target)
+        private IEnumerator ScrollToCoroutine(float targetScrollY)
         {
-            Canvas.ForceUpdateCanvases();
-
-            Vector2 targetPosition = CalculateTargetPosition(target);
             Vector2 startPosition = scrollRect.content.anchoredPosition;
+            Vector2 targetPosition = new Vector2(scrollRect.content.anchoredPosition.x, targetScrollY);
 
             float elapsed = 0;
             while (elapsed < scrollDuration)
             {
                 elapsed += Time.unscaledDeltaTime;
                 float t = elapsed / scrollDuration;
-                // Smooth step
                 t = t * t * (3f - 2f * t);
                 scrollRect.content.anchoredPosition = Vector2.Lerp(startPosition, targetPosition, t);
                 yield return null;
@@ -60,29 +61,6 @@ namespace Treasures.UI
 
             scrollRect.content.anchoredPosition = targetPosition;
             scrollCoroutine = null;
-        }
-
-        private Vector2 CalculateTargetPosition(RectTransform target)
-        {
-            // The content position is relative to its anchor/pivot. 
-            // In a VerticalLayoutGroup, it usually grows downwards.
-            // We want to move the content so that the 'target' is at the top of the viewport.
-            
-            float contentHeight = scrollRect.content.rect.height;
-            float viewportHeight = scrollRect.viewport.rect.height;
-            
-            // Local position of the target relative to the content's pivot
-            float targetLocalY = target.anchoredPosition.y;
-            
-            // The content's anchoredPosition.y is how much it's scrolled up.
-            // If content pivot is at top (1), then anchoredPosition.y = 0 means top is at top.
-            // If target is at y = -100, we need anchoredPosition.y = 100 to bring it to top.
-            float desiredScrollY = -targetLocalY;
-            
-            float maxScroll = Mathf.Max(0, contentHeight - viewportHeight);
-            desiredScrollY = Mathf.Clamp(desiredScrollY, 0, maxScroll);
-            
-            return new Vector2(scrollRect.content.anchoredPosition.x, desiredScrollY);
         }
     }
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: skin_girl_cat
   DisplayName: ' '
   Prefab: {fileID: 4705531411619522676, guid: 17925fed0dd93fb40b657b048163ae86, type: 3}
-  Icon: {fileID: 21300000, guid: 744dfd646abd03a4caa41ef1592c2972, type: 3}
+  Icon: {fileID: 21300000, guid: c684a360eaf59d8418d36cb6e4350c13, type: 3}
   CurrencyPrice:
   - Type: 0
     Value: 4700

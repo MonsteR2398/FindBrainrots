@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: skin_girl_rabbit
   DisplayName: ' '
   Prefab: {fileID: 4705531411619522676, guid: 0b0b6079648b75748b916936ac5e90a6, type: 3}
-  Icon: {fileID: 21300000, guid: bbf813b7b1fc3e54ea288791e46c6afb, type: 3}
+  Icon: {fileID: 21300000, guid: c38cae7a8e3391f4f8ba1c3d010fca91, type: 3}
   CurrencyPrice:
   - Type: 0
     Value: 2000

@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: skin_boy_alladin
   DisplayName: ' '
   Prefab: {fileID: 4705531411619522676, guid: 1b0607398c56c364cbae71bf13777e76, type: 3}
-  Icon: {fileID: 21300000, guid: 7b5a3d265c123eb4cafcab4d5ebd335e, type: 3}
+  Icon: {fileID: 21300000, guid: bcb0616c19c5bcf49a9dd394d4ff425e, type: 3}
   CurrencyPrice:
   - Type: 0
     Value: 3900

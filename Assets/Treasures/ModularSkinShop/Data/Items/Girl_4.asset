@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: skin_girl_4
   DisplayName: ' '
   Prefab: {fileID: 4705531411619522676, guid: 8dc39d6aa7e577647a89ef88f8a32703, type: 3}
-  Icon: {fileID: 21300000, guid: 43a213e8ea8c1804fa360eae1875ae3c, type: 3}
+  Icon: {fileID: 21300000, guid: bf0859a5525abf547ad35709c9d21b53, type: 3}
   CurrencyPrice:
   - Type: 0
     Value: 4200

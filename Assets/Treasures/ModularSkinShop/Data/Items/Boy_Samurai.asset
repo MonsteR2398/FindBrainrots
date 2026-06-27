@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: skin_boy_samurai
   DisplayName: ' '
   Prefab: {fileID: 4705531411619522676, guid: 8df57368de4ad3f4c85f2bc558ace14b, type: 3}
-  Icon: {fileID: 21300000, guid: e0281abbe2e2e6e45bf95bfffea9cd1b, type: 3}
+  Icon: {fileID: 21300000, guid: 45eccf32adc92b840b127ce21de75437, type: 3}
   CurrencyPrice:
   - Type: 0
     Value: 4500

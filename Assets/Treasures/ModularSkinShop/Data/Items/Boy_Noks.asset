@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: skin_boy_noks
   DisplayName: ' '
   Prefab: {fileID: 4705531411619522676, guid: a59d6b7b2925ac045ae5052979baf82a, type: 3}
-  Icon: {fileID: 21300000, guid: b7701d018bd38a046960f6bb6054f4f0, type: 3}
+  Icon: {fileID: 21300000, guid: 615ffe892d6bc3a49a7cf3064ee8a130, type: 3}
   CurrencyPrice:
   - Type: 0
     Value: 4500

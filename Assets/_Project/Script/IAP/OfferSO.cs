@@ -24,7 +24,6 @@ namespace Treasures.IAP
 
         [Header("Display Details")]
         [SerializeField] private string title;
-        [SerializeField] [TextArea(3, 10)] private string description;
         [SerializeField] private Sprite icon;
         [SerializeField] private string defaultPriceString = "$1.99";
 
@@ -42,7 +41,6 @@ namespace Treasures.IAP
         public ProductType ProductType => productType;
         public OfferCategory Category => category;
         public string Title => title;
-        public string Description => description;
         public Sprite Icon => icon;
         public string DefaultPriceString => defaultPriceString;
         public List<CurrencyValue> CurrencyRewards => currencyRewards;

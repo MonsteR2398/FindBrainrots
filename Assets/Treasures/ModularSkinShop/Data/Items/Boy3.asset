@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: skin_boy3
   DisplayName: ' '
   Prefab: {fileID: 4705531411619522676, guid: 0fac178bc48b5ff4380ca5a412a9d346, type: 3}
-  Icon: {fileID: 21300000, guid: 99a748965f716ed4aaeb2851f024c834, type: 3}
+  Icon: {fileID: 21300000, guid: b8ec3aa792dedf544834dcd758baa334, type: 3}
   CurrencyPrice:
   - Type: 0
     Value: 2100

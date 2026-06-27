@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ModularSkinShop.Data.SkinSO
   ID: skin_girl_ghoticangel
   DisplayName: ' '
-  Prefab: {fileID: 4705531411619522676, guid: 7a2627caf8d6fc34fb0915e918c3fc3a, type: 3}
-  Icon: {fileID: 21300000, guid: 7bfbebe1e6b5cc6448b7e62d41dfde29, type: 3}
+  Prefab: {fileID: 4705531411619522676, guid: afceb617f856c4945aa507dfdbb9ace2, type: 3}
+  Icon: {fileID: 21300000, guid: aed3617f6a9fc4a489e16bab3f6483f0, type: 3}
   CurrencyPrice:
   - Type: 0
     Value: 4200

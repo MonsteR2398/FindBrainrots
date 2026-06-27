@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: skin_boy_rick
   DisplayName: ' '
   Prefab: {fileID: 4705531411619522676, guid: b21546ae33b4956438c5d72d979a2c91, type: 3}
-  Icon: {fileID: 21300000, guid: ad981db6be0bf9c4b981619fadbd6c6e, type: 3}
+  Icon: {fileID: 21300000, guid: dd5de543a4ac29847a5f9e88853ada90, type: 3}
   CurrencyPrice:
   - Type: 0
     Value: 1100

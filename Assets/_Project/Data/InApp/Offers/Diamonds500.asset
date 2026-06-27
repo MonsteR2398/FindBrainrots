@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12632104f141734694a09fcd82a7d20, type: 3}
+  m_Name: Diamonds500
+  m_EditorClassIdentifier: Assembly-CSharp::Treasures.IAP.OfferSO
+  productID: diamonds3
+  productType: 0
+  category: 0
+  title: Large diamonds
+  icon: {fileID: 21300000, guid: 8dac541a38a59426e918813c3b2fd6d3, type: 3}
+  defaultPriceString: 1.99$
+  currencyRewards:
+  - Type: 1
+    Value: 500
+  removeAdsReward: 0
+  isTemporary: 0
+  durationHours: 24

@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: skin_girl_squidgamer
   DisplayName: ' '
   Prefab: {fileID: 4705531411619522676, guid: 5b6b1384e74dbf74ca6cce6ba773ae92, type: 3}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 4a1fdb3c69843a943a7a758875f2f777, type: 3}
   CurrencyPrice:
   - Type: 0
     Value: 3400
