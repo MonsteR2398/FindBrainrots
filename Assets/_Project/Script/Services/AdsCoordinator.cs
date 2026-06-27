@@ -13,6 +13,7 @@ namespace Treasures.Services
         private const string InterstitialIntervalKey = "interstitial_interval_sec";
 
         private bool _isBannerShowing;
+        private bool _isInterstitialShowing;
         private float _lastInterstitialTime;
 
         private IEnumerator Start()
@@ -51,6 +52,12 @@ namespace Treasures.Services
         {
             while (true)
             {
+                if (_isInterstitialShowing)
+                {
+                    yield return new WaitForSeconds(1f);
+                    continue;
+                }
+
                 long interval = AppServices.Analytics.GetLong(InterstitialIntervalKey, 60);
                 float timeSinceLastAd = Time.time - _lastInterstitialTime;
 
@@ -59,9 +66,11 @@ namespace Treasures.Services
                     if (AppServices.Ads.IsInterstitialReady())
                     {
                         Debug.Log("[AdsCoordinator] Time's up! Showing interstitial.");
+                        _isInterstitialShowing = true;
                         
                         AppServices.Ads.ShowInterstitial(() =>
                         {
+                            _isInterstitialShowing = false;
                             _lastInterstitialTime = Time.time;
                             Debug.Log("[AdsCoordinator] Interstitial closed. Timer reset.");
                         });

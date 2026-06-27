@@ -93,43 +93,58 @@ namespace ModularTreasures.Quests
             _isSequenceActive = true;
             int priority = 100;
 
+            // Мы используем внешний цикл, чтобы гарантировать, что если во время блендинга назад 
+            // в очередь упали новые запросы, они будут обработаны до того, как мы выключим флаг активности.
             while (_sequenceQueue.Count > 0)
             {
-                SequenceRequest request = _sequenceQueue.Dequeue();
-                yield return StartCoroutine(SequenceRoutine(
-                    request.Target,
-                    request.ViewPoint,
-                    request.Duration,
-                    request.OnArrival,
-                    request.WaitForManualRelease,
-                    priority
-                ));
-                priority++;
-            }
-
-            // Return to player smoothly
-            foreach (var cam in _activeTempCameras)
-            {
-                if (cam != null) cam.Priority = -1;
-            }
-
-            yield return new WaitForSeconds(returnDelay);
-
-            if (brain != null)
-            {
-                // Даем Cinemachine один кадр на регистрацию возврата и старт блендинга к игроку
-                yield return null;
-                if (brain.IsBlending)
+                while (_sequenceQueue.Count > 0)
                 {
-                    yield return new WaitWhile(() => brain.IsBlending);
+                    SequenceRequest request = _sequenceQueue.Dequeue();
+                    
+                    if (request.Target == null)
+                    {
+                        Debug.LogWarning("[CameraSequenceManager] Dequeued a request with a null target. Skipping.");
+                        continue;
+                    }
+
+                    yield return StartCoroutine(SequenceRoutine(
+                        request.Target,
+                        request.ViewPoint,
+                        request.Duration,
+                        request.OnArrival,
+                        request.WaitForManualRelease,
+                        priority
+                    ));
+                    priority++;
                 }
-            }
-            else
-            {
-                yield return new WaitForSeconds(1.5f);
+
+                // Временно снижаем приоритет всех созданных камер, чтобы начать блендинг назад к игроку
+                foreach (var cam in _activeTempCameras)
+                {
+                    if (cam != null) cam.Priority = -1;
+                }
+
+                if (returnDelay > 0)
+                    yield return new WaitForSeconds(returnDelay);
+
+                if (brain != null)
+                {
+                    // Даем Cinemachine один кадр на старт блендинга
+                    yield return null;
+                    if (brain.IsBlending)
+                    {
+                        yield return new WaitWhile(() => brain.IsBlending);
+                    }
+                }
+                else
+                {
+                    yield return new WaitForSeconds(1.0f);
+                }
+                
+                // Если за время блендинга очередь снова наполнилась, цикл продолжится
             }
 
-            // Clean up temporary cameras
+            // Окончательная очистка временных камер
             foreach (var cam in _activeTempCameras)
             {
                 if (cam != null) Destroy(cam.gameObject);
@@ -141,6 +156,8 @@ namespace ModularTreasures.Quests
 
         private IEnumerator SequenceRoutine(Transform target, Transform viewPoint, float duration, Action onArrival, bool waitForManualRelease, int priority)
         {
+            if (target == null) yield break;
+
             _manualReleaseReceived = false;
 
             if (viewPoint == null && target.childCount > 0)
@@ -164,6 +181,7 @@ namespace ModularTreasures.Quests
             {
                 tempCam.transform.position = target.position + target.forward * -5f + Vector3.up * 3f;
             }
+            
             tempCam.transform.LookAt(target);
             tempCam.LookAt = target;
 
@@ -180,7 +198,7 @@ namespace ModularTreasures.Quests
             }
             else
             {
-                yield return new WaitForSeconds(1.5f);
+                yield return new WaitForSeconds(1.0f);
             }
 
             onArrival?.Invoke();

@@ -19,9 +19,9 @@ namespace Treasures.Services
         public static bool AdsReady => Ads != null && Ads.IsInitialized;
 
         /// <summary>
-        /// True only when the Firebase SDK is present in the project AND finished initializing.
-        /// Gameplay code should guard every Firebase-dependent call with this.
+        /// True only when the Firebase SDK is present in the project AND finished initializing,
+        /// OR when the SDK is not present at all (meaning we are ready to proceed without it).
         /// </summary>
-        public static bool FirebaseReady => Analytics != null && Analytics.IsAvailable && Analytics.IsInitialized;
+        public static bool FirebaseReady => Analytics != null && (!Analytics.IsAvailable || Analytics.IsInitialized);
     }
 }

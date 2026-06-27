@@ -31,7 +31,7 @@ namespace ModularTreasures.Quests
 
             if (isClaimed != 1)
             {
-                Debug.Log($"[QuestCameraSequenceTrigger] Condition failed: Quest '{questIdToCheck}' has NOT been claimed yet. Aborting sequence trigger.");
+                // Debug.Log($"[QuestCameraSequenceTrigger] Condition failed: Quest '{questIdToCheck}' has NOT been claimed yet. Aborting sequence trigger.");
                 yield break;
             }
 
@@ -39,7 +39,7 @@ namespace ModularTreasures.Quests
 
             if (isPlayed == 1)
             {
-                Debug.Log($"[QuestCameraSequenceTrigger] Condition failed: Sequence for Quest '{questIdToCheck}' was ALREADY played in a past session. Aborting sequence trigger.");
+                // Debug.Log($"[QuestCameraSequenceTrigger] Condition failed: Sequence for Quest '{questIdToCheck}' was ALREADY played in a past session. Aborting sequence trigger.");
                 yield break; 
             }
 
@@ -63,7 +63,7 @@ namespace ModularTreasures.Quests
 
             CameraSequenceManager.Instance.PlaySequence(target, null, focusDuration, () =>
             {
-                Debug.Log($"[QuestCameraSequenceTrigger] Focus arrived! Triggering QuestActionSystem.TriggerAction with key: '{arrivalActionKey}'");
+                // Debug.Log($"[QuestCameraSequenceTrigger] Focus arrived! Triggering QuestActionSystem.TriggerAction with key: '{arrivalActionKey}'");
                 if (!string.IsNullOrEmpty(arrivalActionKey))
                 {
                     QuestActionSystem.TriggerAction(arrivalActionKey, 1f);

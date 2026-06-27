@@ -21,7 +21,7 @@ namespace ModularTreasures.Quests
         [SerializeField] private List<QuestRewardSO> rewards;
 
         public string Id => id;
-        public string Title => title;
+        public string Title => Treasures.Localization.Localization.Get(title);
         public Sprite Icon => icon;
         public float TargetValue => targetValue;
         public QuestConditionSO Condition => condition;

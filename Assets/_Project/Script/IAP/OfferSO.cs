@@ -3,9 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
 using Treasures.CurrencySystem;
+using Treasures.Boosts;
 
 namespace Treasures.IAP
 {
+    [Serializable]
+    public struct BoostReward
+    {
+        public BoostType Type;
+        public int Value;
+    }
+
     public enum OfferCategory
     {
         StandardCurrency,
@@ -30,6 +38,7 @@ namespace Treasures.IAP
         [Header("Rewards")]
         [SerializeField] private List<CurrencyValue> currencyRewards = new List<CurrencyValue>();
         //[SerializeField] private List<string> skinUnlockIDs = new List<string>();
+        [SerializeField] private List<BoostReward> boostRewards = new List<BoostReward>();
         [SerializeField] private bool removeAdsReward;
 
         [Header("Time Limits")]
@@ -45,6 +54,7 @@ namespace Treasures.IAP
         public string DefaultPriceString => defaultPriceString;
         public List<CurrencyValue> CurrencyRewards => currencyRewards;
         //public List<string> SkinUnlockIDs => skinUnlockIDs;
+        public List<BoostReward> BoostRewards => boostRewards;
         public bool RemoveAdsReward => removeAdsReward;
         public bool IsTemporary => isTemporary;
         public float DurationHours => durationHours;

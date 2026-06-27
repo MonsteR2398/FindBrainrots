@@ -24,6 +24,9 @@ namespace Treasures.Services
         private int _interstitialRetryAttempt;
         private int _rewardedRetryAttempt;
 
+        private bool _isShowingInterstitial;
+        private bool _isShowingRewarded;
+
         public void Initialize(Action onInitialized)
         {
             if (IsInitialized)
@@ -95,7 +98,7 @@ namespace Treasures.Services
 
         public bool IsInterstitialReady()
         {
-            return IsInitialized && MaxSdk.IsInterstitialReady(InterstitialAdUnitId);
+            return IsInitialized && !_isShowingInterstitial && MaxSdk.IsInterstitialReady(InterstitialAdUnitId);
         }
 
         public void LoadInterstitial()
@@ -109,6 +112,7 @@ namespace Treasures.Services
         {
             if (IsInterstitialReady())
             {
+                _isShowingInterstitial = true;
                 _onInterstitialClosed = onClosed;
                 MaxSdk.ShowInterstitial(InterstitialAdUnitId);
             }
@@ -135,6 +139,7 @@ namespace Treasures.Services
         private void OnInterstitialHidden(string adUnitId, MaxSdkBase.AdInfo adInfo)
         {
             Debug.Log("[Ads] Interstitial closed.");
+            _isShowingInterstitial = false;
             LoadInterstitial(); // Preload next
             
             var callback = _onInterstitialClosed;
@@ -145,6 +150,7 @@ namespace Treasures.Services
         private void OnInterstitialDisplayFailed(string adUnitId, MaxSdkBase.ErrorInfo errorInfo, MaxSdkBase.AdInfo adInfo)
         {
             Debug.LogError("[Ads] Interstitial display failed: " + errorInfo.Message);
+            _isShowingInterstitial = false;
             LoadInterstitial();
             
             var callback = _onInterstitialClosed;
@@ -158,7 +164,7 @@ namespace Treasures.Services
 
         public bool IsRewardedAdReady()
         {
-            return IsInitialized && MaxSdk.IsRewardedAdReady(RewardedAdUnitId);
+            return IsInitialized && !_isShowingRewarded && MaxSdk.IsRewardedAdReady(RewardedAdUnitId);
         }
 
         public void LoadRewardedAd()
@@ -172,6 +178,7 @@ namespace Treasures.Services
         {
             if (IsRewardedAdReady())
             {
+                _isShowingRewarded = true;
                 _onRewardedReceived = onRewarded;
                 _onRewardedClosed = onClosed;
                 MaxSdk.ShowRewardedAd(RewardedAdUnitId);
@@ -199,6 +206,7 @@ namespace Treasures.Services
         private void OnRewardedAdHidden(string adUnitId, MaxSdkBase.AdInfo adInfo)
         {
             Debug.Log("[Ads] Rewarded ad closed.");
+            _isShowingRewarded = false;
             LoadRewardedAd();
             
             var callback = _onRewardedClosed;
@@ -209,6 +217,7 @@ namespace Treasures.Services
         private void OnRewardedAdDisplayFailed(string adUnitId, MaxSdkBase.ErrorInfo errorInfo, MaxSdkBase.AdInfo adInfo)
         {
             Debug.LogError("[Ads] Rewarded ad display failed: " + errorInfo.Message);
+            _isShowingRewarded = false;
             LoadRewardedAd();
             
             var callback = _onRewardedClosed;

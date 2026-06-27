@@ -1309,3 +1309,130 @@ MonoBehaviour:
     - Legend
     - Legend
     - Legend
+  - key: Get 1000000 Money
+    values:
+    - Get 1000000 Money
+    - "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C 1000000 \u043C\u043E\u043D\u0435\u0442"
+    - Consigue 1000000 monedas
+    - Consiga 1000000 moedas
+    - "Obtenez 1000000 pi\xE8ces"
+    - "Hol dir 1000000 M\xFCnzen"
+    - Ottieni 1000000 monete
+  - key: Collect 10 Money
+    values:
+    - Collect 10 Money
+    - "\u0421\u043E\u0431\u0435\u0440\u0438 10 \u043C\u043E\u043D\u0435\u0442"
+    - Recoge 10 monedas
+    - Colete 10 moedas
+    - "Collectez 10 pi\xE8ces"
+    - "Sammle 10 M\xFCnzen"
+    - Raccogli 10 monete
+  - key: Collect 5 Diamonds
+    values:
+    - Collect 5 Diamonds
+    - "\u0421\u043E\u0431\u0435\u0440\u0438 5 \u0430\u043B\u043C\u0430\u0437\u043E\u0432"
+    - Recoge 5 diamantes
+    - Colete 5 diamantes
+    - Collectez 5 diamants
+    - Sammle 5 Diamanten
+    - Raccogli 5 diamanti
+  - key: Find 10 Brainrots
+    values:
+    - Find 10 Brainrots
+    - "\u041D\u0430\u0439\u0434\u0438 10 \u0411\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+    - Encuentra 10 Brainrots
+    - Encontre 10 Brainrots
+    - Trouvez 10 Brainrots
+    - Finde 10 Brainrots
+    - Trova 10 Brainrots
+  - key: "\u041D\u0430\u0439\u0434\u0438 3 \u042D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0445
+      \u0411\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u0430"
+    values:
+    - Find 3 Epic Brainrots
+    - "\u041D\u0430\u0439\u0434\u0438 3 \u042D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0445
+      \u0411\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u0430"
+    - "Encuentra 3 Brainrots \xE9picos"
+    - "Encontre 3 Brainrots \xE9picos"
+    - "Trouvez 3 Brainrots \xE9piques"
+    - Finde 3 epische Brainrots
+    - Trova 3 Brainrot epici
+  - key: Find 60 Brainrots
+    values:
+    - Find 60 Brainrots
+    - "\u041D\u0430\u0439\u0434\u0438 60 \u0411\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+    - Encuentra 60 Brainrots
+    - Encontre 60 Brainrots
+    - Trouvez 60 Brainrots
+    - Finde 60 Brainrots
+    - Trova 60 Brainrots
+  - key: "\u041D\u0430\u0439\u0434\u0438 15 \u043B\u0435\u0433\u0435\u043D\u0434\u0430\u0440\u043D\u044B\u0445
+      \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+    values:
+    - Find 15 Legendary Brainrots
+    - "\u041D\u0430\u0439\u0434\u0438 15 \u043B\u0435\u0433\u0435\u043D\u0434\u0430\u0440\u043D\u044B\u0445
+      \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+    - Encuentra 15 Brainrots legendarios
+    - "Encontre 15 Brainrots lend\xE1rios"
+    - "Trouvez 15 Brainrots l\xE9gendaires"
+    - "Finde 15 legend\xE4re Brainrots"
+    - Trova 15 Brainrot leggendari
+  - key: Find 200 Brainrots
+    values:
+    - Find 200 Brainrots
+    - "\u041D\u0430\u0439\u0434\u0438 200 \u0411\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+    - Encuentra 200 Brainrots
+    - Encontre 200 Brainrots
+    - Trouvez 200 Brainrots
+    - Finde 200 Brainrots
+    - Trova 200 Brainrots
+  - key: Find 210 Brainrots
+    values:
+    - Find 210 Brainrots
+    - "\u041D\u0430\u0439\u0434\u0438 210 \u0411\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+    - Encuentra 210 Brainrots
+    - Encontre 210 Brainrots
+    - Trouvez 210 Brainrots
+    - Finde 210 Brainrots
+    - Trova 210 Brainrots
+  - key: "\u041D\u0430\u0439\u0434\u0438 \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+    values:
+    - Find Brainrots
+    - "\u041D\u0430\u0439\u0434\u0438 \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+    - Encuentra Brainrots
+    - Encontre Brainrots
+    - Trouvez des Brainrots
+    - Finde Brainrots
+    - Trova Brainrot
+  - key: "\u041D\u0430\u0439\u0434\u0438 \u044D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0445
+      \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+    values:
+    - Find Epic Brainrots
+    - "\u041D\u0430\u0439\u0434\u0438 \u044D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0445
+      \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+    - "Encuentra Brainrots \xE9picos"
+    - "Encontre Brainrots \xE9picos"
+    - "Trouvez des Brainrots \xE9piques"
+    - Finde epische Brainrots
+    - Trova Brainrot epici
+  - key: "\u041D\u0430\u0439\u0434\u0438 \u043B\u0435\u0433\u0435\u043D\u0434\u0430\u0440\u043D\u044B\u0445
+      \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+    values:
+    - Find Legendary Brainrots
+    - "\u041D\u0430\u0439\u0434\u0438 \u043B\u0435\u0433\u0435\u043D\u0434\u0430\u0440\u043D\u044B\u0445
+      \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+    - Encuentra Brainrots legendarios
+    - "Encontre Brainrots lend\xE1rios"
+    - "Trouvez des Brainrots l\xE9gendaires"
+    - "Finde legend\xE4re Brainrots"
+    - Trova Brainrot leggendari
+  - key: "\u041D\u0430\u0439\u0434\u0438 \u0440\u0430\u0434\u0443\u0436\u043D\u044B\u0445
+      \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+    values:
+    - Find Rainbow Brainrots
+    - "\u041D\u0430\u0439\u0434\u0438 \u0440\u0430\u0434\u0443\u0436\u043D\u044B\u0445
+      \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
+    - "Encuentra Brainrots arco\xEDris"
+    - "Encontre Brainrots arco-\xEDris"
+    - Trouvez des Brainrots arc-en-ciel
+    - Finde Regenbogen-Brainrots
+    - Trova Brainrot arcobaleno

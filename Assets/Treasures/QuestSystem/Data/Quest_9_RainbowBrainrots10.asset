@@ -12,12 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2026d73f13412e45a225ff3089f56ad, type: 3}
   m_Name: Quest_9_RainbowBrainrots10
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.QuestSO
-  id: Quest_9_Brainrots
-  title: Find 210 Brainrots
+  id: Quest_9_RainbowBrainrots
+  title: "\u041D\u0430\u0439\u0434\u0438 \u0440\u0430\u0434\u0443\u0436\u043D\u044B\u0445
+    \u0431\u0440\u0435\u0438\u043D\u0440\u043E\u0442\u043E\u0432"
   icon: {fileID: 21300000, guid: 7ca9fb4d5211abb408d5a79c3608a671, type: 3}
   targetValue: 10
   condition: {fileID: 11400000, guid: 6845a2be71f60ec42ae54fb124383ae8, type: 2}
   isRepeatable: 0
   startFromCurrentValue: 1
   rewards:
-  - {fileID: 11400000, guid: c5c5fc1fb6dd7b0448dafa20a1b0f39c, type: 2}
+  - {fileID: 11400000, guid: 0b7c804a7eb950448a5fa7ce7ba34928, type: 2}
+  - {fileID: 11400000, guid: 676aa7ff46e51e8498fc6b49fe07d3d3, type: 2}
+  - {fileID: 11400000, guid: c64ef8dacdb26b1499ab3a8e6a3b7505, type: 2}
+  - {fileID: 11400000, guid: 8d9e58d1a3022344ea350f15f26f0fd4, type: 2}

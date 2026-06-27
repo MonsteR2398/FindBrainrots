@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using ModularCollection.Core;
 using ModularCollection.Data;
+using Treasures.Localization;
 
 namespace ModularTreasures.Quests
 {
@@ -21,6 +22,7 @@ namespace ModularTreasures.Quests
                 CollectionManager.Instance.OnItemUnlocked += HandleItemUnlocked;
             
             QuestActionSystem.OnActionTriggered += HandleQuestAction;
+            Localization.LanguageChanged += UpdateDisplay;
             UpdateDisplay();
 
             // Load saved disabled state
@@ -36,6 +38,7 @@ namespace ModularTreasures.Quests
                 CollectionManager.Instance.OnItemUnlocked -= HandleItemUnlocked;
 
             QuestActionSystem.OnActionTriggered -= HandleQuestAction;
+            Localization.LanguageChanged -= UpdateDisplay;
         }
 
         private void HandleItemUnlocked(string itemId) => UpdateDisplay();
@@ -66,8 +69,9 @@ namespace ModularTreasures.Quests
             
             if (taskText != null)
             {
-                string title = string.IsNullOrEmpty(taskTitleOverride) ? "Найди бреинротов" : taskTitleOverride;
-                taskText.text = $"{title}\n{current}/{targetCount}";
+                string key = string.IsNullOrEmpty(taskTitleOverride) ? "Найди бреинротов" : taskTitleOverride;
+                string localizedTitle = Localization.Get(key);
+                taskText.text = $"{localizedTitle}\n{current}/{targetCount}";
             }
         }
 

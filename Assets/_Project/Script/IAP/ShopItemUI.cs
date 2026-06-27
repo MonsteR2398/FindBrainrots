@@ -49,7 +49,13 @@ namespace Treasures.IAP
             if (offer == null) return;
 
             if (titleText != null) titleText.text = offer.Title;
-            if (rewardText != null) rewardText.text = NumberFormatter.Format(offer.CurrencyRewards[0].Value, NumberFormatMode.Separated);
+            int reward = 0;
+            if(offer.CurrencyRewards.Count > 0)
+                reward = offer.CurrencyRewards[0].Value;
+            else if(offer.BoostRewards.Count > 0)
+                reward = offer.BoostRewards[0].Value;
+
+            if (rewardText != null) rewardText.text = NumberFormatter.Format(reward, NumberFormatMode.Separated);
             if (iconImage != null && offer.Icon != null) iconImage.sprite = offer.Icon;
 
             if (priceText != null)

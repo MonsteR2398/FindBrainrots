@@ -1,48 +1,122 @@
 fileFormatVersion: 2
 guid: 5ca20da3d0781984f9d1244c0f2f2343
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: crane-docks-arm-back
-    100004: crane-docks-arm-main
-    100006: crane-docks-arm-tip
-    100008: crane-docks-base
-    100010: crane-docks-hook
-    100012: crane-docks-top
-    400000: //RootNode
-    400002: crane-docks-arm-back
-    400004: crane-docks-arm-main
-    400006: crane-docks-arm-tip
-    400008: crane-docks-base
-    400010: crane-docks-hook
-    400012: crane-docks-top
-    2100000: 25 RED-DARKEST
-    2100002: 17 GREY-DARKEST
-    2100004: 29 ORANGE-LIGHT
-    2100006: 20 GREY
-    2100008: 64 GLASS
-    2300000: crane-docks-arm-back
-    2300002: crane-docks-arm-main
-    2300004: crane-docks-arm-tip
-    2300006: crane-docks-base
-    2300008: crane-docks-hook
-    2300010: crane-docks-top
-    3300000: crane-docks-arm-back
-    3300002: crane-docks-arm-main
-    3300004: crane-docks-arm-tip
-    3300006: crane-docks-base
-    3300008: crane-docks-hook
-    3300010: crane-docks-top
-    4300000: crane-docks-base
-    4300002: crane-docks-top
-    4300004: crane-docks-arm-main
-    4300006: crane-docks-arm-back
-    4300008: crane-docks-arm-tip
-    4300010: crane-docks-hook
+  serializedVersion: 24200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: crane-docks-arm-back
+  - first:
+      1: 100004
+    second: crane-docks-arm-main
+  - first:
+      1: 100006
+    second: crane-docks-arm-tip
+  - first:
+      1: 100008
+    second: crane-docks-base
+  - first:
+      1: 100010
+    second: crane-docks-hook
+  - first:
+      1: 100012
+    second: crane-docks-top
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: crane-docks-arm-back
+  - first:
+      4: 400004
+    second: crane-docks-arm-main
+  - first:
+      4: 400006
+    second: crane-docks-arm-tip
+  - first:
+      4: 400008
+    second: crane-docks-base
+  - first:
+      4: 400010
+    second: crane-docks-hook
+  - first:
+      4: 400012
+    second: crane-docks-top
+  - first:
+      21: 2100000
+    second: 25 RED-DARKEST
+  - first:
+      21: 2100002
+    second: 17 GREY-DARKEST
+  - first:
+      21: 2100004
+    second: 29 ORANGE-LIGHT
+  - first:
+      21: 2100006
+    second: 20 GREY
+  - first:
+      21: 2100008
+    second: 64 GLASS
+  - first:
+      23: 2300000
+    second: crane-docks-arm-back
+  - first:
+      23: 2300002
+    second: crane-docks-arm-main
+  - first:
+      23: 2300004
+    second: crane-docks-arm-tip
+  - first:
+      23: 2300006
+    second: crane-docks-base
+  - first:
+      23: 2300008
+    second: crane-docks-hook
+  - first:
+      23: 2300010
+    second: crane-docks-top
+  - first:
+      33: 3300000
+    second: crane-docks-arm-back
+  - first:
+      33: 3300002
+    second: crane-docks-arm-main
+  - first:
+      33: 3300004
+    second: crane-docks-arm-tip
+  - first:
+      33: 3300006
+    second: crane-docks-base
+  - first:
+      33: 3300008
+    second: crane-docks-hook
+  - first:
+      33: 3300010
+    second: crane-docks-top
+  - first:
+      43: 4300000
+    second: crane-docks-base
+  - first:
+      43: 4300002
+    second: crane-docks-top
+  - first:
+      43: 4300004
+    second: crane-docks-arm-main
+  - first:
+      43: 4300006
+    second: crane-docks-arm-back
+  - first:
+      43: 4300008
+    second: crane-docks-arm-tip
+  - first:
+      43: 4300010
+    second: crane-docks-hook
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -51,9 +125,8 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -68,32 +141,46 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 1
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -102,10 +189,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -115,13 +202,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

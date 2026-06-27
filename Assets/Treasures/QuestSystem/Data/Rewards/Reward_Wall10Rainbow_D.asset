@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ModularTreasures.Quests.CameraSequenceRewardSO
   targetId: Wall10Rainbow_D
   focusDuration: 5
-  arrivalActionKey: Quest_Wall10Rainbow_D
+  arrivalActionKey: Quest_WallRainbow10_D
   waitForManualRelease: 1

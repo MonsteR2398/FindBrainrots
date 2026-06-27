@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Treasures.Localization;
 
 namespace ModularTreasures.Quests
 {
@@ -20,7 +21,7 @@ namespace ModularTreasures.Quests
 
         [Header("Colors")]
         [SerializeField] private Color activeColor = new Color(0.15f, 0.15f, 0.15f, 0.9f);
-[SerializeField] private Color completedColor = new Color(0.1f, 0.5f, 0.1f, 1f);
+        [SerializeField] private Color completedColor = new Color(0.1f, 0.5f, 0.1f, 1f);
 
         private RectTransform panelParent;
         private Vector3 _originalScale;
@@ -33,8 +34,10 @@ namespace ModularTreasures.Quests
             }
         }
 
-        private void Start()
+        private void OnEnable()
         {
+            Localization.LanguageChanged += RefreshLocalizedText;
+
             if (QuestManager.Instance != null)
             {
                 QuestManager.Instance.OnProgressUpdated += UpdateUI;
@@ -47,18 +50,31 @@ namespace ModularTreasures.Quests
                 else
                     HandleQuestStarted(QuestManager.Instance.CurrentQuest);
             }
+        }
 
+        private void Start()
+        {
             panelParent = backgroundImage.rectTransform;
             _originalScale = panelParent.localScale;
         }
 
         private void OnDisable()
         {
+            Localization.LanguageChanged -= RefreshLocalizedText;
+
             if (QuestManager.Instance != null)
             {
                 QuestManager.Instance.OnProgressUpdated -= UpdateUI;
                 QuestManager.Instance.OnQuestCompleted -= HandleQuestCompleted;
                 QuestManager.Instance.OnQuestStarted -= HandleQuestStarted;
+            }
+        }
+
+        private void RefreshLocalizedText()
+        {
+            if (QuestManager.Instance != null && QuestManager.Instance.CurrentQuest != null)
+            {
+                titleText.text = QuestManager.Instance.CurrentQuest.Title;
             }
         }
 
