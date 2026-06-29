@@ -17,7 +17,7 @@ namespace ModularSkinShop.Example
             {
                 ShopManager.OnSkinDressed += ApplySkin;
                 
-                string activeId = PlayerPrefs.GetString("Shop_Active", "");
+                string activeId = ShopManager.GetActiveId();
                 if (!string.IsNullOrEmpty(activeId) && ShopManager.Library != null)
                 {
                     var activeSkin = ShopManager.Library.Skins.Find(s => s.ID == activeId);
