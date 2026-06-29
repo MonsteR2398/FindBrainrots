@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6371179970838183574}
   - component: {fileID: -2907588612749208236}
   m_Layer: 0
-  m_Name: Coin
+  m_Name: Coin_500
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.Pickups.ModularPickup
   uniqueId: c9834f92-2622-4a87-a791-dd8942615b92
   effects:
-  - {fileID: 11400000, guid: a2b87f8b9ff195945be56d90d0f80ca9, type: 2}
+  - {fileID: 11400000, guid: 8a17105a37d5b45448f24e00f481d672, type: 2}
   vfxPrefab: {fileID: 4812455897532753986, guid: 9d98b71f8e5d72a41b64e90f5cb4aa9e, type: 3}
   OnPickedUp:
     m_PersistentCalls:

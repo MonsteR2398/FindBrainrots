@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ModularSkinShop.Data.SkinSO
   ID: skin_another_squidwarrior
   DisplayName: ' '
-  Prefab: {fileID: 4705531411619522676, guid: 2dec9db9c3d1503458dd47a00db61ffd, type: 3}
+  Prefab: {fileID: 4705531411619522676, guid: 77bd276b435129a41969c1cbf9007e95, type: 3}
   Icon: {fileID: 21300000, guid: 8b113ea209cabf7488c36804b8b7c351, type: 3}
   CurrencyPrice:
   - Type: 0
-    Value: 2700
+    Value: 3000
+  - Type: 1
+    Value: 6

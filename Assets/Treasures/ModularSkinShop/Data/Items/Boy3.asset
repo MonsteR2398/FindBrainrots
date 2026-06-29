@@ -18,6 +18,6 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: b8ec3aa792dedf544834dcd758baa334, type: 3}
   CurrencyPrice:
   - Type: 0
-    Value: 2100
+    Value: 0
   - Type: 1
-    Value: 21
+    Value: 0
