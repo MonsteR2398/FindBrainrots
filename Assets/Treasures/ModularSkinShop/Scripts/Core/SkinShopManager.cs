@@ -23,6 +23,13 @@ namespace ModularSkinShop.Core
         public MockShopSave mockShopSave;
 
         private void Awake() {
+            if (FindObjectsByType<SkinShopManager>().Length > 1)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            DontDestroyOnLoad(gameObject);
+
             _persistence = mockShopSave.GetComponent<IShopPersistence>();
             InitializeDefaultSkin();
         }
