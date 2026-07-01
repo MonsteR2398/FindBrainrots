@@ -51,14 +51,18 @@ public class CameraLookController : MonoBehaviour
             LockCursor();
         }
 
+        // On mobile/touchscreen devices, touch camera rotation is handled exclusively by TouchLookZone.
+        // Therefore, we ignore touch inputs in this controller to prevent double-input and joystick conflict.
+        if (IsTouchInput()) return;
+
         Vector2 delta = lookAction.ReadValue<Vector2>();
 
         if (delta.sqrMagnitude > 0)
         {
-            float baseSensitivity = IsTouchInput() ? touchSensitivity : mouseSensitivity;
+            float baseSensitivity = mouseSensitivity;
             float currentSensitivity = baseSensitivity * Treasures.Settings.GameSettings.SensitivityMultiplier;
             
-            if (Cursor.lockState == CursorLockMode.Locked || IsTouchInput())
+            if (Cursor.lockState == CursorLockMode.Locked)
             {
                 orbitalFollow.HorizontalAxis.Value += delta.x * currentSensitivity;
                 orbitalFollow.VerticalAxis.Value -= delta.y * currentSensitivity;

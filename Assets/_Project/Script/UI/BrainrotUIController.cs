@@ -121,13 +121,13 @@ public class BrainrotUIController : MonoBehaviour
             animator.Play(0, 0, 0f);
         }
 
-        if (itemNameText != null) itemNameText.text = item.ItemName;
+        if (itemNameText != null) itemNameText.text = Treasures.Localization.Localization.Get(item.ItemName);
         if (itemIcon != null) itemIcon.sprite = item.Icon;
         if (glitterImage != null) glitterImage.sprite = item.Rarity.GlitterSprite;
         if (cardImage != null) cardImage.sprite = item.Rarity.CardSprite;
         if (rarityText != null)
         {
-            rarityText.text = item.Rarity != null ? item.Rarity.DisplayName : "";
+            rarityText.text = item.Rarity != null ? Treasures.Localization.Localization.Get(item.Rarity.DisplayName) : "";
             rarityText.color = item.Rarity != null ? item.Rarity.Color : Color.white;
         }
         if (objectTarget != null)
