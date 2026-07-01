@@ -663,6 +663,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mini_Location_1
       objectReference: {fileID: 0}
+    - target: {fileID: 8270761545987974458, guid: 9d3ad4f376840f541a7970517e058796, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: GameMode_Magma
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.WorldSystem.GameModeDefinition
   Id: Magma
-  DisplayName: world.agma.name
-  Description: world.skylands.desc
-  Icon: {fileID: 0}
-  AccentColor: {r: 0.9490196, g: 0.7097444, b: 0.3490196, a: 1}
+  DisplayName: world.magma.name
+  Description: world.magma.desc
+  Icon: {fileID: 21300000, guid: 3a0b6d16095418a4088204c1d388a7ce, type: 3}
+  AccentColor: {r: 1, g: 1, b: 1, a: 1}
   SceneName: World_Skylands
   Rules: {fileID: 11400000, guid: 63f9692193284db4aa6f44603ecf1d6d, type: 2}
   price:

@@ -10,6 +10,7 @@ namespace Treasures.Services
     public class AdsCoordinator : MonoBehaviour
     {
         private const string BannerEnabledKey = "banner_enabled";
+        private const string InitialAdDelayKey = "initial_ad_delay_sec";
         private const string InterstitialIntervalKey = "interstitial_interval_sec";
 
         private bool _isBannerShowing;
@@ -23,11 +24,16 @@ namespace Treasures.Services
                 yield return new WaitForSeconds(1f);
             }
 
-            Debug.Log("[AdsCoordinator] Services ready. Applying Remote Config...");
+            Debug.Log("[AdsCoordinator] Services ready. Waiting for initial delay...");
+
+            long initialDelay = AppServices.Analytics.GetLong(InitialAdDelayKey, 180);
+            yield return new WaitForSeconds(initialDelay);
 
             ApplyBannerSettings();
 
-            _lastInterstitialTime = Time.time;
+            // Set last time so the first interstitial triggers immediately after the initial delay
+            long interval = AppServices.Analytics.GetLong(InterstitialIntervalKey, 90);
+            _lastInterstitialTime = Time.time - interval;
             StartCoroutine(InterstitialTimerLoop());
         }
 
@@ -58,7 +64,7 @@ namespace Treasures.Services
                     continue;
                 }
 
-                long interval = AppServices.Analytics.GetLong(InterstitialIntervalKey, 60);
+                long interval = AppServices.Analytics.GetLong(InterstitialIntervalKey, 90);
                 float timeSinceLastAd = Time.time - _lastInterstitialTime;
 
                 if (timeSinceLastAd >= interval)
@@ -72,7 +78,19 @@ namespace Treasures.Services
                         {
                             _isInterstitialShowing = false;
                             _lastInterstitialTime = Time.time;
-                            Debug.Log("[AdsCoordinator] Interstitial closed. Timer reset.");
+                            
+                            // Track total interstitial views
+                            int totalViews = PlayerPrefs.GetInt("TotalInterstitialsViewed", 0) + 1;
+                            PlayerPrefs.SetInt("TotalInterstitialsViewed", totalViews);
+                            PlayerPrefs.Save();
+
+                            if (totalViews == 15)
+                            {
+                                Debug.Log("[AdsCoordinator] Milestone reached: 15 interstitials viewed. Logging event.");
+                                AppServices.Analytics.LogEvent("milestone_inter_15");
+                            }
+
+                            Debug.Log($"[AdsCoordinator] Interstitial closed. Total viewed: {totalViews}. Timer reset.");
                         });
                     }
                     else

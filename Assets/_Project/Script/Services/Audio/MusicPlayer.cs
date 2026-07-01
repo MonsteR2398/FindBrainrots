@@ -7,6 +7,6 @@ public class MusicPlayer : MonoBehaviour
 
     private void Start()
     {
-        AppServices.Audio.PlaySfx(_music);
+        AppServices.Audio.PlayMusic(_music);
     }
 }

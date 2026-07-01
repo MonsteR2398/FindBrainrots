@@ -1436,3 +1436,22 @@ MonoBehaviour:
     - Trouvez des Brainrots arc-en-ciel
     - Finde Regenbogen-Brainrots
     - Trova Brainrot arcobaleno
+  - key: world.magma.name
+    values:
+    - Magma
+    - "\u041C\u0430\u0433\u043C\u0430"
+    - Magma
+    - Magma
+    - Magma
+    - Magma
+    - Magma
+  - key: world.magma.desc
+    values:
+    - Volcanic world with lava.
+    - "\u0412\u0443\u043B\u043A\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0438\u0439
+      \u043C\u0438\u0440 \u0441 \u043B\u0430\u0432\u043E\u0439."
+    - "Mundo volc\xE1nico con lava."
+    - "Mundo vulc\xE2nico com lava."
+    - Monde volcanique avec de la lave.
+    - Vulkanische Welt mit Lava.
+    - Mondo vulcanico con lava.

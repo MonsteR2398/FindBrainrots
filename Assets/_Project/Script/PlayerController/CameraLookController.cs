@@ -32,6 +32,15 @@ public class CameraLookController : MonoBehaviour
     {
         if (orbitalFollow == null || lookAction == null) return;
 
+        if (IsAnyWindowOpen())
+        {
+            if (Cursor.lockState != CursorLockMode.None)
+            {
+                UnlockCursor();
+            }
+            return;
+        }
+
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             UnlockCursor();
@@ -80,5 +89,25 @@ public class CameraLookController : MonoBehaviour
     {
         return UnityEngine.EventSystems.EventSystem.current != null && 
                UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject();
+    }
+
+    private bool IsAnyWindowOpen()
+    {
+        var canvas = GameObject.Find("Canvas");
+        if (canvas == null) return false;
+
+        string[] windowNames = { "SkinShopUI", "CollectionUI", "AchievementUI", "SettingsUI", "PortalWindowUI", "IAPShopUI", "TemporaryOfferPopup", "FindBrainrotUI" };
+        foreach (string name in windowNames)
+        {
+            Transform t = canvas.transform.Find(name);
+            if (t != null && t.gameObject.activeInHierarchy)
+            {
+                if (t.childCount > 0 && t.GetChild(0).gameObject.activeSelf)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

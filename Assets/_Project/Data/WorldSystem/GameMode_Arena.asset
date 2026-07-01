@@ -15,8 +15,8 @@ MonoBehaviour:
   Id: arena
   DisplayName: world.arena.name
   Description: world.arena.desc
-  Icon: {fileID: 0}
-  AccentColor: {r: 0.85, g: 0.35, b: 0.3, a: 1}
+  Icon: {fileID: 21300000, guid: 73bdbbb88388c85479892b0bea2e3db1, type: 3}
+  AccentColor: {r: 1, g: 1, b: 1, a: 1}
   SceneName: World_Arena
   Rules: {fileID: 11400000, guid: 63f9692193284db4aa6f44603ecf1d6d, type: 2}
   price:

@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mini_Location_3
       objectReference: {fileID: 0}
+    - target: {fileID: 2926864003596073086, guid: 4e237582c9c03de4f801dec0d000d5d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8642474352624591352, guid: 4e237582c9c03de4f801dec0d000d5d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

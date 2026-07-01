@@ -54,19 +54,29 @@ namespace Treasures.Services
 #if FIREBASE_ENABLED
         private void FetchRemoteConfig(Action<bool> onInitialized)
         {
-            FirebaseRemoteConfig.DefaultInstance.FetchAndActivateAsync().ContinueWithOnMainThread(task =>
+            var defaults = new Dictionary<string, object>
             {
-                if (task.IsFaulted || task.IsCanceled)
-                {
-                    Debug.LogWarning("[Firebase] Remote Config fetch failed or timed out.");
-                }
-                else
-                {
-                    Debug.Log("[Firebase] Remote Config fetched and activated.");
-                }
+                { "banner_enabled", true },
+                { "initial_ad_delay_sec", 180L },
+                { "interstitial_interval_sec", 90L }
+            };
 
-                IsInitialized = true;
-                onInitialized?.Invoke(true);
+            FirebaseRemoteConfig.DefaultInstance.SetDefaultsAsync(defaults).ContinueWithOnMainThread(setDefaultsTask =>
+            {
+                FirebaseRemoteConfig.DefaultInstance.FetchAndActivateAsync().ContinueWithOnMainThread(task =>
+                {
+                    if (task.IsFaulted || task.IsCanceled)
+                    {
+                        Debug.LogWarning("[Firebase] Remote Config fetch failed or timed out.");
+                    }
+                    else
+                    {
+                        Debug.Log("[Firebase] Remote Config fetched and activated.");
+                    }
+
+                    IsInitialized = true;
+                    onInitialized?.Invoke(true);
+                });
             });
         }
 

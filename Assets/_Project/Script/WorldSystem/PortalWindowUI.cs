@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Treasures.Localization;
 
 namespace Treasures.WorldSystem
 {
@@ -118,6 +119,28 @@ namespace Treasures.WorldSystem
                 return;
             }
 
+            // Cleanup any existing buttons that might be there (e.g. from editor or previous builds)
+            foreach (var go in _spawned)
+            {
+                if (go != null)
+                {
+                    if (Application.isPlaying) Destroy(go);
+                    else DestroyImmediate(go);
+                }
+            }
+            _spawned.Clear();
+
+            // Also cleanup any stray children in the container that are not the template
+            for (int i = buttonContainer.childCount - 1; i >= 0; i--)
+            {
+                Transform child = buttonContainer.GetChild(i);
+                if (child.gameObject != buttonTemplate && child.name.StartsWith("PortalButton_"))
+                {
+                    if (Application.isPlaying) Destroy(child.gameObject);
+                    else DestroyImmediate(child.gameObject);
+                }
+            }
+
             foreach (GameModeDefinition mode in catalog.Modes)
             {
                 if (mode == null) continue;
@@ -126,22 +149,20 @@ namespace Treasures.WorldSystem
                 go.SetActive(true);
                 go.name = "PortalButton_" + mode.DisplayName;
 
-                TMPro.TMP_Text label = go.GetComponentInChildren<TMPro.TMP_Text>(true);
-                if (label != null) label.text = mode.DisplayName;
+                Transform labelTf = go.transform.Find("Label");
+                TMPro.TMP_Text label = labelTf != null ? labelTf.GetComponent<TMPro.TMP_Text>() : null;
+                if (label != null)
+                {
+                    label.text = Treasures.Localization.Localization.Get(mode.DisplayName);
+                }
 
                 UnityEngine.UI.Image bg = go.GetComponent<UnityEngine.UI.Image>();
-                if (bg != null) bg.color = mode.AccentColor;
-
-                Transform iconTf = go.transform.Find("Icon");
-                if (iconTf != null)
+                if (bg != null)
                 {
-                    UnityEngine.UI.Image iconImg = iconTf.GetComponent<UnityEngine.UI.Image>();
-                    if (iconImg != null)
-                    {
-                        if (mode.Icon != null) { iconImg.sprite = mode.Icon; iconImg.enabled = true; }
-                        else iconImg.enabled = false;
-                    }
-                }
+                    bg.color = mode.AccentColor;
+                    bg.sprite = mode.Icon;
+                }    
+                
 
                 Transform lockTf = go.transform.Find("Lock");
                 if (lockTf != null)
@@ -199,6 +220,23 @@ namespace Treasures.WorldSystem
             }
 
             _built = true;
+        }
+
+        private void OnEnable()
+        {
+            Treasures.Localization.Localization.LanguageChanged += Rebuild;
+        }
+
+        private void OnDisable()
+        {
+            Treasures.Localization.Localization.LanguageChanged -= Rebuild;
+        }
+
+        private void Rebuild()
+        {
+            if (!_built) return;
+            _built = false;
+            BuildIfNeeded();
         }
 
         private void OnSelect(GameModeDefinition mode)
