@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.Pickups.ModularPickup
   uniqueId: 6e737536-df67-4d4f-a7ad-9f1a79fbff10
   effects:
-  - {fileID: 11400000, guid: d8db9ef7e7e84064d942e4f5f17a360e, type: 2}
+  - {fileID: 11400000, guid: a26df2cdf651bb345bcd9bad31cddbf2, type: 2}
   vfxPrefab: {fileID: 4009871513710076505, guid: 529b93c02ffee40429c42e5e75754b84, type: 3}
   OnPickedUp:
     m_PersistentCalls:
