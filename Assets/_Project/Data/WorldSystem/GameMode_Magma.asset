@@ -21,4 +21,4 @@ MonoBehaviour:
   Rules: {fileID: 11400000, guid: 63f9692193284db4aa6f44603ecf1d6d, type: 2}
   price:
     Type: 1
-    Value: 250
+    Value: 100
