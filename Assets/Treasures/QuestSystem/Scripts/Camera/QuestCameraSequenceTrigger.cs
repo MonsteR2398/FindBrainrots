@@ -63,10 +63,14 @@ namespace ModularTreasures.Quests
 
             CameraSequenceManager.Instance.PlaySequence(target, null, focusDuration, () =>
             {
-                // Debug.Log($"[QuestCameraSequenceTrigger] Focus arrived! Triggering QuestActionSystem.TriggerAction with key: '{arrivalActionKey}'");
+                // Debug.Log($"[QuestCameraSequenceTrigger] Focus arrived! Triggering QuestActionSystem.TriggerAction with keys: '{arrivalActionKey}'");
                 if (!string.IsNullOrEmpty(arrivalActionKey))
                 {
-                    QuestActionSystem.TriggerAction(arrivalActionKey, 1f);
+                    string[] keys = arrivalActionKey.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    foreach (var key in keys)
+                    {
+                        QuestActionSystem.TriggerAction(key.Trim(), 1f);
+                    }
                 }
             }, waitForManualRelease);
 

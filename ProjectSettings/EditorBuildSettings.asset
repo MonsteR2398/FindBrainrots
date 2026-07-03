@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Worlds/World_Skylands.unity
     guid: 344835696652bbb4ba5935ac7ffb8f3e
+  - enabled: 1
+    path: Assets/_Project/Scenes/Worlds/World_Magma.unity
+    guid: 1229af15ee74eb14e82491b9add55d78
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

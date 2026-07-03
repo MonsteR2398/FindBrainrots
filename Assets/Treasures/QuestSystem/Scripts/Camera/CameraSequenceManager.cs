@@ -189,8 +189,10 @@ namespace ModularTreasures.Quests
 
             if (brain != null)
             {
-                // Даем Cinemachine один кадр на регистрацию изменения приоритета и старт блендинга
+                // Wait 2 frames to ensure Cinemachine has registered the priority change and started blending
                 yield return null;
+                yield return null;
+                
                 if (brain.IsBlending)
                 {
                     yield return new WaitWhile(() => brain.IsBlending);
