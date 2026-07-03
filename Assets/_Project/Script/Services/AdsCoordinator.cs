@@ -26,7 +26,7 @@ namespace Treasures.Services
 
             Debug.Log("[AdsCoordinator] Services ready. Waiting for initial delay...");
 
-            long initialDelay = AppServices.Analytics.GetLong(InitialAdDelayKey, 180);
+            long initialDelay = AppServices.Analytics.GetLong(InitialAdDelayKey, 90);
             yield return new WaitForSeconds(initialDelay);
 
             ApplyBannerSettings();

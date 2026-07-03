@@ -44,6 +44,7 @@ namespace Treasures.Services
             MaxSdkCallbacks.Interstitial.OnAdLoadFailedEvent += OnInterstitialLoadFailed;
             MaxSdkCallbacks.Interstitial.OnAdHiddenEvent += OnInterstitialHidden;
             MaxSdkCallbacks.Interstitial.OnAdDisplayFailedEvent += OnInterstitialDisplayFailed;
+            MaxSdkCallbacks.Interstitial.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
 
             // Rewarded callbacks
             MaxSdkCallbacks.Rewarded.OnAdLoadedEvent += OnRewardedAdLoaded;
@@ -51,6 +52,10 @@ namespace Treasures.Services
             MaxSdkCallbacks.Rewarded.OnAdHiddenEvent += OnRewardedAdHidden;
             MaxSdkCallbacks.Rewarded.OnAdDisplayFailedEvent += OnRewardedAdDisplayFailed;
             MaxSdkCallbacks.Rewarded.OnAdReceivedRewardEvent += OnRewardedAdReceivedReward;
+            MaxSdkCallbacks.Rewarded.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
+
+            // Banner callbacks
+            MaxSdkCallbacks.Banner.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
 
             MaxSdk.InitializeSdk();
             Debug.Log("[Ads] AppLovin MAX initialization requested.");
@@ -231,6 +236,26 @@ namespace Treasures.Services
             var callback = _onRewardedReceived;
             _onRewardedReceived = null;
             callback?.Invoke();
+        }
+
+        private void OnAdRevenuePaidEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
+        {
+            Debug.Log($"[Ads] Ad revenue paid for {adUnitId}. Revenue: {adInfo.Revenue}");
+
+            if (AppServices.Analytics != null && AppServices.Analytics.IsInitialized)
+            {
+                var parameters = new System.Collections.Generic.Dictionary<string, object>
+                {
+                    { "ad_platform", "AppLovin" },
+                    { "ad_source", adInfo.NetworkName },
+                    { "ad_unit_name", adInfo.AdUnitIdentifier },
+                    { "ad_format", adInfo.AdFormat },
+                    { "value", adInfo.Revenue },
+                    { "currency", "USD" }
+                };
+
+                AppServices.Analytics.LogEvent("ad_impression", parameters);
+            }
         }
 
         #endregion
