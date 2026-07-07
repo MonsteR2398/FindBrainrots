@@ -6,6 +6,21 @@ using Treasures.Services;
 
 namespace Treasures.Boosts
 {
+    /// <summary>
+    /// Arguments for stock-changed events.
+    /// </summary>
+    public class BoostStockEventArgs : EventArgs
+    {
+        public BoostType Type { get; }
+        public int NewStock { get; }
+
+        public BoostStockEventArgs(BoostType type, int newStock)
+        {
+            Type = type;
+            NewStock = newStock;
+        }
+    }
+
     public enum BoostType
     {
         Speed,
@@ -15,8 +30,8 @@ namespace Treasures.Boosts
 
     /// <summary>
     /// Central manager for temporary player boosts (speed / jump).
-    /// - Activation tries to spend Diamond crystals first; if the player can't afford it,
-    ///   it falls back to showing a Reward ad (boost granted only on successful reward).
+    /// - Boosts can be accumulated (stock). If stock > 0, using a boost consumes 1 stock.
+    /// - If stock == 0, a rewarded ad is shown to grant 1 stock.
     /// - Re-activating an already active boost STACKS its remaining duration.
     /// - Multiple boost types can be active simultaneously.
     /// UI binds to <see cref="OnBoostsChanged"/> (start/stop) and polls remaining time per frame.
@@ -58,8 +73,12 @@ namespace Treasures.Boosts
         /// <summary>Fired whenever a boost starts or ends (use for showing/hiding the timer window).</summary>
         public event Action OnBoostsChanged;
 
+        /// <summary>Fired whenever a boost stock count changes.</summary>
+        public event Action<BoostStockEventArgs> OnStockChanged;
+
         private readonly Dictionary<BoostType, float> _remaining = new Dictionary<BoostType, float>();
         private readonly Dictionary<BoostType, float> _peak = new Dictionary<BoostType, float>();
+        private readonly Dictionary<BoostType, int> _stock = new Dictionary<BoostType, int>();
 
         private void Awake()
         {
@@ -108,11 +127,44 @@ namespace Treasures.Boosts
                 return null;
         }
 
+        /// <summary>Returns current stock count for the given boost type.</summary>
+        public int GetStock(BoostType type)
+        {
+            return _stock.TryGetValue(type, out var s) ? s : 0;
+        }
+
+        /// <summary>Adds stock (e.g. from rewarded ad).</summary>
+        public void AddStock(BoostType type, int amount = 1)
+        {
+            int current = GetStock(type);
+            _stock[type] = current + amount;
+            OnStockChanged?.Invoke(new BoostStockEventArgs(type, _stock[type]));
+            Debug.Log($"[Boost] {type} stock: {current} -> {_stock[type]}");
+        }
+
+        /// <summary>Tries to spend 1 stock. Returns true if stock was available and spent.</summary>
+        private bool TrySpendStock(BoostType type)
+        {
+            int current = GetStock(type);
+            if (current <= 0) return false;
+
+            _stock[type] = current - 1;
+            OnStockChanged?.Invoke(new BoostStockEventArgs(type, _stock[type]));
+            Debug.Log($"[Boost] {type} stock spent: {current} -> {_stock[type]}");
+            return true;
+        }
+
         public void RequestBoost(BoostType type)
         {
-            var config = ConfigFor(type);
+            // 1. Try to use accumulated stock first.
+            if (TrySpendStock(type))
+            {
+                Debug.Log($"[Boost] {type} activated from stock.");
+                Activate(type);
+                return;
+            }
 
-            // 1. Try to pay with crystals (Diamond).
+            // 2. No stock - try to pay with crystals (Diamond).
             // var currency = CurrencyService.Instance;
             // if (currency != null && currency.TrySpend(CurrencyType.Diamond, config.diamondCost))
             // {
@@ -121,22 +173,22 @@ namespace Treasures.Boosts
             //     return;
             // }
 
-            // 2. Not enough crystals >> fall back to a Reward ad.
-             Debug.Log($"[Boost] Not enough crystals for {type}. Offering reward ad...");
+            // 3. Not enough crystals >> fall back to a Reward ad to grant stock.
+             Debug.Log($"[Boost] No stock for {type}. Offering reward ad...");
              var ads = AppServices.Ads;
              if (ads != null && ads.IsRewardedAdReady())
              {
                  ads.ShowRewardedAd(
                      onRewarded: () =>
                      {
-                        Debug.Log($"[Boost] Reward granted -> activating {type}.");
-                        Activate(type);
+                        Debug.Log($"[Boost] Reward granted -> adding 1 stock for {type}.");
+                        AddStock(type, 1);
                      },
                      onClosed: null);
              }
             else
              {
-                Debug.LogWarning($"[Boost] {type} unavailable: not enough crystals and no reward ad ready.");
+                Debug.LogWarning($"[Boost] {type} unavailable: no stock and no reward ad ready.");
                  ads?.LoadRewardedAd();
              }
         }

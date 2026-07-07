@@ -60,14 +60,12 @@ namespace Treasures.IAP
 
             if (priceText != null)
             {
+                string price = null;
                 if (IAPManager.Instance != null && IAPManager.Instance.IsInitialized())
                 {
-                    priceText.text = IAPManager.Instance.GetLocalizedPrice(offer.ProductID, offer.DefaultPriceString);
+                    price = IAPManager.Instance.GetLocalizedPrice(offer.ProductID);
                 }
-                else
-                {
-                    priceText.text = offer.DefaultPriceString;
-                }
+                priceText.text = price ?? "N/A";
             }
         }
 

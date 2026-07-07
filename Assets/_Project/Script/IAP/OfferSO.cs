@@ -33,7 +33,6 @@ namespace Treasures.IAP
         [Header("Display Details")]
         [SerializeField] private string title;
         [SerializeField] private Sprite icon;
-        [SerializeField] private string defaultPriceString = "$1.99";
 
         [Header("Rewards")]
         [SerializeField] private List<CurrencyValue> currencyRewards = new List<CurrencyValue>();
@@ -51,7 +50,6 @@ namespace Treasures.IAP
         public OfferCategory Category => category;
         public string Title => title;
         public Sprite Icon => icon;
-        public string DefaultPriceString => defaultPriceString;
         public List<CurrencyValue> CurrencyRewards => currencyRewards;
         //public List<string> SkinUnlockIDs => skinUnlockIDs;
         public List<BoostReward> BoostRewards => boostRewards;

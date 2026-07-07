@@ -32,16 +32,13 @@ namespace Treasures.Services
                 var dependencyStatus = task.Result;
                 if (dependencyStatus == DependencyStatus.Available)
                 {
-                    // Initialize Analytics
                     FirebaseAnalytics.SetAnalyticsCollectionEnabled(true);
-                    
-                    // Initialize Remote Config with default values or just fetch
                     FetchRemoteConfig(onInitialized);
                 }
                 else
                 {
                     Debug.LogError($"[Firebase] Could not resolve dependencies: {dependencyStatus}");
-                    IsInitialized = true; // Mark as initialized but failed
+                    IsInitialized = true;
                     onInitialized?.Invoke(false);
                 }
             });

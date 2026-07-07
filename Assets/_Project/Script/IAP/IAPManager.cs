@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Purchasing;
 using UnityEngine.Purchasing.Security;
 using Treasures.CurrencySystem;
+using Treasures.Boosts;
 using ModularSkinShop.Core;
 
 namespace Treasures.IAP
@@ -50,7 +51,18 @@ namespace Treasures.IAP
             var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
             foreach (var offer in catalog.Offers)
             {
+                if (offer == null)
+                {
+                    Debug.LogError("IAPManager: Null offer found in catalog! Check OfferCatalog.asset.");
+                    continue;
+                }
+                if (string.IsNullOrEmpty(offer.ProductID))
+                {
+                    Debug.LogError($"IAPManager: Offer '{offer.name}' has empty ProductID! Skipping.");
+                    continue;
+                }
                 builder.AddProduct(offer.ProductID, offer.ProductType);
+                Debug.Log($"IAPManager: Registered product '{offer.ProductID}' ({offer.ProductType}) from offer '{offer.name}'");
             }
 
             UnityPurchasing.Initialize(this, builder);
@@ -73,7 +85,14 @@ namespace Treasures.IAP
                 }
                 else
                 {
-                    Debug.LogError("IAPManager: BuyProductID: FAIL. Not purchasing product, either is not found or is not available for purchase.");
+                    if (product == null)
+                    {
+                        Debug.LogError($"IAPManager: BuyProductID FAIL. Product with ID '{productId}' not found in store controller. Available products: {ListRegisteredProducts()}");
+                    }
+                    else
+                    {
+                        Debug.LogError($"IAPManager: BuyProductID FAIL. Product '{productId}' found but not available for purchase.");
+                    }
                     OnPurchaseFailedEvent?.Invoke(productId, "Product not found or unavailable");
                 }
             }
@@ -84,7 +103,18 @@ namespace Treasures.IAP
             }
         }
 
-        public string GetLocalizedPrice(string productId, string defaultPrice)
+        private string ListRegisteredProducts()
+        {
+            if (m_StoreController?.products?.all == null) return "none";
+            var ids = new System.Collections.Generic.List<string>();
+            foreach (var p in m_StoreController.products.all)
+            {
+                ids.Add(p.definition.id);
+            }
+            return string.Join(", ", ids);
+        }
+
+        public string GetLocalizedPrice(string productId)
         {
             if (IsInitialized())
             {
@@ -94,7 +124,7 @@ namespace Treasures.IAP
                     return product.metadata.localizedPriceString;
                 }
             }
-            return defaultPrice;
+            return null;
         }
 
         public void GrantRewards(string productId)
@@ -128,6 +158,23 @@ namespace Treasures.IAP
                     }
                 }
             }
+            // 3. Grant booster rewards (add to stock)
+            if (offer.BoostRewards != null)
+            {
+                foreach (var boosterReward in offer.BoostRewards)
+                {
+                    if (BoostController.Instance != null)
+                    {
+                        BoostController.Instance.AddStock(boosterReward.Type, boosterReward.Value);
+                        Debug.Log($"IAPManager: Granted boost {boosterReward.Type} x {boosterReward.Value}");
+                    }
+                    else
+                    {
+                        Debug.LogError("IAPManager: BoostController instance is missing!");
+                    }
+                }
+            }
+
 
             // // 2. Grant skin unlock rewards
             // if (offer.SkinUnlockIDs != null)

@@ -13,7 +13,16 @@ MonoBehaviour:
   m_Name: OfferCatalog
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.IAP.OfferCatalogSO
   offers:
+  - {fileID: 11400000, guid: e661eadb1b19eb94aa54a1f4f0e086a7, type: 2}
+  - {fileID: 11400000, guid: 3f031fe5029c4e24ba8eb26b8f6bf126, type: 2}
+  - {fileID: 11400000, guid: 991c109a8f22bbe4697b6f8d513aa906, type: 2}
+  - {fileID: 11400000, guid: 855ab9caa78adcb42adb69a6aaa62c20, type: 2}
+  - {fileID: 11400000, guid: 43c94a16536c43948b69ec4bba82e9f7, type: 2}
+  - {fileID: 11400000, guid: b5469dcf3b0fcf3489b6c1d7c615f854, type: 2}
+  - {fileID: 11400000, guid: e8bc3e1127c6502409534a3f147c8e22, type: 2}
+  - {fileID: 11400000, guid: 94b5ad08432613446a92f0a92b45f692, type: 2}
   - {fileID: 11400000, guid: 11b6453578e8e5943b32241e0dfbebbb, type: 2}
-  - {fileID: 11400000, guid: 11b6453578e8e5943b32241e0dfbebbb, type: 2}
-  - {fileID: 11400000, guid: 11b6453578e8e5943b32241e0dfbebbb, type: 2}
+  - {fileID: 11400000, guid: aa2fcad8326dc34489e25cafc76ff23c, type: 2}
+  - {fileID: 11400000, guid: 1e474a1ddab173345961eaae0e793e9e, type: 2}
+  - {fileID: 11400000, guid: 5c6e6d7787d8a4e4e855d8029a3c7c2d, type: 2}
   - {fileID: 11400000, guid: 6bee9ef0b7290214cbefc7a8579001c5, type: 2}

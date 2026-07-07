@@ -99,11 +99,11 @@ namespace Treasures.IAP
             {
                 if (IAPManager.Instance != null && IAPManager.Instance.IsInitialized())
                 {
-                    priceText.text = IAPManager.Instance.GetLocalizedPrice(offer.ProductID, offer.DefaultPriceString);
+                    priceText.text = IAPManager.Instance.GetLocalizedPrice(offer.ProductID);
                 }
                 else
                 {
-                    priceText.text = offer.DefaultPriceString;
+                    priceText.text = "N/A";
                 }
             }
 
