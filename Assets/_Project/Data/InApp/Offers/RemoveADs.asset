@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12632104f141734694a09fcd82a7d20, type: 3}
   m_Name: RemoveADs
   m_EditorClassIdentifier: Assembly-CSharp::Treasures.IAP.OfferSO
-  productID: removeADs
+  productID: removead
   productType: 0
   category: 0
   title: Remove ADs
