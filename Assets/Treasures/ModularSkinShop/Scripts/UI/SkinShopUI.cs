@@ -48,6 +48,9 @@ namespace ModularSkinShop.UI
             //_spawnedItems.Clear();
             foreach (var skin in Manager.Library.Skins)
             {
+                // Skip skins that are map-only (should only be purchased on the map)
+                if (skin.mapOnly) continue;
+                
                 var go = Instantiate(ItemPrefab, ItemContainer);
                 go.SetActive(true);
                 var itemUI = go.GetComponent<SkinShopItemUI>();

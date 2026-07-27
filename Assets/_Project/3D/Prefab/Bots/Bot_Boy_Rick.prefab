@@ -53,7 +53,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1750213780047223627, guid: b21546ae33b4956438c5d72d979a2c91, type: 3}
+    - {fileID: 5631604384398574278, guid: b21546ae33b4956438c5d72d979a2c91, type: 3}
+    - {fileID: 678607685864533309, guid: b21546ae33b4956438c5d72d979a2c91, type: 3}
+    - {fileID: 331641218154422318, guid: b21546ae33b4956438c5d72d979a2c91, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b21546ae33b4956438c5d72d979a2c91, type: 3}
@@ -118,6 +122,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -5025369866119417362, guid: 82fe3d84be3f4f740b17600593645127, type: 2}
+    - target: {fileID: 4077782028668792766, guid: 0255b313e8f9d174fbffb0be08fe3c55, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
     - target: {fileID: 8531485491263520109, guid: 0255b313e8f9d174fbffb0be08fe3c55, type: 3}
       propertyPath: m_Name
       value: Bot_Boy_Rick

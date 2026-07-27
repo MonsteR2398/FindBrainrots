@@ -21,4 +21,5 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/Worlds/World_Magma.unity
     guid: 1229af15ee74eb14e82491b9add55d78
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: d0c4de878b31a80449bd83fa042ef3d5, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

@@ -11,6 +11,13 @@ public class PlayerController : MonoBehaviour
     public float jumpHeight = 1.5f;
     public float gravity = -30f;
     public int maxJumps = 2;
+    
+    [Header("Player State")]
+    public bool canMove = true;
+    
+    [Header("Additional Attributes")]
+    public float additionalSpeed = 0f;
+    public float additionalJump = 0f;
 
     [Tooltip("When true, movement input is interpreted relative to the main camera (human player). " +
              "When false, input is interpreted in world space (used by bots that have no camera).")]
@@ -58,6 +65,9 @@ public class PlayerController : MonoBehaviour
 
         lastSafePosition = transform.position;
         lastSafeRotation = transform.rotation;
+
+        // Load saved additional attributes
+        LoadAdditionalAttributes();
     }
 
     public void OnMove(InputValue value)
@@ -131,6 +141,12 @@ public class PlayerController : MonoBehaviour
     {
             externalSpeedMultiplier += multiplier;
     }
+    
+    public void AddSpeed(float amount)
+    {
+        additionalSpeed += amount;
+        SaveAdditionalAttributes();
+    }
 
     public void RemoveSpeedMultiplayer(float multiplier)
     {
@@ -145,6 +161,12 @@ public class PlayerController : MonoBehaviour
     public void AddJumpMultiplier(float multiplier)
     {
         externalJumpMultiplier += multiplier;
+    }
+    
+    public void AddJump(float amount)
+    {
+        additionalJump += amount;
+        SaveAdditionalAttributes();
     }
 
     public void ApplySpeedBoost(float multiplier)
@@ -174,6 +196,13 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
+        // Don't move if canMove is false
+        if (!canMove)
+        {
+            velocity = Vector3.zero;
+            return;
+        }
+        
         bool isGrounded = controller.isGrounded;
         
         if (isGrounded && velocity.y < 0)
@@ -199,7 +228,10 @@ public class PlayerController : MonoBehaviour
 
         Vector3 rawInput = forward * moveInput.y + right * moveInput.x;
         Vector3 moveDir = rawInput.normalized;
-        float targetSpeed = rawInput.magnitude * moveSpeed * externalSpeedMultiplier;
+        
+        // Apply additional speed bonus
+        float totalSpeed = moveSpeed + additionalSpeed;
+        float targetSpeed = rawInput.magnitude * totalSpeed * externalSpeedMultiplier;
 
         Vector3 currentHorizontalVel = new Vector3(velocity.x, 0, velocity.z);
         float currentSpeed = currentHorizontalVel.magnitude;
@@ -231,11 +263,26 @@ else
         velocity.z = currentHorizontalVel.z;
         if (jumpRequested)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * externalJumpMultiplier * -2f * gravity);
+            // Apply additional jump bonus
+            float totalJump = jumpHeight + additionalJump;
+            velocity.y = Mathf.Sqrt(totalJump * externalJumpMultiplier * -2f * gravity);
             jumpsRemaining--;
             jumpRequested = false;
         }
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void SaveAdditionalAttributes()
+    {
+        PlayerPrefs.SetFloat("PlayerAdditionalSpeed", additionalSpeed);
+        PlayerPrefs.SetFloat("PlayerAdditionalJump", additionalJump);
+        PlayerPrefs.Save();
+    }
+
+    private void LoadAdditionalAttributes()
+    {
+        additionalSpeed = PlayerPrefs.GetFloat("PlayerAdditionalSpeed", 0f);
+        additionalJump = PlayerPrefs.GetFloat("PlayerAdditionalJump", 0f);
     }
 }

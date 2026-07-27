@@ -8,172 +8,192 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Alladin
-    second: {fileID: 2100000, guid: 41edb7e4c5e3a6d44af92c9329639ca5, type: 2}
+    second: {fileID: 2100000, guid: 1c119264a10a4c64f88f5fc47e4d183c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bear
+    second: {fileID: 2100000, guid: 7de3182af9f17e34fb03b78a012a11d8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Body.002
-    second: {fileID: 2100000, guid: ab04370cd1e862c43b73927334ee3b6c, type: 2}
+    second: {fileID: 2100000, guid: 804f752d0b6bbda4bb7dc7a0be4adbbe, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Body.003
-    second: {fileID: 2100000, guid: 19c88fc78eedd4e4ab0b05d6d92eecdb, type: 2}
+    second: {fileID: 2100000, guid: 3fab90a04a0b7634c93e2800ee8352bf, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_Blue_Scar
-    second: {fileID: 2100000, guid: 80395ed5e5dce2444bec454ed6612f71, type: 2}
+    second: {fileID: 2100000, guid: a2876b4a23acdc6428dd610a9400cad0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_Blue_Scar_Hair
-    second: {fileID: 2100000, guid: 0dd2adaf97bb9c94e84f9963a4642a25, type: 2}
+    second: {fileID: 2100000, guid: a7c3a95db9e203942a1a1ee8a6a78950, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_Noks
-    second: {fileID: 2100000, guid: a812b94414e95124a9674cc27ec6f1fe, type: 2}
+    second: {fileID: 2100000, guid: 55e141f0b9665af44841a9001094db85, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_Noks_Hair
-    second: {fileID: 2100000, guid: c3aff1f618b00bc4db0ae7beaa528292, type: 2}
+    second: {fileID: 2100000, guid: dbb7c7fcbb82ce74ca1c6e8b06e2351e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_Rick
-    second: {fileID: 2100000, guid: fe86741eb739c3243aa08e544438cd5e, type: 2}
+    second: {fileID: 2100000, guid: 43c61ac872097a34e868089c6ac11e74, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_Shiro
-    second: {fileID: 2100000, guid: faa757d03fe23214a9f8f8ae03f382ad, type: 2}
+    second: {fileID: 2100000, guid: 15da6c0037754f7438d503893509de7b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_Shiro_hair
-    second: {fileID: 2100000, guid: efd6b9ce256b3c14ea56ebbf81fb786d, type: 2}
+    second: {fileID: 2100000, guid: f980e92d82bc34f42813984b36a2a83c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_rick_hair
-    second: {fileID: 2100000, guid: da2e9e4af2531264898c01a8ccb3646e, type: 2}
+    second: {fileID: 2100000, guid: 78117159c4a2a14478f1ca92b16aa9d5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boy_shorts_hair
-    second: {fileID: 2100000, guid: 5e9d3237c1e5ebb4c9dd62dfe8c5e945, type: 2}
+    second: {fileID: 2100000, guid: cd64ae8f0e6352c429d890052bbf641c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cat
+    second: {fileID: 2100000, guid: 0362ba1b70c7d934e9fc3ab48d6aee71, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Face_002
-    second: {fileID: 2100000, guid: 654b9dcd7fe7baa4b825ca94178b8768, type: 2}
+    second: {fileID: 2100000, guid: a0312d2e98a2638438d793bc8201f2d9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Face_002.001
-    second: {fileID: 2100000, guid: f42889f9eb1db7545afad87fb773c354, type: 2}
+    second: {fileID: 2100000, guid: 347794f461f4af443a2a06eee78b3df6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Face_002.002
-    second: {fileID: 2100000, guid: a608192164e7e1d4f9aa2d804afd950c, type: 2}
+    second: {fileID: 2100000, guid: b660083eb1db7d04299ce6c50f36ac4a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Face_002.004
-    second: {fileID: 2100000, guid: 0940d35d082b5e34492aaae9704bfa78, type: 2}
+    second: {fileID: 2100000, guid: d1864c3f82a0d8e4f81d875c0e6df018, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Face_girl
-    second: {fileID: 2100000, guid: 8a2d9d5567ce23c46b82d528bd963107, type: 2}
+    second: {fileID: 2100000, guid: 23fafdf9e5cbf01429626a38aeffc20e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Girl_Cyber_Friend
-    second: {fileID: 2100000, guid: cde9f412de8a9174099e114fdd46f560, type: 2}
+    second: {fileID: 2100000, guid: a2a24e5a96afa984cafcee14c502c019, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Girl_Gothic_Angel
-    second: {fileID: 2100000, guid: 970d3e80c3bb3ad489d6ffbad2db506e, type: 2}
+    second: {fileID: 2100000, guid: e11cd32e243d00449891572b3e709856, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Girl_Moon_Dreamer
-    second: {fileID: 2100000, guid: 9524e5015f0edf1429f1769d26e09bcf, type: 2}
+    second: {fileID: 2100000, guid: c58e8d5e1b479bd44902ed8f7b60f0cd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Girl_Sakura
-    second: {fileID: 2100000, guid: 9b7b588686724f84ea3eb01e998c1f20, type: 2}
+    second: {fileID: 2100000, guid: 96eaa7edd0ff3b3459d6aa9d7d54828d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Girl_pastel
-    second: {fileID: 2100000, guid: 827fa898706fa104a956ab50529e216b, type: 2}
+    second: {fileID: 2100000, guid: 1d3fb91342c789a499bb18a3adb41d61, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hair_Cyber_Friend
-    second: {fileID: 2100000, guid: 9f5bfd7212f04894ca9c1f0ffdaac773, type: 2}
+    second: {fileID: 2100000, guid: 4359578a13f365948a008855d8d5dc4c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hair_Moon_Dreamer
-    second: {fileID: 2100000, guid: f5b7eef0864417f409f00a88c579813f, type: 2}
+    second: {fileID: 2100000, guid: e7d1295a70e7ca043baba8673b2f6aac, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hair_Sakura
-    second: {fileID: 2100000, guid: 638b83c56d3d1284f9adfc6fe97a4629, type: 2}
+    second: {fileID: 2100000, guid: 52cd8fcfd42f12f459f5f9f2bfcc42a9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hair_blue.001
-    second: {fileID: 2100000, guid: ef9f00918019e3549af1d68a66ce4f07, type: 2}
+    second: {fileID: 2100000, guid: 9d1efbd46c67d444d9548650174b4b2a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hair_girl_1
-    second: {fileID: 2100000, guid: 701882c75c34c2b449f24a2fd663b33a, type: 2}
+    second: {fileID: 2100000, guid: 1ecdadedaae63194fa2f9cd08a3cd8a7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hair_gothic_angel
-    second: {fileID: 2100000, guid: 100d2f721ca2cb04ba895ab9601e0512, type: 2}
+    second: {fileID: 2100000, guid: 9c253af56517a6046929677a8179e2ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rabbit
+    second: {fileID: 2100000, guid: 8e45420a91655e744a78553b5ed484ac, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Samurai
-    second: {fileID: 2100000, guid: 4c412b03f01ed374ca8d31a24a55556d, type: 2}
+    second: {fileID: 2100000, guid: dfbe6b4fc440d0a468781d77d2c2a123, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Squid_Gamer_girl
-    second: {fileID: 2100000, guid: 1f15d65f03887cc44a5f7cb6baf0014a, type: 2}
+    second: {fileID: 2100000, guid: a9d512503ddfd744d87fec1ac20f86f7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Squid_Warrior_man
-    second: {fileID: 2100000, guid: 1075a4885b8ca594ba6781c3a758e8a1, type: 2}
+    second: {fileID: 2100000, guid: 2f209a4699f6c9642b1234d319b35544, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Squid_gamer_man
-    second: {fileID: 2100000, guid: 4886b10f386e199459802b6a48bbdc9a, type: 2}
+    second: {fileID: 2100000, guid: e3268913b72c4c941a3cf788fd8647f3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: UV_Atlas
-    second: {fileID: 2100000, guid: 50c5c45c6c4c63940a5fe89a02b908dc, type: 2}
+    second: {fileID: 2100000, guid: 4ed21383801aa8a46a54a9f058e6f7a7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: penguin
-    second: {fileID: 2100000, guid: 53d429ef4b8b2fc4998bd37e1a32a412, type: 2}
+    second: {fileID: 2100000, guid: 8e788b3eca09c74409e04426d971a55b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u0421hemical_protection.001"
+    second: {fileID: 2100000, guid: 1e02c19edcda8984f884ecda67632956, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -386,7 +406,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -433,11 +453,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Running
-      takeName: Running
-      internalID: -9121621101649706817
+      name: Somersault
+      takeName: Somersault
+      internalID: -9146538161596909413
       firstFrame: 0
-      lastFrame: 20
+      lastFrame: 21
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -462,11 +482,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Somersault
-      takeName: Somersault
-      internalID: -9146538161596909413
+      name: Flip.001
+      takeName: Flip.001
+      internalID: 21220528213340344
       firstFrame: 0
-      lastFrame: 21
+      lastFrame: 27
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -491,11 +511,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Flip.001
-      takeName: Flip.001
-      internalID: 21220528213340344
+      name: Sit
+      takeName: Sit
+      internalID: 1970460594263377210
       firstFrame: 0
-      lastFrame: 19
+      lastFrame: 2
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -503,6 +523,35 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Swim
+      takeName: Swim
+      internalID: 5414490534771693905
+      firstFrame: 0
+      lastFrame: 22
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -531,7 +580,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -549,18 +598,18 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Swim.001
-      takeName: Swim.001
-      internalID: -1705380719386326235
+      name: Running
+      takeName: Running
+      internalID: -9121621101649706817
       firstFrame: 0
-      lastFrame: 22
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -581,7 +630,7 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 3
+    meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1

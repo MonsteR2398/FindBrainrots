@@ -11,5 +11,9 @@ namespace ModularSkinShop.Data
         public GameObject Prefab;
         public Sprite Icon;
         public CurrencyValue[] CurrencyPrice;
+        
+        [Header("Map Purchase Settings")]
+        [Tooltip("If true, this skin can only be purchased on the map, not in the main shop")]
+        public bool mapOnly = false;
     }
 }

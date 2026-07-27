@@ -1464,3 +1464,12 @@ MonoBehaviour:
     - Shop
     - Shop
     - Shop
+  - key: gym.push
+    values:
+    - PUSH IT!
+    - "\u0416\u041C\u0418 \u0417\u0414\u0415\u0421\u042C!"
+    - PUSH IT!
+    - PUSH IT!
+    - PUSH IT!
+    - PUSH IT!
+    - PUSH IT!

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ccf33d8af24fa849beb7742681ff175, type: 3}
+  m_Name: Other_Rabbit
+  m_EditorClassIdentifier: Assembly-CSharp::ModularSkinShop.Data.SkinSO
+  ID: skin_other_rabbit
+  DisplayName: ' '
+  Prefab: {fileID: 1082030001945558959, guid: f4954f6cd8bcda347b5ddf369eed1435, type: 3}
+  Icon: {fileID: 0}
+  CurrencyPrice:
+  - Type: 0
+    Value: 300000
+  - Type: 1
+    Value: 600
+  mapOnly: 1

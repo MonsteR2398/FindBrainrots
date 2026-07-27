@@ -3,6 +3,10 @@ using UnityEngine;
 
 namespace ModularSkinShop.Core
 {
+    /// <summary>
+    /// Renders skin models to a render texture for preview.
+    /// Used by both SkinShopUI and SkinPurchaseUI.
+    /// </summary>
     public class SkinShopRender : MonoBehaviour
     {
         public Transform spawnTarget;
@@ -34,6 +38,26 @@ namespace ModularSkinShop.Core
             _currentSkinInstance = Instantiate(skin.Prefab, spawnTarget);
             _currentSkinInstance.transform.localPosition = Vector3.zero;
             _currentSkinInstance.transform.localRotation = Quaternion.identity;
+        }
+
+        /// <summary>
+        /// Public method to render a skin (used by SkinPurchaseUI).
+        /// </summary>
+        public void RenderSkin(SkinSO skin)
+        {
+            SelectSkin(skin);
+        }
+
+        /// <summary>
+        /// Clear the current skin instance.
+        /// </summary>
+        public void Clear()
+        {
+            if (_currentSkinInstance != null)
+            {
+                Destroy(_currentSkinInstance);
+                _currentSkinInstance = null;
+            }
         }
     }
 }

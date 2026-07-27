@@ -8,7 +8,7 @@ namespace Treasures.WorldSystem
     /// Singleton window (in the core Canvas) that lists every world from the catalog
     /// as a button. Selecting one tells the GameModeManager to switch.
     /// </summary>
-    public class PortalWindowUI : MonoBehaviour
+    public class PortalWindowUI : MonoBehaviour, IUIOpenable
     {
         public static PortalWindowUI Instance { get; private set; }
 
@@ -40,6 +40,13 @@ namespace Treasures.WorldSystem
 
             if (buttonTemplate != null) buttonTemplate.SetActive(false);
             if (root != null) root.SetActive(false);
+
+            UIRegistry.Register("PortalWindow", this);
+        }
+
+        private void OnDestroy()
+        {
+            UIRegistry.Unregister("PortalWindow");
         }
 
         public bool IsOpen => root != null && root.activeSelf;

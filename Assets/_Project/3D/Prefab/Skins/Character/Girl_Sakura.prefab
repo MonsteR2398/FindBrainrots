@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3965021178830968292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8404912181375541517}
+  m_Layer: 0
+  m_Name: BarbellHolder
+  m_TagString: BarbellHolder
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8404912181375541517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3965021178830968292}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.079, z: -0.23300004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5334152362216288974}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5587856848407172389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -253,7 +284,14 @@ PrefabInstance:
     - {fileID: 6064398640569872584, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
     - {fileID: -7431134724959148993, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
     - {fileID: 3593871364021846429, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
-    m_AddedGameObjects: []
+    - {fileID: -3956913800775207669, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
+    - {fileID: -4258461126774933480, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
+    - {fileID: 6180640845926911598, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
+    - {fileID: -8958939029897275421, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 8404912181375541517}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
       insertIndex: -1
@@ -302,3 +340,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimator
   speedDampTime: 0.15
+--- !u!4 &5334152362216288974 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e1ef42003da9ea9498b245bdbcf4591b, type: 3}
+  m_PrefabInstance: {fileID: 5587856848407172389}
+  m_PrefabAsset: {fileID: 0}

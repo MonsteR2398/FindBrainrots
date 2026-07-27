@@ -8,6 +8,9 @@ public class CameraLookController : MonoBehaviour
     public float mouseSensitivity = 0.1f;
     public float touchSensitivity = 0.1f;
     public bool lockCursorOnStart = true;
+    public float minZoomDistance = 2f;
+    public float maxZoomDistance = 10f;
+    public float currentZoomDistance = 5f;
 
     [Header("References")]
     public CinemachineCamera vcam;
@@ -18,7 +21,14 @@ public class CameraLookController : MonoBehaviour
     private void Start()
     {
         if (vcam == null) vcam = GetComponent<CinemachineCamera>();
-        if (vcam != null) orbitalFollow = vcam.GetComponent<CinemachineOrbitalFollow>();
+        if (vcam != null) 
+        {
+            orbitalFollow = vcam.GetComponent<CinemachineOrbitalFollow>();
+            if (orbitalFollow != null)
+            {
+                currentZoomDistance = orbitalFollow.Radius;
+            }
+        }
 
         lookAction = InputSystem.actions.FindAction("Look");
 
@@ -93,6 +103,20 @@ public class CameraLookController : MonoBehaviour
     {
         return UnityEngine.EventSystems.EventSystem.current != null && 
                UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject();
+    }
+
+    public void ForceZoomTo(float distance)
+    {
+        if (orbitalFollow != null)
+        {
+            currentZoomDistance = Mathf.Clamp(distance, minZoomDistance, maxZoomDistance);
+            orbitalFollow.Radius = currentZoomDistance;
+        }
+    }
+
+    public float saveZoom
+    {
+        get { return currentZoomDistance; }
     }
 
     private bool IsAnyWindowOpen()

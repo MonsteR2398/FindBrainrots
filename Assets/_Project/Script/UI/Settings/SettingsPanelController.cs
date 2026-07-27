@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using Treasures.Services;
 using Treasures.Settings;
-using Treasures.Localization;
+using Treasures.WorldSystem;
 using L10n = Treasures.Localization.Localization;
 
 namespace Treasures.UI
@@ -16,7 +16,7 @@ namespace Treasures.UI
     /// The open/close buttons toggle <see cref="panelRoot"/>. Values are read back from the
     /// live settings every time the panel opens, so the UI always reflects the saved state.
     /// </summary>
-    public class SettingsPanelController : MonoBehaviour
+    public class SettingsPanelController : MonoBehaviour, IUIOpenable
     {
         [Header("Window")]
         [SerializeField] private GameObject panelRoot;
@@ -61,6 +61,13 @@ namespace Treasures.UI
             }
 
             if (panelRoot != null) panelRoot.SetActive(false);
+
+            UIRegistry.Register("SettingsPanel", this);
+        }
+
+        private void OnDestroy()
+        {
+            UIRegistry.Unregister("SettingsPanel");
         }
 
         /// <summary>Show the panel and sync the sliders to the current saved values.</summary>
