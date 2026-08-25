@@ -9,6 +9,9 @@ namespace Treasures.Services
     /// Initialization order (as required by AppLovin's guidelines):
     ///   1. AppLovin MAX  ->  presents GDPR/CMP consent flow + auto-inits mediated networks (incl. Google).
     ///   2. ONLY AFTER consent is collected (OnSdkInitializedEvent) -> initialize Firebase.
+    ///
+    /// The ads service is picked per build platform: Yandex Games (YG2) on WebGL, AppLovin MAX on
+    /// Android/iOS/Editor.
     /// </summary>
     public class AppBootstrap : MonoBehaviour
     {
@@ -40,16 +43,34 @@ namespace Treasures.Services
             _instance = this;
             DontDestroyOnLoad(gameObject);
 
-            AppServices.Ads = new AppLovinAdsService();
+            AppServices.Ads = CreateAdsService();
             AppServices.Analytics = new FirebaseService();
 
-            Debug.Log("[Bootstrap] Step 1 - initializing AppLovin MAX...");
+            Debug.Log($"[Bootstrap] Step 1 - initializing {GetAdsName()}...");
             AppServices.Ads.Initialize(OnAdsInitialized);
+        }
+
+        private static IAdsService CreateAdsService()
+        {
+#if UNITY_WEBGL
+            return new YandexAdsService();
+#else
+            return new AppLovinAdsService();
+#endif
+        }
+
+        private static string GetAdsName()
+        {
+#if UNITY_WEBGL
+            return "Yandex Games (YG2)";
+#else
+            return "AppLovin MAX";
+#endif
         }
 
         private void OnAdsInitialized()
         {
-            Debug.Log("[Bootstrap] AppLovin MAX + consent ready.");
+            Debug.Log("[Bootstrap] Ads service + consent ready.");
 
             if (AppServices.Analytics != null && AppServices.Analytics.IsAvailable)
             {

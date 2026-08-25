@@ -12,7 +12,6 @@ namespace ModularTreasures.Quests
         {
             if (CameraSequenceManager.Instance != null)
             {
-                Debug.Log($"[CameraTarget] Registering target '{id}' on GameObject '{gameObject.name}'");
                 CameraSequenceManager.Instance.RegisterTarget(id, transform);
             }
             else

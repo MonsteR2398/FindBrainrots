@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
 using UnityEngine.Purchasing.Security;
+using PlayerPrefs = RedefineYG.PlayerPrefs;
 using Treasures.CurrencySystem;
 using Treasures.Boosts;
 using ModularSkinShop.Core;

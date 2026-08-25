@@ -4,41 +4,27 @@ using UnityEngine;
 namespace Treasures.Services
 {
     /// <summary>
-    /// AppLovin MAX implementation of <see cref="IAdsService"/>.
+    /// AppLovin MAX implementation of <see cref="IAdsService"/> for mobile (Android/iOS) builds.
     /// </summary>
-    public class AppLovinAdsService : IAdsService
+    public class AppLovinAdsService : AdsServiceBase
     {
         // TODO: Replace with your actual Ad Unit IDs from AppLovin dashboard
         private const string InterstitialAdUnitId = "8c09ebe742c77325";
         private const string BannerAdUnitId = "07963619ee83b6a0";
         private const string RewardedAdUnitId = "295b278f68e8c76b";
 
-        public bool IsInitialized { get; private set; }
+        protected override string PlatformName { get { return "AppLovin MAX"; } }
 
 #if UNITY_ANDROID || UNITY_IOS || UNITY_EDITOR
-        private Action _onInitialized;
-        private Action _onInterstitialClosed;
-        private Action _onRewardedClosed;
-        private Action _onRewardedReceived;
-        
         private int _interstitialRetryAttempt;
         private int _rewardedRetryAttempt;
 
-        private bool _isShowingInterstitial;
-        private bool _isShowingRewarded;
+        #region Initialization
 
-        public void Initialize(Action onInitialized)
+        protected override void PlatformBindEvents()
         {
-            if (IsInitialized)
-            {
-                onInitialized?.Invoke();
-                return;
-            }
-
-            _onInitialized = onInitialized;
-
             MaxSdkCallbacks.OnSdkInitializedEvent += OnSdkInitialized;
-            
+
             // Interstitial callbacks
             MaxSdkCallbacks.Interstitial.OnAdLoadedEvent += OnInterstitialLoaded;
             MaxSdkCallbacks.Interstitial.OnAdLoadFailedEvent += OnInterstitialLoadFailed;
@@ -56,40 +42,33 @@ namespace Treasures.Services
 
             // Banner callbacks
             MaxSdkCallbacks.Banner.OnAdRevenuePaidEvent += OnAdRevenuePaidEvent;
+        }
 
+        protected override void PlatformInitialize()
+        {
             MaxSdk.InitializeSdk();
-            Debug.Log("[Ads] AppLovin MAX initialization requested.");
         }
 
         private void OnSdkInitialized(MaxSdkBase.SdkConfiguration configuration)
         {
             MaxSdkCallbacks.OnSdkInitializedEvent -= OnSdkInitialized;
-            IsInitialized = true;
-
-            Debug.Log("[Ads] AppLovin MAX initialized.");
-
-            LoadInterstitial();
-            LoadRewardedAd();
-
-            var callback = _onInitialized;
-            _onInitialized = null;
-            callback?.Invoke();
+            NotifyInitialized();
         }
+
+        #endregion
 
         #region Banners
 
-        public void ShowBanner()
+        protected override void PlatformShowBanner()
         {
-            if (!IsInitialized) return;
             MaxSdk.CreateBanner(BannerAdUnitId, MaxSdkBase.BannerPosition.BottomCenter);
             MaxSdk.SetBannerBackgroundColor(BannerAdUnitId, Color.black);
             MaxSdk.ShowBanner(BannerAdUnitId);
             Debug.Log("[Ads] ShowBanner (Simulated in Editor)");
         }
 
-        public void HideBanner()
+        protected override void PlatformHideBanner()
         {
-            if (!IsInitialized) return;
 #if !UNITY_EDITOR
             MaxSdk.HideBanner(BannerAdUnitId);
 #else
@@ -101,32 +80,20 @@ namespace Treasures.Services
 
         #region Interstitials
 
-        public bool IsInterstitialReady()
+        protected override bool PlatformIsInterstitialReady()
         {
-            return IsInitialized && !_isShowingInterstitial && MaxSdk.IsInterstitialReady(InterstitialAdUnitId);
+            return !IsShowingInterstitial && MaxSdk.IsInterstitialReady(InterstitialAdUnitId);
         }
 
-        public void LoadInterstitial()
+        protected override void PlatformLoadInterstitial()
         {
-            if (!IsInitialized) return;
             Debug.Log("[Ads] Loading Interstitial...");
             MaxSdk.LoadInterstitial(InterstitialAdUnitId);
         }
 
-        public void ShowInterstitial(Action onClosed = null)
+        protected override void PlatformShowInterstitial()
         {
-            if (IsInterstitialReady())
-            {
-                _isShowingInterstitial = true;
-                _onInterstitialClosed = onClosed;
-                MaxSdk.ShowInterstitial(InterstitialAdUnitId);
-            }
-            else
-            {
-                Debug.LogWarning("[Ads] Interstitial not ready!");
-                LoadInterstitial();
-                onClosed?.Invoke();
-            }
+            MaxSdk.ShowInterstitial(InterstitialAdUnitId);
         }
 
         private void OnInterstitialLoaded(string adUnitId, MaxSdkBase.AdInfo adInfo)
@@ -143,57 +110,32 @@ namespace Treasures.Services
 
         private void OnInterstitialHidden(string adUnitId, MaxSdkBase.AdInfo adInfo)
         {
-            Debug.Log("[Ads] Interstitial closed.");
-            _isShowingInterstitial = false;
-            LoadInterstitial(); // Preload next
-            
-            var callback = _onInterstitialClosed;
-            _onInterstitialClosed = null;
-            callback?.Invoke();
+            NotifyInterstitialClosed();
         }
 
         private void OnInterstitialDisplayFailed(string adUnitId, MaxSdkBase.ErrorInfo errorInfo, MaxSdkBase.AdInfo adInfo)
         {
-            Debug.LogError("[Ads] Interstitial display failed: " + errorInfo.Message);
-            _isShowingInterstitial = false;
-            LoadInterstitial();
-            
-            var callback = _onInterstitialClosed;
-            _onInterstitialClosed = null;
-            callback?.Invoke();
+            NotifyInterstitialDisplayFailed(errorInfo.Message);
         }
 
         #endregion
 
         #region Rewarded Ads
 
-        public bool IsRewardedAdReady()
+        protected override bool PlatformIsRewardedReady()
         {
-            return IsInitialized && !_isShowingRewarded && MaxSdk.IsRewardedAdReady(RewardedAdUnitId);
+            return !IsShowingRewarded && MaxSdk.IsRewardedAdReady(RewardedAdUnitId);
         }
 
-        public void LoadRewardedAd()
+        protected override void PlatformLoadRewarded()
         {
-            if (!IsInitialized) return;
             Debug.Log("[Ads] Loading Rewarded Ad...");
             MaxSdk.LoadRewardedAd(RewardedAdUnitId);
         }
 
-        public void ShowRewardedAd(Action onRewarded, Action onClosed = null)
+        protected override void PlatformShowRewarded()
         {
-            if (IsRewardedAdReady())
-            {
-                _isShowingRewarded = true;
-                _onRewardedReceived = onRewarded;
-                _onRewardedClosed = onClosed;
-                MaxSdk.ShowRewardedAd(RewardedAdUnitId);
-            }
-            else
-            {
-                Debug.LogWarning("[Ads] Rewarded ad not ready!");
-                LoadRewardedAd();
-                onClosed?.Invoke();
-            }
+            MaxSdk.ShowRewardedAd(RewardedAdUnitId);
         }
 
         private void OnRewardedAdLoaded(string adUnitId, MaxSdkBase.AdInfo adInfo)
@@ -210,32 +152,17 @@ namespace Treasures.Services
 
         private void OnRewardedAdHidden(string adUnitId, MaxSdkBase.AdInfo adInfo)
         {
-            Debug.Log("[Ads] Rewarded ad closed.");
-            _isShowingRewarded = false;
-            LoadRewardedAd();
-            
-            var callback = _onRewardedClosed;
-            _onRewardedClosed = null;
-            callback?.Invoke();
+            NotifyRewardedClosed();
         }
 
         private void OnRewardedAdDisplayFailed(string adUnitId, MaxSdkBase.ErrorInfo errorInfo, MaxSdkBase.AdInfo adInfo)
         {
-            Debug.LogError("[Ads] Rewarded ad display failed: " + errorInfo.Message);
-            _isShowingRewarded = false;
-            LoadRewardedAd();
-            
-            var callback = _onRewardedClosed;
-            _onRewardedClosed = null;
-            callback?.Invoke();
+            NotifyRewardedDisplayFailed(errorInfo.Message);
         }
 
         private void OnRewardedAdReceivedReward(string adUnitId, MaxSdk.Reward reward, MaxSdkBase.AdInfo adInfo)
         {
-            Debug.Log("[Ads] Rewarded ad received reward.");
-            var callback = _onRewardedReceived;
-            _onRewardedReceived = null;
-            callback?.Invoke();
+            NotifyRewardedReceived();
         }
 
         private void OnAdRevenuePaidEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
@@ -259,17 +186,19 @@ namespace Treasures.Services
         }
 
         #endregion
-
 #else
-        public void Initialize(Action onInitialized) => onInitialized?.Invoke();
-        public void ShowBanner() { }
-        public void HideBanner() { }
-        public bool IsInterstitialReady() => false;
-        public void LoadInterstitial() { }
-        public void ShowInterstitial(Action onClosed = null) => onClosed?.Invoke();
-        public bool IsRewardedAdReady() => false;
-        public void LoadRewardedAd() { }
-        public void ShowRewardedAd(Action onRewarded, Action onClosed = null) => onClosed?.Invoke();
+        // Non-Android/iOS (and not Editor) targets: the base class still satisfies IAdsService,
+        // but no MAX SDK calls are made. All Platform* primitives are no-ops / not-ready.
+        protected override void PlatformBindEvents() { }
+        protected override void PlatformInitialize() { }
+        protected override void PlatformShowBanner() { }
+        protected override void PlatformHideBanner() { }
+        protected override bool PlatformIsInterstitialReady() => false;
+        protected override void PlatformLoadInterstitial() { }
+        protected override void PlatformShowInterstitial() { }
+        protected override bool PlatformIsRewardedReady() => false;
+        protected override void PlatformLoadRewarded() { }
+        protected override void PlatformShowRewarded() { }
 #endif
     }
 }

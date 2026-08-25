@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using PlayerPrefs = RedefineYG.PlayerPrefs;
 
 namespace Treasures.IAP
 {

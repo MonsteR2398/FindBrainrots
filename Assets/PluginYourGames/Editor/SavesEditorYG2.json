@@ -1,0 +1,31 @@
+{
+    "stringKeys": [
+        "OfferStart_starter_pack",
+        "CollectedPickups"
+    ],
+    "stringValues": [
+        "639232408083686965",
+        "8f4d25e8-af83-493a-881b-37dfa6ab0f03,8d33bfd2-4cc5-45ce-9170-eab86084e474,ad4e7e57-c225-4cbf-ba84-3bbcba81a707,d681e081-3d63-4321-9351-a3657ec8789a,bdf68711-4e6d-4701-be9e-d8e41b568eac,2e672b75-5295-409c-955c-796f157f471c"
+    ],
+    "floatKeys": [],
+    "floatValues": [],
+    "intKeys": [
+        "NoAdsPurchased",
+        "OfferPurchased_starter_pack",
+        "TotalInterstitialsViewed"
+    ],
+    "intValues": [
+        1,
+        1,
+        8
+    ],
+    "intExample": 5,
+    "strExample": "Hello!",
+    "boolExample": [
+        false,
+        false,
+        false,
+        false
+    ],
+    "idSave": 21
+}

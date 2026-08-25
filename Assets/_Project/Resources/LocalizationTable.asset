@@ -1473,3 +1473,210 @@ MonoBehaviour:
     - PUSH IT!
     - PUSH IT!
     - PUSH IT!
+  - key: Jump
+    values:
+    - Jump
+    - "\u041F\u0440\u044B\u0436\u043E\u043A"
+    - Salto
+    - Salto
+    - Saut
+    - Sprung
+    - Salto
+  - key: Speed
+    values:
+    - Speed
+    - "\u0421\u043A\u043E\u0440\u043E\u0441\u0442\u044C"
+    - Velocidad
+    - Velocidade
+    - Vitesse
+    - Geschwindigkeit
+    - "Velocit\xE0"
+  - key: Vision
+    values:
+    - Vision
+    - "\u041E\u0431\u0437\u043E\u0440"
+    - "Visi\xF3n"
+    - "Vis\xE3o"
+    - Vision
+    - Sicht
+    - Visione
+  - key: ALL BOOSTERS
+    values:
+    - ALL BOOSTERS
+    - "\u0412\u0421\u0415 \u0411\u0423\u0421\u0422\u0415\u0420\u042B"
+    - TODOS LOS POTENCIADORES
+    - TODOS OS POTENCIALIZADORES
+    - TOUS LES BOOSTERS
+    - ALLE BOOSTER
+    - TUTTI I BOOSTER
+  - key: LUXURY PACK
+    values:
+    - LUXURY PACK
+    - "\u041B\u042E\u041A\u0421\u041E\u0412\u042B\u0419 \u041D\u0410\u0411\u041E\u0420"
+    - PACK DE LUJO
+    - PACOTE DE LUXO
+    - PACK DE LUXE
+    - LUXUSPAKET
+    - PACCHETTO DI LUSSO
+  - key: Remove ADs
+    values:
+    - Remove Ads
+    - "\u0423\u0431\u0440\u0430\u0442\u044C \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+    - Quitar anuncios
+    - "Remover an\xFAncios"
+    - Supprimer les pubs
+    - Werbung entfernen
+    - Rimuovi annunci
+  - key: Starter pack
+    values:
+    - Starter pack
+    - "\u0421\u0442\u0430\u0440\u0442\u043E\u0432\u044B\u0439 \u043D\u0430\u0431\u043E\u0440"
+    - Pack inicial
+    - Pacote inicial
+    - "Pack de d\xE9marrage"
+    - Starterpaket
+    - Pacchetto iniziale
+  - key: Small diamonds
+    values:
+    - Small diamonds
+    - "\u041C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0435 \u0430\u043B\u043C\u0430\u0437\u044B"
+    - "Diamantes peque\xF1os"
+    - Pequenos diamantes
+    - Petits diamants
+    - Kleine Diamanten
+    - Piccoli diamanti
+  - key: More diamonds
+    values:
+    - More diamonds
+    - "\u0411\u043E\u043B\u044C\u0448\u0435 \u0430\u043B\u043C\u0430\u0437\u043E\u0432"
+    - "M\xE1s diamantes"
+    - Mais diamantes
+    - Plus de diamants
+    - Mehr Diamanten
+    - "Pi\xF9 diamanti"
+  - key: Large diamonds
+    values:
+    - Large diamonds
+    - "\u0411\u043E\u043B\u044C\u0448\u0438\u0435 \u0430\u043B\u043C\u0430\u0437\u044B"
+    - Diamantes grandes
+    - Grandes diamantes
+    - Grands diamants
+    - "Gro\xDFe Diamanten"
+    - Grandi diamanti
+  - key: Extra diamonds
+    values:
+    - Extra diamonds
+    - "\u042D\u043A\u0441\u0442\u0440\u0430 \u0430\u043B\u043C\u0430\u0437\u044B"
+    - Diamantes extra
+    - Diamantes extras
+    - "Diamants suppl\xE9mentaires"
+    - Extra-Diamanten
+    - Diamanti extra
+  - key: Small money
+    values:
+    - Small money
+    - "\u041D\u0435\u043C\u043D\u043E\u0433\u043E \u0434\u0435\u043D\u0435\u0433"
+    - "Dinero peque\xF1o"
+    - Dinheiro pequeno
+    - Petit argent
+    - Kleines Geld
+    - Po' di soldi
+  - key: More money
+    values:
+    - More money
+    - "\u0411\u043E\u043B\u044C\u0448\u0435 \u0434\u0435\u043D\u0435\u0433"
+    - "M\xE1s dinero"
+    - Mais dinheiro
+    - Plus d'argent
+    - Mehr Geld
+    - "Pi\xF9 soldi"
+  - key: Large money
+    values:
+    - Large money
+    - "\u041C\u043D\u043E\u0433\u043E \u0434\u0435\u043D\u0435\u0433"
+    - Mucho dinero
+    - Muito dinheiro
+    - Gros argent
+    - Viel Geld
+    - Tanti soldi
+  - key: Extra money
+    values:
+    - Extra money
+    - "\u042D\u043A\u0441\u0442\u0440\u0430 \u0434\u0435\u043D\u044C\u0433\u0438"
+    - Dinero extra
+    - Dinheiro extra
+    - "Argent suppl\xE9mentaire"
+    - Extra-Geld
+    - Soldi extra
+  - key: Money
+    values:
+    - Money
+    - "\u0414\u0435\u043D\u044C\u0433\u0438"
+    - Dinero
+    - Dinheiro
+    - Argent
+    - Geld
+    - Soldi
+  - key: Diamonds
+    values:
+    - Diamonds
+    - "\u0410\u043B\u043C\u0430\u0437\u044B"
+    - Diamantes
+    - Diamantes
+    - Diamants
+    - Diamanten
+    - Diamanti
+  - key: Boosters
+    values:
+    - Boosters
+    - "\u0411\u0443\u0441\u0442\u0435\u0440\u044B"
+    - Boosteres
+    - Boosteres
+    - Boosteres
+    - Boosteres
+    - Boosteres
+  - key: ADs
+    values:
+    - ADs
+    - "\u0420\u0435\u043A\u043B\u0430\u043C\u0430"
+    - ADs
+    - ADs
+    - ADs
+    - ADs
+    - ADs
+  - key: Offers
+    values:
+    - Offers
+    - "\u041F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F"
+    - Offers
+    - Offers
+    - Offers
+    - Offers
+    - Offers
+  - key: AD Diamonds
+    values:
+    - AD Diamonds
+    - "\u0410\u043B\u043C\u0430\u0437\u044B \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+    - Diamantes por publicidad
+    - Diamantes para publicidade
+    - "Diamants pour la publicit\xE9"
+    - "Diamanten f\xFCr Werbung"
+    - "Diamanti per la pubblicit\xE0"
+  - key: AD Money
+    values:
+    - AD Money
+    - "\u0414\u0435\u043D\u044C\u0433\u0438 \u0437\u0430 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
+    - Dinero por publicidad
+    - Dinheiro para publicidade
+    - "Argent pour la publicit\xE9"
+    - "Geld f\xFCr Werbung"
+    - "Soldi per la pubblicit\xE0"
+  - key: ads.countdown
+    values:
+    - Ad in {0}..
+    - "Реклама через {0}.."
+    - "Anuncio en {0}.."
+    - "Anúncio em {0}.."
+    - "Publicité dans {0}.."
+    - "Werbung in {0}.."
+    - "Pubblicità tra {0}.."

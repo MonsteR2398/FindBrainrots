@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
+using PlayerPrefs = RedefineYG.PlayerPrefs;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour

@@ -1,5 +1,8 @@
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
+using YG;
+using PlayerPrefs = RedefineYG.PlayerPrefs;
 
 namespace Treasures.Services
 {
@@ -86,10 +89,19 @@ namespace Treasures.Services
             _sfxSource.loop = false;
             _sfxSource.outputAudioMixerGroup = _sfxGroup;
 
-            // Load persisted volumes (default 1.0 = full).
-            _masterVolume = PlayerPrefs.GetFloat(MasterKey, 1f);
-            _musicVolume = PlayerPrefs.GetFloat(MusicKey, 1f);
-            _sfxVolume = PlayerPrefs.GetFloat(SfxKey, 1f);
+            // Load persisted volumes (default 1.0 = full). The YG2 platform object may not
+            // exist yet at this point (BeforeSceneLoad init order) - degrade gracefully;
+            // ApplySavedVolumes re-applies real values once the SDK data has loaded.
+            try
+            {
+                _masterVolume = PlayerPrefs.GetFloat(MasterKey, 1f);
+                _musicVolume = PlayerPrefs.GetFloat(MusicKey, 1f);
+                _sfxVolume = PlayerPrefs.GetFloat(SfxKey, 1f);
+            }
+            catch (Exception e)
+            {
+                Debug.LogWarning($"[AudioManager] Saved volumes not readable yet, using defaults: {e.Message}");
+            }
 
             ApplyToMixer(MasterParam, _masterVolume);
             ApplyToMixer(MusicParam, _musicVolume);
@@ -97,6 +109,28 @@ namespace Treasures.Services
 
             // Register with the global service locator.
             AppServices.Audio = this;
+
+            // Cloud/local saves finish loading asynchronously and replace anything written
+            // before that point - re-apply persisted volumes once the SDK data arrives.
+            YG2.onGetSDKData += ApplySavedVolumes;
+        }
+
+        private void ApplySavedVolumes()
+        {
+            try
+            {
+                _masterVolume = Mathf.Clamp01(PlayerPrefs.GetFloat(MasterKey, _masterVolume));
+                _musicVolume = Mathf.Clamp01(PlayerPrefs.GetFloat(MusicKey, _musicVolume));
+                _sfxVolume = Mathf.Clamp01(PlayerPrefs.GetFloat(SfxKey, _sfxVolume));
+            }
+            catch
+            {
+                return;
+            }
+
+            ApplyToMixer(MasterParam, _masterVolume);
+            ApplyToMixer(MusicParam, _musicVolume);
+            ApplyToMixer(SfxParam, _sfxVolume);
         }
 
         public void PlayMusic(AudioClip clip, bool loop = true)

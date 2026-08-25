@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
+using PlayerPrefs = RedefineYG.PlayerPrefs;
 
 namespace Treasures.Localization
 {
@@ -94,6 +96,30 @@ namespace Treasures.Localization
             }
 
             _languageIndex = ResolveInitialLanguage();
+
+            // With YG2 Storage, cloud/local saves finish loading asynchronously and REPLACE
+            // everything that was written before that point. Once the SDK data arrives,
+            // re-apply the persisted language choice so it survives the save-load swap.
+            YG2.onGetSDKData += OnSdkDataLoaded;
+        }
+
+        private static void OnSdkDataLoaded()
+        {
+            string saved;
+            try
+            {
+                saved = PlayerPrefs.GetString(PrefsKey, string.Empty);
+            }
+            catch
+            {
+                return;
+            }
+
+            if (_table == null || string.IsNullOrEmpty(saved)) return;
+
+            int idx = Array.IndexOf(_table.languageCodes, saved);
+            if (idx >= 0 && idx != _languageIndex)
+                CurrentLanguageIndex = idx; // Fires LanguageChanged so all UI refreshes.
         }
 
         /// <summary>
@@ -102,7 +128,18 @@ namespace Treasures.Localization
         /// </summary>
         private static int ResolveInitialLanguage()
         {
-            string saved = PlayerPrefs.GetString(PrefsKey, string.Empty);
+            // PlayerPrefs (RedefineYG) touches the YG2 platform object which may not exist yet
+            // if this static initializer runs before YG2.Initialize - degrade gracefully.
+            string saved = string.Empty;
+            try
+            {
+                saved = PlayerPrefs.GetString(PrefsKey, string.Empty);
+            }
+            catch
+            {
+                // Platform not ready; OnSdkDataLoaded will re-apply the choice after init.
+            }
+
             if (!string.IsNullOrEmpty(saved))
             {
                 int idx = Array.IndexOf(_table.languageCodes, saved);

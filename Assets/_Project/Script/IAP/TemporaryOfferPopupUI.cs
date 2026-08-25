@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using L10n = Treasures.Localization.Localization;
 
 namespace Treasures.IAP
 {
@@ -86,6 +87,25 @@ namespace Treasures.IAP
             }
         }
 
+        private void OnEnable()
+        {
+            // Live refresh when the player switches language while the popup is visible.
+            L10n.LanguageChanged += HandleLanguageChanged;
+        }
+
+        private void OnDisable()
+        {
+            L10n.LanguageChanged -= HandleLanguageChanged;
+        }
+
+        private void HandleLanguageChanged()
+        {
+            if (_currentOffer != null)
+            {
+                RefreshLocalizedTexts();
+            }
+        }
+
         public void Show(OfferSO offer, TemporaryOfferController controller)
         {
             _currentOffer = offer;
@@ -93,23 +113,37 @@ namespace Treasures.IAP
 
             if (offer == null) return;
 
-            if (titleText != null) titleText.text = offer.Title;
-            
+            RefreshLocalizedTexts();
+
+            if (popupPanel != null)
+            {
+                popupPanel.SetActive(true);
+            }
+        }
+
+        /// <summary>
+        /// Sets all offer-dependent texts. The offer title doubles as a localization key:
+        /// if an entry with this key exists in LocalizationTable it is translated,
+        /// otherwise the raw title is shown as-is.
+        /// </summary>
+        private void RefreshLocalizedTexts()
+        {
+            if (_currentOffer == null) return;
+
+            string localizedTitle = L10n.Get(_currentOffer.Title);
+            Debug.Log($"[Shop][Diag] Popup offer '{_currentOffer.name}' title='{_currentOffer.Title}' -> localized='{localizedTitle}'");
+            if (titleText != null) titleText.text = localizedTitle;
+
             if (priceText != null)
             {
                 if (IAPManager.Instance != null && IAPManager.Instance.IsInitialized())
                 {
-                    priceText.text = IAPManager.Instance.GetLocalizedPrice(offer.ProductID);
+                    priceText.text = IAPManager.Instance.GetLocalizedPrice(_currentOffer.ProductID);
                 }
                 else
                 {
                     priceText.text = "N/A";
                 }
-            }
-
-            if (popupPanel != null)
-            {
-                popupPanel.SetActive(true);
             }
         }
 

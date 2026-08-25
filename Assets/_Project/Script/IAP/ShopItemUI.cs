@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using ModularTreasures;
+using L10n = Treasures.Localization.Localization;
 
 namespace Treasures.IAP
 {
@@ -30,6 +31,17 @@ namespace Treasures.IAP
             }
         }
 
+        private void OnEnable()
+        {
+            // Live refresh when the player switches language while the shop is visible.
+            L10n.LanguageChanged += RefreshUI;
+        }
+
+        private void OnDisable()
+        {
+            L10n.LanguageChanged -= RefreshUI;
+        }
+
         private void OnDestroy()
         {
             if (buyButton != null)
@@ -48,7 +60,11 @@ namespace Treasures.IAP
         {
             if (offer == null) return;
 
-            if (titleText != null) titleText.text = offer.Title;
+            // The offer title doubles as a localization key: if an entry with this key exists
+            // in LocalizationTable it is translated, otherwise the raw title is shown as-is.
+            string localizedTitle = L10n.Get(offer.Title);
+            Debug.Log($"[Shop][Diag] Offer '{offer.name}' title='{offer.Title}' -> localized='{localizedTitle}'");
+            if (titleText != null) titleText.text = localizedTitle;
             int reward = 0;
             if(offer.CurrencyRewards.Count > 0)
                 reward = offer.CurrencyRewards[0].Value;
