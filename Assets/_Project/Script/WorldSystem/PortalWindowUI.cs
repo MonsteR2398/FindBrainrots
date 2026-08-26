@@ -72,11 +72,9 @@ namespace Treasures.WorldSystem
             if (root != null) root.SetActive(false);
             if (_player != null) _player.enabled = true;
 
-            if (manageCursor)
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-            }
+            // The cursor stays visible and unlocked everywhere in this game.
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 
         private bool IsWorldPurchased(GameModeDefinition mode)

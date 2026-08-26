@@ -105,6 +105,7 @@ namespace Treasures.Localization
 
         private static void OnSdkDataLoaded()
         {
+            // 1) Explicit player choice (persisted) always wins.
             string saved;
             try
             {
@@ -115,11 +116,51 @@ namespace Treasures.Localization
                 return;
             }
 
-            if (_table == null || string.IsNullOrEmpty(saved)) return;
+            if (!string.IsNullOrEmpty(saved))
+            {
+                if (_table == null) return;
 
-            int idx = Array.IndexOf(_table.languageCodes, saved);
-            if (idx >= 0 && idx != _languageIndex)
-                CurrentLanguageIndex = idx; // Fires LanguageChanged so all UI refreshes.
+                int savedIdx = Array.IndexOf(_table.languageCodes, saved);
+                if (savedIdx >= 0 && savedIdx != _languageIndex)
+                    CurrentLanguageIndex = savedIdx; // Fires LanguageChanged so all UI refreshes.
+                return;
+            }
+
+            // 2) No saved choice yet -> ask the platform (Yandex Games) for the player's language,
+            //    falling back to the browser/OS language.
+            int suggested = GetSuggestedLanguageIndex();
+            if (suggested >= 0 && suggested != _languageIndex && _table != null)
+                CurrentLanguageIndex = suggested; // Also persists the choice for next sessions.
+        }
+
+        /// <summary>
+        /// Suggested language index from the environment:
+        /// YG2 player language when the EnvirData module is installed, otherwise the OS/browser language.
+        /// Returns -1 when nothing supported was detected.
+        /// </summary>
+        private static int GetSuggestedLanguageIndex()
+        {
+#if EnvirData_yg
+            try
+            {
+                string ygCode = YG2.envirData.language;
+                if (!string.IsNullOrEmpty(ygCode))
+                {
+                    // CIS variants reported by Yandex map to the Russian table entry.
+                    if (ygCode == "be" || ygCode == "kk" || ygCode == "uk") ygCode = "ru";
+
+                    int ygIdx = Array.IndexOf(_table.languageCodes, ygCode.ToLowerInvariant());
+                    if (ygIdx >= 0) return ygIdx;
+                }
+            }
+            catch
+            {
+                // envirData not ready - fall through to OS language.
+            }
+#endif
+            string osCode = SystemLanguageToCode(Application.systemLanguage);
+            int osIdx = _table != null ? Array.IndexOf(_table.languageCodes, osCode) : -1;
+            return osIdx;
         }
 
         /// <summary>

@@ -47,7 +47,7 @@ Shader "Custom/AutoTilling"
 
             HLSLPROGRAM
 
-            #pragma target 4.5
+            #pragma target 3.0
 
             // Material keywords
             #pragma shader_feature_local _NORMALMAP
@@ -266,7 +266,7 @@ Shader "Custom/AutoTilling"
             Cull[_Cull]
 
             HLSLPROGRAM
-            #pragma target 4.5
+            #pragma target 3.0
 
             #pragma shader_feature_local _ALPHATEST_ON
             #pragma shader_feature_local _SURFACE_TYPE_TRANSPARENT
@@ -332,7 +332,7 @@ Shader "Custom/AutoTilling"
             Cull[_Cull]
 
             HLSLPROGRAM
-            #pragma target 4.5
+            #pragma target 3.0
 
             #pragma shader_feature_local _ALPHATEST_ON
             #pragma shader_feature_local _SURFACE_TYPE_TRANSPARENT

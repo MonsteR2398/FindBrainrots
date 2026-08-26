@@ -7,7 +7,6 @@ public class CameraLookController : MonoBehaviour
     [Header("Settings")]
     public float mouseSensitivity = 0.1f;
     public float touchSensitivity = 0.1f;
-    public bool lockCursorOnStart = true;
     public float minZoomDistance = 2f;
     public float maxZoomDistance = 10f;
     public float currentZoomDistance = 5f;
@@ -32,38 +31,31 @@ public class CameraLookController : MonoBehaviour
 
         lookAction = InputSystem.actions.FindAction("Look");
 
-        if (lockCursorOnStart && IsPointerOverUI() == false)
-        {
-            LockCursor();
-        }
+        // The cursor is always visible and never locked in this game.
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     private void Update()
     {
         if (orbitalFollow == null || lookAction == null) return;
 
-        if (IsAnyWindowOpen())
-        {
-            if (Cursor.lockState != CursorLockMode.None)
-            {
-                UnlockCursor();
-            }
-            return;
-        }
+        if (IsAnyWindowOpen()) return;
 
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        // Safety net: keep the cursor visible/unlocked no matter what
+        // (ad pause restore, other systems, browser focus quirks).
+        if (!Cursor.visible || Cursor.lockState != CursorLockMode.None)
         {
-            UnlockCursor();
-        }
-        
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame && !IsPointerOverUI())
-        {
-            LockCursor();
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
 
         // On mobile/touchscreen devices, touch camera rotation is handled exclusively by TouchLookZone.
         // Therefore, we ignore touch inputs in this controller to prevent double-input and joystick conflict.
         if (IsTouchInput()) return;
+
+        // Rotate with mouse delta whenever the pointer is not over UI.
+        if (IsPointerOverUI()) return;
 
         Vector2 delta = lookAction.ReadValue<Vector2>();
 
@@ -72,26 +64,11 @@ public class CameraLookController : MonoBehaviour
             float baseSensitivity = mouseSensitivity;
             float currentSensitivity = baseSensitivity * Treasures.Settings.GameSettings.SensitivityMultiplier;
             
-            if (Cursor.lockState == CursorLockMode.Locked)
-            {
-                orbitalFollow.HorizontalAxis.Value += delta.x * currentSensitivity;
-                orbitalFollow.VerticalAxis.Value -= delta.y * currentSensitivity;
-                
-                orbitalFollow.VerticalAxis.Value = Mathf.Clamp(orbitalFollow.VerticalAxis.Value, -20f, 70f);
-            }
+            orbitalFollow.HorizontalAxis.Value += delta.x * currentSensitivity;
+            orbitalFollow.VerticalAxis.Value -= delta.y * currentSensitivity;
+            
+            orbitalFollow.VerticalAxis.Value = Mathf.Clamp(orbitalFollow.VerticalAxis.Value, -20f, 70f);
         }
-    }
-
-    private void LockCursor()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-
-    private void UnlockCursor()
-    {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
     }
 
     private bool IsTouchInput()

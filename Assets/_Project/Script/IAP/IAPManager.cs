@@ -6,6 +6,7 @@ using UnityEngine.Purchasing.Security;
 using PlayerPrefs = RedefineYG.PlayerPrefs;
 using Treasures.CurrencySystem;
 using Treasures.Boosts;
+using Treasures.Services;
 using ModularSkinShop.Core;
 
 namespace Treasures.IAP
@@ -13,6 +14,15 @@ namespace Treasures.IAP
     public class IAPManager : MonoBehaviour, IStoreListener
     {
         public static IAPManager Instance { get; private set; }
+
+        /// <summary>PlayerPrefs key storing the "Remove Ads" purchase flag.</summary>
+        private const string NoAdsKey = "NoAdsPurchased";
+
+        /// <summary>
+        /// True when the player bought "Remove Ads" (interstitials and banner are suppressed).
+        /// Persisted through YG2 storage, so the value survives restarts and syncs to the cloud.
+        /// </summary>
+        public static bool IsAdsRemoved => PlayerPrefs.GetInt(NoAdsKey, 0) == 1;
 
         [Header("Catalog Reference")]
         [SerializeField] private OfferCatalogSO catalog;
@@ -201,9 +211,14 @@ namespace Treasures.IAP
             // 3. Remove Ads reward
             if (offer.RemoveAdsReward)
             {
-                PlayerPrefs.SetInt("NoAdsPurchased", 1);
+                PlayerPrefs.SetInt(NoAdsKey, 1);
                 PlayerPrefs.Save();
                 Debug.Log("IAPManager: Granted Remove Ads reward.");
+
+                // Reflect immediately in this session: hide the banner.
+                // Interstitials are gated by IAPManager.IsAdsRemoved in AdsCoordinator.
+                if (AppServices.Ads != null)
+                    AppServices.Ads.HideBanner();
             }
         }
 

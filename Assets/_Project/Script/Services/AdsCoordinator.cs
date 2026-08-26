@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using YG;
+using Treasures.IAP;
 using PlayerPrefs = RedefineYG.PlayerPrefs;
 using L10n = Treasures.Localization.Localization;
 
@@ -54,6 +55,15 @@ namespace Treasures.Services
 
         private void ApplyBannerSettings()
         {
+            // Respect "Remove Ads": the banner stays hidden regardless of Remote Config.
+            if (IAPManager.IsAdsRemoved)
+            {
+                Debug.Log("[AdsCoordinator] Ads removed by purchase - banner stays hidden.");
+                AppServices.Ads.HideBanner();
+                _isBannerShowing = false;
+                return;
+            }
+
             bool bannerEnabled = AppServices.Analytics.GetBool(BannerEnabledKey, true);
             if (bannerEnabled)
             {
@@ -109,6 +119,9 @@ namespace Treasures.Services
         /// </summary>
         private bool CanShowInterstitialNow()
         {
+            // "Remove Ads" purchased -> interstitials are never shown.
+            if (IAPManager.IsAdsRemoved) return false;
+
             var ads = AppServices.Ads;
             if (ads == null || !AppServices.AdsReady) return false;
             if (!ads.IsInterstitialReady()) return false;
@@ -145,7 +158,7 @@ namespace Treasures.Services
             _countdownRoot.SetActive(false);
 
             var ads = AppServices.Ads;
-            if (ads == null || !ads.IsInterstitialReady())
+            if (ads == null || !ads.IsInterstitialReady() || IAPManager.IsAdsRemoved)
             {
                 // Ad became unavailable during the countdown - never leave the game frozen.
                 Debug.LogWarning("[AdsCoordinator] Interstitial lost during countdown - resuming.");

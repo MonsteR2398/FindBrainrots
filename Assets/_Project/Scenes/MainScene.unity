@@ -8002,6 +8002,7 @@ GameObject:
   - component: {fileID: 452865529}
   - component: {fileID: 452865531}
   - component: {fileID: 452865530}
+  - component: {fileID: 452865532}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -8128,6 +8129,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452865528}
   m_CullTransparentMesh: 1
+--- !u!114 &452865532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452865528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8f17e12bfb6fc4592073349e294147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Treasures.Localization.LocalizedText
+  key: Money
 --- !u!1 &469918786
 GameObject:
   m_ObjectHideFlags: 0
@@ -8514,7 +8528,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 161.66669, y: -140}
+  m_AnchoredPosition: {x: 161.66667, y: -140}
   m_SizeDelta: {x: 280, y: 280}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &482647318
@@ -14753,6 +14767,7 @@ GameObject:
   - component: {fileID: 778782180}
   - component: {fileID: 778782182}
   - component: {fileID: 778782181}
+  - component: {fileID: 778782183}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -14879,6 +14894,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778782179}
   m_CullTransparentMesh: 1
+--- !u!114 &778782183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778782179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8f17e12bfb6fc4592073349e294147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Treasures.Localization.LocalizedText
+  key: ADs
 --- !u!1001 &788810733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27334,7 +27362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 161.66669, y: -140}
+  m_AnchoredPosition: {x: 161.66667, y: -140}
   m_SizeDelta: {x: 280, y: 280}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1555748598
@@ -28199,6 +28227,7 @@ GameObject:
   - component: {fileID: 1608567538}
   - component: {fileID: 1608567540}
   - component: {fileID: 1608567539}
+  - component: {fileID: 1608567541}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -28325,6 +28354,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608567537}
   m_CullTransparentMesh: 1
+--- !u!114 &1608567541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608567537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8f17e12bfb6fc4592073349e294147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Treasures.Localization.LocalizedText
+  key: Offers
 --- !u!1 &1614643321
 GameObject:
   m_ObjectHideFlags: 0
@@ -30858,6 +30900,7 @@ GameObject:
   - component: {fileID: 1748925972}
   - component: {fileID: 1748925974}
   - component: {fileID: 1748925973}
+  - component: {fileID: 1748925975}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -30984,6 +31027,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748925971}
   m_CullTransparentMesh: 1
+--- !u!114 &1748925975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748925971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8f17e12bfb6fc4592073349e294147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Treasures.Localization.LocalizedText
+  key: Diamonds
 --- !u!1 &1771273049
 GameObject:
   m_ObjectHideFlags: 0
@@ -34299,6 +34355,7 @@ GameObject:
   - component: {fileID: 1987059723}
   - component: {fileID: 1987059725}
   - component: {fileID: 1987059724}
+  - component: {fileID: 1987059726}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -34425,6 +34482,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987059722}
   m_CullTransparentMesh: 1
+--- !u!114 &1987059726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987059722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8f17e12bfb6fc4592073349e294147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Treasures.Localization.LocalizedText
+  key: Boosters
 --- !u!1 &1990548586
 GameObject:
   m_ObjectHideFlags: 0
@@ -35545,7 +35615,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraLookController
   mouseSensitivity: 0.1
   touchSensitivity: 0.1
-  lockCursorOnStart: 1
   minZoomDistance: 2
   maxZoomDistance: 10
   currentZoomDistance: 5
