@@ -46,27 +46,31 @@ namespace Treasures.WorldSystem
                 Debug.LogWarning("[SkinPurchasePoint] Missing references for price spawning!");
                 return;
             }
-
+        
             if (skinData.CurrencyPrice == null || skinData.CurrencyPrice.Length == 0)
             {
                 Debug.LogWarning("[SkinPurchasePoint] No currency prices defined in skin data!");
                 return;
             }
-
+        
             // Clear existing prices
             foreach (Transform child in pricesRoot.transform)
-            {
                 Destroy(child.gameObject);
-            }
-
-            // Spawn price for each currency
+        
             for (int i = 0; i < skinData.CurrencyPrice.Length; i++)
             {
                 var price = skinData.CurrencyPrice[i];
-                
                 GameObject priceObj = Instantiate(pricePrefab, pricesRoot.transform);
                 priceObj.SetActive(true);
-
+        
+                // ---- ВКЛЮЧАЕМ ВСЁ ----
+                foreach (Transform child in priceObj.GetComponentsInChildren<Transform>(true))
+                    if (child != priceObj.transform) child.gameObject.SetActive(true);
+        
+                foreach (Behaviour comp in priceObj.GetComponentsInChildren<Behaviour>(true))
+                    comp.enabled = true;
+                // ----------------------
+        
                 // Find Icon (Image) in children
                 Image iconImage = priceObj.transform.Find("Icon")?.GetComponent<Image>();
                 if (iconImage != null && CurrencyService.Instance != null && CurrencyService.Instance.Database != null)
@@ -75,10 +79,10 @@ namespace Treasures.WorldSystem
                     if (currencyDef != null && currencyDef.Icon != null)
                     {
                         iconImage.sprite = currencyDef.Icon;
-                        iconImage.enabled = true;
+                        iconImage.enabled = true; // теперь уже не обязательно, но оставьте на всякий случай
                     }
                 }
-
+        
                 // Find Text (TMP_Text) in children
                 TMP_Text priceText = priceObj.transform.Find("Text")?.GetComponent<TMP_Text>();
                 if (priceText != null)
@@ -88,7 +92,6 @@ namespace Treasures.WorldSystem
                 }
             }
         }
-
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Player"))

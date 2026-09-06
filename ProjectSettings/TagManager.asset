@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Barbell
   - BarbellHolder
+  - KeyboardKey
   layers:
   - Default
   - TransparentFX

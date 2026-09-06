@@ -43,7 +43,7 @@ public class DynamicJoystickHandler : MonoBehaviour, IPointerDownHandler, IDragH
             if (RectTransformUtility.ScreenPointToLocalPointInRectangle(parentRect, eventData.position, uiCamera, out Vector2 localPoint))
             {
                 joystickTransform.anchoredPosition = localPoint;
-                Debug.Log($"Joystick moved to local: {localPoint} (Screen: {eventData.position}, Camera: {(uiCamera != null ? uiCamera.name : "null")})");
+               // Debug.Log($"Joystick moved to local: {localPoint} (Screen: {eventData.position}, Camera: {(uiCamera != null ? uiCamera.name : "null")})");
             }
             else
             {

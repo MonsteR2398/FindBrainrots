@@ -23426,6 +23426,7 @@ GameObject:
   - component: {fileID: 1350259630}
   - component: {fileID: 1350259631}
   - component: {fileID: 1350259632}
+  - component: {fileID: 1350259633}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -23601,6 +23602,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundPlayer
   _defaultAudioClip: {fileID: 8300000, guid: 1feb1eb0705cd16448a080737482ff0c, type: 3}
+--- !u!114 &1350259633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350259622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b52bb3f76710f45a6b6116723d24e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyboardInteractionManager
+  keyPressDepth: 0.03
+  pressDownSpeed: 10
+  pressUpSpeed: 8
+  releaseDelayAfterFullPress: 0.01
+  keySounds:
+  - {fileID: 8300000, guid: 44e561dbae4f715448384b7c5a66b0a2, type: 3}
+  - {fileID: 8300000, guid: 65e4fea9ab36fa84586a21e013a8f4ef, type: 3}
+  - {fileID: 8300000, guid: a3f5e0cc13451844f9e9e4ab22eea476, type: 3}
+  - {fileID: 8300000, guid: 5e7a0839f3e54df4596046987bb6ffb8, type: 3}
+  - {fileID: 8300000, guid: 03a2f98985d0824408beee8e0f88ef69, type: 3}
+  - {fileID: 8300000, guid: 47e0ae0b4e6d5c743b7675fb729add83, type: 3}
+  - {fileID: 8300000, guid: c84e25eaf266884469861dbb1ba7cf12, type: 3}
+  - {fileID: 8300000, guid: 30b74a1086d097c43b650b03a52fa4fc, type: 3}
+  - {fileID: 8300000, guid: 77bb6eb92ed5e584caa48854d95b6326, type: 3}
+  audioSource: {fileID: 0}
+  soundCooldown: 0.1
+  autoRegisterNewKeys: 1
+  maxRegisteredKeys: 100
 --- !u!1 &1351929881
 GameObject:
   m_ObjectHideFlags: 0
