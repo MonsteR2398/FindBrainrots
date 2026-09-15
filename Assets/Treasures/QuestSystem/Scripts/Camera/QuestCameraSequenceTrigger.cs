@@ -1,5 +1,7 @@
-using UnityEngine;
 using System.Collections;
+using Treasures.Services;
+using UnityEngine;
+using PlayerPrefs = RedefineYG.PlayerPrefs;
 
 namespace ModularTreasures.Quests
 {
@@ -25,6 +27,16 @@ namespace ModularTreasures.Quests
         private IEnumerator Start()
         {
             yield return null;
+
+            // The "claimed"/"played" flags live in the cloud save, which is applied asynchronously.
+            // Give the YG2 Storage module a moment so the sequence is not replayed (or skipped)
+            // because of data that has not been loaded yet.
+            float cloudDataTimeout = 10f;
+            while (!CloudSaves.IsReady && cloudDataTimeout > 0f)
+            {
+                cloudDataTimeout -= Time.unscaledDeltaTime;
+                yield return null;
+            }
 
             string claimedKey = questIdToCheck.StartsWith("Quest_") ? $"{questIdToCheck}_Claimed" : $"Quest_{questIdToCheck}_Claimed";
             int isClaimed = PlayerPrefs.GetInt(claimedKey, 0);
@@ -75,7 +87,7 @@ namespace ModularTreasures.Quests
             }, waitForManualRelease);
 
             PlayerPrefs.SetInt(PlaySaveKey, 1);
-            PlayerPrefs.Save();
+            CloudSaves.Save();
         }
     }
 }

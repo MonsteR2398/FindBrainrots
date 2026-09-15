@@ -3,6 +3,8 @@ using TMPro;
 using ModularCollection.Core;
 using ModularCollection.Data;
 using Treasures.Localization;
+using Treasures.Services;
+using PlayerPrefs = RedefineYG.PlayerPrefs;
 
 namespace ModularTreasures.Quests
 {
@@ -25,7 +27,19 @@ namespace ModularTreasures.Quests
             Localization.LanguageChanged += UpdateDisplay;
             UpdateDisplay();
 
-            // Load saved disabled state
+            // Load saved disabled state. It lives in the cloud save, which is applied
+            // asynchronously - so read it now and again once the YG2 Storage data has arrived.
+            CloudSaves.Subscribe(ApplySavedState);
+            ApplySavedState();
+        }
+
+        private void OnDestroy()
+        {
+            CloudSaves.Unsubscribe(ApplySavedState);
+        }
+
+        private void ApplySavedState()
+        {
             if (PlayerPrefs.GetInt(GetSaveKey(), 0) == 1)
             {
                 DisableHUD(false); // disable without triggering a save again
@@ -88,7 +102,7 @@ namespace ModularTreasures.Quests
             if (shouldSave)
             {
                 PlayerPrefs.SetInt(GetSaveKey(), 1);
-                PlayerPrefs.Save();
+                CloudSaves.Save();
             }
 
             if (CameraSequenceManager.Instance != null)

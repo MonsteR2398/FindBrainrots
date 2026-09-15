@@ -1,16 +1,20 @@
 {
     "stringKeys": [
         "OfferStart_starter_pack",
-        "CollectedPickups"
+        "Shop_Unlocked",
+        "Shop_Active",
+        "currency.wallet"
     ],
     "stringValues": [
-        "639242785917379944",
-        "8d33bfd2-4cc5-45ce-9170-eab86084e474,d4d92a9a-8e6f-4af7-97cc-f1d17dc1269d,ad4e7e57-c225-4cbf-ba84-3bbcba81a707,bdf68711-4e6d-4701-be9e-d8e41b568eac,2e672b75-5295-409c-955c-796f157f471c,a160f2a5-f78f-4c97-9fe8-256a32a900c3"
+        "639250605736472791",
+        "skin_base,skin_boy3,skin_boy_squidgamer",
+        "skin_boy_squidgamer",
+        "{\"balances\":[{\"type\":0,\"amount\":37000}]}"
     ],
     "floatKeys": [],
     "floatValues": [],
     "intKeys": [
-        "TotalInterstitialsViewed"
+        "WorldPurchased_arena"
     ],
     "intValues": [
         1
@@ -23,5 +27,5 @@
         false,
         false
     ],
-    "idSave": 8
+    "idSave": 10
 }

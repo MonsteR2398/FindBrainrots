@@ -184,7 +184,7 @@ namespace Treasures.Services
             // Track total interstitial views.
             int totalViews = PlayerPrefs.GetInt("TotalInterstitialsViewed", 0) + 1;
             PlayerPrefs.SetInt("TotalInterstitialsViewed", totalViews);
-            PlayerPrefs.Save();
+            CloudSaves.Save();
 
             if (totalViews == 15)
             {

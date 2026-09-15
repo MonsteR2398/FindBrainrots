@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Treasures.Services;
 using UnityEngine;
 using PlayerPrefs = RedefineYG.PlayerPrefs;
 using Treasures.Localization;
@@ -8,6 +9,7 @@ namespace Treasures.WorldSystem
     /// <summary>
     /// Singleton window (in the core Canvas) that lists every world from the catalog
     /// as a button. Selecting one tells the GameModeManager to switch.
+    /// World purchases are stored in the cloud save (PluginYourGames "Storage" module).
     /// </summary>
     public class PortalWindowUI : MonoBehaviour, IUIOpenable
     {
@@ -96,7 +98,7 @@ namespace Treasures.WorldSystem
                 {
                     string key = "WorldPurchased_" + mode.Id;
                     PlayerPrefs.SetInt(key, 1);
-                    PlayerPrefs.Save();
+                    CloudSaves.Save();
 
                     if (lockGo != null)
                     {
@@ -231,11 +233,16 @@ namespace Treasures.WorldSystem
         private void OnEnable()
         {
             Treasures.Localization.Localization.LanguageChanged += Rebuild;
+
+            // World purchases live in the cloud save, which is applied asynchronously - refresh the
+            // lock buttons once the YG2 Storage data has arrived.
+            CloudSaves.Subscribe(Rebuild);
         }
 
         private void OnDisable()
         {
             Treasures.Localization.Localization.LanguageChanged -= Rebuild;
+            CloudSaves.Unsubscribe(Rebuild);
         }
 
         private void Rebuild()

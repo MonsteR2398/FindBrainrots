@@ -1,7 +1,13 @@
+using Treasures.Services;
 using UnityEngine;
+using PlayerPrefs = RedefineYG.PlayerPrefs;
 
 namespace ModularTreasures.Achievements
 {
+    /// <summary>
+    /// Achievement persistence backed by the PluginYourGames "Storage" module: all values are
+    /// written into <c>YG2.saves</c> (cloud save) through the plugin's PlayerPrefs override.
+    /// </summary>
     public class PlayerPrefsAchievementPersistence : IAchievementPersistence
     {
         private const string ProgressKey = "Achievement_Progress_";
@@ -11,7 +17,7 @@ namespace ModularTreasures.Achievements
         {
             PlayerPrefs.SetFloat(ProgressKey + achievementId, progress);
             PlayerPrefs.SetInt(UnlockedKey + achievementId, isUnlocked ? 1 : 0);
-            PlayerPrefs.Save();
+            CloudSaves.Save();
         }
 
         public bool LoadProgress(string achievementId, out float progress, out bool isUnlocked)

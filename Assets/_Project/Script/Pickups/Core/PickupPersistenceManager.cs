@@ -1,9 +1,14 @@
 using System.Collections.Generic;
+using Treasures.Services;
 using UnityEngine;
 using PlayerPrefs = RedefineYG.PlayerPrefs;
 
 namespace Treasures.Pickups
 {
+    /// <summary>
+    /// Tracks which world pickups have already been collected. The ids are stored through the
+    /// PluginYourGames "Storage" module, i.e. in the cloud save.
+    /// </summary>
     public class PickupPersistenceManager : MonoBehaviour
     {
         private static PickupPersistenceManager _instance;
@@ -34,6 +39,15 @@ namespace Treasures.Pickups
             _instance = this;
             DontDestroyOnLoad(gameObject);
             Load();
+
+            // Cloud saves are applied asynchronously - re-read the collected ids once the YG2
+            // Storage data has arrived.
+            CloudSaves.Subscribe(Load);
+        }
+
+        private void OnDestroy()
+        {
+            CloudSaves.Unsubscribe(Load);
         }
 
         public bool IsCollected(string id)
@@ -55,7 +69,7 @@ namespace Treasures.Pickups
         {
             string data = string.Join(",", _collectedIds);
             PlayerPrefs.SetString(SaveKey, data);
-            PlayerPrefs.Save();
+            CloudSaves.Save();
         }
 
         private void Load()
@@ -73,7 +87,7 @@ namespace Treasures.Pickups
         {
             _collectedIds.Clear();
             PlayerPrefs.DeleteKey(SaveKey);
-            PlayerPrefs.Save();
+            CloudSaves.Save();
             Debug.Log("Pickup Persistence Cleared");
         }
     }

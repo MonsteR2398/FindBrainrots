@@ -1681,3 +1681,21 @@ MonoBehaviour:
     - "Publicit\xE9 dans {0}.."
     - Werbung in {0}..
     - "Pubblicit\xE0 tra {0}.."
+  - key: Active
+    values:
+    - Active
+    - "\u0410\u043A\u0442\u0438\u0432\u043D\u044B\u0439"
+    - Activo
+    - Ativo
+    - Actif
+    - Aktiv
+    - Attivo
+  - key: Select
+    values:
+    - Select
+    - "\u0412\u044B\u0431\u0440\u0430\u0442\u044C"
+    - Seleccione
+    - Seleccionar
+    - "S\xE9lectionner"
+    - "W\xE4hlen"
+    - Selezionare

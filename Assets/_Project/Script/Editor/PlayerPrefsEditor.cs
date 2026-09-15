@@ -3,11 +3,26 @@ using UnityEditor;
 
 public class PlayerPrefsEditor : EditorWindow
 {
-    [MenuItem("Tools/Clear PlayerPrefs")]
-    public static void ClearPlayerPrefs()
+    /// <summary>
+    /// Wipes every save of the game: the legacy device-local PlayerPrefs (raw Unity ones plus the
+    /// plugin's local storage) and the YG2 cloud save handled by the "Storage" module
+    /// (<c>YG2.saves</c>, written to PluginYourGames/Editor/SavesEditorYG2.json in the editor).
+    /// </summary>
+    public static void ClearAllSaves()
     {
         PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();
+
+        // PluginYourGames "Storage": clear the save object and persist the reset state.
+        RedefineYG.PlayerPrefs.DeleteAll();
+        YG.YG2.SetDefaultSaves();
+        YG.Insides.YGInsides.SaveEditor();
+    }
+
+    [MenuItem("Tools/Clear PlayerPrefs")]
+    public static void ClearPlayerPrefs()
+    {
+        ClearAllSaves();
 
         Debug.Log("All PlayerPrefs have been cleared successfully!");
 
@@ -24,11 +39,10 @@ public class PlayerPrefsEditor : EditorWindow
             "Are you sure you want to clear all PlayerPrefs data? This action cannot be undone.",
             "Yes", "No"))
         {
-            PlayerPrefs.DeleteAll();
-            PlayerPrefs.Save();
-            Debug.Log("All PlayerPrefs have been cleared successfully!");
+            ClearAllSaves();
+            Debug.Log("All saves have been cleared successfully! (device PlayerPrefs + YG2 cloud save)");
             EditorUtility.DisplayDialog("Success",
-                "All PlayerPrefs data has been cleared.", "OK");
+                "All saves (device PlayerPrefs and the YG2 cloud save) have been cleared.", "OK");
         }
     }
 
@@ -57,11 +71,10 @@ public class AdvancedPlayerPrefsCleaner : EditorWindow
                 "This will delete EVERYTHING saved in PlayerPrefs. Are you sure?",
                 "Yes, clear everything", "Cancel"))
             {
-                PlayerPrefs.DeleteAll();
-                PlayerPrefs.Save();
-                Debug.Log("All PlayerPrefs cleared");
+                PlayerPrefsEditor.ClearAllSaves();
+                Debug.Log("All saves cleared (device PlayerPrefs + YG2 cloud save)");
                 EditorUtility.DisplayDialog("Success",
-                    "All PlayerPrefs have been cleared.", "OK");
+                    "All saves (device PlayerPrefs and the YG2 cloud save) have been cleared.", "OK");
             }
         }
 
@@ -77,9 +90,14 @@ public class AdvancedPlayerPrefsCleaner : EditorWindow
             {
                 PlayerPrefs.DeleteKey(specificKey);
                 PlayerPrefs.Save();
-                Debug.Log($"PlayerPrefs key '{specificKey}' has been cleared");
+
+                // Same key inside the YG2 cloud save (PluginYourGames "Storage" module).
+                RedefineYG.PlayerPrefs.DeleteKey(specificKey);
+                YG.Insides.YGInsides.SaveEditor();
+
+                Debug.Log($"Save key '{specificKey}' has been cleared (device PlayerPrefs + YG2 saves)");
                 EditorUtility.DisplayDialog("Success",
-                    $"Key '{specificKey}' has been cleared.", "OK");
+                    $"Key '{specificKey}' has been cleared (device PlayerPrefs + YG2 saves).", "OK");
             }
             else
             {

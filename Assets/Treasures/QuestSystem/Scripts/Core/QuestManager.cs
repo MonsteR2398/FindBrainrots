@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Treasures.Services;
 using UnityEngine;
+using PlayerPrefs = RedefineYG.PlayerPrefs;
 
 namespace ModularTreasures.Quests
 {
@@ -44,11 +46,26 @@ namespace ModularTreasures.Quests
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
                 LoadProgress();
+
+                // Cloud data is applied asynchronously - re-read the quest state once it arrives,
+                // otherwise the next save would push the pre-load defaults to the cloud.
+                CloudSaves.Subscribe(ReloadFromCloud);
             }
             else
             {
                 Destroy(gameObject);
             }
+        }
+
+        private void OnDestroy()
+        {
+            CloudSaves.Unsubscribe(ReloadFromCloud);
+        }
+
+        private void ReloadFromCloud()
+        {
+            LoadProgress();
+            StartQuest(CurrentQuest);
         }
 
         private void Start()
@@ -117,9 +134,9 @@ namespace ModularTreasures.Quests
             string questId = finishedQuest.Id;
             string claimKey = questId.StartsWith("Quest_") ? $"{questId}_Claimed" : $"Quest_{questId}_Claimed";
 
-            Debug.Log($"[QuestManager] ClaimReward: Saving '{claimKey}' = 1 to PlayerPrefs.");
+            Debug.Log($"[QuestManager] ClaimReward: Saving '{claimKey}' = 1 to cloud saves.");
             PlayerPrefs.SetInt(claimKey, 1);
-            PlayerPrefs.Save();
+            CloudSaves.Save();
 
             foreach (var reward in finishedQuest.Rewards)
             {
@@ -188,7 +205,7 @@ namespace ModularTreasures.Quests
             PlayerPrefs.SetString(SAVE_KEY_QUEUE, queueData);
             PlayerPrefs.SetFloat(SAVE_KEY_PROGRESS, _currentProgress);
             PlayerPrefs.SetInt(SAVE_KEY_STATUS, (int)_status);
-            PlayerPrefs.Save();
+            CloudSaves.Save();
         }
 
         private void LoadProgress()

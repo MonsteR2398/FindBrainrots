@@ -110,9 +110,14 @@ namespace Treasures.Services
             // Register with the global service locator.
             AppServices.Audio = this;
 
-            // Cloud/local saves finish loading asynchronously and replace anything written
-            // before that point - re-apply persisted volumes once the SDK data arrives.
-            YG2.onGetSDKData += ApplySavedVolumes;
+            // Cloud saves finish loading asynchronously and replace anything written before that
+            // point - re-apply the persisted volumes once the YG2 Storage data has arrived.
+            CloudSaves.Subscribe(ApplySavedVolumes);
+        }
+
+        private void OnDestroy()
+        {
+            CloudSaves.Unsubscribe(ApplySavedVolumes);
         }
 
         private void ApplySavedVolumes()
@@ -175,7 +180,7 @@ namespace Treasures.Services
             field = Mathf.Clamp01(value);
             ApplyToMixer(param, field);
             PlayerPrefs.SetFloat(prefsKey, field);
-            PlayerPrefs.Save();
+            CloudSaves.Save();
         }
 
         private void ApplyToMixer(string param, float normalized)

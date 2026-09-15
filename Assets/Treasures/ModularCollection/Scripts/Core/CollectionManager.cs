@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Treasures.Services;
 using UnityEngine;
 
 namespace ModularCollection.Core
@@ -42,6 +43,13 @@ namespace ModularCollection.Core
                 yield return new WaitForSeconds(1f);
             }
 
+            // The cloud save is applied asynchronously - wait for it so the logged count is real
+            // (never fall back to the pre-load defaults).
+            while (!CloudSaves.IsReady)
+            {
+                yield return null;
+            }
+
             // Log current count at the start of the session
             Treasures.Services.AppServices.Analytics.LogEvent("collection_session_start_count", new Dictionary<string, object>
             {
@@ -51,8 +59,24 @@ namespace ModularCollection.Core
 
         private void Initialize()
         {
-            // Default to PlayerPrefs if nothing else is provided
+            // The project stores everything in the cloud save (YG2 Storage module) - this
+            // PlayerPrefs-based persistence is redirected to it by the plugin.
             persistence = new PlayerPrefsPersistence();
+            ReloadFromStorage();
+
+            // Cloud data arrives asynchronously - re-read it once it is applied, otherwise the next
+            // unlock would push the pre-load collection to the cloud.
+            CloudSaves.Subscribe(ReloadFromStorage);
+        }
+
+        private void OnDestroy()
+        {
+            CloudSaves.Unsubscribe(ReloadFromStorage);
+        }
+
+        private void ReloadFromStorage()
+        {
+            if (persistence == null) return;
             unlockedItemIds = persistence.LoadUnlockedItems();
             readItemIds = persistence.LoadReadItems();
         }
@@ -60,8 +84,7 @@ namespace ModularCollection.Core
         public void SetPersistence(ICollectionPersistence newPersistence)
         {
             persistence = newPersistence;
-            unlockedItemIds = persistence.LoadUnlockedItems();
-            readItemIds = persistence.LoadReadItems();
+            ReloadFromStorage();
         }
 
         public bool IsUnlocked(string itemId) => unlockedItemIds.Contains(itemId);

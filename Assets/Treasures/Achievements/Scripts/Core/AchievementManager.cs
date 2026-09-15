@@ -1,6 +1,7 @@
-using UnityEngine;
 using System;
 using System.Collections.Generic;
+using Treasures.Services;
+using UnityEngine;
 
 namespace ModularTreasures.Achievements
 {
@@ -40,6 +41,24 @@ namespace ModularTreasures.Achievements
         {
             _persistence = new PlayerPrefsAchievementPersistence();
             InitializeDefinitions();
+
+            // The cloud save is applied asynchronously - drop the cached values when it arrives so
+            // they are read again from the cloud, otherwise the next progress write would push the
+            // pre-load values back to the cloud.
+            CloudSaves.Subscribe(ClearCache);
+        }
+
+        private void OnDestroy()
+        {
+            CloudSaves.Unsubscribe(ClearCache);
+        }
+
+        /// <summary>Forces the next <see cref="GetProgress"/> / <see cref="IsUnlocked"/> call to read
+        /// the values from the (cloud) save again.</summary>
+        private void ClearCache()
+        {
+            _progress.Clear();
+            _unlockedUniqueIds.Clear();
         }
 
         private void InitializeDefinitions()

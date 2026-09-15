@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using ModularTreasures.Quests;
+using Treasures.Services;
 using UnityEngine;
+using PlayerPrefs = RedefineYG.PlayerPrefs;
 
 namespace Treasures.CurrencySystem
 {
@@ -19,9 +21,22 @@ namespace Treasures.CurrencySystem
         public List<CurrencyPair> balances = new List<CurrencyPair>();
     }
 
+    /// <summary>
+    /// Holds every currency balance of the player. The wallet is persisted through the
+    /// PluginYourGames "Storage" module: it is written into the cloud save (<c>YG2.saves</c>) via the
+    /// plugin's PlayerPrefs override instead of the device-local file used by earlier builds.
+    /// </summary>
     public class CurrencyService : MonoBehaviour
     {
         public static CurrencyService Instance { get; private set; }
+
+        /// <summary>Cloud save key that stores the serialized <see cref="WalletData"/>.</summary>
+        public const string WalletKey = "currency.wallet";
+
+        /// <summary>Device-local file name used before the cloud save migration.</summary>
+        private const string LegacyFileName = "wallet.json";
+
+        private static bool _legacyFileChecked;
 
         [SerializeField] private CurrencyDatabaseSO database;
         [SerializeField] private CurrencyFlyVFX vfxManager;
@@ -31,7 +46,6 @@ namespace Treasures.CurrencySystem
         public event Action<CurrencyType, long> OnCurrencyReceived; // type, addedAmount (for VFX)
 
         private Dictionary<CurrencyType, long> _balances = new Dictionary<CurrencyType, long>();
-        private string _savePath;
 
         private void Awake()
         {
@@ -44,8 +58,30 @@ namespace Treasures.CurrencySystem
 
             DontDestroyOnLoad(gameObject);
 
-            _savePath = Path.Combine(Application.persistentDataPath, "wallet.json");
             Load();
+
+            // The cloud save is applied asynchronously - re-read the wallet when it arrives,
+            // otherwise the next AddBalance/TrySpend would push the pre-load wallet to the cloud.
+            CloudSaves.Subscribe(OnCloudDataReady);
+        }
+
+        private void OnDestroy()
+        {
+            CloudSaves.Unsubscribe(OnCloudDataReady);
+        }
+
+        /// <summary>
+        /// Re-syncs the in-memory balances with the cloud save and notifies the UI (silently, so no
+        /// VFX are spawned for a reload).
+        /// </summary>
+        private void OnCloudDataReady()
+        {
+            Load();
+
+            foreach (var kvp in _balances)
+            {
+                OnBalanceChanged?.Invoke(kvp.Key, kvp.Value, true);
+            }
         }
 
         public long GetBalance(CurrencyType type)
@@ -95,21 +131,64 @@ namespace Treasures.CurrencySystem
             {
                 data.balances.Add(new CurrencyPair { type = kvp.Key, amount = kvp.Value });
             }
-            string json = JsonUtility.ToJson(data);
-            File.WriteAllText(_savePath, json);
+
+            // Stored through the YG2 Storage module (cloud save).
+            PlayerPrefs.SetString(WalletKey, JsonUtility.ToJson(data));
+            CloudSaves.Save();
         }
 
         private void Load()
         {
-            if (File.Exists(_savePath))
+            string json = PlayerPrefs.GetString(WalletKey, string.Empty);
+
+            if (string.IsNullOrEmpty(json))
+                json = ImportLegacyWallet();
+
+            _balances.Clear();
+
+            if (string.IsNullOrEmpty(json)) return;
+
+            try
             {
-                string json = File.ReadAllText(_savePath);
                 WalletData data = JsonUtility.FromJson<WalletData>(json);
-                _balances.Clear();
+                if (data?.balances == null) return;
+
                 foreach (var pair in data.balances)
                 {
                     _balances[pair.type] = pair.amount;
                 }
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"[CurrencyService] Failed to read the wallet from the cloud save: {e.Message}");
+            }
+        }
+
+        /// <summary>
+        /// One-time import of the device-local <c>wallet.json</c> written by builds that predate the
+        /// cloud save migration. The file is removed afterwards so that resetting the cloud save
+        /// cannot resurrect the old wallet.
+        /// </summary>
+        private static string ImportLegacyWallet()
+        {
+            if (_legacyFileChecked) return string.Empty;
+            _legacyFileChecked = true;
+
+            try
+            {
+                string path = Path.Combine(Application.persistentDataPath, LegacyFileName);
+                if (!File.Exists(path)) return string.Empty;
+
+                string json = File.ReadAllText(path);
+                File.Delete(path);
+
+                Debug.Log($"[CurrencyService] Migrated the local {LegacyFileName} into the YG2 cloud save.");
+                return json;
+            }
+            catch (Exception e)
+            {
+                Debug.LogWarning($"[CurrencyService] Could not migrate the local {LegacyFileName}: {e.Message}");
+                return string.Empty;
             }
         }
     }

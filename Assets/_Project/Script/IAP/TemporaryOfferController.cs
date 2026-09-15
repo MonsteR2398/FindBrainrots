@@ -1,4 +1,5 @@
 using System;
+using Treasures.Services;
 using UnityEngine;
 using PlayerPrefs = RedefineYG.PlayerPrefs;
 
@@ -76,7 +77,7 @@ namespace Treasures.IAP
             if (!PlayerPrefs.HasKey(StartTimeKey))
             {
                 PlayerPrefs.SetString(StartTimeKey, DateTime.UtcNow.Ticks.ToString());
-                PlayerPrefs.Save();
+                CloudSaves.Save();
             }
 
             if (IsOfferActive())
@@ -121,7 +122,7 @@ namespace Treasures.IAP
         {
             if (offer == null) return;
             PlayerPrefs.SetInt(PurchasedKey, 1);
-            PlayerPrefs.Save();
+            CloudSaves.Save();
         }
     }
 }

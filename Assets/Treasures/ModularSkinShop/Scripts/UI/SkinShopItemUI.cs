@@ -6,6 +6,7 @@ using ModularSkinShop.Core;
 using Treasures.CurrencySystem;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using Treasures.Localization;
 
 namespace ModularSkinShop.UI
 {
@@ -54,6 +55,8 @@ namespace ModularSkinShop.UI
             UpdateUI();
             SeletButton.onClick.RemoveAllListeners();
             SeletButton.onClick.AddListener(OnSelectClicked);
+
+
         }
 
         public void UpdateUI()
@@ -64,7 +67,10 @@ namespace ModularSkinShop.UI
                 foreach (var item in _buyButtons)
                     item.gameObject.SetActive(false);
 
-                InteractionText.text = "Active";
+                if (InteractionText.text != null && !string.IsNullOrEmpty("Active"))
+                {
+                    InteractionText.text = Localization.Get("Active");
+                }
                 InteractionButton.gameObject.SetActive(true);
                 InteractionButton.interactable = false;
                 if(InteractionButton.TryGetComponent(out Image image))
@@ -76,8 +82,10 @@ namespace ModularSkinShop.UI
                 foreach (var item in _buyButtons)
                     item.gameObject.SetActive(false);
                 
-
-                InteractionText.text = "Select";
+                if (InteractionText.text != null && !string.IsNullOrEmpty("Select"))
+                {
+                    InteractionText.text = Localization.Get("Select");
+                }
                 InteractionButton.gameObject.SetActive(true);
                 InteractionButton.interactable = true;
                 if(InteractionButton.TryGetComponent(out Image image))

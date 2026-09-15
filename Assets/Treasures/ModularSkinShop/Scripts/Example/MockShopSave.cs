@@ -1,9 +1,16 @@
-using UnityEngine;
-using ModularSkinShop.Interfaces;
 using System.Collections.Generic;
+using ModularSkinShop.Interfaces;
+using Treasures.Services;
+using UnityEngine;
+using PlayerPrefs = RedefineYG.PlayerPrefs;
 
 namespace ModularSkinShop.Example
 {
+    /// <summary>
+    /// Skin shop persistence backed by the PluginYourGames "Storage" module: the unlocked skins and
+    /// the active skin are stored in <c>YG2.saves</c> (cloud save) through the plugin's PlayerPrefs
+    /// override.
+    /// </summary>
     public class MockShopSave : MonoBehaviour, IShopPersistence
     {
         public string DefaultSkinId = "";
@@ -14,6 +21,21 @@ namespace ModularSkinShop.Example
 
         private void Awake()
         {
+            EnsureLoaded();
+
+            // Cloud data arrives asynchronously - re-read it so the next write cannot push the
+            // pre-load defaults back to the cloud.
+            CloudSaves.Subscribe(Reload);
+        }
+
+        private void OnDestroy()
+        {
+            CloudSaves.Unsubscribe(Reload);
+        }
+
+        private void Reload()
+        {
+            _isLoaded = false;
             EnsureLoaded();
         }
 
@@ -44,7 +66,7 @@ namespace ModularSkinShop.Example
             {
                 _unlockedSkins.Add(id);
                 PlayerPrefs.SetString("Shop_Unlocked", string.Join(",", _unlockedSkins));
-                PlayerPrefs.Save();
+                CloudSaves.Save();
             }
         }
 
@@ -59,7 +81,7 @@ namespace ModularSkinShop.Example
             EnsureLoaded();
             _activeSkinId = id;
             PlayerPrefs.SetString("Shop_Active", id);
-            PlayerPrefs.Save();
+            CloudSaves.Save();
             Debug.Log($"Skin set to: {id}");
         }
     }

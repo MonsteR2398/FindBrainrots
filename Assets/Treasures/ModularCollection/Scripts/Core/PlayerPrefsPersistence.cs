@@ -1,8 +1,15 @@
 using System.Collections.Generic;
+using Treasures.Services;
 using UnityEngine;
+using PlayerPrefs = RedefineYG.PlayerPrefs;
 
 namespace ModularCollection.Core
 {
+    /// <summary>
+    /// Collection persistence backed by the PluginYourGames "Storage" module: the unlocked / read
+    /// item ids are stored in <c>YG2.saves</c> (cloud save) through the plugin's PlayerPrefs
+    /// override.
+    /// </summary>
     public class PlayerPrefsPersistence : ICollectionPersistence
     {
         private const string UnlockedKey = "Collection_Unlocked_IDs";
@@ -12,7 +19,7 @@ namespace ModularCollection.Core
         public void SaveUnlockedItems(HashSet<string> unlockedIds)
         {
             PlayerPrefs.SetString(UnlockedKey, string.Join(Separator.ToString(), unlockedIds));
-            PlayerPrefs.Save();
+            CloudSaves.Save();
         }
 
         public HashSet<string> LoadUnlockedItems()
@@ -25,7 +32,7 @@ namespace ModularCollection.Core
         public void SaveReadItems(HashSet<string> readIds)
         {
             PlayerPrefs.SetString(ReadKey, string.Join(Separator.ToString(), readIds));
-            PlayerPrefs.Save();
+            CloudSaves.Save();
         }
 
         public HashSet<string> LoadReadItems()

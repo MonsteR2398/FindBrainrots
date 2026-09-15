@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
+using Treasures.Services;
 using PlayerPrefs = RedefineYG.PlayerPrefs;
 
 [RequireComponent(typeof(CharacterController))]
@@ -69,6 +70,15 @@ public class PlayerController : MonoBehaviour
 
         // Load saved additional attributes
         LoadAdditionalAttributes();
+
+        // Cloud saves are applied asynchronously - re-read the saved bonuses once the YG2 Storage
+        // data has arrived.
+        CloudSaves.Subscribe(LoadAdditionalAttributes);
+    }
+
+    private void OnDestroy()
+    {
+        CloudSaves.Unsubscribe(LoadAdditionalAttributes);
     }
 
     public void OnMove(InputValue value)
@@ -278,7 +288,7 @@ else
     {
         PlayerPrefs.SetFloat("PlayerAdditionalSpeed", additionalSpeed);
         PlayerPrefs.SetFloat("PlayerAdditionalJump", additionalJump);
-        PlayerPrefs.Save();
+        CloudSaves.Save();
     }
 
     private void LoadAdditionalAttributes()
