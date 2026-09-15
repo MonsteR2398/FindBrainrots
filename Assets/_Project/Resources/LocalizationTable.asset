@@ -78,11 +78,11 @@ MonoBehaviour:
     values:
     - Skins
     - "\u0421\u043A\u0438\u043D\u044B"
-    - Skins
-    - Skins
-    - Skins
-    - Skins
-    - Skin
+    - Ropa
+    - "Vestu\xE1rio"
+    - "V\xEAtement"
+    - Kleidung
+    - Abbigliamento
   - key: menu.collection
     values:
     - Collection
@@ -1674,9 +1674,10 @@ MonoBehaviour:
   - key: ads.countdown
     values:
     - Ad in {0}..
-    - "Реклама через {0}.."
-    - "Anuncio en {0}.."
-    - "Anúncio em {0}.."
-    - "Publicité dans {0}.."
-    - "Werbung in {0}.."
-    - "Pubblicità tra {0}.."
+    - "\u0420\u0435\u043A\u043B\u0430\u043C\u0430 \u0447\u0435\u0440\u0435\u0437
+      {0}.."
+    - Anuncio en {0}..
+    - "An\xFAncio em {0}.."
+    - "Publicit\xE9 dans {0}.."
+    - Werbung in {0}..
+    - "Pubblicit\xE0 tra {0}.."

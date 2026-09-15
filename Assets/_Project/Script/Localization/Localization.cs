@@ -2,22 +2,25 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using YG;
-using PlayerPrefs = RedefineYG.PlayerPrefs;
 
 namespace Treasures.Localization
 {
     /// <summary>
     /// Static access point for runtime text translation. Loads a <see cref="LocalizationTable"/>
-    /// from Resources, picks the initial language (saved choice -> OS language -> English),
-    /// and exposes <see cref="Get"/> for lookups plus a change event for live UI updates.
+    /// from Resources and exposes <see cref="Get"/> for lookups plus a change event for live UI
+    /// updates.
     ///
-    /// Language persistence: the selected language code is stored in PlayerPrefs under
-    /// <c>settings.language</c> and restored on the next session.
+    /// The active language always follows the language offered by the SDK platform (PluginYG2
+    /// "Localization" module): <c>YG2.lang</c> is resolved from the platform on every launch
+    /// (SetLangMod.EveryGameLaunch for Yandex Games) and pushed to this class through the
+    /// <see cref="YG2.onCorrectLang"/> / <see cref="YG2.onSwitchLang"/> events. Nothing is
+    /// persisted by this class - no PlayerPrefs, no saves. In-game switches call
+    /// <see cref="YG2.SwitchLanguage(string)"/> so the SDK stays in sync (which itself never
+    /// overrides the platform language on the next launch under EveryGameLaunch).
     /// </summary>
     public static class Localization
     {
         private const string ResourcePath = "LocalizationTable";
-        private const string PrefsKey = "settings.language";
 
         private static LocalizationTable _table;
         private static Dictionary<string, string[]> _lookup;
@@ -50,8 +53,9 @@ namespace Treasures.Localization
                 : string.Empty;
 
         /// <summary>
-        /// Index of the active language. Setting it clamps to range, persists the choice,
-        /// and raises <see cref="LanguageChanged"/>.
+        /// Index of the active language. Setting it (used by the in-game language selector)
+        /// clamps to range, raises <see cref="LanguageChanged"/> and calls
+        /// <see cref="YG2.SwitchLanguage(string)"/> so the SDK follows. No PlayerPrefs/saves.
         /// </summary>
         public static int CurrentLanguageIndex
         {
@@ -65,9 +69,11 @@ namespace Treasures.Localization
                 if (clamped == _languageIndex) return;
 
                 _languageIndex = clamped;
-                PlayerPrefs.SetString(PrefsKey, _table.languageCodes[_languageIndex]);
-                PlayerPrefs.Save();
                 LanguageChanged?.Invoke();
+
+                string code = _table.languageCodes[clamped];
+                if (YG2.lang != code)
+                    YG2.SwitchLanguage(code); // Syncs YG2.lang and fires onSwitchLang (no save here).
             }
         }
 
@@ -75,7 +81,7 @@ namespace Treasures.Localization
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void AutoInit() => EnsureInitialized();
 
-        /// <summary>Idempotent. Loads the table and resolves the initial language exactly once.</summary>
+        /// <summary>Idempotent. Loads the table and wires up the YG2 localisation events.</summary>
         public static void EnsureInitialized()
         {
             if (_initialized) return;
@@ -95,116 +101,77 @@ namespace Treasures.Localization
                     _lookup[e.key] = e.values;
             }
 
-            _languageIndex = ResolveInitialLanguage();
+            // Initial language = what the SDK platform already resolved for the current launch.
+            // The PluginYG2 Localization module resolves YG2.lang from the platform (for Yandex
+            // Games this happens every launch) and delivers it through onCorrectLang/onSwitchLang,
+            // so we also subscribe to those events to catch a late or synchronous delivery.
+            _languageIndex = IndexFromCode(YG2.lang);
+            if (_languageIndex < 0) _languageIndex = 0;
 
-            // With YG2 Storage, cloud/local saves finish loading asynchronously and REPLACE
-            // everything that was written before that point. Once the SDK data arrives,
-            // re-apply the persisted language choice so it survives the save-load swap.
-            YG2.onGetSDKData += OnSdkDataLoaded;
-        }
-
-        private static void OnSdkDataLoaded()
-        {
-            // 1) Explicit player choice (persisted) always wins.
-            string saved;
-            try
-            {
-                saved = PlayerPrefs.GetString(PrefsKey, string.Empty);
-            }
-            catch
-            {
-                return;
-            }
-
-            if (!string.IsNullOrEmpty(saved))
-            {
-                if (_table == null) return;
-
-                int savedIdx = Array.IndexOf(_table.languageCodes, saved);
-                if (savedIdx >= 0 && savedIdx != _languageIndex)
-                    CurrentLanguageIndex = savedIdx; // Fires LanguageChanged so all UI refreshes.
-                return;
-            }
-
-            // 2) No saved choice yet -> ask the platform (Yandex Games) for the player's language,
-            //    falling back to the browser/OS language.
-            int suggested = GetSuggestedLanguageIndex();
-            if (suggested >= 0 && suggested != _languageIndex && _table != null)
-                CurrentLanguageIndex = suggested; // Also persists the choice for next sessions.
+            YG2.onCorrectLang += OnYgCorrectLang;
+            YG2.onSwitchLang += OnYgSwitchLang;
         }
 
         /// <summary>
-        /// Suggested language index from the environment:
-        /// YG2 player language when the EnvirData module is installed, otherwise the OS/browser language.
-        /// Returns -1 when nothing supported was detected.
+        /// Fired by PluginYG2 when the language is read from the SDK platform at launch
+        /// (<c>GetLanguage()</c>). Maps the platform country code to this game's table and applies it.
         /// </summary>
-        private static int GetSuggestedLanguageIndex()
+        private static void OnYgCorrectLang(string lang)
         {
-#if EnvirData_yg
-            try
+            if (_table == null) return;
+            int idx = IndexFromCode(lang);
+            if (idx >= 0 && idx != _languageIndex)
             {
-                string ygCode = YG2.envirData.language;
-                if (!string.IsNullOrEmpty(ygCode))
-                {
-                    // CIS variants reported by Yandex map to the Russian table entry.
-                    if (ygCode == "be" || ygCode == "kk" || ygCode == "uk") ygCode = "ru";
-
-                    int ygIdx = Array.IndexOf(_table.languageCodes, ygCode.ToLowerInvariant());
-                    if (ygIdx >= 0) return ygIdx;
-                }
+                _languageIndex = idx;
+                LanguageChanged?.Invoke();
             }
-            catch
-            {
-                // envirData not ready - fall through to OS language.
-            }
-#endif
-            string osCode = SystemLanguageToCode(Application.systemLanguage);
-            int osIdx = _table != null ? Array.IndexOf(_table.languageCodes, osCode) : -1;
-            return osIdx;
         }
 
         /// <summary>
-        /// Returns the saved language if valid; otherwise maps the device OS language to a
-        /// supported language; otherwise falls back to the first language (English).
+        /// Fired by PluginYG2 after the language changes (startup and <c>SwitchLanguage</c>).
         /// </summary>
-        private static int ResolveInitialLanguage()
+        private static void OnYgSwitchLang(string lang)
         {
-            // PlayerPrefs (RedefineYG) touches the YG2 platform object which may not exist yet
-            // if this static initializer runs before YG2.Initialize - degrade gracefully.
-            string saved = string.Empty;
-            try
-            {
-                saved = PlayerPrefs.GetString(PrefsKey, string.Empty);
-            }
-            catch
-            {
-                // Platform not ready; OnSdkDataLoaded will re-apply the choice after init.
-            }
-
-            if (!string.IsNullOrEmpty(saved))
-            {
-                int idx = Array.IndexOf(_table.languageCodes, saved);
-                if (idx >= 0) return idx;
-            }
-
-            string osCode = SystemLanguageToCode(Application.systemLanguage);
-            int osIdx = Array.IndexOf(_table.languageCodes, osCode);
-            return osIdx >= 0 ? osIdx : 0;
+            OnYgCorrectLang(lang);
         }
 
-        private static string SystemLanguageToCode(SystemLanguage lang)
+        /// <summary>
+        /// Maps a PluginYG2 country code (the value of <c>YG2.lang</c>, e.g. "ru", "en", "de",
+        /// "tr") to an index in the game's <see cref="LocalizationTable"/>.
+        ///
+        /// Supported codes (en, ru, es, pt, fr, de, it) are used directly. CIS Russian-speaking
+        /// codes reported by Yandex (be, kk, uk, az, ky, tg, tk, uz) map to the Russian column,
+        /// since the game ships with Russian text for those regions. Any other unsupported code
+        /// (e.g. tr) falls back to English. Returns -1 when <paramref name="code"/> is invalid
+        /// or the table is not loaded.
+        /// </summary>
+        private static int IndexFromCode(string code)
         {
-            switch (lang)
+            if (_table == null || string.IsNullOrEmpty(code)) return -1;
+
+            string c = code.Trim().ToLowerInvariant();
+
+            // Direct match against any supported column (e.g. "de" -> Deutsch).
+            int idx = Array.IndexOf(_table.languageCodes, c);
+            if (idx >= 0) return idx;
+
+            // CIS Russian-speaking locales share the Russian translation.
+            switch (c)
             {
-                case SystemLanguage.Russian: return "ru";
-                case SystemLanguage.Spanish: return "es";
-                case SystemLanguage.Portuguese: return "pt";
-                case SystemLanguage.French: return "fr";
-                case SystemLanguage.German: return "de";
-                case SystemLanguage.Italian: return "it";
-                case SystemLanguage.English: return "en";
-                default: return "en";
+                case "be":
+                case "kk":
+                case "uk":
+                case "az":
+                case "ky":
+                case "tg":
+                case "tk":
+                case "uz":
+                case "mo":
+                    return Array.IndexOf(_table.languageCodes, "ru");
             }
+
+            // Unsupported language -> English fallback. Never Russian unless Russian/CIS.
+            return Array.IndexOf(_table.languageCodes, "en");
         }
 
         /// <summary>
